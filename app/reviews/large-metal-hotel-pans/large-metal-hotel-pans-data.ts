@@ -9,7 +9,7 @@ export const reviewData = {
   // METADATA
   metadata: {
     title: 'Large Metal Hotel Pans Review: Commercial-Grade Hot Holding',
-    description: '24 years in commercial kitchens—metal hotel pans handle heat, steam tables, and high-volume service. Essential for catering and large events.',
+    description: '24 years in commercial kitchens, metal hotel pans handle heat, steam tables, and high-volume service. Essential for catering and large events.',
     ogTitle: 'Large Metal Hotel Pans Review: Commercial Hot Holding',
     ogDescription: 'Professional chef review of large metal hotel pans for catering and commercial operations.',
     testingPeriod: '24 Years Pro Use',
@@ -40,7 +40,7 @@ export const reviewData = {
       icon: '🏆',
       text: 'Tier 1: Professional Kitchen Use + 24 Years',
     },
-    verdict: 'After 24 years using large metal hotel pans in professional kitchens, full and 1/3 stainless steel pans are essential for catering businesses, commercial kitchens, and large-scale event hosting—but unnecessary for typical home use. These are commercial workhorses designed for hot food service: transporting hot dishes to off-site events, maintaining safe serving temperatures for hours in chafing dishes, and professional buffet service for 50+ people. They\'re overkill for family gatherings under 20 people. For home cooks, use smaller 1/6 metal pans instead.',
+    verdict: 'After 24 years using large metal hotel pans in professional kitchens, full and 1/3 stainless steel pans are essential for catering businesses, commercial kitchens, and large-scale event hosting, but unnecessary for typical home use. These are commercial workhorses designed for hot food service: transporting hot dishes to off-site events, maintaining safe serving temperatures for hours in chafing dishes, and professional buffet service for 50+ people. They\'re overkill for family gatherings under 20 people. For home cooks, use smaller 1/6 metal pans instead.',
     verdictStrong: 'Professional stainless steel for commercial hot food service',
     ctaText: 'Check Price on Amazon →'
   },
@@ -55,11 +55,11 @@ export const reviewData = {
       },
       {
         title: 'Professional Kitchen Transport Durability',
-        content: 'After 24 years of professional kitchen use, large metal pans are virtually indestructible. They survive being loaded into vans, transported to events, set up in chafing dishes, and cleaned in commercial dishwashers at 180°F+. No coating to wear off, no warping, no degradation—just restaurant-grade 18-8 stainless steel that lasts decades.'
+        content: 'After 24 years of professional kitchen use, large metal pans are virtually indestructible. They survive being loaded into vans, transported to events, set up in chafing dishes, and cleaned in commercial dishwashers at 180°F+. No coating to wear off, no warping, no degradation. Just restaurant-grade 18-8 stainless steel that lasts decades.'
       },
       {
         title: 'Buffet Service Excellence',
-        content: 'Notched lids are game-changers for professional buffet service. The lid cutout fits serving utensils so the spoon stays IN the pan while the lid maintains heat. This is standard practice in professional catering—essential for maintaining safe food temperatures during hours of buffet service.'
+        content: 'Notched lids are game-changers for professional buffet service. The lid cutout fits serving utensils so the spoon stays IN the pan while the lid maintains heat. This is standard practice in professional catering, essential for maintaining safe food temperatures during hours of buffet service.'
       },
       {
         title: 'Commercial vs Home Reality',
@@ -95,7 +95,7 @@ export const reviewData = {
     sections: [
       {
         title: 'The Hot Holding Advantage',
-        content: 'Large metal hotel pans excel at maintaining safe food temperatures during professional service. In chafing dishes with Sterno fuel, food stays at 140°F+ for 3-4 hours—critical for catering operations where food safety is non-negotiable. The stainless steel conducts heat efficiently, and notched lids maintain temperature while allowing easy access for serving. This is why every professional caterer uses metal pans for hot food service.'
+        content: 'Large metal hotel pans excel at maintaining safe food temperatures during professional service. In chafing dishes with Sterno fuel, food stays at 140°F+ for 3-4 hours, critical for catering operations where food safety is non-negotiable. The stainless steel conducts heat efficiently, and notched lids maintain temperature while allowing easy access for serving. This is why every professional caterer uses metal pans for hot food service.'
       },
       {
         title: 'Catering Transport Reality',
@@ -103,7 +103,7 @@ export const reviewData = {
       },
       {
         title: 'Why Notched Lids Matter',
-        content: 'Notched lids are the difference between amateur and professional buffet service. The cutout fits serving utensils so the spoon stays IN the pan while the lid covers 90% of the surface to maintain heat. Guests serve themselves without removing the entire lid. This keeps food at safe temperatures for hours—essential for professional catering where food sits out during extended service periods.'
+        content: 'Notched lids are the difference between amateur and professional buffet service. The cutout fits serving utensils so the spoon stays IN the pan while the lid covers 90% of the surface to maintain heat. Guests serve themselves without removing the entire lid. This keeps food at safe temperatures for hours, essential for professional catering where food sits out during extended service periods.'
       },
       {
         title: 'Home Use Reality Check',
@@ -162,11 +162,11 @@ export const reviewData = {
     },
     {
       question: 'Will they rust?',
-      answer: 'No—18/8 stainless steel is highly corrosion-resistant. Proper cleaning (dishwasher or hand-wash) prevents rust.'
+      answer: 'No. 18/8 stainless steel is highly corrosion-resistant. Proper cleaning (dishwasher or hand-wash) prevents rust.'
     },
     {
       question: 'Can I rent these instead of buying?',
-      answer: 'Yes—many catering supply companies rent large pans and chafing dishes. For one-time events, renting makes sense. For regular use (churches, caterers), buying is more cost-effective.'
+      answer: 'Yes. Many catering supply companies rent large pans and chafing dishes. For one-time events, renting makes sense. For regular use (churches, caterers), buying is more cost-effective.'
     },
     {
       question: 'How long do they keep food hot?',
@@ -194,7 +194,7 @@ export const reviewData = {
   bottomLine: {
     title: 'The Bottom Line: My Professional Verdict',
     paragraphs: [
-      'After 24 years using large metal hotel pans in professional kitchens, full and 1/3 stainless steel pans are essential for catering businesses, commercial operations, and large-scale event hosting—but unnecessary for typical home use. These are commercial workhorses designed for feeding 50-200+ people with hot food service.',
+      'After 24 years using large metal hotel pans in professional kitchens, full and 1/3 stainless steel pans are essential for catering businesses, commercial operations, and large-scale event hosting, but unnecessary for typical home use. These are commercial workhorses designed for feeding 50-200+ people with hot food service.',
       'If you run a catering business, manage a church kitchen, or regularly host major events for crowds, large metal hotel pans are non-negotiable equipment. For typical home cooking and family gatherings under 20 people, use smaller 1/6 metal pans instead. Know your use case before investing in commercial-scale equipment.'
     ],
     ctaText: 'Check Price on Amazon →'
@@ -300,7 +300,7 @@ export const reviewData = {
       }
     ],
     expertRating: 5,
-    expertOpinion: 'After 24 years using large metal hotel pans in professional kitchens, they\'re essential for catering businesses and commercial operations—but unnecessary for typical home use.',
+    expertOpinion: 'After 24 years using large metal hotel pans in professional kitchens, they\'re essential for catering businesses and commercial operations, but unnecessary for typical home use.',
     pros: [
       'Maintains food at 140°F+ for hours in chafing dishes',
       'Virtually indestructible restaurant-grade stainless steel',

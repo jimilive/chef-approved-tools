@@ -40,7 +40,7 @@ export const reviewData = {
       icon: '💎',
       text: 'Tier 3: Expert Evaluation',
     },
-    verdict: 'Walk into any professional kitchen in America—from neighborhood cafés to fine dining establishments—and you\'ll find bar mops exactly like these. ZUPERIA makes the same 100% ring spun cotton towels that have been the restaurant industry standard for decades. After years of testing them in commercial environments where towel failure means operational problems, these proved why every professional kitchen uses them. This isn\'t about fancy features or clever marketing. These are the workhorse towels that professional kitchens buy by the hundred because they work, they last, and they\'re reliable every single day.',
+    verdict: 'Walk into any professional kitchen in America, from neighborhood cafés to fine dining establishments, and you\'ll find bar mops exactly like these. ZUPERIA makes the same 100% ring spun cotton towels that have been the restaurant industry standard for decades. After years of testing them in commercial environments where towel failure means operational problems, these proved why every professional kitchen uses them. This isn\'t about fancy features or clever marketing. These are the workhorse towels that professional kitchens buy by the hundred because they work, they last, and they\'re reliable every single day.',
     verdictStrong: 'Industry standard quality that professionals trust',
     ctaText: 'Check Price on Amazon →'
   },
@@ -51,7 +51,7 @@ export const reviewData = {
     sections: [
       {
         title: 'Industry Standard Quality',
-        content: '100% ring spun cotton—the exact specification restaurants demand. Not a cheaper cotton blend. Not polyester mix. Pure cotton construction that professionals trust.'
+        content: '100% ring spun cotton, the exact specification restaurants demand. Not a cheaper cotton blend. Not polyester mix. Pure cotton construction that professionals trust.'
       },
       {
         title: 'Superior Absorbency',
@@ -59,7 +59,7 @@ export const reviewData = {
       },
       {
         title: 'Commercial Durability',
-        content: 'Built to survive industrial washing machines, harsh chemicals, high heat drying. Reinforced edges don\'t fray. These last years in restaurant abuse—even longer in home kitchens.'
+        content: 'Built to survive industrial washing machines, harsh chemicals, high heat drying. Reinforced edges don\'t fray. These last years in restaurant abuse, even longer in home kitchens.'
       },
       {
         title: 'Lint-Free Performance',

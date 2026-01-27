@@ -151,34 +151,6 @@ export const reviewData = {
     ]
   },
 
-  // USER REVIEWS
-  userReviews: {
-    title: "What Real Users Are Saying",
-    subtitle: "Customer reviews curated from WebstaurantStore verified purchasers. These represent selected experiences.",
-    reviews: [
-      {
-        quote: "After 2 years in our busy cafe, this Robot Coupe has been worth every penny. We process 15-20 lbs of vegetables daily, and the continuous feed design means we can keep working without stopping to empty the bowl constantly. Saves us at least 2 hours of prep time daily.",
-        author: "WebstaurantStore verified purchaser (J.K., August 2024) | Cafe Operations"
-      },
-      {
-        quote: "Upgraded from a home-grade Cuisinart and the difference is night and day. The 2 HP motor handles hard cheeses without bogging down. The continuous feed makes a big difference for volume prep. Expensive upfront but pays for itself quickly in labor savings.",
-        author: "WebstaurantStore verified purchaser (M.R., July 2024) | Small Restaurant"
-      },
-      {
-        quote: "We use this for catering prep, and the ability to process large quantities quickly is essential. The consistency of cuts is excellent for professional presentation. Only downside is cleaning takes 15 minutes after heavy use, but that's the trade-off for commercial capacity.",
-        author: "WebstaurantStore verified purchaser (S.L., June 2024) | Catering Business"
-      },
-      {
-        quote: "Solid machine but be prepared: it's MUCH larger than home food processors. Make sure you have the counter space (we had to rearrange our prep station). Also needed an electrician to verify our circuit could handle it.",
-        author: "WebstaurantStore verified purchaser (D.T., May 2024) | Restaurant Kitchen"
-      },
-      {
-        quote: "Been using this daily for 18 months in our pizza shop for cheese shredding. The blades and discs do wear, and we replaced the shredding disc after 14 months of heavy use. Factor replacement parts into your budget.",
-        author: "WebstaurantStore verified purchaser (A.P., April 2024) | Pizzeria"
-      }
-    ]
-  },
-
   // TECHNICAL SPECS
   technicalSpecs: {
     title: "Technical Specifications",

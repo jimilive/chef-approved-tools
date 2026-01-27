@@ -85,7 +85,7 @@ export const reviewData = {
     sections: [
       {
         title: 'Why a Fish Spatula Is Different',
-        content: 'A fish spatula—also called a fish turner or slotted turner—is a specialized tool designed for one purpose: sliding under delicate foods without breaking them. The thin, flexible, slotted blade distinguishes it from regular spatulas. The slots allow oil and liquid to drain away, while the beveled edge slides effortlessly under fish fillets, eggs, and other fragile items that would stick to or break with a standard spatula.'
+        content: 'A fish spatula (also called a fish turner or slotted turner) is a specialized tool designed for one purpose: sliding under delicate foods without breaking them. The thin, flexible, slotted blade distinguishes it from regular spatulas. The slots allow oil and liquid to drain away, while the beveled edge slides effortlessly under fish fillets, eggs, and other fragile items that would stick to or break with a standard spatula.'
       },
       {
         title: 'Professional Kitchen Performance',
@@ -97,7 +97,7 @@ export const reviewData = {
       },
       {
         title: 'Why Lamson Stands Out',
-        content: 'The Lamson fish spatula is made in Shelburne Falls, Massachusetts—the same town where they\'ve been making cutlery since 1837. The high-carbon stainless steel holds up to professional abuse, the POM handle stays comfortable during long prep sessions, and the three-rivet construction won\'t loosen over time. This is a fish spatula built for decades of use.'
+        content: 'The Lamson fish spatula is made in Shelburne Falls, Massachusetts, the same town where they\'ve been making cutlery since 1837. The high-carbon stainless steel holds up to professional abuse, the POM handle stays comfortable during long prep sessions, and the three-rivet construction won\'t loosen over time. This is a fish spatula built for decades of use.'
       }
     ],
     testingEnvironment: [
@@ -145,7 +145,7 @@ export const reviewData = {
     title: 'Left-Handed Fish Spatula Option',
     paragraphs: [
       'Here\'s something most fish spatula reviews miss: handedness matters. The beveled edge on a fish spatula is angled to slide under food from a specific direction. If you\'re left-handed and using a right-handed spatula, you\'re working against the tool\'s design.',
-      'Lamson makes a left-handed fish spatula—one of the only manufacturers to offer this option. The beveled edge is reversed, so left-handed cooks get the same effortless sliding action that right-handers enjoy. If you\'ve ever wondered why fish spatulas felt awkward, this might be why.',
+      'Lamson makes a left-handed fish spatula, one of the only manufacturers to offer this option. The beveled edge is reversed, so left-handed cooks get the same effortless sliding action that right-handers enjoy. If you\'ve ever wondered why fish spatulas felt awkward, this might be why.',
       'The left-handed Lamson has identical construction: high-carbon stainless steel, POM handle, three-rivet assembly, made in USA. The only difference is the bevel orientation.'
     ]
   },
@@ -228,7 +228,7 @@ export const reviewData = {
     },
     {
       question: 'What\'s the difference between a fish turner and spatula?',
-      answer: 'A fish turner and fish spatula are the same tool—different names for the slotted, flexible metal spatula designed for flipping fish. Some people call it a fish turner because of its flipping function, while others call it a fish spatula. Both refer to the thin, slotted tool used for delicate foods.'
+      answer: 'A fish turner and fish spatula are the same tool, different names for the slotted, flexible metal spatula designed for flipping fish. Some people call it a fish turner because of its flipping function, while others call it a fish spatula. Both refer to the thin, slotted tool used for delicate foods.'
     },
     {
       question: 'Is a fish slice the same as a fish spatula?',
@@ -240,15 +240,15 @@ export const reviewData = {
     },
     {
       question: 'Can I use a fish spatula on nonstick pans?',
-      answer: 'Metal fish spatulas can scratch nonstick coatings over time. For nonstick pans, consider a silicone fish spatula instead. For cast iron, stainless steel, and carbon steel pans, a metal fish spatula like the Lamson is ideal—the thin edge and flexibility work best with these surfaces.'
+      answer: 'Metal fish spatulas can scratch nonstick coatings over time. For nonstick pans, consider a silicone fish spatula instead. For cast iron, stainless steel, and carbon steel pans, a metal fish spatula like the Lamson is ideal. The thin edge and flexibility work best with these surfaces.'
     },
     {
       question: 'Do I need a left-handed fish spatula?',
-      answer: 'If you\'re left-handed, yes—a left-handed fish spatula makes a noticeable difference. The beveled edge on fish spatulas is angled to slide under food from a specific direction. Left-handed cooks using right-handed spatulas work against the tool\'s design. Lamson is one of the few manufacturers offering a left-handed fish spatula.'
+      answer: 'If you\'re left-handed, yes. A left-handed fish spatula makes a noticeable difference. The beveled edge on fish spatulas is angled to slide under food from a specific direction. Left-handed cooks using right-handed spatulas work against the tool\'s design. Lamson is one of the few manufacturers offering a left-handed fish spatula.'
     },
     {
       question: 'Is stainless steel or silicone better for fish spatulas?',
-      answer: 'Stainless steel fish spatulas are better for most cooking surfaces—cast iron, stainless steel, carbon steel, and grills. The thin metal edge slides under food that silicone can\'t reach. Silicone fish spatulas are only better for nonstick pans, where metal could scratch the coating.'
+      answer: 'Stainless steel fish spatulas are better for most cooking surfaces: cast iron, stainless steel, carbon steel, and grills. The thin metal edge slides under food that silicone can\'t reach. Silicone fish spatulas are only better for nonstick pans, where metal could scratch the coating.'
     },
     {
       question: 'What size fish spatula should I get?',
@@ -260,7 +260,7 @@ export const reviewData = {
     },
     {
       question: 'Is the Lamson fish spatula worth it?',
-      answer: 'After 24 years of professional kitchen experience, yes—the Lamson fish spatula is worth it. The American-made quality, perfect flex, and availability of a left-handed version justify the price. Cheaper fish spatulas often have poor flexibility or construction that fails over time. The Lamson is a buy-it-for-life tool.'
+      answer: 'After 24 years of professional kitchen experience, yes. The Lamson fish spatula is worth it. The American-made quality, perfect flex, and availability of a left-handed version justify the price. Cheaper fish spatulas often have poor flexibility or construction that fails over time. The Lamson is a buy-it-for-life tool.'
     }
   ],
 
@@ -278,7 +278,7 @@ export const reviewData = {
     title: 'The Bottom Line: My Professional Verdict',
     paragraphs: [
       'After owning this exact Lamson fish spatula since 2009, including professional use at Purple Café for fish service, it\'s the fish spatula I recommend. The high-carbon stainless steel blade has the perfect flex, the slotted design drains oil beautifully, and the American-made quality means this tool will last decades.',
-      'The Lamson also stands alone in offering a left-handed version—a detail that matters more than most people realize. If you\'ve been using a regular spatula for delicate foods and wondering why fish sticks or eggs tear, a proper fish spatula like the Lamson will change how you cook. This is the best fish spatula for home cooks who want professional results.'
+      'The Lamson also stands alone in offering a left-handed version, a detail that matters more than most people realize. If you\'ve been using a regular spatula for delicate foods and wondering why fish sticks or eggs tear, a proper fish spatula like the Lamson will change how you cook. This is the best fish spatula for home cooks who want professional results.'
     ],
     ctaText: 'Check Price on Amazon →'
   },

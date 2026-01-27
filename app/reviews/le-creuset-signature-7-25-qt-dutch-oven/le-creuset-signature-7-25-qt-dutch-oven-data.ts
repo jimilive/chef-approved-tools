@@ -67,7 +67,7 @@ export const reviewData = {
       },
       {
         title: "Light Sand Interior Advantage",
-        content: "The light-colored interior lets you monitor browning and deglazing—invaluable for precision cooking. <LINK>This Dutch oven</LINK> shows exactly when fond is developing, when onions are caramelized, and when sauces need reduction. After 12 years: zero staining despite regular use with tomato sauces and red wines."
+        content: "The light-colored interior lets you monitor browning and deglazing, invaluable for precision cooking. <LINK>This Dutch oven</LINK> shows exactly when fond is developing, when onions are caramelized, and when sauces need reduction. After 12 years: zero staining despite regular use with tomato sauces and red wines."
       },
       {
         title: "Weight-Per-Quart Leadership",
@@ -127,7 +127,7 @@ export const reviewData = {
       },
       {
         title: "Searing to Oven Transitions",
-        content: "Seamless stovetop to oven transitions maintain heat perfectly. <LINK>The Le Creuset's</LINK> thermal mass holds temperature through transfers, ensuring consistent cooking. Sear at high heat, deglaze, add liquid, then move directly to a 325°F oven—the temperature barely drops. This versatility eliminates the need for multiple pans."
+        content: "Seamless stovetop to oven transitions maintain heat perfectly. <LINK>The Le Creuset's</LINK> thermal mass holds temperature through transfers, ensuring consistent cooking. Sear at high heat, deglaze, add liquid, then move directly to a 325°F oven. The temperature barely drops. This versatility eliminates the need for multiple pans."
       },
       {
         title: "Bread Baking Performance",
@@ -184,11 +184,11 @@ export const reviewData = {
       },
       {
         question: "How does the 7.25-qt size compare to 5.5-qt for a family of 4?",
-        answer: "The 7.25-qt is the better choice for family of 4. While 5.5-qt works for smaller meals, the 7.25-qt provides versatility for larger roasts (5-6 lbs), batch cooking, and entertaining without being too large for everyday use. Most users eventually wish they'd bought larger—very few regret buying 7.25-qt over 5.5-qt."
+        answer: "The 7.25-qt is the better choice for family of 4. While 5.5-qt works for smaller meals, the 7.25-qt provides versatility for larger roasts (5-6 lbs), batch cooking, and entertaining without being too large for everyday use. Most users eventually wish they'd bought larger. Very few regret buying 7.25-qt over 5.5-qt."
       },
       {
         question: "What's covered under the lifetime warranty?",
-        answer: "Lifetime Limited Warranty covers defects in material and workmanship under normal household use. Covered: Manufacturing defects, enamel defects not caused by misuse. Not covered: Damage from thermal shock, drops, metal utensil scratches, commercial use. Users report Le Creuset honors warranty claims readily—one user's thermal shock crack was replaced despite being user error."
+        answer: "Lifetime Limited Warranty covers defects in material and workmanship under normal household use. Covered: Manufacturing defects, enamel defects not caused by misuse. Not covered: Damage from thermal shock, drops, metal utensil scratches, commercial use. Users report Le Creuset honors warranty claims readily. One user's thermal shock crack was replaced despite being user error."
       }
     ]
   },
@@ -213,11 +213,11 @@ export const reviewData = {
     },
     {
       question: "How does the 7.25-qt size compare to 5.5-qt for a family of 4?",
-      answer: "The 7.25-qt is the better choice for family of 4. While 5.5-qt works for smaller meals, the 7.25-qt provides versatility for larger roasts (5-6 lbs), batch cooking, and entertaining without being too large for everyday use. Most users eventually wish they'd bought larger—very few regret buying 7.25-qt over 5.5-qt."
+      answer: "The 7.25-qt is the better choice for family of 4. While 5.5-qt works for smaller meals, the 7.25-qt provides versatility for larger roasts (5-6 lbs), batch cooking, and entertaining without being too large for everyday use. Most users eventually wish they'd bought larger. Very few regret buying 7.25-qt over 5.5-qt."
     },
     {
       question: "What's covered under the lifetime warranty?",
-      answer: "Lifetime Limited Warranty covers defects in material and workmanship under normal household use. Covered: Manufacturing defects, enamel defects not caused by misuse. Not covered: Damage from thermal shock, drops, metal utensil scratches, commercial use. Users report Le Creuset honors warranty claims readily—one user's thermal shock crack was replaced despite being user error."
+      answer: "Lifetime Limited Warranty covers defects in material and workmanship under normal household use. Covered: Manufacturing defects, enamel defects not caused by misuse. Not covered: Damage from thermal shock, drops, metal utensil scratches, commercial use. Users report Le Creuset honors warranty claims readily. One user's thermal shock crack was replaced despite being user error."
     }
   ],
 

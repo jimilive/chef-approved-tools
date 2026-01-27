@@ -131,7 +131,7 @@ export const reviewData = {
       },
       {
         title: "Attachment Versatility",
-        content: "Compatible with 15+ attachments: pasta makers, meat grinders, ice cream makers. One machine handles pasta, meat grinding, ice cream, and more. This transforms <LINK>the Professional 600</LINK> from a stand mixer into a complete kitchen system—one investment that grows with your cooking ambitions."
+        content: "Compatible with 15+ attachments: pasta makers, meat grinders, ice cream makers. One machine handles pasta, meat grinding, ice cream, and more. This transforms <LINK>the Professional 600</LINK> from a stand mixer into a complete kitchen system, one investment that grows with your cooking ambitions."
       },
       {
         title: "Built to Last",
@@ -178,7 +178,7 @@ export const reviewData = {
     sections: [
       {
         title: "Motor & Durability",
-        content: "The 575-watt motor delivers 60% more power than Artisan models, handling heavy dough and continuous mixing without overheating. After 18 years of weekly use—including challenging pizza dough that would strain lesser mixers—this motor shows zero degradation in performance. The bowl-lift design provides superior stability during heavy mixing compared to tilt-head models."
+        content: "The 575-watt motor delivers 60% more power than Artisan models, handling heavy dough and continuous mixing without overheating. After 18 years of weekly use, including challenging pizza dough that would strain lesser mixers, this motor shows zero degradation in performance. The bowl-lift design provides superior stability during heavy mixing compared to tilt-head models."
       },
       {
         title: "Real-World Capacity",
@@ -186,7 +186,7 @@ export const reviewData = {
       },
       {
         title: "Bowl-Lift vs Tilt-Head",
-        content: "After using both designs extensively—bowl-lift at home, tilt-head in professional settings—the bowl-lift design offers three key advantages: superior stability during heavy mixing, easier access to bowl contents during mixing, and better leverage for thick doughs. The trade-off is counter space (requires more vertical clearance) and slightly more effort to attach/remove the bowl."
+        content: "After using both designs extensively (bowl-lift at home, tilt-head in professional settings), the bowl-lift design offers three key advantages: superior stability during heavy mixing, easier access to bowl contents during mixing, and better leverage for thick doughs. The trade-off is counter space (requires more vertical clearance) and slightly more effort to attach/remove the bowl."
       },
       {
         title: "18-Year Durability Assessment",
@@ -194,7 +194,7 @@ export const reviewData = {
       },
       {
         title: "KitchenAid Professional 600 Series Specifications",
-        content: "The Professional 600 Series features a 575-watt motor—significantly more powerful than the 325-watt Artisan. The 6-quart stainless steel bowl handles double and triple batches without overflow. Bowl-lift design provides superior stability for heavy doughs compared to tilt-head models. All-metal construction throughout means this mixer is built to last decades, not years."
+        content: "The Professional 600 Series features a 575-watt motor, significantly more powerful than the 325-watt Artisan. The 6-quart stainless steel bowl handles double and triple batches without overflow. Bowl-lift design provides superior stability for heavy doughs compared to tilt-head models. All-metal construction throughout means this mixer is built to last decades, not years."
       }
     ]
   },
@@ -248,7 +248,7 @@ export const reviewData = {
     },
     {
       question: "Can this mixer handle pizza dough?",
-      answer: "Absolutely. After 18 years of weekly pizza dough—including high-hydration Neapolitan-style and thick Sicilian doughs—this mixer handles it effortlessly. The 575-watt motor and bowl-lift stability make it ideal for dough work that would strain lesser mixers. This is the ultimate pizza dough test, and the Pro 600 passes easily."
+      answer: "Absolutely. After 18 years of weekly pizza dough, including high-hydration Neapolitan-style and thick Sicilian doughs, this mixer handles it effortlessly. The 575-watt motor and bowl-lift stability make it ideal for dough work that would strain lesser mixers. This is the ultimate pizza dough test, and the Pro 600 passes easily."
     },
     {
       question: "How long will this mixer last?",
@@ -264,7 +264,7 @@ export const reviewData = {
     },
     {
       question: "KitchenAid Professional 600 vs 7 Qt: which should I buy?",
-      answer: "The Professional 600 (6 qt) handles most serious home baking needs including double batches of bread dough and large cookie batches. The 7 Qt model (KSM70) offers 17% more capacity for very large batches—useful if you regularly bake for crowds or run a home bakery. For most serious home bakers, the 6 Qt Professional 600 hits the sweet spot of capacity, power, and value. Choose the 7 Qt only if you consistently max out a 6-quart bowl."
+      answer: "The Professional 600 (6 qt) handles most serious home baking needs including double batches of bread dough and large cookie batches. The 7 Qt model (KSM70) offers 17% more capacity for very large batches, useful if you regularly bake for crowds or run a home bakery. For most serious home bakers, the 6 Qt Professional 600 hits the sweet spot of capacity, power, and value. Choose the 7 Qt only if you consistently max out a 6-quart bowl."
     }
   ],
 

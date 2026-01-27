@@ -40,7 +40,7 @@ export const reviewData = {
       icon: '💎',
       text: 'Tier 3: Expert Evaluation',
     },
-    verdict: 'These are the same style of restaurant-grade tongs I used for 20 years in professional kitchens. Strong, reliable, dishwasher-safe. Inexpensive yet built like professional equipment—buy three and never worry about tongs again.',
+    verdict: 'These are the same style of restaurant-grade tongs I used for 20 years in professional kitchens. Strong, reliable, dishwasher-safe. Inexpensive yet built like professional equipment. Buy three and never worry about tongs again.',
     verdictStrong: 'Restaurant-quality tongs at budget price',
     ctaText: 'Check Price on Amazon →'
   },
@@ -179,7 +179,7 @@ export const reviewData = {
     title: 'Ready to Add These to Your Kitchen?',
     paragraphs: [
       'These are one of the 11 tools I use most in my home kitchen. After 20 years using similar restaurant-grade tongs professionally, I know what works. Inexpensive, professional-quality—buy a few pairs. You\'ll use them for everything.',
-      'I keep three pairs in my home kitchen: one for the grill, one for the stove, one for serving. Inexpensive yet built to last—they\'ll outlast typical home kitchen tongs by years.'
+      'I keep three pairs in my home kitchen: one for the grill, one for the stove, one for serving. Inexpensive yet built to last. They\'ll outlast typical home kitchen tongs by years.'
     ],
     ctaText: 'Check Price on Amazon →'
   },

@@ -40,7 +40,7 @@ export const reviewData = {
       icon: '🏆',
       text: 'Tier 1: Professional Kitchen Use',
     },
-    verdict: 'After 2 years testing in professional kitchens, this WÜSTHOF set has proven exceptional value through German engineering and ergonomic design. The chef\'s knife, santoku, bread knife, and paring knives alone justify the purchase price—saving hundreds compared to individual purchases. The IKON handle ergonomics reduce hand fatigue during extended prep sessions, a significant factor for professional use. While some pieces like the slicer see limited use, the overall performance makes this an outstanding investment.',
+    verdict: 'After 2 years testing in professional kitchens, this WÜSTHOF set has proven exceptional value through German engineering and ergonomic design. The chef\'s knife, santoku, bread knife, and paring knives alone justify the purchase price, saving hundreds compared to individual purchases. The IKON handle ergonomics reduce hand fatigue during extended prep sessions, a significant factor for professional use. While some pieces like the slicer see limited use, the overall performance makes this an outstanding investment.',
     verdictStrong: 'German engineering meets professional ergonomics',
     ctaText: 'Check Price on Amazon →'
   },
@@ -55,7 +55,7 @@ export const reviewData = {
       },
       {
         title: 'Handle Ergonomics During Long Sessions',
-        content: 'The IKON handles are exceptional for extended prep work. After hours of continuous chopping, dicing, and slicing, the ergonomic design reduces hand fatigue significantly compared to cheaper knife sets. The contoured grip provides secure control even when hands are wet or greasy—critical for professional kitchen safety.'
+        content: 'The IKON handles are exceptional for extended prep work. After hours of continuous chopping, dicing, and slicing, the ergonomic design reduces hand fatigue significantly compared to cheaper knife sets. The contoured grip provides secure control even when hands are wet or greasy, critical for professional kitchen safety.'
       },
       {
         title: 'Most Valuable Knives from the Set',
@@ -63,7 +63,7 @@ export const reviewData = {
       },
       {
         title: 'Maintenance Reality',
-        content: 'Regular maintenance with the included honing steel keeps edges sharp for daily use. When the steel can no longer restore the edge to perfection, a stone is required—typically every few months under heavy professional use. The German steel takes and holds an edge well, making maintenance straightforward for anyone willing to learn proper technique.'
+        content: 'Regular maintenance with the included honing steel keeps edges sharp for daily use. When the steel can no longer restore the edge to perfection, a stone is required, typically every few months under heavy professional use. The German steel takes and holds an edge well, making maintenance straightforward for anyone willing to learn proper technique.'
       }
     ],
     testingEnvironment: [
@@ -151,11 +151,11 @@ export const reviewData = {
     },
     {
       question: 'WÜSTHOF Classic IKON vs Classic series: Which should I buy?',
-      answer: 'The IKON features ergonomic curved handles that provide superior comfort during extended use, while the Classic has traditional straight triple-rivet handles. Both use identical X50CrMoV15 steel and PEtec edge technology. Choose IKON if you cook frequently or professionally—the ergonomic benefit becomes very noticeable after 30+ minutes of continuous knife work. Choose Classic if you prefer traditional aesthetics and don\'t mind standard handle comfort.'
+      answer: 'The IKON features ergonomic curved handles that provide superior comfort during extended use, while the Classic has traditional straight triple-rivet handles. Both use identical X50CrMoV15 steel and PEtec edge technology. Choose IKON if you cook frequently or professionally. The ergonomic benefit becomes very noticeable after 30+ minutes of continuous knife work. Choose Classic if you prefer traditional aesthetics and don\'t mind standard handle comfort.'
     },
     {
       question: 'How often do WÜSTHOF knives need sharpening?',
-      answer: 'With regular honing using the included steel (weekly for home use, daily for professional), full sharpening is needed every 6-12 months for home cooks or every 2-3 months under heavy professional use. The German X50CrMoV15 steel holds an edge very well—noticeably better than budget knives. When the honing steel can no longer restore sharpness, use a whetstone for proper sharpening. Never use pull-through sharpeners as they damage the precision edge.'
+      answer: 'With regular honing using the included steel (weekly for home use, daily for professional), full sharpening is needed every 6-12 months for home cooks or every 2-3 months under heavy professional use. The German X50CrMoV15 steel holds an edge very well, noticeably better than budget knives. When the honing steel can no longer restore sharpness, use a whetstone for proper sharpening. Never use pull-through sharpeners as they damage the precision edge.'
     },
     {
       question: 'Can WÜSTHOF knives go in the dishwasher?',
@@ -163,7 +163,7 @@ export const reviewData = {
     },
     {
       question: 'What size is the knife block and how much counter space does it need?',
-      answer: 'The hardwood block measures approximately 13" × 9" × 7" (varies slightly by wood type—acacia or walnut). This is substantial and requires permanent counter space. If counter space is limited, consider wall-mounted magnetic strips or individual knife storage, though you\'ll lose the convenience and protection the block provides. The block keeps knives organized, protected, and immediately accessible during cooking.'
+      answer: 'The hardwood block measures approximately 13" × 9" × 7" (varies slightly by wood type: acacia or walnut). This is substantial and requires permanent counter space. If counter space is limited, consider wall-mounted magnetic strips or individual knife storage, though you\'ll lose the convenience and protection the block provides. The block keeps knives organized, protected, and immediately accessible during cooking.'
     },
     {
       question: 'What does 58 HRC hardness mean for knife performance?',
@@ -179,11 +179,11 @@ export const reviewData = {
     },
     {
       question: 'What does full tang construction mean and why does it matter?',
-      answer: 'Full tang means the steel blade extends through the entire length of the handle—you can see it as the metal visible between the handle scales held by rivets. This provides three major benefits: superior balance (the weight is distributed throughout the entire knife), exceptional durability (the blade cannot separate from the handle), and longevity (properly maintained full-tang knives last decades or even generations). Partial-tang or rat-tail construction, found in cheaper knives, creates weak points where the blade can eventually separate from the handle.'
+      answer: 'Full tang means the steel blade extends through the entire length of the handle. You can see it as the metal visible between the handle scales held by rivets. This provides three major benefits: superior balance (the weight is distributed throughout the entire knife), exceptional durability (the blade cannot separate from the handle), and longevity (properly maintained full-tang knives last decades or even generations). Partial-tang or rat-tail construction, found in cheaper knives, creates weak points where the blade can eventually separate from the handle.'
     },
     {
       question: 'How do I properly maintain WÜSTHOF knives for maximum longevity?',
-      answer: 'Follow these professional maintenance practices: (1) Hand wash immediately after use with warm soapy water and dry completely—never leave knives wet or in the sink. (2) Hone before or after each use with the included steel to realign the edge. (3) Use proper cutting boards—wood or plastic only, never glass, stone, or ceramic which destroy edges. (4) Store in the block rather than loose in drawers where blades contact other utensils. (5) Professional sharpening or whetstone sharpening every 6-12 months for home use. Following these practices, WÜSTHOF knives easily last 20 years of regular use.'
+      answer: 'Follow these professional maintenance practices: (1) Hand wash immediately after use with warm soapy water and dry completely. Never leave knives wet or in the sink. (2) Hone before or after each use with the included steel to realign the edge. (3) Use proper cutting boards: wood or plastic only, never glass, stone, or ceramic which destroy edges. (4) Store in the block rather than loose in drawers where blades contact other utensils. (5) Professional sharpening or whetstone sharpening every 6-12 months for home use. Following these practices, WÜSTHOF knives easily last 20 years of regular use.'
     }
   ],
 
@@ -207,8 +207,8 @@ export const reviewData = {
   bottomLine: {
     title: 'The Bottom Line: My Professional Verdict',
     paragraphs: [
-      'This WÜSTHOF Classic IKON set has proven its worth in the demanding environment of professional kitchens. The ergonomic IKON handles make a noticeable difference during extended prep sessions—something you truly appreciate after hours of continuous knife work. The German-forged construction delivers reliable performance day after day, and the PEtec-enhanced edges hold sharpness remarkably well between maintenance sessions.',
-      'While not every knife in the set sees equal use (the slicer, for instance, rarely leaves the block), the essential pieces—chef\'s knife, santoku, bread knife, and paring knives—more than justify the investment. These four knives alone would cost significantly more purchased individually, making the set excellent value.'
+      'This WÜSTHOF Classic IKON set has proven its worth in the demanding environment of professional kitchens. The ergonomic IKON handles make a noticeable difference during extended prep sessions, something you truly appreciate after hours of continuous knife work. The German-forged construction delivers reliable performance day after day, and the PEtec-enhanced edges hold sharpness remarkably well between maintenance sessions.',
+      'While not every knife in the set sees equal use (the slicer, for instance, rarely leaves the block), the essential pieces (chef\'s knife, santoku, bread knife, and paring knives) more than justify the investment. These four knives alone would cost significantly more purchased individually, making the set excellent value.'
     ],
     ctaText: 'Check Price on Amazon →'
   },
