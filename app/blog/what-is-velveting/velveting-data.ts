@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const velvetingData = {
-  metadata: {
-    title: "What is Velveting: Chinese Restaurant Technique Explained",
-    description: "Learn the Chinese technique that makes restaurant stir-fry chicken impossibly tender. Understand the science of velveting, oil vs water methods, and how it compensates for home stove limitations.",
-    publishedDate: "2025-01-20",
-    lastUpdated: "2025-01-20",
-    primaryKeyword: "velveting",
-    secondaryKeywords: ["Chinese cooking technique", "tender stir-fry chicken", "blanching meat", "wok cooking"],
-    readTime: "13 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "What is Velveting"

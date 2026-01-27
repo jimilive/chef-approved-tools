@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const educationalData = {
-  metadata: {
-    title: "How to Sear Steaks Like a Restaurant Chef",
-    description: "Learn the professional steak searing techniques used in restaurant kitchens. 24 years of professional experience including high-volume restaurant operations reveals the secrets to perfect sears.",
-    publishedDate: "2025-09-10",
-    lastUpdated: "2024-09-27",
-    primaryKeyword: "how to sear steak",
-    secondaryKeywords: ["restaurant steak technique", "Maillard reaction", "cast iron steak", "perfect sear"],
-    readTime: "8 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "How to Sear Steaks Like a Restaurant Chef"

@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const educationalData = {
-  metadata: {
-    title: "Caramelization Science: Why Temperature Matters Most",
-    description: "Learn the chemistry behind caramelization and how heat transforms sugar into hundreds of complex flavor compounds used by professional chefs.",
-    publishedDate: "2025-09-19",
-    lastUpdated: "2025-10-24",
-    primaryKeyword: "caramelization",
-    secondaryKeywords: ["caramelized onions", "sugar chemistry", "flavor development", "browning"],
-    readTime: "9 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Caramelization Science: Why Temperature Matters Most"

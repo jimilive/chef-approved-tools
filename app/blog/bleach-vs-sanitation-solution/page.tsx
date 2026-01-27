@@ -15,6 +15,7 @@ import RelatedPosts from '@/components/blog/RelatedPosts'
 import AuthorBio from '@/components/review/AuthorBio'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { getBlogMetadata } from '@/data/metadata'
 
 // ISR: Regenerate every hour
 export const revalidate = 3600
@@ -23,12 +24,14 @@ export const revalidate = 3600
 export const metadata = generateBlogMetadata('bleach-vs-sanitation-solution')
 
 export default function BleachVsSanitationSolutionPage() {
+  const blogMeta = getBlogMetadata('bleach-vs-sanitation-solution')
+
   // Generate schemas from data
   const articleSchema = generateArticleSchema({
-    headline: bleachData.metadata.title,
-    description: bleachData.metadata.description,
-    datePublished: bleachData.metadata.publishedDate,
-    dateModified: bleachData.metadata.lastUpdated,
+    headline: blogMeta.title,
+    description: blogMeta.description,
+    datePublished: blogMeta.publishedDate,
+    dateModified: blogMeta.lastUpdated,
     authorName: 'Scott Bradley',
     urlPrefix: 'blog',
     urlSuffix: 'bleach-vs-sanitation-solution',
@@ -52,9 +55,8 @@ export default function BleachVsSanitationSolutionPage() {
       <BlogHero
         title={bleachData.hero.title}
         introduction={bleachData.hero.introduction}
-        publishedDate={bleachData.metadata.publishedDate}
-        lastUpdated={bleachData.metadata.lastUpdated}
-        readTime={bleachData.metadata.readTime}
+        publishedDate={blogMeta.publishedDate}
+        lastUpdated={blogMeta.lastUpdated}
       />
 
       {/* Quick Answer Section */}

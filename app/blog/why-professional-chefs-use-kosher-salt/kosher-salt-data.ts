@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const educationalData = {
-  metadata: {
-    title: "Why All Professional Cooks Use Kosher Salt",
-    description: "Discover why professional chefs prefer kosher salt. Learn about Diamond Crystal vs Morton, proper seasoning technique, and why it's essential in commercial kitchens.",
-    publishedDate: "2025-10-13",
-    lastUpdated: "2025-10-27",
-    primaryKeyword: "kosher salt",
-    secondaryKeywords: ["Diamond Crystal", "Morton kosher salt", "professional seasoning", "chef salt"],
-    readTime: "8 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Why All Professional Cooks Use Kosher Salt"

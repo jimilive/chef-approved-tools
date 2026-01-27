@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const bleachData = {
-  metadata: {
-    title: "Bleach vs Sanitation Solution: Which to Use",
-    description: "Professional chef explains chemical sanitation methods after 24 years in restaurant kitchens. Proper dilution ratios, contact time, and safety protocols. Critical food safety guide.",
-    publishedDate: "2025-11-20",
-    lastUpdated: "2025-11-20",
-    primaryKeyword: "bleach vs sanitizer",
-    secondaryKeywords: ["sanitation solution", "kitchen sanitation", "quat sanitizer", "food safety"],
-    readTime: "10 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Bleach vs Sanitation Solution"

@@ -1,13 +1,4 @@
 export const comparisonData = {
-  metadata: {
-    title: "Air Fryer vs Convection Oven: What's the Real Difference?",
-    description: "Professional chef explains air fryers and convection ovens use the same technology differently. One cooks faster, one handles more. Here's which you need.",
-    publishedDate: "2025-12-08",
-    lastUpdated: "2025-12-08",
-    primaryKeyword: "air fryer vs convection oven",
-    readTime: "10 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Air Fryer vs Convection Oven"

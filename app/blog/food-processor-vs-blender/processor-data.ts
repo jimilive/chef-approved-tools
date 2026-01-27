@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const processorData = {
-  metadata: {
-    title: "Food Processor vs Blender: When To Use Each",
-    description: "Professional chef explains the difference between blenders and food processors, when to use each, and which models perform best in real kitchens.",
-    publishedDate: "2025-09-28",
-    lastUpdated: "2025-11-14",
-    primaryKeyword: "food processor vs blender",
-    secondaryKeywords: ["blender vs food processor", "when to use food processor", "when to use blender"],
-    readTime: "12 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Food Processor vs Blender: When To Use Each"

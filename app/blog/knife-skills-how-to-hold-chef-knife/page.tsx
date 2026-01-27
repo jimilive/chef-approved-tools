@@ -15,6 +15,7 @@ import {
 } from '@/components/blog'
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA'
 import AuthorBio from '@/components/review/AuthorBio'
+import { getBlogMetadata } from '@/data/metadata'
 import { Hand, Target, AlertTriangle, CheckCircle2 } from 'lucide-react'
 
 // ISR: Regenerate every hour
@@ -24,12 +25,14 @@ export const revalidate = 3600
 export const metadata = generateBlogMetadata('knife-skills-how-to-hold-chef-knife')
 
 export default function KnifeSkillsPage() {
+  const blogMeta = getBlogMetadata('knife-skills-how-to-hold-chef-knife')
+
   // Generate schemas from data
   const articleSchema = generateArticleSchema({
-    headline: educationalData.metadata.title,
-    description: educationalData.metadata.description,
-    datePublished: educationalData.metadata.publishedDate,
-    dateModified: educationalData.metadata.lastUpdated,
+    headline: blogMeta.title,
+    description: blogMeta.description,
+    datePublished: blogMeta.publishedDate,
+    dateModified: blogMeta.lastUpdated,
     authorName: 'Scott Bradley',
     urlPrefix: 'blog',
     urlSuffix: 'knife-skills-how-to-hold-chef-knife',
@@ -121,9 +124,8 @@ export default function KnifeSkillsPage() {
         <BlogHero
           title={educationalData.hero.title}
           introduction={educationalData.hero.introduction}
-          publishedDate={educationalData.metadata.publishedDate}
-          lastUpdated={educationalData.metadata.lastUpdated}
-          readTime={educationalData.metadata.readTime}
+          publishedDate={blogMeta.publishedDate}
+          lastUpdated={blogMeta.lastUpdated}
         />
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">

@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const stainlessData = {
-  metadata: {
-    title: "How to Clean Burnt Stainless Steel Pans",
-    description: "Professional chef explains how to clean burnt stainless steel cookware using safe, effective methods. No harsh scrubbing or damage.",
-    publishedDate: "2025-10-18",
-    lastUpdated: "2025-10-21",
-    primaryKeyword: "clean burnt stainless steel",
-    secondaryKeywords: ["stainless steel pan cleaning", "remove burnt residue", "restore stainless cookware"],
-    readTime: "8 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "How to Clean Burnt Stainless Steel Pans"

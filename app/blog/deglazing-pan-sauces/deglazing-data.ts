@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const educationalData = {
-  metadata: {
-    title: "Deglazing & Pan Sauces: Turn Brown Bits Into Sauce",
-    description: "Master deglazing and pan sauces from a professional chef with 24 years of restaurant experience. Learn the technique, understand fond, and create restaurant-quality sauces at home in minutes.",
-    publishedDate: "2025-09-11",
-    lastUpdated: "2025-11-07",
-    primaryKeyword: "deglazing pan sauce",
-    secondaryKeywords: ["pan sauce recipe", "how to deglaze", "fond cooking", "restaurant sauce technique"],
-    readTime: "12 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Deglazing & Pan Sauces: Turn Brown Bits Into Sauce"

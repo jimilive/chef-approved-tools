@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const educationalData = {
-  metadata: {
-    title: "Why Fat is Flavor (And How to Use It Like a Pro)",
-    description: "Understanding why fat is fundamental to flavor—and how professional chefs use it to create dishes that taste exponentially better than home cooking.",
-    publishedDate: "2025-09-22",
-    lastUpdated: "2025-10-24",
-    primaryKeyword: "fat is flavor",
-    secondaryKeywords: ["cooking with fat", "butter finish", "flavor development", "restaurant cooking"],
-    readTime: "9 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Why Fat is Flavor"

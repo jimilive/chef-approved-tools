@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const mirepoixData = {
-  metadata: {
-    title: "What is Mirepoix and Why Professional Chefs Use It",
-    description: "Learn the French aromatic base that appears in professional kitchens worldwide. Understand the 2:1:1 ratio, dice sizes, cooking methods, and global variations.",
-    publishedDate: "2025-01-20",
-    lastUpdated: "2025-01-20",
-    primaryKeyword: "mirepoix",
-    secondaryKeywords: ["aromatic base", "French cooking", "holy trinity", "soffritto"],
-    readTime: "11 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "What is Mirepoix"

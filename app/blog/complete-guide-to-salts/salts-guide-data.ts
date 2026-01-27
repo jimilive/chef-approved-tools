@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const educationalData = {
-  metadata: {
-    title: "Cooking Salts Guide: Kosher vs Sea Salt vs Fleur de Sel",
-    description: "Understanding different types of salt, their uses in cooking, and why choosing the right salt actually matters for your food.",
-    publishedDate: "2025-10-05",
-    lastUpdated: "2025-10-24",
-    primaryKeyword: "cooking salts",
-    secondaryKeywords: ["kosher salt", "sea salt", "fleur de sel", "Diamond Crystal", "finishing salt"],
-    readTime: "7 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Cooking Salts Guide: Kosher vs Sea Salt vs Fleur de Sel"

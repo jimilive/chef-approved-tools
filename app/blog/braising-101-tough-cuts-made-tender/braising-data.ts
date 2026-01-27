@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const braisingData = {
-  metadata: {
-    title: "Braising 101: Turn Tough Cuts Into Fall-Apart Tender",
-    description: "Professional chef explains the art and science of braising, transforming tough cuts into tender, flavorful perfection through low, slow heat and control.",
-    publishedDate: "2025-09-25",
-    lastUpdated: "2025-10-21",
-    primaryKeyword: "braising",
-    secondaryKeywords: ["how to braise", "tough cuts", "slow cooking", "dutch oven braise"],
-    readTime: "8 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Braising 101: Turn Tough Cuts Into Fall-Apart Tender"

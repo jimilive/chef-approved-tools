@@ -14,15 +14,18 @@ import BlogFAQ from '@/components/blog/BlogFAQ';
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
 import AuthorBio from '@/components/review/AuthorBio';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
+import { getBlogMetadata } from '@/data/metadata'
 import { comparisonData } from './victorinox-wusthof-data';
 
 export const metadata = generateBlogMetadata('victorinox-budget-vs-wusthof-premium-knives');
 
+const blogMeta = getBlogMetadata('victorinox-budget-vs-wusthof-premium-knives')
+
 const articleSchema = generateArticleSchema({
   headline: comparisonData.hero.title,
-  description: comparisonData.metadata.description,
-  datePublished: comparisonData.metadata.publishedDate,
-  dateModified: comparisonData.metadata.lastUpdated,
+  description: blogMeta.description,
+  datePublished: blogMeta.publishedDate,
+  dateModified: blogMeta.lastUpdated,
   authorName: "Scott Bradley",
   urlPrefix: 'blog',
   urlSuffix: 'victorinox-budget-vs-wusthof-premium-knives'
@@ -58,9 +61,8 @@ export default function VictorinoxVsWusthofPage() {
         <BlogHero
           title={comparisonData.hero.title}
           introduction={comparisonData.hero.introduction}
-          publishedDate={comparisonData.metadata.publishedDate}
-          lastUpdated={comparisonData.metadata.lastUpdated}
-          readTime={comparisonData.metadata.readTime}
+          publishedDate={blogMeta.publishedDate}
+          lastUpdated={blogMeta.lastUpdated}
         />
 
         {/* Quick Answer Section */}

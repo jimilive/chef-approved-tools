@@ -4,24 +4,6 @@
 // Author: Scott Bradley
 
 export const educationalData = {
-  metadata: {
-    title: "How to Get Rust Off a Knife: 5 Methods That Actually Work",
-    description:
-      "Professional chef with 24 years experience shows how to remove rust from knives using vinegar, baking soda, and other proven methods. Plus prevention tips.",
-    publishedDate: "2026-01-19",
-    lastUpdated: "2026-01-19",
-    primaryKeyword: "how to get rust off a knife",
-    secondaryKeywords: [
-      "remove rust from knife",
-      "rusty knife fix",
-      "knife rust removal",
-      "how to clean rust off knife",
-      "rust on kitchen knife",
-      "carbon steel knife rust",
-    ],
-    readTime: "8 min read",
-  },
-
   breadcrumb: {
     category: "Knife Care",
     title: "How to Get Rust Off a Knife",

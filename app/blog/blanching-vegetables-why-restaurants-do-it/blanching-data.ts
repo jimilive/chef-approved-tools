@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const blanchingData = {
-  metadata: {
-    title: "Why Restaurant Vegetables Stay Vibrant (You Skip This)",
-    description: "Learn why professional kitchens blanch vegetables before service. Preserve color, texture, and flavor with a chef-tested method for perfect results.",
-    publishedDate: "2025-10-07",
-    lastUpdated: "2025-10-21",
-    primaryKeyword: "blanching vegetables",
-    secondaryKeywords: ["how to blanch vegetables", "blanching technique", "vegetable preparation", "professional cooking"],
-    readTime: "8 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Why Restaurant Vegetables Stay Vibrant"

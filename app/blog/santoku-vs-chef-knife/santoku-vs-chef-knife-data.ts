@@ -1,14 +1,4 @@
 export const comparisonData = {
-  metadata: {
-    title: "Santoku Knife vs Chef Knife: Which Style Should You Choose?",
-    description: "Santoku knife vs chef knife: what's the real difference? A professional chef with 24 years of kitchen experience explains which knife style is right for your cooking.",
-    publishedDate: "2026-01-08",
-    lastUpdated: "2026-01-08",
-    primaryKeyword: "santoku knife vs chef knife",
-    secondaryKeywords: ["santoku vs chef knife", "chef knife vs santoku", "chef's knife vs santoku knife", "santoku vs chef's knife"],
-    readTime: "14 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Santoku vs Chef Knife"

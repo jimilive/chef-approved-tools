@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const hotelPanData = {
-  metadata: {
-    title: "Hotel Pan System Review: The Professional Organization System Every Kitchen Needs",
-    description: "After 24 years in professional kitchens and 20 years using hotel pans at home, discover why every restaurant uses this system and how it eliminates Tupperware chaos.",
-    publishedDate: "2025-10-19",
-    lastUpdated: "2025-10-25",
-    primaryKeyword: "hotel pan system",
-    secondaryKeywords: ["hotel pans for home", "kitchen organization", "restaurant organization system"],
-    readTime: "15 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Hotel Pan System Guide"

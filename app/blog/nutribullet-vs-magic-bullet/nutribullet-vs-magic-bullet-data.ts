@@ -1,13 +1,4 @@
 export const comparisonData = {
-  metadata: {
-    title: "Nutribullet vs Magic Bullet: Which Personal Blender Should You Buy?",
-    description: "Professional chef compares Nutribullet and Magic Bullet blenders. Learn which offers better power, blending performance, and value for your smoothie-making needs.",
-    publishedDate: "2025-12-22",
-    lastUpdated: "2025-12-22",
-    primaryKeyword: "nutribullet vs magic bullet",
-    readTime: "12 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Nutribullet vs Magic Bullet"

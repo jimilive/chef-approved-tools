@@ -16,6 +16,7 @@ import {
 } from '@/components/blog'
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA'
 import AuthorBio from '@/components/review/AuthorBio'
+import { getBlogMetadata } from '@/data/metadata'
 
 // ISR: Regenerate every hour
 export const revalidate = 3600
@@ -24,12 +25,14 @@ export const revalidate = 3600
 export const metadata = generateBlogMetadata('benefits-cooking-with-garlic')
 
 export default function GarlicBenefitsPage() {
+  const blogMeta = getBlogMetadata('benefits-cooking-with-garlic')
+
   // Generate schemas from data
   const articleSchema = generateArticleSchema({
-    headline: garlicData.metadata.title,
-    description: garlicData.metadata.description,
-    datePublished: garlicData.metadata.publishedDate,
-    dateModified: garlicData.metadata.lastUpdated,
+    headline: blogMeta.title,
+    description: blogMeta.description,
+    datePublished: blogMeta.publishedDate,
+    dateModified: blogMeta.lastUpdated,
     authorName: 'Scott Bradley',
     urlPrefix: 'blog',
     urlSuffix: 'benefits-cooking-with-garlic',
@@ -73,9 +76,8 @@ export default function GarlicBenefitsPage() {
         <BlogHero
           title={garlicData.hero.title}
           introduction={garlicData.hero.introduction}
-          publishedDate={garlicData.metadata.publishedDate}
-          lastUpdated={garlicData.metadata.lastUpdated}
-          readTime={garlicData.metadata.readTime}
+          publishedDate={blogMeta.publishedDate}
+          lastUpdated={blogMeta.lastUpdated}
         />
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">

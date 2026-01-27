@@ -1,14 +1,4 @@
 export const comparisonData = {
-  metadata: {
-    title: "Victorinox vs Wüsthof Chef's Knife: Honest 24-Year Comparison",
-    description: "Victorinox vs Wüsthof chef knife comparison from a pro chef with 24 years experience. Which brand wins for your kitchen? Fair analysis of both.",
-    publishedDate: "2025-11-15",
-    lastUpdated: "2026-01-09",
-    primaryKeyword: "victorinox vs wusthof",
-    secondaryKeywords: ["wusthof vs victorinox", "victorinox vs wusthof chef knife", "victorinox or wusthof"],
-    readTime: "10 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Victorinox vs Wüsthof"

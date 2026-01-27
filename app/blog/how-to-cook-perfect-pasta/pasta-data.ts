@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const pastaData = {
-  metadata: {
-    title: "How to Cook Perfect Pasta: The Professional's Guide to Al Dente Every Time",
-    description: "Master pasta cooking from a professional chef with 24 years of restaurant experience. Learn proper water ratios, timing, salt levels, and the secret to restaurant-quality pasta at home.",
-    publishedDate: "2025-10-21",
-    lastUpdated: "2025-10-24",
-    primaryKeyword: "how to cook perfect pasta",
-    secondaryKeywords: ["al dente pasta", "pasta cooking technique", "restaurant pasta"],
-    readTime: "9 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "How to Cook Perfect Pasta"

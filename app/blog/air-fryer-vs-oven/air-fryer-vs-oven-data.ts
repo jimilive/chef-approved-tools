@@ -1,13 +1,4 @@
 export const comparisonData = {
-  metadata: {
-    title: "Air Fryer vs Oven: Which Cooking Appliance Should You Choose?",
-    description: "Professional chef compares air fryers and conventional ovens. Learn which cooks faster, uses less energy, and produces better results for your household size.",
-    publishedDate: "2025-12-21",
-    lastUpdated: "2025-12-21",
-    primaryKeyword: "air fryer vs oven",
-    readTime: "12 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Air Fryer vs Oven"

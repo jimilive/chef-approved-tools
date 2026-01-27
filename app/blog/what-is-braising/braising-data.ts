@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const braisingData = {
-  metadata: {
-    title: "What is Braising and Why It's So Profoundly Amazing",
-    description: "Learn the professional braising technique that transforms tough, cheap cuts into restaurant-quality meals. Master the science of collagen, proper liquid levels, and why low and slow wins.",
-    publishedDate: "2025-10-04",
-    lastUpdated: "2025-10-23",
-    primaryKeyword: "what is braising",
-    secondaryKeywords: ["braising", "braised meat", "short ribs", "slow cooking", "collagen"],
-    readTime: "7 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "What is Braising"

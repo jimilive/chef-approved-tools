@@ -16,6 +16,7 @@ import {
 } from '@/components/blog'
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA'
 import AuthorBio from '@/components/review/AuthorBio'
+import { getBlogMetadata } from '@/data/metadata'
 import { AlertTriangle, Lightbulb, Droplets, Beaker, Wine, Sparkles } from 'lucide-react'
 
 // ISR: Regenerate every hour
@@ -25,12 +26,14 @@ export const revalidate = 3600
 export const metadata = generateBlogMetadata('deglazing-pan-sauces')
 
 export default function DeglazingPanSaucesPage() {
+  const blogMeta = getBlogMetadata('deglazing-pan-sauces')
+
   // Generate schemas from data
   const articleSchema = generateArticleSchema({
-    headline: educationalData.metadata.title,
-    description: educationalData.metadata.description,
-    datePublished: educationalData.metadata.publishedDate,
-    dateModified: educationalData.metadata.lastUpdated,
+    headline: blogMeta.title,
+    description: blogMeta.description,
+    datePublished: blogMeta.publishedDate,
+    dateModified: blogMeta.lastUpdated,
     authorName: 'Scott Bradley',
     urlPrefix: 'blog',
     urlSuffix: 'deglazing-pan-sauces',
@@ -166,9 +169,8 @@ export default function DeglazingPanSaucesPage() {
         <BlogHero
           title={educationalData.hero.title}
           introduction={educationalData.hero.introduction}
-          publishedDate={educationalData.metadata.publishedDate}
-          lastUpdated={educationalData.metadata.lastUpdated}
-          readTime={educationalData.metadata.readTime}
+          publishedDate={blogMeta.publishedDate}
+          lastUpdated={blogMeta.lastUpdated}
         />
 
         {/* Introduction Section */}

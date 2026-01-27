@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const carbonData = {
-  metadata: {
-    title: "Buy Once, Cry Once: Why Cheap Tools Cost The Planet",
-    description: "Professional chef explains how quality kitchen equipment reduces waste and carbon footprint — why durability is the real sustainability in the kitchen.",
-    publishedDate: "2025-09-26",
-    lastUpdated: "2025-10-21",
-    primaryKeyword: "sustainable kitchen equipment",
-    secondaryKeywords: ["buy once cry once", "kitchen carbon footprint", "durable cookware"],
-    readTime: "8 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Buy Once, Cry Once: Why Cheap Tools Cost The Planet"

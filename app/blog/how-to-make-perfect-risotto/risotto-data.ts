@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const risottoData = {
-  metadata: {
-    title: "Perfect Risotto: Italian Restaurant Technique Explained",
-    description: "Master risotto from a professional chef with 24 years of restaurant experience. Learn proper technique, timing, stock selection, and the science behind perfectly creamy rice without cream.",
-    publishedDate: "2025-09-30",
-    lastUpdated: "2025-10-24",
-    primaryKeyword: "how to make risotto",
-    secondaryKeywords: ["risotto technique", "creamy risotto", "Italian risotto"],
-    readTime: "11 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Perfect Risotto: Italian Restaurant Technique Explained"

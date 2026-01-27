@@ -1,13 +1,4 @@
 export const comparisonData = {
-  metadata: {
-    title: "Ninja vs Vitamix: Which High-Performance Blender is Worth Your Money?",
-    description: "Professional chef compares Ninja and Vitamix blenders. Learn which offers better build quality, blending performance, and long-term value for your investment.",
-    publishedDate: "2025-12-21",
-    lastUpdated: "2025-12-21",
-    primaryKeyword: "ninja vs vitamix",
-    readTime: "12 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Ninja vs Vitamix"

@@ -4,23 +4,6 @@
 // Author: Scott Bradley
 
 export const educationalData = {
-  metadata: {
-    title: "Cooking by Feel: How Chefs Develop Kitchen Intuition",
-    description:
-      "Professional chef explains how to develop kitchen intuition through temperature awareness and patience. The skills that let chefs cook without timers or thermometers.",
-    publishedDate: "2026-01-19",
-    lastUpdated: "2026-01-19",
-    primaryKeyword: "cooking by feel",
-    secondaryKeywords: [
-      "kitchen intuition",
-      "cooking intuition",
-      "how chefs cook",
-      "cooking without recipes",
-      "chef instincts",
-    ],
-    readTime: "9 min read",
-  },
-
   breadcrumb: {
     category: "Cooking Techniques",
     title: "Cooking by Feel",

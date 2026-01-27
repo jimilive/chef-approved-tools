@@ -31,16 +31,6 @@ interface ComparisonTable {
 }
 
 export const educationalData = {
-  metadata: {
-    title: "Knife Storage: Protecting Your Blades for Decades",
-    description: "Learn how to store knives like a professional chef. Prevent dull edges, rust, and damage with proven storage techniques and chef-approved tools.",
-    publishedDate: "2025-09-13",
-    lastUpdated: "2025-11-07",
-    primaryKeyword: "knife storage",
-    secondaryKeywords: ["knife care", "how to store knives", "knife protection", "blade storage", "knife longevity"],
-    readTime: "12 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Knife Storage: Protecting Your Blades for Decades"

@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const preheatData = {
-  metadata: {
-    title: "How To Preheat A Pan (Most People Do This Wrong)",
-    description: "Professional chef explains the science of preheating stainless steel and cast iron pans. How to prevent sticking and achieve perfect sear every time.",
-    publishedDate: "2025-10-02",
-    lastUpdated: "2025-10-21",
-    primaryKeyword: "how to preheat a pan",
-    secondaryKeywords: ["preheat pan", "prevent sticking", "searing technique"],
-    readTime: "8 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "How To Preheat A Pan (Most People Do This Wrong)"

@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const educationalData = {
-  metadata: {
-    title: "Cookware Materials Explained: What Chefs Actually Use",
-    description: "Professional chef explains the pros and cons of stainless steel, cast iron, nonstick, carbon steel, and copper cookware, and which belong in your kitchen.",
-    publishedDate: "2025-10-14",
-    lastUpdated: "2025-10-21",
-    primaryKeyword: "cookware materials",
-    secondaryKeywords: ["stainless steel", "cast iron", "nonstick", "carbon steel", "copper cookware"],
-    readTime: "10 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Cookware Materials Explained"

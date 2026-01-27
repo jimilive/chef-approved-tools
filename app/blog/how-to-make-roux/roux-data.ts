@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const rouxData = {
-  metadata: {
-    title: "How to Make a Perfect Roux: The Foundation of Great Sauces",
-    description: "Learn how to make a roux the right way and master the foundation of countless professional sauces.",
-    publishedDate: "2025-09-24",
-    lastUpdated: "2025-10-24",
-    primaryKeyword: "how to make roux",
-    secondaryKeywords: ["roux", "béchamel", "white sauce", "dark roux", "gumbo"],
-    readTime: "10 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "How to Make a Perfect Roux"

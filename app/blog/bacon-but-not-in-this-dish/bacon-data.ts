@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const baconData = {
-  metadata: {
-    title: "Oh Sweet, Sweet Bacon: How I Love Thee (But Not in This Dish)",
-    description: "Learn when bacon overpowers dishes instead of enhancing them. Professional chef reveals 7 dishes where bacon doesn't belong and why restraint creates better food.",
-    publishedDate: "2025-10-23",
-    lastUpdated: "2025-10-24",
-    primaryKeyword: "when not to use bacon",
-    secondaryKeywords: ["bacon overuse", "bacon in cooking", "cooking restraint", "flavor balance"],
-    readTime: "7 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "When NOT to Use Bacon"

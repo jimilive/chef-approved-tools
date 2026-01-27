@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const pizzastoneData = {
-  metadata: {
-    title: "How to Use a Pizza Stone: Professional Techniques for Home Ovens",
-    description: "Master pizza stone technique for home ovens. Learn why 45-60 minute preheat is essential, how to prevent thermal shock, and the differences between stone and steel for crispy crusts.",
-    publishedDate: "2025-01-20",
-    lastUpdated: "2025-01-20",
-    primaryKeyword: "how to use pizza stone",
-    secondaryKeywords: ["pizza stone preheat", "pizza stone cracking", "pizza stone vs steel"],
-    readTime: "14 min read"
-  },
-
   faq: {
     questions: [
       {

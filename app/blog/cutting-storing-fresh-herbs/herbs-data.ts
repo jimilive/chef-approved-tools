@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const herbsData = {
-  metadata: {
-    title: "How To Cut & Store Fresh Herbs (Stay Fresh For Weeks)",
-    description: "Master professional techniques for cutting, storing, and preserving fresh herbs. Learn why technique matters and how to keep herbs fresh for days.",
-    publishedDate: "2025-09-14",
-    lastUpdated: "2025-10-24",
-    primaryKeyword: "how to store fresh herbs",
-    secondaryKeywords: ["cutting herbs", "herb storage", "keep herbs fresh"],
-    readTime: "8 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "How To Cut & Store Fresh Herbs (Stay Fresh For Weeks)"

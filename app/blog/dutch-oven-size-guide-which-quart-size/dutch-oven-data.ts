@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const dutchOvenData = {
-  metadata: {
-    title: "Dutch Oven Size Guide: 5.5-Qt vs 7-Qt for Your Family",
-    description: "A professional chef's guide to choosing the right Dutch oven size for soups, bread, braises, and everyday cooking. Learn what size fits your kitchen best.",
-    publishedDate: "2025-09-06",
-    lastUpdated: "2025-10-21",
-    primaryKeyword: "dutch oven size guide",
-    secondaryKeywords: ["dutch oven size", "what size dutch oven", "5.5 vs 7 quart dutch oven"],
-    readTime: "8 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Dutch Oven Size Guide: 5.5-Qt vs 7-Qt for Your Family"

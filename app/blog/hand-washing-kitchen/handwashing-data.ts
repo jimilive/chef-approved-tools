@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const handwashingData = {
-  metadata: {
-    title: "Hand-Washing in the Kitchen: The Right Way",
-    description: "Professional chef teaches proper hand-washing technique after 24 years in restaurant kitchens. Prevents foodborne illness through critical 20-second protocol. Master immediately.",
-    publishedDate: "2025-11-20",
-    lastUpdated: "2025-11-20",
-    primaryKeyword: "kitchen hand washing",
-    secondaryKeywords: ["hand washing technique", "food safety hand washing", "proper hand washing"],
-    readTime: "7 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Hand-Washing in the Kitchen"

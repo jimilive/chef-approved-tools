@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const educationalData = {
-  metadata: {
-    title: "How to Steel a Knife (The Right Way to Hone Like a Chef)",
-    description: "Learn how to steel a knife properly using a honing steel. Professional chef guide to honing vs sharpening, perfect technique, and top tool recommendations.",
-    publishedDate: "2025-09-13",
-    lastUpdated: "2025-09-13",
-    primaryKeyword: "how to steel a knife",
-    secondaryKeywords: ["honing steel", "knife honing", "sharpening vs honing", "honing technique"],
-    readTime: "6 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "How to Steel a Knife"

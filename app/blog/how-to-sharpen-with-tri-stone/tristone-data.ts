@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const tristoneData = {
-  metadata: {
-    title: "How to Sharpen with a Stone: Professional Technique",
-    description: "Professional chef shares technique perfected over 6 years in restaurant kitchen. Step-by-step guide: angles, pressure, three-stage progression, troubleshooting.",
-    publishedDate: "2025-10-16",
-    lastUpdated: "2025-10-16",
-    primaryKeyword: "how to sharpen knife with whetstone",
-    secondaryKeywords: ["knife sharpening", "tri-stone sharpener", "Norton IM200"],
-    readTime: "8 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "How to Sharpen with a Stone: Professional Technique"

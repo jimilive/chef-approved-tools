@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const garlicData = {
-  metadata: {
-    title: "The Benefits of Cooking with Garlic",
-    description: "Why garlic is essential in cooking—health benefits, flavor science, and professional techniques for using this powerful ingredient properly.",
-    publishedDate: "2025-10-22",
-    lastUpdated: "2025-10-24",
-    primaryKeyword: "cooking with garlic",
-    secondaryKeywords: ["garlic health benefits", "garlic techniques", "how to cook garlic", "garlic flavor"],
-    readTime: "7 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Benefits of Cooking with Garlic"

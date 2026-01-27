@@ -11,17 +11,20 @@ import {
   BlogEmailCapture
 } from '@/components/blog'
 import AuthorBio from '@/components/review/AuthorBio'
+import { getBlogMetadata } from '@/data/metadata'
 
 export const revalidate = 3600
 
 export const metadata = generateBlogMetadata('ninja-vs-vitamix')
 
 export default function NinjaVsVitamix() {
+  const blogMeta = getBlogMetadata('ninja-vs-vitamix')
+
   const articleSchema = generateArticleSchema({
-    headline: comparisonData.metadata.title,
-    description: comparisonData.metadata.description,
-    datePublished: comparisonData.metadata.publishedDate,
-    dateModified: comparisonData.metadata.lastUpdated,
+    headline: blogMeta.title,
+    description: blogMeta.description,
+    datePublished: blogMeta.publishedDate,
+    dateModified: blogMeta.lastUpdated,
     authorName: 'Scott Bradley',
     urlPrefix: 'blog',
     urlSuffix: 'ninja-vs-vitamix',
@@ -46,9 +49,8 @@ export default function NinjaVsVitamix() {
         <BlogHero
           title={comparisonData.hero.title}
           introduction={comparisonData.hero.introduction}
-          publishedDate={comparisonData.metadata.publishedDate}
-          lastUpdated={comparisonData.metadata.lastUpdated}
-          readTime={comparisonData.metadata.readTime}
+          publishedDate={blogMeta.publishedDate}
+          lastUpdated={blogMeta.lastUpdated}
         />
 
         <BlogQuickAnswer

@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const educationalData = {
-  metadata: {
-    title: "Mis en Place: The Foundation of Professional Cooking",
-    description: "Learn why mise en place is the foundation of every professional kitchen. Master the organization and prep techniques that make cooking faster, cleaner, and more enjoyable.",
-    publishedDate: "2025-09-21",
-    lastUpdated: "2025-10-24",
-    primaryKeyword: "mise en place",
-    secondaryKeywords: ["kitchen prep", "cooking organization", "professional cooking", "prep work"],
-    readTime: "8 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Mis en Place"

@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const breadData = {
-  metadata: {
-    title: "Why Bread Gets Dense: Gluten Development Explained",
-    description: "The chemistry of gluten formation, kneading techniques, and how to troubleshoot bread problems. From a chef with 24 years of professional baking experience.",
-    publishedDate: "2025-10-18",
-    lastUpdated: "2025-10-24",
-    primaryKeyword: "gluten development",
-    secondaryKeywords: ["bread science", "kneading dough", "windowpane test", "bread baking"],
-    readTime: "10 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Why Bread Gets Dense: Gluten Development Explained"

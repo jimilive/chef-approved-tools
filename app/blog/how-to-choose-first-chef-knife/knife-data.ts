@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const knifeData = {
-  metadata: {
-    title: "How to Choose Your First Chef Knife (Like a Professional Chef)",
-    description: "Learn how to choose your first chef knife from a professional chef. Understand balance, steel type, blade length, and why comfort matters more than price.",
-    publishedDate: "2025-10-10",
-    lastUpdated: "2025-10-21",
-    primaryKeyword: "how to choose chef knife",
-    secondaryKeywords: ["first chef knife", "chef knife buying guide", "best chef knife for beginners"],
-    readTime: "8 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "How to Choose Your First Chef Knife"

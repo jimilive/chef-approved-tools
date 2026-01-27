@@ -1,13 +1,4 @@
 export const comparisonData = {
-  metadata: {
-    title: "Air Fryer vs Toaster Oven: Which Should You Buy?",
-    description: "Professional chef compares air fryers and toaster ovens. Learn which delivers crispier results, better versatility, and the best value for your cooking needs.",
-    publishedDate: "2025-12-21",
-    lastUpdated: "2025-12-21",
-    primaryKeyword: "air fryer vs toaster oven",
-    readTime: "12 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Air Fryer vs Toaster Oven"

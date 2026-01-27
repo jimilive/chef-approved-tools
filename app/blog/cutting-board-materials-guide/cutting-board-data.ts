@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const educationalData = {
-  metadata: {
-    title: "Cutting Board Materials: Wood vs Plastic (Why Wood Wins)",
-    description: "Chef Scott Bradley explains the pros and cons of wood, plastic, rubber, and bamboo cutting boards, and which are best for your knives and kitchen.",
-    publishedDate: "2025-10-05",
-    lastUpdated: "2025-10-21",
-    primaryKeyword: "cutting board materials",
-    secondaryKeywords: ["wood cutting board", "plastic cutting board", "end grain", "bamboo cutting board"],
-    readTime: "8 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Cutting Board Materials: Wood vs Plastic (Why Wood Wins)"

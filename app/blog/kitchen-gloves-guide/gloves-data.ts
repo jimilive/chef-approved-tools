@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const glovesData = {
-  metadata: {
-    title: "Essential Guide to Kitchen Gloves: Professional Safety Protocols",
-    description: "Learn professional kitchen glove safety from chef with 24 years restaurant experience. Single-use, cut-resistant, and proper layering techniques.",
-    publishedDate: "2025-09-23",
-    lastUpdated: "2025-09-23",
-    primaryKeyword: "kitchen gloves",
-    secondaryKeywords: ["cut-resistant gloves", "nitrile gloves", "food safety gloves", "mandoline safety"],
-    readTime: "9 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Essential Guide to Kitchen Gloves"

@@ -1,13 +1,4 @@
 export const comparisonData = {
-  metadata: {
-    title: "Toaster Oven vs Slot Toaster: Which Should You Buy?",
-    description: "Professional chef compares toaster ovens and slot toasters on speed, energy use, toast quality, and versatility. Clear winner depends on how you cook.",
-    publishedDate: "2025-12-08",
-    lastUpdated: "2025-12-08",
-    primaryKeyword: "toaster oven vs toaster",
-    readTime: "9 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Toaster Oven vs Slot Toaster"

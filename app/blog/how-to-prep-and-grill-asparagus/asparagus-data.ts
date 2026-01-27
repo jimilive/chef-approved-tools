@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const asparagusData = {
-  metadata: {
-    title: "How to Prep and Grill Asparagus",
-    description: "Professional chef teaches asparagus grilling after 24 years in restaurant kitchens. High heat, minimal time, and the bending trick for perfect spears. Master in 10 minutes.",
-    publishedDate: "2025-11-20",
-    lastUpdated: "2025-11-20",
-    primaryKeyword: "how to grill asparagus",
-    secondaryKeywords: ["grilled asparagus", "asparagus prep", "bending trick asparagus"],
-    readTime: "7 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "How to Prep and Grill Asparagus"

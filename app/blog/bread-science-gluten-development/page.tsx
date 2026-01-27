@@ -16,6 +16,7 @@ import {
 } from '@/components/blog'
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA'
 import AuthorBio from '@/components/review/AuthorBio'
+import { getBlogMetadata } from '@/data/metadata'
 
 // ISR: Regenerate every hour
 export const revalidate = 3600
@@ -24,12 +25,14 @@ export const revalidate = 3600
 export const metadata = generateBlogMetadata('bread-science-gluten-development')
 
 export default function BreadSciencePage() {
+  const blogMeta = getBlogMetadata('bread-science-gluten-development')
+
   // Generate schemas from data
   const articleSchema = generateArticleSchema({
-    headline: breadData.metadata.title,
-    description: breadData.metadata.description,
-    datePublished: breadData.metadata.publishedDate,
-    dateModified: breadData.metadata.lastUpdated,
+    headline: blogMeta.title,
+    description: blogMeta.description,
+    datePublished: blogMeta.publishedDate,
+    dateModified: blogMeta.lastUpdated,
     authorName: 'Scott Bradley',
     urlPrefix: 'blog',
     urlSuffix: 'bread-science-gluten-development',
@@ -54,9 +57,8 @@ export default function BreadSciencePage() {
         <BlogHero
           title={breadData.hero.title}
           introduction={breadData.hero.introduction}
-          publishedDate={breadData.metadata.publishedDate}
-          lastUpdated={breadData.metadata.lastUpdated}
-          readTime={breadData.metadata.readTime}
+          publishedDate={blogMeta.publishedDate}
+          lastUpdated={blogMeta.lastUpdated}
         />
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">

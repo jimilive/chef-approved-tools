@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const onionsData = {
-  metadata: {
-    title: "Why Caramelized Onions Take 45 Minutes (Not 10)",
-    description: "Professional chef explains the real process of caramelizing onions — why patience, temperature, and technique matter more than shortcuts.",
-    publishedDate: "2025-09-19",
-    lastUpdated: "2025-10-21",
-    primaryKeyword: "caramelized onions",
-    secondaryKeywords: ["how to caramelize onions", "onion cooking tips", "caramelization science"],
-    readTime: "8 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Why Caramelized Onions Take 45 Minutes (Not 10)"

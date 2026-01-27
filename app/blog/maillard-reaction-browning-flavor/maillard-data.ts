@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const educationalData = {
-  metadata: {
-    title: "The Maillard Reaction: Why Browning = Flavor",
-    description: "Learn the food science behind perfect browning from a chef with 24 years of professional kitchen experience. Master the Maillard reaction for restaurant-quality flavor at home.",
-    publishedDate: "2025-09-05",
-    lastUpdated: "2025-10-23",
-    primaryKeyword: "maillard reaction",
-    secondaryKeywords: ["browning", "searing", "food science", "flavor development"],
-    readTime: "7 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "The Maillard Reaction: Why Browning = Flavor"

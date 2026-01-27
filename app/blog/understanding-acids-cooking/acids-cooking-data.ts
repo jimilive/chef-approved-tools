@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const educationalData = {
-  metadata: {
-    title: "Understanding Acids in Cooking: The Secret to Balanced Flavor",
-    description: "Why acids are the most underused tool in home cooking, and how professional chefs use them to transform flat, one-dimensional food into bright, balanced dishes.",
-    publishedDate: "2025-10-25",
-    lastUpdated: "2025-10-24",
-    primaryKeyword: "acids in cooking",
-    secondaryKeywords: ["lemon juice", "vinegar", "flavor balance", "brightening dishes"],
-    readTime: "9 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Understanding Acids in Cooking"

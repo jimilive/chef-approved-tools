@@ -1,13 +1,4 @@
 export const comparisonData = {
-  metadata: {
-    title: "Air Fryer vs Deep Fryer: Which Makes Better Fried Food?",
-    description: "Professional chef compares air fryers and deep fryers on taste, health, and results. Air frying uses 70-80% less oil but does it match deep-fried quality?",
-    publishedDate: "2025-12-08",
-    lastUpdated: "2025-12-08",
-    primaryKeyword: "air fryer vs deep fryer",
-    readTime: "10 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Air Fryer vs Deep Fryer"

@@ -1,13 +1,4 @@
 export const comparisonData = {
-  metadata: {
-    title: "Immersion vs Countertop Blender: Why You Need Both",
-    description: "Countertop crushes ice and makes smoothies. Immersion purees soup in the pot with zero cleanup. When each shines + $60 immersion pick that rivals $300 models.",
-    publishedDate: "2025-11-09",
-    lastUpdated: "2025-11-09",
-    primaryKeyword: "immersion blender vs countertop blender",
-    readTime: "12 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Immersion vs Countertop Blender"

@@ -15,6 +15,7 @@ import {
   BlogEmailCapture
 } from '@/components/blog'
 import AuthorBio from '@/components/review/AuthorBio'
+import { getBlogMetadata } from '@/data/metadata'
 
 // ISR: Regenerate every hour
 export const revalidate = 3600
@@ -23,12 +24,14 @@ export const revalidate = 3600
 export const metadata = generateBlogMetadata('why-professional-chefs-use-kosher-salt')
 
 export default function WhyChefsUseKosherSaltPage() {
+  const blogMeta = getBlogMetadata('why-professional-chefs-use-kosher-salt')
+
   // Generate schemas from data
   const articleSchema = generateArticleSchema({
-    headline: educationalData.metadata.title,
-    description: educationalData.metadata.description,
-    datePublished: educationalData.metadata.publishedDate,
-    dateModified: educationalData.metadata.lastUpdated,
+    headline: blogMeta.title,
+    description: blogMeta.description,
+    datePublished: blogMeta.publishedDate,
+    dateModified: blogMeta.lastUpdated,
     authorName: 'Scott Bradley',
     urlPrefix: 'blog',
     urlSuffix: 'why-professional-chefs-use-kosher-salt',
@@ -127,9 +130,8 @@ export default function WhyChefsUseKosherSaltPage() {
         <BlogHero
           title={educationalData.hero.title}
           introduction={educationalData.hero.introduction}
-          publishedDate={educationalData.metadata.publishedDate}
-          lastUpdated={educationalData.metadata.lastUpdated}
-          readTime={educationalData.metadata.readTime}
+          publishedDate={blogMeta.publishedDate}
+          lastUpdated={blogMeta.lastUpdated}
         />
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">

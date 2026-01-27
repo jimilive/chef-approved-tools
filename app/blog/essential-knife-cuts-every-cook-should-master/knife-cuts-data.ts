@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const educationalData = {
-  metadata: {
-    title: "5 Knife Cuts Every Cook Should Master (With Photos)",
-    description: "Learn the five professional knife cuts—dice, julienne, chiffonade, mince, and bias—taught by chef Scott Bradley. Technique, precision, and practice tips for home cooks.",
-    publishedDate: "2025-10-12",
-    lastUpdated: "2025-11-07",
-    primaryKeyword: "knife cuts",
-    secondaryKeywords: ["dice cut", "julienne", "chiffonade", "mince", "knife skills"],
-    readTime: "12 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "5 Knife Cuts Every Cook Should Master"

@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const wastingmoneyData = {
-  metadata: {
-    title: "10 Kitchen Tools You're Wasting Money On (And What to Buy Instead)",
-    description: "Professional chef breaks down the 10 kitchen tools most home cooks waste money on and shares which essential tools professionals actually use instead.",
-    publishedDate: "2025-09-04",
-    lastUpdated: "2025-10-21",
-    primaryKeyword: "kitchen tools wasting money",
-    secondaryKeywords: ["essential kitchen tools", "kitchen gadgets waste", "professional chef tools"],
-    readTime: "8 min read"
-  },
-
   faq: {
     questions: [
       {

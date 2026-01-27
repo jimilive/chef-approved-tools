@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const marinaraData = {
-  metadata: {
-    title: "How to Make Marinara Sauce: Authentic Italian Technique",
-    description: "Learn authentic Italian marinara sauce technique. Understand why 30-45 minutes is optimal, why quality tomatoes need no sugar, and the mistakes that ruin most homemade marinara.",
-    publishedDate: "2025-01-20",
-    lastUpdated: "2025-01-20",
-    primaryKeyword: "how to make marinara sauce",
-    secondaryKeywords: ["authentic marinara", "Italian tomato sauce", "quick marinara recipe"],
-    readTime: "10 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "How to Make Marinara Sauce"

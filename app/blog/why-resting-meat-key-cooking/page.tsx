@@ -16,6 +16,7 @@ import {
 } from '@/components/blog'
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA'
 import AuthorBio from '@/components/review/AuthorBio'
+import { getBlogMetadata } from '@/data/metadata'
 
 // ISR: Regenerate every hour
 export const revalidate = 3600
@@ -24,12 +25,14 @@ export const revalidate = 3600
 export const metadata = generateBlogMetadata('why-resting-meat-key-cooking')
 
 export default function RestingMeatPage() {
+  const blogMeta = getBlogMetadata('why-resting-meat-key-cooking')
+
   // Generate schemas from data
   const articleSchema = generateArticleSchema({
-    headline: restingMeatData.metadata.title,
-    description: restingMeatData.metadata.description,
-    datePublished: restingMeatData.metadata.publishedDate,
-    dateModified: restingMeatData.metadata.lastUpdated,
+    headline: blogMeta.title,
+    description: blogMeta.description,
+    datePublished: blogMeta.publishedDate,
+    dateModified: blogMeta.lastUpdated,
     authorName: 'Scott Bradley',
     urlPrefix: 'blog',
     urlSuffix: 'why-resting-meat-key-cooking',
@@ -132,9 +135,8 @@ export default function RestingMeatPage() {
         <BlogHero
           title={restingMeatData.hero.title}
           introduction={restingMeatData.hero.introduction}
-          publishedDate={restingMeatData.metadata.publishedDate}
-          lastUpdated={restingMeatData.metadata.lastUpdated}
-          readTime={restingMeatData.metadata.readTime}
+          publishedDate={blogMeta.publishedDate}
+          lastUpdated={blogMeta.lastUpdated}
         />
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">

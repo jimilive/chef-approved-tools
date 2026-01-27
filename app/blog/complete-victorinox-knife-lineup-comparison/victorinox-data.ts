@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const victorinoxData = {
-  metadata: {
-    title: "Complete Victorinox Knife Lineup: Comparing All 5 Models for Your Kitchen",
-    description: "After 24 years of professional kitchen experience, here's exactly which Victorinox knives you actually need, and which ones you can skip. Strategic buying guide for the complete Fibrox lineup.",
-    publishedDate: "2025-11-15",
-    lastUpdated: "2025-11-15",
-    primaryKeyword: "victorinox knife comparison",
-    secondaryKeywords: ["victorinox fibrox lineup", "best victorinox knives", "kitchen knife buying guide"],
-    readTime: "15 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Complete Victorinox Knife Lineup: Comparing All 5 Models"

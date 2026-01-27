@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const umamiData = {
-  metadata: {
-    title: "Understanding Umami: The Fifth Taste That Makes Food Delicious",
-    description: "What umami is, the science behind glutamate and nucleotides, and how to use umami to make food taste incredible. From a chef with 24 years of professional experience.",
-    publishedDate: "2025-09-16",
-    lastUpdated: "2025-10-24",
-    primaryKeyword: "umami",
-    secondaryKeywords: ["fifth taste", "glutamate", "MSG", "savory flavor"],
-    readTime: "9 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Understanding Umami"

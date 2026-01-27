@@ -16,6 +16,7 @@ import {
   BlogEmailCapture
 } from '@/components/blog'
 import AuthorBio from '@/components/review/AuthorBio'
+import { getBlogMetadata } from '@/data/metadata'
 
 // ISR: Regenerate every hour
 export const revalidate = 3600
@@ -24,12 +25,14 @@ export const revalidate = 3600
 export const metadata = generateBlogMetadata('carbon-footprint-kitchen-equipment-buy-once-cry-once')
 
 export default function CarbonFootprintKitchenEquipmentPage() {
+  const blogMeta = getBlogMetadata('carbon-footprint-kitchen-equipment-buy-once-cry-once')
+
   // Generate schemas from data
   const articleSchema = generateArticleSchema({
-    headline: carbonData.metadata.title,
-    description: carbonData.metadata.description,
-    datePublished: carbonData.metadata.publishedDate,
-    dateModified: carbonData.metadata.lastUpdated,
+    headline: blogMeta.title,
+    description: blogMeta.description,
+    datePublished: blogMeta.publishedDate,
+    dateModified: blogMeta.lastUpdated,
     authorName: 'Scott Bradley',
     urlPrefix: 'blog',
     urlSuffix: 'carbon-footprint-kitchen-equipment-buy-once-cry-once',
@@ -54,9 +57,8 @@ export default function CarbonFootprintKitchenEquipmentPage() {
         <BlogHero
           title={carbonData.hero.title}
           introduction={carbonData.hero.introduction}
-          publishedDate={carbonData.metadata.publishedDate}
-          lastUpdated={carbonData.metadata.lastUpdated}
-          readTime={carbonData.metadata.readTime}
+          publishedDate={blogMeta.publishedDate}
+          lastUpdated={blogMeta.lastUpdated}
         />
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">

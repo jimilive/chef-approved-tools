@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const tomatoesData = {
-  metadata: {
-    title: "Cooking with Tomatoes: Fresh vs Canned",
-    description: "Understanding when to use fresh tomatoes versus canned tomatoes, and how to get the best results from each in your cooking.",
-    publishedDate: "2025-10-08",
-    lastUpdated: "2025-10-24",
-    primaryKeyword: "fresh vs canned tomatoes",
-    secondaryKeywords: ["cooking with tomatoes", "when to use canned tomatoes", "tomato cooking guide"],
-    readTime: "7 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Cooking with Tomatoes: Fresh vs Canned"

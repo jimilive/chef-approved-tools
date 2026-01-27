@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const coffeeData = {
-  metadata: {
-    title: "How to Make Perfect French Press Coffee Every Time",
-    description: "Master French press coffee with 24 years of professional experience. Learn the perfect ratio, step-by-step technique, common mistakes to avoid, and pro tips for cafe-quality coffee at home.",
-    publishedDate: "2025-10-24",
-    lastUpdated: "2025-10-24",
-    primaryKeyword: "how to make french press coffee",
-    secondaryKeywords: ["french press technique", "french press ratio", "perfect french press"],
-    readTime: "9 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "How to Make Perfect French Press Coffee"

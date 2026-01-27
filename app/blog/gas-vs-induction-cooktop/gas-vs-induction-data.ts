@@ -1,13 +1,4 @@
 export const comparisonData = {
-  metadata: {
-    title: "Gas vs Induction Cooktops: Why I Switched After 24 Years",
-    description: "Induction boils water 2x faster and wastes 50% less energy. Gas offers instant visual control. Cost analysis + which matches your cooking style.",
-    publishedDate: "2025-11-09",
-    lastUpdated: "2025-11-09",
-    primaryKeyword: "gas vs induction cooktop",
-    readTime: "11 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Gas vs Induction Cooktops"

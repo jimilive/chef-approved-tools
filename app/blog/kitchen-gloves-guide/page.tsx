@@ -15,6 +15,7 @@ import {
   BlogEmailCapture
 } from '@/components/blog'
 import AuthorBio from '@/components/review/AuthorBio'
+import { getBlogMetadata } from '@/data/metadata'
 
 // ISR: Regenerate every hour
 export const revalidate = 3600
@@ -23,12 +24,14 @@ export const revalidate = 3600
 export const metadata = generateBlogMetadata('kitchen-gloves-guide')
 
 export default function KitchenGlovesGuide() {
+  const blogMeta = getBlogMetadata('kitchen-gloves-guide')
+
   // Generate schemas from data
   const articleSchema = generateArticleSchema({
-    headline: glovesData.metadata.title,
-    description: glovesData.metadata.description,
-    datePublished: glovesData.metadata.publishedDate,
-    dateModified: glovesData.metadata.lastUpdated,
+    headline: blogMeta.title,
+    description: blogMeta.description,
+    datePublished: blogMeta.publishedDate,
+    dateModified: blogMeta.lastUpdated,
     authorName: 'Scott Bradley',
     urlPrefix: 'blog',
     urlSuffix: 'kitchen-gloves-guide',
@@ -148,9 +151,8 @@ export default function KitchenGlovesGuide() {
         <BlogHero
           title={glovesData.hero.title}
           introduction={glovesData.hero.introduction}
-          publishedDate={glovesData.metadata.publishedDate}
-          lastUpdated={glovesData.metadata.lastUpdated}
-          readTime={glovesData.metadata.readTime}
+          publishedDate={blogMeta.publishedDate}
+          lastUpdated={blogMeta.lastUpdated}
         />
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">

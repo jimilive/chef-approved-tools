@@ -10,17 +10,20 @@ import {
   BlogEmailCapture
 } from '@/components/blog'
 import AuthorBio from '@/components/review/AuthorBio'
+import { getBlogMetadata } from '@/data/metadata'
 
 export const revalidate = 3600
 
 export const metadata = generateBlogMetadata('knife-storage-protecting-blades-for-decades')
 
 export default function KnifeStorageProtectionPage() {
+  const blogMeta = getBlogMetadata('knife-storage-protecting-blades-for-decades')
+
   const articleSchema = generateArticleSchema({
-    headline: educationalData.metadata.title,
-    description: educationalData.metadata.description,
-    datePublished: educationalData.metadata.publishedDate,
-    dateModified: educationalData.metadata.lastUpdated,
+    headline: blogMeta.title,
+    description: blogMeta.description,
+    datePublished: blogMeta.publishedDate,
+    dateModified: blogMeta.lastUpdated,
     authorName: 'Scott Bradley',
     urlPrefix: 'blog',
     urlSuffix: 'knife-storage-protecting-blades-for-decades',
@@ -59,9 +62,8 @@ export default function KnifeStorageProtectionPage() {
         <BlogHero
           title={educationalData.hero.title}
           introduction={educationalData.hero.introduction}
-          publishedDate={educationalData.metadata.publishedDate}
-          lastUpdated={educationalData.metadata.lastUpdated}
-          readTime={educationalData.metadata.readTime}
+          publishedDate={blogMeta.publishedDate}
+          lastUpdated={blogMeta.lastUpdated}
         />
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">

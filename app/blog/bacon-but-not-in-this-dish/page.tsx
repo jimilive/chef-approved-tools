@@ -16,6 +16,7 @@ import {
 } from '@/components/blog'
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA'
 import AuthorBio from '@/components/review/AuthorBio'
+import { getBlogMetadata } from '@/data/metadata'
 
 // ISR: Regenerate every hour
 export const revalidate = 3600
@@ -24,12 +25,14 @@ export const revalidate = 3600
 export const metadata = generateBlogMetadata('bacon-but-not-in-this-dish')
 
 export default function BaconButNotInThisDishPage() {
+  const blogMeta = getBlogMetadata('bacon-but-not-in-this-dish')
+
   // Generate schemas from data
   const articleSchema = generateArticleSchema({
-    headline: baconData.metadata.title,
-    description: baconData.metadata.description,
-    datePublished: baconData.metadata.publishedDate,
-    dateModified: baconData.metadata.lastUpdated,
+    headline: blogMeta.title,
+    description: blogMeta.description,
+    datePublished: blogMeta.publishedDate,
+    dateModified: blogMeta.lastUpdated,
     authorName: 'Scott Bradley',
     urlPrefix: 'blog',
     urlSuffix: 'bacon-but-not-in-this-dish',
@@ -79,9 +82,8 @@ export default function BaconButNotInThisDishPage() {
         <BlogHero
           title={baconData.hero.title}
           introduction={baconData.hero.introduction}
-          publishedDate={baconData.metadata.publishedDate}
-          lastUpdated={baconData.metadata.lastUpdated}
-          readTime={baconData.metadata.readTime}
+          publishedDate={blogMeta.publishedDate}
+          lastUpdated={blogMeta.lastUpdated}
         />
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">

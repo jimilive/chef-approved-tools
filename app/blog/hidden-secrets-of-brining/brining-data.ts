@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const briningData = {
-  metadata: {
-    title: "The Hidden Secrets of Brining: Professional Techniques Explained",
-    description: "Learn professional brining techniques that transform lean proteins. Understand the science of moisture retention, proper ratios, timing, and which meats benefit most from brining.",
-    publishedDate: "2025-01-20",
-    lastUpdated: "2025-01-20",
-    primaryKeyword: "brining",
-    secondaryKeywords: ["wet brine", "dry brine", "brine ratio", "brining chicken"],
-    readTime: "12 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "The Hidden Secrets of Brining"

@@ -15,6 +15,7 @@ import {
   BlogEmailCapture
 } from '@/components/blog'
 import AuthorBio from '@/components/review/AuthorBio'
+import { getBlogMetadata } from '@/data/metadata'
 
 // ISR: Regenerate every hour
 export const revalidate = 3600
@@ -49,12 +50,14 @@ function hasSubsections(section: Section): section is SectionWithSubsections {
 }
 
 export default async function CookingByFeelPage() {
+  const blogMeta = getBlogMetadata('cooking-by-feel')
+
   // Generate schemas from data
   const articleSchema = generateArticleSchema({
-    headline: educationalData.metadata.title,
-    description: educationalData.metadata.description,
-    datePublished: educationalData.metadata.publishedDate,
-    dateModified: educationalData.metadata.lastUpdated,
+    headline: blogMeta.title,
+    description: blogMeta.description,
+    datePublished: blogMeta.publishedDate,
+    dateModified: blogMeta.lastUpdated,
     authorName: 'Scott Bradley',
     urlPrefix: 'blog',
     urlSuffix: 'cooking-by-feel',
@@ -78,7 +81,7 @@ export default async function CookingByFeelPage() {
       <HowToSchema
         name={educationalData.howToSchema.name}
         description={educationalData.howToSchema.description}
-        datePublished={educationalData.metadata.publishedDate}
+        datePublished={blogMeta.publishedDate}
         totalTime={educationalData.howToSchema.totalTime}
         tools={educationalData.howToSchema.tools}
         steps={educationalData.howToSchema.steps}
@@ -89,9 +92,8 @@ export default async function CookingByFeelPage() {
         <BlogHero
           title={educationalData.hero.title}
           introduction={educationalData.hero.introduction}
-          publishedDate={educationalData.metadata.publishedDate}
-          lastUpdated={educationalData.metadata.lastUpdated}
-          readTime={educationalData.metadata.readTime}
+          publishedDate={blogMeta.publishedDate}
+          lastUpdated={blogMeta.lastUpdated}
         />
 
         {/* Table of Contents */}

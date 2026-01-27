@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const hydrationData = {
-  metadata: {
-    title: "Hydration, Health, and Water Intake for Home Cooks",
-    description: "Learn how professional chefs stay hydrated during long shifts and why proper water intake matters for home cooks. Science-backed hydration strategies for the kitchen.",
-    publishedDate: "2025-09-03",
-    lastUpdated: "2025-10-24",
-    primaryKeyword: "kitchen hydration",
-    secondaryKeywords: ["cooking hydration", "chef water intake", "dehydration cooking"],
-    readTime: "7 min read"
-  },
-
   faq: {
     questions: [
       {

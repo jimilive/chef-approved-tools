@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const educationalData = {
-  metadata: {
-    title: "The Complete Guide to Kitchen Thermometers: Types, Techniques, and Temperature Targets",
-    description: "Master food temperature from a professional chef with 24 years of restaurant experience. Learn which thermometer to use, proper technique, and exact temperatures for perfect results every time.",
-    publishedDate: "2025-09-11",
-    lastUpdated: "2025-11-07",
-    primaryKeyword: "kitchen thermometers",
-    secondaryKeywords: ["instant read thermometer", "meat thermometer", "food temperature", "cooking temperatures"],
-    readTime: "15 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Complete Guide to Kitchen Thermometers"

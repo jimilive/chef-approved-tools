@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const educationalData = {
-  metadata: {
-    title: "Professional Knife Grip Techniques: Complete Guide",
-    description: "Learn professional knife grips from a chef with 24 years experience. The pinch grip, claw position, paring grip, reverse grip, and practice methods that make cooking safer and more precise.",
-    publishedDate: "2025-10-06",
-    lastUpdated: "2025-11-07",
-    primaryKeyword: "knife grip",
-    secondaryKeywords: ["pinch grip", "claw position", "how to hold knife", "knife skills"],
-    readTime: "12 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Knife Grip Techniques"

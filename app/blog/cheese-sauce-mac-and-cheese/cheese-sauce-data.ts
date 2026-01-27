@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const cheeseSauceData = {
-  metadata: {
-    title: "How to Make a Cheese Sauce (Mac and Cheese Perfection)",
-    description: "Learn the professional technique for silky, smooth cheese sauce every time. Master béchamel, avoid graininess, and make restaurant-quality mac and cheese that never breaks.",
-    publishedDate: "2025-09-29",
-    lastUpdated: "2025-10-23",
-    primaryKeyword: "cheese sauce",
-    secondaryKeywords: ["mac and cheese", "béchamel", "mornay sauce", "cheese sauce recipe"],
-    readTime: "8 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "How to Make a Cheese Sauce"

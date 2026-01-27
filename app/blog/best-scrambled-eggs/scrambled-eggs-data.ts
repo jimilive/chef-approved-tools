@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const educationalData = {
-  metadata: {
-    title: "Stop Using a Bowl for Scrambled Eggs (Do This Instead)",
-    description: "Ditch the bowl and whisk. This 45-second pan technique creates creamy eggs every time. The method I've used in professional kitchens for 24 years, zero cleanup.",
-    publishedDate: "2025-10-09",
-    lastUpdated: "2025-10-09",
-    primaryKeyword: "scrambled eggs",
-    secondaryKeywords: ["how to make scrambled eggs", "creamy scrambled eggs", "best scrambled eggs", "no bowl scrambled eggs"],
-    readTime: "7 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Stop Using a Bowl for Scrambled Eggs"

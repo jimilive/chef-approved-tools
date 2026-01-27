@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const educationalData = {
-  metadata: {
-    title: "How to Season and Clean Cast Iron Skillets",
-    description: "Learn how to season, clean, and care for cast iron skillets. A professional chef shares restaurant-tested methods used across 24 years in commercial kitchens.",
-    publishedDate: "2025-09-27",
-    lastUpdated: "2026-01-08",
-    primaryKeyword: "how to season cast iron skillet",
-    secondaryKeywords: ["how to clean cast iron skillet", "how to reseason cast iron", "how to clean rusty cast iron", "best oil for cast iron"],
-    readTime: "18 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "How to Season & Clean Cast Iron"

@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const stockData = {
-  metadata: {
-    title: "Making Stock: The Professional Chef Method",
-    description: "Professional chef Scott Bradley explains the real restaurant method for making stock. Build deep flavor with bones, vegetables, and proper simmering technique tested over 6 years at Purple Cafe.",
-    publishedDate: "2025-09-07",
-    lastUpdated: "2025-11-14",
-    primaryKeyword: "how to make stock",
-    secondaryKeywords: ["professional stock recipe", "chicken stock", "beef stock"],
-    readTime: "12 min read"
-  },
-
   faq: {
     questions: [
       {

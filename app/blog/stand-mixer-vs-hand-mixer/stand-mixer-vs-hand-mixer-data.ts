@@ -1,13 +1,4 @@
 export const comparisonData = {
-  metadata: {
-    title: "Hand Mixer vs Stand Mixer: A Chef's 24-Year Verdict",
-    description: "Hand mixer vs stand mixer. After 24 years in professional kitchens, here's when each one wins. Hand mixers handle 80% of tasks. Stand mixers only for bread.",
-    publishedDate: "2025-11-09",
-    lastUpdated: "2026-01-08",
-    primaryKeyword: "hand mixer vs stand mixer",
-    readTime: "13 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Stand Mixer vs Hand Mixer"

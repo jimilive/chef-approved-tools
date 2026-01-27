@@ -1,13 +1,4 @@
 export const comparisonData = {
-  metadata: {
-    title: "Instant Pot vs Crock Pot: Which One Should You Buy? (2026)",
-    description: "Instant Pot vs Crock Pot vs slow cooker comparison. 24 years pro kitchen experience explains which cooks faster, tastes better, and fits your schedule.",
-    publishedDate: "2025-12-21",
-    lastUpdated: "2026-01-08",
-    primaryKeyword: "instant pot vs crock pot",
-    readTime: "12 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Instant Pot vs Crockpot"

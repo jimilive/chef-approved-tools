@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const restingMeatData = {
-  metadata: {
-    title: "Why Resting Is the Key to Cooking Meat",
-    description: "Learn why professional chefs never skip resting meat. Master carry-over cooking, juice redistribution, and the science behind perfectly cooked steaks, roasts, and poultry.",
-    publishedDate: "2025-09-05",
-    lastUpdated: "2025-10-23",
-    primaryKeyword: "resting meat",
-    secondaryKeywords: ["carry-over cooking", "rest steak", "juice redistribution", "meat temperature"],
-    readTime: "6 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Why Resting Is the Key to Cooking Meat"

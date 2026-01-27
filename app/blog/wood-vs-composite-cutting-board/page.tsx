@@ -12,6 +12,7 @@ import {
 } from '@/components/blog'
 import AuthorBio from '@/components/review/AuthorBio'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
+import { getBlogMetadata } from '@/data/metadata'
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -20,12 +21,14 @@ export const revalidate = 3600 // 1 hour
 export const metadata = generateBlogMetadata('wood-vs-composite-cutting-board')
 
 export default function WoodVsCompositeComparison() {
+  const blogMeta = getBlogMetadata('wood-vs-composite-cutting-board')
+
   // Generate schemas
   const articleSchema = generateArticleSchema({
-    headline: comparisonData.metadata.title,
-    description: comparisonData.metadata.description,
-    datePublished: comparisonData.metadata.publishedDate,
-    dateModified: comparisonData.metadata.lastUpdated,
+    headline: blogMeta.title,
+    description: blogMeta.description,
+    datePublished: blogMeta.publishedDate,
+    dateModified: blogMeta.lastUpdated,
     authorName: 'Scott Bradley',
     urlPrefix: 'blog',
     urlSuffix: 'wood-vs-composite-cutting-board',
@@ -60,9 +63,8 @@ export default function WoodVsCompositeComparison() {
         <BlogHero
           title={comparisonData.hero.title}
           introduction={comparisonData.hero.introduction}
-          publishedDate={comparisonData.metadata.publishedDate}
-          lastUpdated={comparisonData.metadata.lastUpdated}
-          readTime={comparisonData.metadata.readTime}
+          publishedDate={blogMeta.publishedDate}
+          lastUpdated={blogMeta.lastUpdated}
         />
 
         <BlogQuickAnswer

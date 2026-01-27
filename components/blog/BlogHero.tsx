@@ -2,8 +2,8 @@ interface BlogHeroProps {
   title: string
   introduction: string[]
   publishedDate: string
-  lastUpdated: string
-  readTime: string
+  lastUpdated?: string
+  readTime?: string
   authorName?: string
   authorYears?: string
 }
@@ -53,8 +53,8 @@ export default function BlogHero({
           {formatDate(publishedDate)}
         </time>
         {' • '}
-        <span>Updated: <time dateTime={lastUpdated}>
-          {formatDate(lastUpdated)}
+        <span>Updated: <time dateTime={lastUpdated || publishedDate}>
+          {formatDate(lastUpdated || publishedDate)}
         </time></span>
       </div>
 
@@ -65,8 +65,12 @@ export default function BlogHero({
           <span>By {authorName}</span>
           <span>•</span>
           <span>{authorYears}</span>
-          <span>•</span>
-          <span>{readTime}</span>
+          {readTime && (
+            <>
+              <span>•</span>
+              <span>{readTime}</span>
+            </>
+          )}
         </div>
         <div className="prose prose-lg max-w-none">
           {introduction.map((paragraph, index) => (

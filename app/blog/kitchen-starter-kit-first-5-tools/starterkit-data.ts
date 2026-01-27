@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const starterkitData = {
-  metadata: {
-    title: "Kitchen Starter Kit: First 5 Tools to Buy",
-    description: "Chef Scott Bradley reveals the five essential kitchen tools every home cook needs first. No fluff, no gimmicks—just the gear professionals actually use daily.",
-    publishedDate: "2025-09-24",
-    lastUpdated: "2025-10-22",
-    primaryKeyword: "kitchen starter kit",
-    secondaryKeywords: ["essential kitchen tools", "first kitchen tools", "beginner cooking equipment"],
-    readTime: "10 min read"
-  },
-
   faq: {
     questions: [
       {

@@ -17,6 +17,7 @@ import {
   BlogEmailCapture
 } from '@/components/blog'
 import AuthorBio from '@/components/review/AuthorBio'
+import { getBlogMetadata } from '@/data/metadata'
 
 // ISR: Regenerate every hour
 export const revalidate = 3600
@@ -25,12 +26,14 @@ export const revalidate = 3600
 export const metadata = generateBlogMetadata('blanching-vegetables-why-restaurants-do-it')
 
 export default function BlanchingVegetablesPage() {
+  const blogMeta = getBlogMetadata('blanching-vegetables-why-restaurants-do-it')
+
   // Generate schemas from data
   const articleSchema = generateArticleSchema({
-    headline: blanchingData.metadata.title,
-    description: blanchingData.metadata.description,
-    datePublished: blanchingData.metadata.publishedDate,
-    dateModified: blanchingData.metadata.lastUpdated,
+    headline: blogMeta.title,
+    description: blogMeta.description,
+    datePublished: blogMeta.publishedDate,
+    dateModified: blogMeta.lastUpdated,
     authorName: 'Scott Bradley',
     urlPrefix: 'blog',
     urlSuffix: 'blanching-vegetables-why-restaurants-do-it',
@@ -101,9 +104,8 @@ export default function BlanchingVegetablesPage() {
         <BlogHero
           title={blanchingData.hero.title}
           introduction={blanchingData.hero.introduction}
-          publishedDate={blanchingData.metadata.publishedDate}
-          lastUpdated={blanchingData.metadata.lastUpdated}
-          readTime={blanchingData.metadata.readTime}
+          publishedDate={blogMeta.publishedDate}
+          lastUpdated={blogMeta.lastUpdated}
         />
 
         <div className="prose prose-lg max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">

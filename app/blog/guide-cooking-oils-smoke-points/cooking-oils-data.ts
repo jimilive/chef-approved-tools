@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const educationalData = {
-  metadata: {
-    title: "Guide to Cooking Oils & Smoke Points",
-    description: "Understanding different cooking oils, their smoke points, flavor profiles, and which oils work best for different cooking methods.",
-    publishedDate: "2025-10-02",
-    lastUpdated: "2025-10-24",
-    primaryKeyword: "cooking oils",
-    secondaryKeywords: ["smoke point", "avocado oil", "olive oil", "canola oil"],
-    readTime: "8 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "Guide to Cooking Oils & Smoke Points"

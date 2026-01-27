@@ -17,6 +17,7 @@ import {
   BlogEmailCapture
 } from '@/components/blog'
 import AuthorBio from '@/components/review/AuthorBio'
+import { getBlogMetadata } from '@/data/metadata'
 
 // ISR: Regenerate every hour
 export const revalidate = 3600
@@ -25,12 +26,14 @@ export const revalidate = 3600
 export const metadata = generateBlogMetadata('caramelizing-onions-why-it-takes-45-minutes')
 
 export default function CaramelizingOnionsPage() {
+  const blogMeta = getBlogMetadata('caramelizing-onions-why-it-takes-45-minutes')
+
   // Generate schemas from data
   const articleSchema = generateArticleSchema({
-    headline: onionsData.metadata.title,
-    description: onionsData.metadata.description,
-    datePublished: onionsData.metadata.publishedDate,
-    dateModified: onionsData.metadata.lastUpdated,
+    headline: blogMeta.title,
+    description: blogMeta.description,
+    datePublished: blogMeta.publishedDate,
+    dateModified: blogMeta.lastUpdated,
     authorName: 'Scott Bradley',
     urlPrefix: 'blog',
     urlSuffix: 'caramelizing-onions-why-it-takes-45-minutes',
@@ -63,9 +66,8 @@ export default function CaramelizingOnionsPage() {
         <BlogHero
           title={onionsData.hero.title}
           introduction={onionsData.hero.introduction}
-          publishedDate={onionsData.metadata.publishedDate}
-          lastUpdated={onionsData.metadata.lastUpdated}
-          readTime={onionsData.metadata.readTime}
+          publishedDate={blogMeta.publishedDate}
+          lastUpdated={blogMeta.lastUpdated}
         />
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">

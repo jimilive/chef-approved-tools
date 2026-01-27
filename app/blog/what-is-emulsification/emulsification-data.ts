@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const educationalData = {
-  metadata: {
-    title: "What is Emulsification? The Science Behind Creamy Sauces",
-    description: "Master the chemistry and technique behind stable emulsions. Learn why oil and water mix in mayonnaise, how to fix broken sauces, and professional emulsification methods.",
-    publishedDate: "2025-09-18",
-    lastUpdated: "2025-10-24",
-    primaryKeyword: "emulsification",
-    secondaryKeywords: ["emulsion", "mayonnaise", "hollandaise", "vinaigrette", "emulsifier"],
-    readTime: "7 min read"
-  },
-
   breadcrumb: {
     category: "Blog",
     title: "What is Emulsification"

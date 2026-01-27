@@ -16,6 +16,7 @@ import {
 } from '@/components/blog'
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA'
 import AuthorBio from '@/components/review/AuthorBio'
+import { getBlogMetadata } from '@/data/metadata'
 
 // ISR: Regenerate every hour
 export const revalidate = 3600
@@ -24,12 +25,14 @@ export const revalidate = 3600
 export const metadata = generateBlogMetadata('understanding-umami-fifth-taste')
 
 export default function UnderstandingUmamiPage() {
+  const blogMeta = getBlogMetadata('understanding-umami-fifth-taste')
+
   // Generate schemas from data
   const articleSchema = generateArticleSchema({
-    headline: umamiData.metadata.title,
-    description: umamiData.metadata.description,
-    datePublished: umamiData.metadata.publishedDate,
-    dateModified: umamiData.metadata.lastUpdated,
+    headline: blogMeta.title,
+    description: blogMeta.description,
+    datePublished: blogMeta.publishedDate,
+    dateModified: blogMeta.lastUpdated,
     authorName: 'Scott Bradley',
     urlPrefix: 'blog',
     urlSuffix: 'understanding-umami-fifth-taste',
@@ -178,9 +181,8 @@ export default function UnderstandingUmamiPage() {
         <BlogHero
           title={umamiData.hero.title}
           introduction={umamiData.hero.introduction}
-          publishedDate={umamiData.metadata.publishedDate}
-          lastUpdated={umamiData.metadata.lastUpdated}
-          readTime={umamiData.metadata.readTime}
+          publishedDate={blogMeta.publishedDate}
+          lastUpdated={blogMeta.lastUpdated}
         />
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">

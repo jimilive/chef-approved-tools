@@ -4,16 +4,6 @@
 // ============================================================================
 
 export const mealprepData = {
-  metadata: {
-    title: "Meal Prep Station Setup: Restaurant Efficiency at Home",
-    description: "Professional chef explains how to create a restaurant-style meal prep station at home — mise en place, flow, and efficiency techniques that make cooking effortless.",
-    publishedDate: "2025-09-15",
-    lastUpdated: "2025-10-21",
-    primaryKeyword: "meal prep station",
-    secondaryKeywords: ["mise en place", "kitchen organization", "chef efficiency tips"],
-    readTime: "8 min read"
-  },
-
   faq: {
     questions: [
       {
