@@ -18,7 +18,7 @@ export const metadata = generateBlogMetadata('meal-prep-station-setup-restaurant
 
 const articleSchema = generateArticleSchema({
   headline: 'Meal Prep Station Setup: Restaurant Efficiency at Home',
-  description: 'Professional chef explains how to create a restaurant-style meal prep station at home — mise en place, flow, and efficiency techniques that make cooking effortless.',
+  description: 'Professional chef explains how to create a restaurant-style meal prep station at home: mise en place, flow, and efficiency techniques that make cooking effortless.',
   datePublished: "2025-09-15",
   dateModified: '2025-10-21',
   authorName: 'Scott Bradley',
@@ -56,7 +56,7 @@ export default function MealPrepStationSetupPage() {
       <BlogLayout breadcrumbTitle="Meal Prep Station Setup">
         <BlogHero
           title="Meal Prep Station Setup: Restaurant Efficiency at Home"
-          introduction={["Professional chef explains how to create a restaurant-style meal prep station at home — mise en place, flow, and efficiency techniques that make cooking effortless."]}
+          introduction={["Professional chef explains how to create a restaurant-style meal prep station at home: mise en place, flow, and efficiency techniques that make cooking effortless."]}
           publishedDate="2025-09-15"
           lastUpdated="2025-10-21"
           readTime="8 min read"
@@ -77,12 +77,12 @@ export default function MealPrepStationSetupPage() {
 
           <div className="bg-gradient-to-r from-blue-50 to-blue-100 border-l-4 border-blue-600 p-6 my-8 rounded-r-lg">
             <p className="mb-0">
-              <strong>New to mise en place?</strong> Start with <Link href="/blog/mis-en-place-professional-cooking" className="text-blue-700 hover:text-blue-800 font-semibold underline">understanding the foundation of professional cooking</Link> before diving into station setup—it&apos;ll make these techniques click instantly.
+              <strong>New to mise en place?</strong> Start with <Link href="/blog/mis-en-place-professional-cooking" className="text-blue-700 hover:text-blue-800 font-semibold underline">understanding the foundation of professional cooking</Link> before diving into station setup. It&apos;ll make these techniques click instantly.
             </p>
           </div>
 
           <p>
-            At home, the same principle transforms your kitchen. You don&apos;t need stainless counters or speed racks; you just need flow, awareness, and the right tools in the right places. This guide shows you how to build restaurant efficiency into your home meal prep — so cooking feels effortless, not overwhelming.
+            At home, the same principle transforms your kitchen. You don&apos;t need stainless counters or speed racks; you just need flow, awareness, and the right tools in the right places. This guide shows you how to build restaurant efficiency into your home meal prep, so cooking feels effortless, not overwhelming.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
@@ -95,7 +95,7 @@ export default function MealPrepStationSetupPage() {
           </p>
 
           <p>
-            At home, it&apos;s the difference between calm, confident cooking and mid-recipe panic. You know the feeling — halfway through, you&apos;re missing the garlic, the cutting board&apos;s buried under scraps, and you&apos;re frantically stirring sauce with the wrong spoon.
+            At home, it&apos;s the difference between calm, confident cooking and mid-recipe panic. You know the feeling: halfway through, you&apos;re missing the garlic, the cutting board&apos;s buried under scraps, and you&apos;re frantically stirring sauce with the wrong spoon.
           </p>
 
           <p>
@@ -103,7 +103,7 @@ export default function MealPrepStationSetupPage() {
           </p>
 
           <p>
-            Mise en place means everything has a home. Every knife, towel, and container lives in a logical place. You always know where things are — and that mental clarity makes cooking flow.
+            Mise en place means everything has a home. Every knife, towel, and container lives in a logical place. You always know where things are, and that mental clarity makes cooking flow.
           </p>
 
           <div className="bg-blue-50 border-l-4 border-blue-600 p-6 my-8">
@@ -160,7 +160,7 @@ export default function MealPrepStationSetupPage() {
           </div>
 
           <p>
-            Keep your cutting board front and center — it&apos;s your &quot;stage.&quot; Everything else orbits around it.
+            Keep your cutting board front and center. It&apos;s your &quot;stage.&quot; Everything else orbits around it.
           </p>
 
           <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">
@@ -172,7 +172,7 @@ export default function MealPrepStationSetupPage() {
           </p>
 
           <p>
-            In professional kitchens, you&apos;ll see cooks with a towel tucked into their apron strings or draped over their shoulder. That towel gets used dozens of times per shift — for wiping, gripping, and cleaning as you go.
+            In professional kitchens, you&apos;ll see cooks with a towel tucked into their apron strings or draped over their shoulder. That towel gets used dozens of times per shift: for wiping, gripping, and cleaning as you go.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">
@@ -252,7 +252,7 @@ export default function MealPrepStationSetupPage() {
             <ul className="space-y-3 mb-0">
               <li>Use clear containers so you can see what&apos;s inside.</li>
               <li>Stack by category: sauces, proteins, produce.</li>
-              <li>Keep a &quot;use first&quot; section for older items — first in, first out.</li>
+              <li>Keep a &quot;use first&quot; section for older items: first in, first out.</li>
             </ul>
           </div>
 
@@ -283,7 +283,7 @@ export default function MealPrepStationSetupPage() {
           </p>
 
           <p>
-            Every prep task — dice onions, reset. Trim chicken, reset. That five-second wipe and reorganize keeps your brain clean, not just your counter.
+            Every prep task: dice onions, reset. Trim chicken, reset. That five-second wipe and reorganize keeps your brain clean, not just your counter.
           </p>
 
           <p>
@@ -291,7 +291,7 @@ export default function MealPrepStationSetupPage() {
           </p>
 
           <p>
-            At home, think of it like hitting &quot;save&quot; while writing — the longer you go without, the more chaos you risk losing.
+            At home, think of it like hitting &quot;save&quot; while writing. The longer you go without, the more chaos you risk losing.
           </p>
 
           <div className="bg-purple-50 border-l-4 border-purple-600 p-6 my-8">
@@ -329,10 +329,10 @@ export default function MealPrepStationSetupPage() {
                   <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-blue-700 underline">
                     Victorinox Fibrox 8&quot; Chef&apos;s Knife
                   </Link>
-                </CTAVisibilityTracker> — reliable, ergonomic, and sharp.
+                </CTAVisibilityTracker>. Reliable, ergonomic, and sharp.
               </li> */}
               <li>
-                <strong>Chef&apos;s Knife:</strong> Victorinox Fibrox 8&quot; Chef&apos;s Knife — reliable, ergonomic, and sharp.
+                <strong>Chef&apos;s Knife:</strong> Victorinox Fibrox 8&quot; Chef&apos;s Knife. Reliable, ergonomic, and sharp.
               </li>
               {/* <li>
                 <strong>Cutting Board:</strong>{' '}
@@ -345,10 +345,10 @@ export default function MealPrepStationSetupPage() {
                   <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-blue-700 underline">
                     John Boos Reversible Maple Board
                   </Link>
-                </CTAVisibilityTracker> — stable and durable.
+                </CTAVisibilityTracker>. Stable and durable.
               </li> */}
               <li>
-                <strong>Cutting Board:</strong> John Boos Reversible Maple Board — stable and durable.
+                <strong>Cutting Board:</strong> John Boos Reversible Maple Board. Stable and durable.
               </li>
               <li>
                 <strong>Scraper:</strong>{' '}
@@ -361,7 +361,7 @@ export default function MealPrepStationSetupPage() {
                   <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-blue-700 underline">
                     Rubbermaid Commercial Cook&apos;s Scraper
                   </Link>
-                </CTAVisibilityTracker> — for clean transfers and easy scraping.
+                </CTAVisibilityTracker>. For clean transfers and easy scraping.
               </li>
               {/* <li>
                 <strong>Sheet Pans:</strong>{' '}
@@ -374,13 +374,13 @@ export default function MealPrepStationSetupPage() {
                   <Link href="/reviews/nordic-ware-half-sheet-pan" className="text-blue-700 underline">
                     Nordic Ware Half Sheet Pan
                   </Link>
-                </CTAVisibilityTracker> — use them as trays for organized prep.
+                </CTAVisibilityTracker>. Use them as trays for organized prep.
               </li> */}
               <li>
-                <strong>Sheet Pans:</strong> Nordic Ware Half Sheet Pan — use them as trays for organized prep.
+                <strong>Sheet Pans:</strong> Nordic Ware Half Sheet Pan. Use them as trays for organized prep.
               </li>
               <li>
-                <strong>Containers:</strong> Cambro 2-Qt Square Storage Containers — the restaurant standard for prep and storage.
+                <strong>Containers:</strong> Cambro 2-Qt Square Storage Containers. The restaurant standard for prep and storage.
               </li>
             </ul>
           </div>
@@ -407,7 +407,7 @@ export default function MealPrepStationSetupPage() {
               <span className="text-2xl">🔥</span> Chef&apos;s Tip:
             </p>
             <p className="mb-0">
-              Keep a scrap bowl on your station. It cuts your cleanup time in half and keeps your board clear — the pro kitchen secret no one talks about.
+              Keep a scrap bowl on your station. It cuts your cleanup time in half and keeps your board clear. The pro kitchen secret no one talks about.
             </p>
           </div>
 

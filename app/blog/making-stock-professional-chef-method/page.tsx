@@ -64,9 +64,9 @@ export default function MakingStockPage() {
         steps={[
           { name: "Prepare the Bones", text: "For brown stock, roast bones at 400°F for 45-60 minutes until deeply browned. For white stock, rinse bones under cold water. Use 5-6 lbs bones per gallon of water." },
           { name: "Start with Cold Water", text: "Place bones in stockpot and cover with cold water by 2 inches. Starting cold allows proteins to dissolve gradually for clearer stock." },
-          { name: "Bring to a Simmer Slowly", text: "Heat gradually over medium-low. Never boil—boiling emulsifies fats and clouds the stock. You want gentle bubbles breaking the surface." },
+          { name: "Bring to a Simmer Slowly", text: "Heat gradually over medium-low. Never boil. Boiling emulsifies fats and clouds the stock. You want gentle bubbles breaking the surface." },
           { name: "Skim Constantly", text: "Skim foam and impurities every few minutes during the first hour. This removes coagulated proteins that would cloud the stock and create off-flavors." },
-          { name: "Add Aromatics", text: "After skimming, add mirepoix (onion, carrot, celery), peppercorns, bay leaves, and thyme. Don't add salt—stock will be reduced and seasoned later." },
+          { name: "Add Aromatics", text: "After skimming, add mirepoix (onion, carrot, celery), peppercorns, bay leaves, and thyme. Don't add salt. Stock will be reduced and seasoned later." },
           { name: "Simmer for Hours", text: "Simmer chicken stock 8 hours, beef stock 12-16 hours. Maintain barely-there bubbles. Add water if level drops below bones." },
           { name: "Strain and Cool", text: "Strain through fine-mesh strainer lined with cheesecloth. Cool quickly in ice bath to below 40°F within 2 hours. Remove solidified fat from chilled stock." }
         ]}
@@ -76,7 +76,7 @@ export default function MakingStockPage() {
         <BlogHero
           title="Making Stock: The Professional Chef Method"
           introduction={[
-            "After 6 years at Purple Café in Seattle—making beef, chicken, fish, mushroom, and vegetable stocks weekly in commercial stockpots—I learned that great stock requires three things: bones, time, and attention.",
+            "After 6 years at Purple Café in Seattle, making beef, chicken, fish, mushroom, and vegetable stocks weekly in commercial stockpots, I learned that great stock requires three things: bones, time, and attention.",
             "No shortcuts. No pressure cookers. Just gentle heat, religious skimming, and patience."
           ]}
           publishedDate="2025-09-07"
@@ -100,7 +100,7 @@ export default function MakingStockPage() {
           </div>
 
           <p>
-            I learned to make stock in culinary school, but I learned to make it *right* at Purple Café in Seattle. For 6 years, we made stock weekly—beef, chicken, fish, mushroom, vegetable—in massive commercial stockpots that simmered for 8 to 16 hours. That aroma of roasted bones and aromatics became the baseline for everything we served.
+            I learned to make stock in culinary school, but I learned to make it *right* at Purple Café in Seattle. For 6 years, we made stock weekly (beef, chicken, fish, mushroom, vegetable) in massive commercial stockpots that simmered for 8 to 16 hours. That aroma of roasted bones and aromatics became the baseline for everything we served.
           </p>
 
           <p>
@@ -108,7 +108,7 @@ export default function MakingStockPage() {
           </p>
 
           <p>
-            By the end of this guide, you&rsquo;ll know the exact restaurant process for rich, clear stock that gels when chilled—the hallmark of proper collagen extraction.
+            By the end of this guide, you&rsquo;ll know the exact restaurant process for rich, clear stock that gels when chilled, the hallmark of proper collagen extraction.
           </p>
 
           <h2 id="why-stock-matters">Why Stock Matters More Than You Think</h2>
@@ -118,7 +118,7 @@ export default function MakingStockPage() {
           </p>
 
           <p>
-            The collagen extracted from bones creates body—that silky mouthfeel in a pan sauce or the way soup coats your spoon. You can&rsquo;t fake this with cornstarch or butter. It comes from time and bones, period.
+            The collagen extracted from bones creates body, that silky mouthfeel in a pan sauce or the way soup coats your spoon. You can&rsquo;t fake this with cornstarch or butter. It comes from time and bones, period.
           </p>
 
           <p>
@@ -128,21 +128,21 @@ export default function MakingStockPage() {
           <h2 id="purple-cafe-experience">6 Years of Stock Making at Purple Café (2007-2012)</h2>
 
           <p>
-            At Purple Café in downtown Seattle, stock wasn&rsquo;t optional—it was the foundation of our kitchen operations. We made fresh stock weekly, rotating through types based on menu needs and what was in season.
+            At Purple Café in downtown Seattle, stock wasn&rsquo;t optional. It was the foundation of our kitchen operations. We made fresh stock weekly, rotating through types based on menu needs and what was in season.
           </p>
 
           <h3>What We Made and How Long It Took</h3>
 
           <p>
-            <strong>Chicken stock:</strong> 8 hours of gentle simmering in commercial stockpots. We used backs, necks, and feet for maximum collagen extraction. The result? Stock that gelled solid when refrigerated—proof of proper technique.
+            <strong>Chicken stock:</strong> 8 hours of gentle simmering in commercial stockpots. We used backs, necks, and feet for maximum collagen extraction. The result? Stock that gelled solid when refrigerated, proof of proper technique.
           </p>
 
           <p>
-            <strong>Beef stock:</strong> 12-16 hours, sometimes longer for demi-glace base. We always roasted the bones first at 400°F until deeply browned—this Maillard reaction creates the deep, complex flavor that defines brown stock. Skip this step and your beef stock tastes flat.
+            <strong>Beef stock:</strong> 12-16 hours, sometimes longer for demi-glace base. We always roasted the bones first at 400°F until deeply browned. This Maillard reaction creates the deep, complex flavor that defines brown stock. Skip this step and your beef stock tastes flat.
           </p>
 
           <p>
-            <strong>Fish stock:</strong> 45 minutes to 1 hour maximum. Any longer and it turns bitter from broken-down bones. We used fish heads and frames from daily filleting—waste became the foundation for seafood risottos and chowders.
+            <strong>Fish stock:</strong> 45 minutes to 1 hour maximum. Any longer and it turns bitter from broken-down bones. We used fish heads and frames from daily filleting. Waste became the foundation for seafood risottos and chowders.
           </p>
 
           <p>
@@ -164,7 +164,7 @@ export default function MakingStockPage() {
           </p>
 
           <p>
-            <strong>2. NEVER BOIL.</strong> Maintain barely a tremble—tiny bubbles every few seconds, not a rolling boil. Boiling emulsifies fat into the liquid, creating cloudy, greasy stock. The goal isn&rsquo;t speed; it&rsquo;s gentle extraction of collagen and flavor without agitation.
+            <strong>2. NEVER BOIL.</strong> Maintain barely a tremble. Tiny bubbles every few seconds, not a rolling boil. Boiling emulsifies fat into the liquid, creating cloudy, greasy stock. The goal isn&rsquo;t speed; it&rsquo;s gentle extraction of collagen and flavor without agitation.
           </p>
 
           <p>
@@ -174,7 +174,7 @@ export default function MakingStockPage() {
           <h3>Equipment We Used Daily</h3>
 
           <p>
-            Commercial stockpots held the beef and chicken stocks—massive vessels that sat on back burners for the entire workday. Fish and vegetable stocks went into smaller 2-5 gallon pots since we made them in smaller batches.
+            Commercial stockpots held the beef and chicken stocks, massive vessels that sat on back burners for the entire workday. Fish and vegetable stocks went into smaller 2-5 gallon pots since we made them in smaller batches.
           </p>
 
           <p>
@@ -182,7 +182,7 @@ export default function MakingStockPage() {
           </p>
 
           <p>
-            <strong>Fine-mesh strainers</strong> lined with cheesecloth caught impurities during the final strain. Never press the solids—let gravity do the work or you&rsquo;ll force cloudy particles through and ruin hours of careful simmering.
+            <strong>Fine-mesh strainers</strong> lined with cheesecloth caught impurities during the final strain. Never press the solids. Let gravity do the work or you&rsquo;ll force cloudy particles through and ruin hours of careful simmering.
           </p>
 
           <p>
@@ -200,7 +200,7 @@ export default function MakingStockPage() {
           <h3>What We Learned About Seasoning</h3>
 
           <p>
-            Save most seasoning for the end—especially if you&rsquo;re planning to reduce stock or use it in multi-component dishes later. Stock concentrates as it reduces, and early salting creates inedibly salty sauces.
+            Save most seasoning for the end, especially if you&rsquo;re planning to reduce stock or use it in multi-component dishes later. Stock concentrates as it reduces, and early salting creates inedibly salty sauces.
           </p>
 
           <p>
@@ -225,11 +225,11 @@ export default function MakingStockPage() {
           </p>
 
           <p>
-            Walk into any professional kitchen during prep and you&rsquo;ll see stockpots barely bubbling on back burners. They&rsquo;re not forgotten—they&rsquo;re being treated with the respect they deserve. Low, slow, steady heat extracts maximum flavor while maintaining clarity.
+            Walk into any professional kitchen during prep and you&rsquo;ll see stockpots barely bubbling on back burners. They&rsquo;re not forgotten. They&rsquo;re being treated with the respect they deserve. Low, slow, steady heat extracts maximum flavor while maintaining clarity.
           </p>
 
           <p>
-            Professionals treat stock like an investment—one pot yields dozens of meals. Once you&rsquo;ve made your own, you&rsquo;ll never touch boxed broth again. The difference isn&rsquo;t subtle. It&rsquo;s the difference between a sauce that coats the spoon and one that slides off like water.
+            Professionals treat stock like an investment. One pot yields dozens of meals. Once you&rsquo;ve made your own, you&rsquo;ll never touch boxed broth again. The difference isn&rsquo;t subtle. It&rsquo;s the difference between a sauce that coats the spoon and one that slides off like water.
           </p>
 
           <h2 id="professional-method" className="flex items-center gap-2">
@@ -240,7 +240,7 @@ export default function MakingStockPage() {
           <h3>1. Start with Cold Water</h3>
 
           <p>
-            Add bones to a stockpot and cover with cold water by about 2 inches. Heat gently over medium-low—cold water extracts albumin (blood proteins) as it slowly warms, and these proteins rise as foam you can skim off.
+            Add bones to a stockpot and cover with cold water by about 2 inches. Heat gently over medium-low. Cold water extracts albumin (blood proteins) as it slowly warms, and these proteins rise as foam you can skim off.
           </p>
 
           <p>
@@ -248,13 +248,13 @@ export default function MakingStockPage() {
           </p>
 
           <p>
-            Use filtered water if your tap water has strong mineral flavors or chlorine—these will carry through to the finished stock. Quality matters at every step.
+            Use filtered water if your tap water has strong mineral flavors or chlorine. These will carry through to the finished stock. Quality matters at every step.
           </p>
 
           <h3>2. Skim Religiously</h3>
 
           <p>
-            As foam forms during the first 30-45 minutes, skim with a ladle every few minutes. Clean stock equals clean flavor. This gray-brown foam is coagulated proteins and impurities from the bones—you don&rsquo;t want them dissolved back into your stock.
+            As foam forms during the first 30-45 minutes, skim with a ladle every few minutes. Clean stock equals clean flavor. This gray-brown foam is coagulated proteins and impurities from the bones. You don&rsquo;t want them dissolved back into your stock.
           </p>
 
           <p>
@@ -262,13 +262,13 @@ export default function MakingStockPage() {
           </p>
 
           <p>
-            At Purple Café, we checked stocks every 10-15 minutes during the first hour. Once the foam stops forming and the surface looks relatively clear, you can reduce skimming frequency. But check periodically throughout the simmer—small amounts of foam may continue to appear.
+            At Purple Café, we checked stocks every 10-15 minutes during the first hour. Once the foam stops forming and the surface looks relatively clear, you can reduce skimming frequency. But check periodically throughout the simmer. Small amounts of foam may continue to appear.
           </p>
 
           <h3>3. Add Mirepoix at the Right Time</h3>
 
           <p>
-            Onions, carrots, and celery go in once the stock is hot and skimmed—not from the start. Early addition gives bitterness as vegetables break down too much during the long simmer.
+            Onions, carrots, and celery go in once the stock is hot and skimmed, not from the start. Early addition gives bitterness as vegetables break down too much during the long simmer.
           </p>
 
           <p>
@@ -290,7 +290,7 @@ export default function MakingStockPage() {
           <h3>4. Simmer Gently</h3>
 
           <p>
-            Maintain barely a tremble—tiny bubbles every few seconds, not a rolling boil. The French call this <em>frémir</em> (to tremble). It&rsquo;s the perfect temperature for extraction without emulsification.
+            Maintain barely a tremble. Tiny bubbles every few seconds, not a rolling boil. The French call this <em>frémir</em> (to tremble). It&rsquo;s the perfect temperature for extraction without emulsification.
           </p>
 
           <p>
@@ -306,7 +306,7 @@ export default function MakingStockPage() {
           </ul>
 
           <p>
-            Longer isn&rsquo;t always better—fish and vegetable stocks turn bitter with extended cooking. Chicken and beef stocks, however, benefit from extended gentle extraction as collagen slowly converts to gelatin.
+            Longer isn&rsquo;t always better. Fish and vegetable stocks turn bitter with extended cooking. Chicken and beef stocks, however, benefit from extended gentle extraction as collagen slowly converts to gelatin.
           </p>
 
           <p>
@@ -316,11 +316,11 @@ export default function MakingStockPage() {
           <h3>5. Strain and Chill Fast</h3>
 
           <p>
-            Pour through a fine-mesh strainer lined with cheesecloth. Don&rsquo;t press the solids—let gravity do the work. Pressing forces cloudy particles through the filter and ruins clarity you worked hours to achieve.
+            Pour through a fine-mesh strainer lined with cheesecloth. Don&rsquo;t press the solids. Let gravity do the work. Pressing forces cloudy particles through the filter and ruins clarity you worked hours to achieve.
           </p>
 
           <p>
-            Cool quickly over an ice bath to drop temperature below 70°F within 2 hours (the USDA danger zone rule). At Purple Café, we used ice wands dropped directly into hot stock—they cool from the inside without diluting.
+            Cool quickly over an ice bath to drop temperature below 70°F within 2 hours (the USDA danger zone rule). At Purple Café, we used ice wands dropped directly into hot stock. They cool from the inside without diluting.
           </p>
 
           <p>
@@ -328,7 +328,7 @@ export default function MakingStockPage() {
           </p>
 
           <p>
-            Fat will solidify on top—skim this off before using the stock. That fat layer also acts as a seal, helping preserve the stock underneath.
+            Fat will solidify on top. Skim this off before using the stock. That fat layer also acts as a seal, helping preserve the stock underneath.
           </p>
 
           <p>
@@ -338,11 +338,11 @@ export default function MakingStockPage() {
           <h2 id="the-near-fire">The Stock That Nearly Burned Down the Restaurant</h2>
 
           <p>
-            Temperature control isn&rsquo;t just about quality—it&rsquo;s about safety. I learned this the hard way at Purple Café when a cook left beef stock simmering overnight on too high a burner.
+            Temperature control isn&rsquo;t just about quality. It&rsquo;s about safety. I learned this the hard way at Purple Café when a cook left beef stock simmering overnight on too high a burner.
           </p>
 
           <p>
-            He came in early the next morning (fortunately) to find the entire restaurant filled with smoke. The smell had permeated every corner of a very large space with high ceilings. Smoke alarms for the entire building were going off. The commercial stockpot was destroyed—scorched black on the bottom and completely dry.
+            He came in early the next morning (fortunately) to find the entire restaurant filled with smoke. The smell had permeated every corner of a very large space with high ceilings. Smoke alarms for the entire building were going off. The commercial stockpot was destroyed, scorched black on the bottom and completely dry.
           </p>
 
           <p>
@@ -350,7 +350,7 @@ export default function MakingStockPage() {
           </p>
 
           <p>
-            The lesson: When you set stock to simmer for 12-16 hours, you must verify the temperature is at a bare tremble, not a simmer-boil. &quot;Low and slow&quot; isn&rsquo;t just for quality—it&rsquo;s for safety. Stock left unattended must be at the absolute minimum temperature that maintains extraction.
+            The lesson: When you set stock to simmer for 12-16 hours, you must verify the temperature is at a bare tremble, not a simmer-boil. &quot;Low and slow&quot; isn&rsquo;t just for quality. It&rsquo;s for safety. Stock left unattended must be at the absolute minimum temperature that maintains extraction.
           </p>
 
           <p>
@@ -370,7 +370,7 @@ export default function MakingStockPage() {
 
           <h3>Not Roasting Bones (For Brown Stocks)</h3>
           <p>
-            This step separates mediocre beef stock from restaurant-quality brown stock. Roasting bones at 400°F for 45-60 minutes creates the Maillard reaction—the caramelization that gives brown stock its deep color and complex flavor. Don&rsquo;t skip this.
+            This step separates mediocre beef stock from restaurant-quality brown stock. Roasting bones at 400°F for 45-60 minutes creates the Maillard reaction, the caramelization that gives brown stock its deep color and complex flavor. Don&rsquo;t skip this.
           </p>
 
           <h3>Adding Vegetables Too Early</h3>
@@ -380,7 +380,7 @@ export default function MakingStockPage() {
 
           <h3>Boiling Instead of Simmering</h3>
           <p>
-            A rolling boil emulsifies fat into the liquid, creating greasy, cloudy stock. Maintain barely a tremble—tiny bubbles every few seconds. This gentle extraction creates clear, clean-tasting stock with proper body.
+            A rolling boil emulsifies fat into the liquid, creating greasy, cloudy stock. Maintain barely a tremble. Tiny bubbles every few seconds. This gentle extraction creates clear, clean-tasting stock with proper body.
           </p>
 
           <h3>Pressing Solids While Straining</h3>
@@ -390,7 +390,7 @@ export default function MakingStockPage() {
 
           <h3>Slow Cooling</h3>
           <p>
-            Stock sitting at warm temperatures grows bacteria rapidly. Use an ice bath or ice wands to drop temperature below 70°F within 2 hours. This isn&rsquo;t optional—it&rsquo;s food safety.
+            Stock sitting at warm temperatures grows bacteria rapidly. Use an ice bath or ice wands to drop temperature below 70°F within 2 hours. This isn&rsquo;t optional. It&rsquo;s food safety.
           </p>
 
           <BlogNewsletterCTA slug="making-stock-professional-chef-method" />
@@ -400,7 +400,7 @@ export default function MakingStockPage() {
           <h3>Refrigeration</h3>
 
           <p>
-            Stock lasts 5 days refrigerated in sealed containers. Fat will solidify on top—this is good. It acts as a seal, protecting the stock underneath. Skim off before using.
+            Stock lasts 5 days refrigerated in sealed containers. Fat will solidify on top. This is good. It acts as a seal, protecting the stock underneath. Skim off before using.
           </p>
 
           <p>
@@ -414,11 +414,11 @@ export default function MakingStockPage() {
           </p>
 
           <p>
-            <strong>Ice cube portions:</strong> Freeze stock in ice cube trays, then transfer cubes to freezer bags. Each cube is roughly 2 tablespoons—perfect for adding to pan sauces or deglazing without thawing an entire quart.
+            <strong>Ice cube portions:</strong> Freeze stock in ice cube trays, then transfer cubes to freezer bags. Each cube is roughly 2 tablespoons, perfect for adding to pan sauces or deglazing without thawing an entire quart.
           </p>
 
           <p>
-            <strong>Quart containers:</strong> For soups, stews, and risottos. Leave 1 inch headspace at the top—stock expands when frozen.
+            <strong>Quart containers:</strong> For soups, stews, and risottos. Leave 1 inch headspace at the top. Stock expands when frozen.
           </p>
 
           <p>

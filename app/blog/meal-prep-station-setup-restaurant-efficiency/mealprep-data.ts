@@ -12,7 +12,7 @@ export const mealprepData = {
       },
       {
         question: "How do chefs stay so calm during service?",
-        answer: "Mise en place. Every move is planned before the first ticket prints. At home, that same principle makes dinner relaxing instead of frantic. Professional chefs prep everything before service starts—ingredients are measured, tools are in place, and the workflow is planned. That preparation creates the calm you see during service."
+        answer: "Mise en place. Every move is planned before the first ticket prints. At home, that same principle makes dinner relaxing instead of frantic. Professional chefs prep everything before service starts. Ingredients are measured, tools are in place, and the workflow is planned. That preparation creates the calm you see during service."
       },
       {
         question: "Can I meal prep without fancy containers?",
@@ -24,15 +24,15 @@ export const mealprepData = {
       },
       {
         question: "Does mise en place save time?",
-        answer: "Yes—dramatically. It turns 60-minute chaos into 30 minutes of smooth cooking. The time you spend prepping and organizing upfront is recovered during cooking because you're not stopping to chop garlic, search for tools, or clean up messes. Your workflow becomes continuous and efficient instead of fragmented and reactive."
+        answer: "Yes, dramatically. It turns 60-minute chaos into 30 minutes of smooth cooking. The time you spend prepping and organizing upfront is recovered during cooking because you're not stopping to chop garlic, search for tools, or clean up messes. Your workflow becomes continuous and efficient instead of fragmented and reactive."
       },
       {
         question: "What if I don't have enough counter space for a full prep station?",
-        answer: "Use what you have strategically. A cutting board, one bowl for prepped ingredients, and a scrap container are enough to start. You can set up a temporary station on a dining table, a large cutting board over the sink, or even a kitchen cart. The principles of mise en place work in any space—it's about organization, not square footage."
+        answer: "Use what you have strategically. A cutting board, one bowl for prepped ingredients, and a scrap container are enough to start. You can set up a temporary station on a dining table, a large cutting board over the sink, or even a kitchen cart. The principles of mise en place work in any space. It's about organization, not square footage."
       },
       {
         question: "How do I organize my prep station if I'm left-handed?",
-        answer: "Reverse the workflow: ingredients on your right, finished prep on your left, waste behind or below. The same principles apply—you just mirror the setup. Professional kitchens accommodate both right- and left-handed cooks by letting each person arrange their station for their dominant hand. Flow matters more than which side things are on."
+        answer: "Reverse the workflow: ingredients on your right, finished prep on your left, waste behind or below. The same principles apply. You just mirror the setup. Professional kitchens accommodate both right- and left-handed cooks by letting each person arrange their station for their dominant hand. Flow matters more than which side things are on."
       },
       {
         question: "Should I prep everything at once or in stages throughout the week?",

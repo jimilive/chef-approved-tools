@@ -85,7 +85,7 @@ export const educationalData = {
       ],
       proTip: {
         title: "Restaurant Reality",
-        content: "In professional kitchens, knife safety isn't optional. It's survival. During my time managing the kitchen at Mellow Mushroom, we processed hundreds of pounds of vegetables, meats, and toppings daily. Speed mattered because service waits for no one, but safety came first. I trained every prep cook on the claw grip, proper blade angles, and the difference between \"fast\" and \"reckless.\" The cooks who respected the blade and used proper technique kept working. The ones who got careless or cocky got stitches—and a very serious conversation about whether they were cut out for this work."
+        content: "In professional kitchens, knife safety isn't optional. It's survival. During my time managing the kitchen at Mellow Mushroom, we processed hundreds of pounds of vegetables, meats, and toppings daily. Speed mattered because service waits for no one, but safety came first. I trained every prep cook on the claw grip, proper blade angles, and the difference between \"fast\" and \"reckless.\" The cooks who respected the blade and used proper technique kept working. The ones who got careless or cocky got stitches, and a very serious conversation about whether they were cut out for this work."
       }
     },
     {
@@ -146,7 +146,7 @@ export const educationalData = {
           id: "rule-7",
           title: "7. Focus Fully",
           content: [
-            "In a professional kitchen, multitasking while cutting is a rookie mistake. Keep your eyes on the board and your knife motion predictable. No talking, no texting, no TV. Never rush — speed comes from repetition and proper technique, not from hurrying."
+            "In a professional kitchen, multitasking while cutting is a rookie mistake. Keep your eyes on the board and your knife motion predictable. No talking, no texting, no TV. Never rush. Speed comes from repetition and proper technique, not from hurrying."
           ]
         },
         {
@@ -160,7 +160,7 @@ export const educationalData = {
           id: "rule-9",
           title: "9. Carry Knives Safely",
           content: [
-            "When moving around with a knife, hold it point down, edge back, at your side. Announce \"behind!\" or \"knife!\" if walking past anyone. It's kitchen protocol. Hand knives handle-first when passing to someone else. Never leave knives in the sink — this is the biggest home kitchen danger. Someone reaches in and gets cut."
+            "When moving around with a knife, hold it point down, edge back, at your side. Announce \"behind!\" or \"knife!\" if walking past anyone. It's kitchen protocol. Hand knives handle-first when passing to someone else. Never leave knives in the sink. This is the biggest home kitchen danger. Someone reaches in and gets cut."
           ]
         },
         {
@@ -183,25 +183,25 @@ export const educationalData = {
           id: "step-1",
           title: "Step 1: Learn the Proper Grip",
           content: [
-            "Hold the knife by pinching the blade just in front of the handle between your thumb and forefinger. Your remaining fingers wrap around the handle naturally. This is called the pinch grip — and it gives you total control.",
-            "The first time I show someone the pinch grip, their reaction is usually surprise — it feels awkward at first. That's normal. You're changing muscle memory built up over years of using a handle grip. Give it a week of consistent practice, and you'll never go back."
+            "Hold the knife by pinching the blade just in front of the handle between your thumb and forefinger. Your remaining fingers wrap around the handle naturally. This is called the pinch grip, and it gives you total control.",
+            "The first time I show someone the pinch grip, their reaction is usually surprise. It feels awkward at first. That's normal. You're changing muscle memory built up over years of using a handle grip. Give it a week of consistent practice, and you'll never go back."
           ],
-          tip: "Most home cooks use a handle grip, which shifts balance too far back. You lose blade awareness, control, and precision. With the pinch grip, you can cut faster and straighter with less force. In a professional kitchen, the pinch grip is non-negotiable — it's the difference between efficient, controlled cuts and fighting with your knife all day."
+          tip: "Most home cooks use a handle grip, which shifts balance too far back. You lose blade awareness, control, and precision. With the pinch grip, you can cut faster and straighter with less force. In a professional kitchen, the pinch grip is non-negotiable. It's the difference between efficient, controlled cuts and fighting with your knife all day."
         },
         {
           id: "step-2",
           title: "Step 2: Use the Right Cutting Motion",
           content: [
             "Stop pressing down. Start slicing. Every cut should move forward and down or back and down, depending on the food. You're letting the sharp edge do the work, not muscle.",
-            "When dicing onions or slicing meat, use long, fluid strokes — not choppy sawing. Imagine drawing the knife through the food, not into it. On delicate ingredients like tomatoes, start the slice with the heel of the blade and pull gently toward you. No pressure, just movement.",
-            "Chopping straight down forces the blade to crush food instead of cleanly cutting through it. This dulls your edge faster and causes uneven cuts. Your knife is designed with a curved edge for a reason — that curve is meant to rock through food in a slicing motion."
+            "When dicing onions or slicing meat, use long, fluid strokes, not choppy sawing. Imagine drawing the knife through the food, not into it. On delicate ingredients like tomatoes, start the slice with the heel of the blade and pull gently toward you. No pressure, just movement.",
+            "Chopping straight down forces the blade to crush food instead of cleanly cutting through it. This dulls your edge faster and causes uneven cuts. Your knife is designed with a curved edge for a reason. That curve is meant to rock through food in a slicing motion."
           ]
         },
         {
           id: "step-3",
-          title: "Step 3: Hone Daily — Sharpen Rarely",
+          title: "Step 3: Hone Daily, Sharpen Rarely",
           content: [
-            "Professional kitchens don't sharpen every day — they hone every shift. Honing realigns the microscopic edge that bends during use. Sharpening removes metal.",
+            "Professional kitchens don't sharpen every day. They hone every shift. Honing realigns the microscopic edge that bends during use. Sharpening removes metal.",
             "If you're not honing regularly, your knife feels dull long before it truly is. Use a honing steel or ceramic rod at a 15-20 degree angle, 4-6 strokes per side."
           ],
           tip: "Keep the steel within reach on your prep station. Honing before each session takes 20 seconds and can extend your knife's sharpness 5-10x longer between full sharpenings. At Mellow Mushroom, we had a honing steel at every prep station. Before starting any knife work, you honed. It was automatic."
@@ -210,7 +210,7 @@ export const educationalData = {
           id: "step-4",
           title: "Step 4: Protect the Edge During Prep",
           content: [
-            "Never drag the blade sideways across a cutting board to move chopped ingredients. That dulls the edge instantly. Use the spine of the knife — or better yet, a bench scraper.",
+            "Never drag the blade sideways across a cutting board to move chopped ingredients. That dulls the edge instantly. Use the spine of the knife, or better yet, a bench scraper.",
             "I've used a **Rubbermaid Commercial Cook's Scraper** for 19 years, and it's perfect for transferring chopped veggies or herbs without damaging your knife. An under $20 bench scraper saves you hundreds in sharpening services and potentially thousands in hospital bills."
           ]
         },
@@ -236,7 +236,7 @@ export const educationalData = {
           id: "claw-form",
           title: "How to Form the Claw",
           content: [
-            "Your non-knife hand—the one holding and guiding the food—should form a claw shape:",
+            "Your non-knife hand (the one holding and guiding the food) should form a claw shape:",
             "**1. Fingertips curl inward**, tucked under and away from the blade",
             "**2. Knuckles push forward**, creating a flat guide surface",
             "**3. Your knife blade rides gently against those knuckles** as you cut",
@@ -247,7 +247,7 @@ export const educationalData = {
           id: "claw-why",
           title: "Why This Works",
           content: [
-            "Your knuckles are flat, rounded surfaces. Even if the blade touches them (and it will, slightly), it slides harmlessly off instead of cutting. Your fingertips—the vulnerable, easily-cut parts—are tucked safely back where the blade can never reach them.",
+            "Your knuckles are flat, rounded surfaces. Even if the blade touches them (and it will, slightly), it slides harmlessly off instead of cutting. Your fingertips (the vulnerable, easily-cut parts) are tucked safely back where the blade can never reach them.",
             "The flat side of the knife uses your knuckles as a guide rail. As you move your hand back between cuts, the blade follows naturally. It's a self-correcting safety system."
           ]
         },
@@ -276,7 +276,7 @@ export const educationalData = {
           content: [
             "Chopping straight down forces the blade to crush food instead of cleanly cutting through it. This dulls your edge faster and causes uneven cuts.",
             "I see this mistake constantly, and I understand why it happens. Television cooking shows make dramatic vertical chopping motions look fast and impressive. But in a real professional kitchen, you'll never see a trained chef chopping straight down. That motion wastes energy, dulls the edge, and actually slows you down once you factor in the extra pressure required.",
-            "**The fix:** Keep your knife moving. Forward-and-down or back-and-down motions protect the edge and give you cleaner cuts. This is the technique we drilled endlessly during prep at Mellow Mushroom — because it's faster, easier on your hand, and keeps knives sharper longer."
+            "**The fix:** Keep your knife moving. Forward-and-down or back-and-down motions protect the edge and give you cleaner cuts. This is the technique we drilled endlessly during prep at Mellow Mushroom, because it's faster, easier on your hand, and keeps knives sharper longer."
           ]
         },
         {
@@ -284,7 +284,7 @@ export const educationalData = {
           title: "Mistake #2: Using a Glass or Granite Cutting Board",
           content: [
             "Nothing ruins edges faster than hard surfaces. Glass and stone boards are knife killers.",
-            "I get it — glass cutting boards look beautiful and they're easy to clean. Some people receive them as gifts and don't realize they're destroying their knives with every cut. Here's the problem: when your knife edge hits a surface harder than the steel, the edge has to give. Every single cut on glass or granite creates microscopic damage to your edge.",
+            "I get it. Glass cutting boards look beautiful and they're easy to clean. Some people receive them as gifts and don't realize they're destroying their knives with every cut. Here's the problem: when your knife edge hits a surface harder than the steel, the edge has to give. Every single cut on glass or granite creates microscopic damage to your edge.",
             "**The fix:** Use a wood or high-quality plastic cutting board. I prefer end-grain wood boards for their longevity and gentle surface. Yes, they require more maintenance than glass (you need to oil them occasionally), but your knives will stay sharper 10 times longer."
           ]
         },
@@ -293,7 +293,7 @@ export const educationalData = {
           title: "Mistake #3: Storing Knives Loose in Drawers",
           content: [
             "Every bump and slide inside that drawer dulls or chips your edge. Reaching into a drawer full of loose knives is asking for injury. I refused to allow this in any kitchen I managed.",
-            "**The fix:** Use magnetic strips or an in-drawer knife block. Even inexpensive guards help. Magnetic knife strips are best — blades are visible, accessible, and don't bang against each other."
+            "**The fix:** Use magnetic strips or an in-drawer knife block. Even inexpensive guards help. Magnetic knife strips are best. Blades are visible, accessible, and don't bang against each other."
           ]
         },
         {
@@ -301,7 +301,7 @@ export const educationalData = {
           title: "Mistake #4: Washing Knives in the Dishwasher",
           content: [
             "Dishwasher heat and detergent corrode metal and weaken handles. Worse, knives knock into other utensils mid-cycle.",
-            "This is one of those mistakes that seems harmless until you understand what's actually happening inside that dishwasher. The combination of high heat, harsh detergents, and prolonged water exposure does multiple kinds of damage simultaneously. The edge can chip from banging against other items. The handle — especially if it's wood — can crack, warp, or separate from the blade.",
+            "This is one of those mistakes that seems harmless until you understand what's actually happening inside that dishwasher. The combination of high heat, harsh detergents, and prolonged water exposure does multiple kinds of damage simultaneously. The edge can chip from banging against other items. The handle (especially if it's wood) can crack, warp, or separate from the blade.",
             "**The fix:** Hand wash only. Rinse immediately after use, use mild detergent, and dry fully before storage. This takes 30 seconds and can add years to your knife's life. In restaurant kitchens, knives never go through the dish machine. Ever."
           ]
         },
@@ -311,15 +311,15 @@ export const educationalData = {
           content: [
             "Waiting until your knife \"feels dull\" is like waiting until your car engine seizes before changing the oil.",
             "Here's what most home cooks don't understand: when your knife starts feeling dull after a few weeks of use, it's probably not actually dull. The edge has simply rolled to one side from normal use. The sharp edge is still there. It's just bent out of alignment. Honing realigns that edge in seconds, while sharpening requires removing metal to create a new edge.",
-            "**The fix:** Hone daily, or at minimum before any serious knife work. Sharpen only when honing no longer restores the edge — which might be every 3-6 months for home cooks. This one habit will transform your experience with knives."
+            "**The fix:** Hone daily, or at minimum before any serious knife work. Sharpen only when honing no longer restores the edge, which might be every 3-6 months for home cooks. This one habit will transform your experience with knives."
           ]
         },
         {
           id: "mistake-6",
           title: "Mistake #6: Rushing",
           content: [
-            "Speed comes from repetition, not panic. Every pro starts slow to stay safe. Fast cutting comes from muscle memory and proper technique that's been practiced thousands of times—not from abandoning safety to hurry up. The moment you rush is the moment you cut yourself.",
-            "**Fix:** Build muscle memory first — precision over speed. During my time at Purple Cafe, we ran a high-volume saute station where speed was absolutely critical. But even in that chaos, we never rushed knife work during prep."
+            "Speed comes from repetition, not panic. Every pro starts slow to stay safe. Fast cutting comes from muscle memory and proper technique that's been practiced thousands of times, not from abandoning safety to hurry up. The moment you rush is the moment you cut yourself.",
+            "**Fix:** Build muscle memory first: precision over speed. During my time at Purple Cafe, we ran a high-volume saute station where speed was absolutely critical. But even in that chaos, we never rushed knife work during prep."
           ]
         },
         {
@@ -336,7 +336,7 @@ export const educationalData = {
       id: "equipment",
       title: "Essential Tools That Keep You Safer",
       content: [
-        "The right equipment isn't just about performance — it's about safety. After 24 years in professional kitchens, I've learned that the right supporting equipment matters as much as the knife itself."
+        "The right equipment isn't just about performance. It's about safety. After 24 years in professional kitchens, I've learned that the right supporting equipment matters as much as the knife itself."
       ],
       equipmentList: [
         {
@@ -395,7 +395,7 @@ export const educationalData = {
         },
         {
           problem: "If you're anxious using knives:",
-          solution: "Slow down and focus on the motion — not the result. Confidence builds through rhythm. Start with soft vegetables and practice the claw grip in slow motion. Speed will come naturally with proper technique."
+          solution: "Slow down and focus on the motion, not the result. Confidence builds through rhythm. Start with soft vegetables and practice the claw grip in slow motion. Speed will come naturally with proper technique."
         },
         {
           problem: "If food sticks to the blade:",
@@ -411,14 +411,14 @@ export const educationalData = {
       id: "conclusion",
       title: "Putting It All Together",
       content: [
-        "Knife safety isn't about memorizing rules — it's about building habits that become automatic. In professional kitchens, we don't think about safety consciously during service. We've trained our bodies to move safely even when we're exhausted, stressed, or working at maximum speed.",
+        "Knife safety isn't about memorizing rules. It's about building habits that become automatic. In professional kitchens, we don't think about safety consciously during service. We've trained our bodies to move safely even when we're exhausted, stressed, or working at maximum speed.",
         "That level of unconscious competence takes time. Start by implementing one rule per week. Focus on your grip for a week, then add board stability, then cutting motion. Layer these habits slowly until they become part of how you naturally work.",
-        "The difference between home cook knife work and professional knife work isn't talent or expensive equipment — it's habits. Small, consistent practices that protect your edges and improve your technique. Start with one change. Maybe it's switching to a wood cutting board. Maybe it's learning the pinch grip or getting a honing steel and using it before each cooking session.",
-        "The goal isn't perfection — it's consistency. Even after 24 years, I still occasionally slip up. The difference is that my baseline habits catch most mistakes before they become injuries. That's what these rules give you: a safety net built from repetition."
+        "The difference between home cook knife work and professional knife work isn't talent or expensive equipment. It's habits. Small, consistent practices that protect your edges and improve your technique. Start with one change. Maybe it's switching to a wood cutting board. Maybe it's learning the pinch grip or getting a honing steel and using it before each cooking session.",
+        "The goal isn't perfection. It's consistency. Even after 24 years, I still occasionally slip up. The difference is that my baseline habits catch most mistakes before they become injuries. That's what these rules give you: a safety net built from repetition."
       ],
       proTip: {
         title: "Success Tip: Make Safety Automatic",
-        content: "In professional kitchens, proper technique isn't something we think about—it's automatic. The claw grip, the pinch grip, knife handling—these become muscle memory through deliberate practice. Start slow, practice the right way every time, and within a few weeks, safe cutting will feel natural. That's when you can start increasing speed. Speed built on proper technique is safe speed. Speed built on shortcuts is a hospital visit waiting to happen."
+        content: "In professional kitchens, proper technique isn't something we think about. It's automatic. The claw grip, the pinch grip, knife handling. These become muscle memory through deliberate practice. Start slow, practice the right way every time, and within a few weeks, safe cutting will feel natural. That's when you can start increasing speed. Speed built on proper technique is safe speed. Speed built on shortcuts is a hospital visit waiting to happen."
       }
     }
   ],
@@ -427,11 +427,11 @@ export const educationalData = {
     questions: [
       {
         question: "Is a sharp knife really safer than a dull one?",
-        answer: "Yes—unequivocally yes. Sharp blades cut cleanly where you intend with minimal pressure. Dull knives require force, and when you finally break through the food, you have no control over where that force goes. A dull knife forces you to press harder, which leads to slips and accidents. Sharp knives respond precisely to small adjustments and cut predictably."
+        answer: "Yes, unequivocally yes. Sharp blades cut cleanly where you intend with minimal pressure. Dull knives require force, and when you finally break through the food, you have no control over where that force goes. A dull knife forces you to press harder, which leads to slips and accidents. Sharp knives respond precisely to small adjustments and cut predictably."
       },
       {
         question: "How often should I hone my knife?",
-        answer: "Ideally before each cooking session. Honing takes seconds and keeps your edge aligned, dramatically extending time between sharpenings. Professional kitchens hone every shift—it's automatic, like a guitarist tuning before playing."
+        answer: "Ideally before each cooking session. Honing takes seconds and keeps your edge aligned, dramatically extending time between sharpenings. Professional kitchens hone every shift. It's automatic, like a guitarist tuning before playing."
       },
       {
         question: "How often should I sharpen my knife?",
@@ -439,19 +439,19 @@ export const educationalData = {
       },
       {
         question: "What's the safest knife for beginners?",
-        answer: "Counterintuitively, a properly sharpened 8-inch chef's knife like the Victorinox Fibrox. It's predictable, comfortable in hand, and safe when you use proper technique. Small paring knives slip more easily on certain tasks. Size isn't the danger—improper technique is."
+        answer: "Counterintuitively, a properly sharpened 8-inch chef's knife like the Victorinox Fibrox. It's predictable, comfortable in hand, and safe when you use proper technique. Small paring knives slip more easily on certain tasks. Size isn't the danger. Improper technique is."
       },
       {
         question: "Should I use cut-resistant gloves?",
-        answer: "For mandoline work or oyster shucking, yes—absolutely use a cut-resistant glove. For everyday knife work with proper technique, no. Cut-resistant gloves give false confidence and reduce your tactile sense of where the blade is. They're a crutch that prevents you from learning proper technique. The claw grip is your glove."
+        answer: "For mandoline work or oyster shucking, yes. Absolutely use a cut-resistant glove. For everyday knife work with proper technique, no. Cut-resistant gloves give false confidence and reduce your tactile sense of where the blade is. They're a crutch that prevents you from learning proper technique. The claw grip is your glove."
       },
       {
         question: "Why do chefs use towels under cutting boards?",
-        answer: "It stabilizes the board completely — no sliding, no wobbling, no accidents. A damp kitchen towel creates friction and prevents the board from sliding around while you cut. Every professional kitchen does this—no exceptions."
+        answer: "It stabilizes the board completely: no sliding, no wobbling, no accidents. A damp kitchen towel creates friction and prevents the board from sliding around while you cut. Every professional kitchen does this. No exceptions."
       },
       {
         question: "How do I teach knife safety to kids?",
-        answer: "Start young with a butter knife and soft foods (bananas, strawberries, cooked vegetables). Teach the claw grip from day one—make it non-negotiable. Around age 7-8, graduate to a small serrated knife, always supervised. Focus on respect and technique before speed."
+        answer: "Start young with a butter knife and soft foods (bananas, strawberries, cooked vegetables). Teach the claw grip from day one. Make it non-negotiable. Around age 7-8, graduate to a small serrated knife, always supervised. Focus on respect and technique before speed."
       },
       {
         question: "Can I use an electric sharpener?",
@@ -471,7 +471,7 @@ export const educationalData = {
       },
       {
         question: "What's the best way to clean a knife after use?",
-        answer: "Rinse immediately after use with warm water and mild dish soap. Wipe from spine to edge (never run your finger along the edge). Dry completely with a towel before storing. Never let knives sit in the sink or soak—this damages the edge and can corrode the blade."
+        answer: "Rinse immediately after use with warm water and mild dish soap. Wipe from spine to edge (never run your finger along the edge). Dry completely with a towel before storing. Never let knives sit in the sink or soak. This damages the edge and can corrode the blade."
       },
       {
         question: "How do I know if my knife needs sharpening or just honing?",
@@ -479,7 +479,7 @@ export const educationalData = {
       },
       {
         question: "Can I sharpen serrated knives?",
-        answer: "Yes, but it requires a special technique and tools. Serrated knives are sharpened on the beveled side only, using a tapered sharpening rod that fits into each serration. Most home cooks are better off using a professional service for serrated knife sharpening—it's inexpensive and done right."
+        answer: "Yes, but it requires a special technique and tools. Serrated knives are sharpened on the beveled side only, using a tapered sharpening rod that fits into each serration. Most home cooks are better off using a professional service for serrated knife sharpening. It's inexpensive and done right."
       },
       {
         question: "What should I do if I cut myself while cooking?",
@@ -491,11 +491,11 @@ export const educationalData = {
       },
       {
         question: "What's the most dangerous knife task?",
-        answer: "Mandoline slicing causes more injuries than any other single kitchen task. Those blades are razor-sharp and your hand moves toward them repeatedly. Always use the guard—no exceptions. The second most dangerous task is cutting round, rolling foods (potatoes, onions) without first creating a flat base."
+        answer: "Mandoline slicing causes more injuries than any other single kitchen task. Those blades are razor-sharp and your hand moves toward them repeatedly. Always use the guard. No exceptions. The second most dangerous task is cutting round, rolling foods (potatoes, onions) without first creating a flat base."
       },
       {
         question: "How do professional chefs cut so fast without hurting themselves?",
-        answer: "Thousands of hours of repetition with perfect technique. We're not faster because we rush—we're faster because proper technique has become automatic muscle memory. The claw grip isn't something we think about; it's just how our hand positions itself. Every professional was once slow and deliberate. We got fast by doing it right ten thousand times, not by taking shortcuts."
+        answer: "Thousands of hours of repetition with perfect technique. We're not faster because we rush. We're faster because proper technique has become automatic muscle memory. The claw grip isn't something we think about; it's just how our hand positions itself. Every professional was once slow and deliberate. We got fast by doing it right ten thousand times, not by taking shortcuts."
       }
     ]
   },
