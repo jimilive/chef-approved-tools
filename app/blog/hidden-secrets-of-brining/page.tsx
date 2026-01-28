@@ -1,6 +1,7 @@
 // ============================================================================
-// HIDDEN SECRETS OF BRINING - Blog Page (Data-Driven)
-// Migrated from inline to data-driven architecture
+// HOW TO BRINE CHICKEN & OTHER PROTEINS - Blog Page (Data-Driven)
+// Optimized: January 28, 2026
+// Changes: Quick Answer box, Diamond Crystal link, updated H2s
 // ============================================================================
 
 import Link from 'next/link'
@@ -59,6 +60,7 @@ export default function BriningSecretsPage() {
     id: string
     title: string
     formula: { title: string; items: { label: string; value: string }[]; critical: string }
+    saltNote: { text: string; linkText: string; linkHref: string }
     methods: { name: string; description: string }[]
   }
   const proteinsSection = briningData.sections[3] as {
@@ -119,6 +121,46 @@ export default function BriningSecretsPage() {
             </ul>
           </div>
 
+          {/* NEW: Quick Answer Box for Featured Snippet */}
+          <div id="quick-answer" className="bg-green-50 border-2 border-green-600 rounded-xl p-6 my-8">
+            <h2 className="text-xl font-bold text-green-800 mb-4">{briningData.quickAnswer.title}</h2>
+
+            {/* Ratio */}
+            <div className="mb-4">
+              <p className="font-semibold text-green-900">{briningData.quickAnswer.ratio.label}:</p>
+              <p className="text-green-800 text-lg">{briningData.quickAnswer.ratio.value}</p>
+            </div>
+
+            {/* Timing Chart */}
+            <div className="mb-4">
+              <p className="font-semibold text-green-900 mb-2">Timing (Wet Brine):</p>
+              <ul className="space-y-1 text-green-800">
+                {briningData.quickAnswer.timing.map((item, index) => (
+                  <li key={index}>
+                    <strong>{item.protein}:</strong> {item.time}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Steps */}
+            <div className="mb-4">
+              <p className="font-semibold text-green-900 mb-2">Basic Steps:</p>
+              <ol className="list-decimal list-inside space-y-1 text-green-800">
+                {briningData.quickAnswer.steps.map((step, index) => (
+                  <li key={index}>{step}</li>
+                ))}
+              </ol>
+            </div>
+
+            {/* Pro Tip */}
+            <div className="bg-green-100 rounded-lg p-4 mt-4">
+              <p className="text-green-900 mb-0">
+                <strong>Pro Tip:</strong> {briningData.quickAnswer.proTip}
+              </p>
+            </div>
+          </div>
+
           {/* Introduction */}
           {introSection.content.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
@@ -163,6 +205,14 @@ export default function BriningSecretsPage() {
               <strong>Critical:</strong> {ratiosSection.formula.critical}
             </p>
           </div>
+
+          {/* Diamond Crystal Link - Internal Link for SEO */}
+          <p>
+            {ratiosSection.saltNote.text}{' '}
+            <Link href={ratiosSection.saltNote.linkHref} className="text-orange-700 hover:text-orange-800 font-semibold">
+              {ratiosSection.saltNote.linkText} →
+            </Link>
+          </p>
 
           <h3>Gradient vs. Equilibrium Brining</h3>
           {ratiosSection.methods.map((method, index) => (

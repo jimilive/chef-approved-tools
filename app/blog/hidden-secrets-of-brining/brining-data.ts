@@ -1,31 +1,56 @@
 // ============================================================================
-// HIDDEN SECRETS OF BRINING - Blog Data
-// Migrated from inline to data-driven architecture
+// HOW TO BRINE CHICKEN & OTHER PROTEINS - Blog Data
+// Optimized: January 28, 2026
+// Changes: Title, H1, H2s, Quick Answer box, expanded FAQs, internal links
 // ============================================================================
 
 export const briningData = {
   breadcrumb: {
     category: "Blog",
-    title: "The Hidden Secrets of Brining"
+    title: "How to Brine Chicken"
   },
 
   hero: {
-    title: "The Hidden Secrets of Brining",
+    title: "How to Brine Chicken & Other Proteins: Wet vs Dry",
     introduction: [
-      "Professional kitchens brine lean proteins because the difference between brined and unbrined meat isn't subtle. It's the difference between juicy, tender results and dry, disappointing texture.",
-      "Brining isn't magic. It's controlled protein chemistry that restructures muscle tissue to trap moisture during cooking."
+      "After 24 years in professional kitchens—brining hundreds of turkeys for holiday services and thousands of chicken breasts for daily prep—I can tell you the difference between brined and unbrined meat isn't subtle. It's the difference between juicy and sawdust.",
+      "This guide covers exact ratios, timing charts for chicken, turkey, pork, and seafood, plus the real difference between wet and dry brining. No recipes, no fluff—just the technique that works."
     ]
   },
 
   tableOfContents: [
-    { id: "science", label: "What Brining Actually Does (The Science)" },
-    { id: "ratios", label: "Standard Brine Ratios" },
-    { id: "proteins", label: "Which Proteins Benefit From Brining" },
-    { id: "timing", label: "Brining Times for Different Proteins" },
-    { id: "wet-vs-dry", label: "Wet Brining vs. Dry Brining" },
-    { id: "mistakes", label: "Common Brining Mistakes" },
+    { id: "quick-answer", label: "Quick Answer: Ratios & Timing" },
+    { id: "science", label: "How Does Brining Work?" },
+    { id: "ratios", label: "What Is the Correct Brine Ratio?" },
+    { id: "proteins", label: "What Meats Should You Brine?" },
+    { id: "timing", label: "How Long to Brine Chicken, Turkey, and Pork" },
+    { id: "wet-vs-dry", label: "Wet Brine vs Dry Brine: Which Is Better?" },
+    { id: "mistakes", label: "5 Brining Mistakes That Ruin Meat" },
     { id: "faq", label: "Frequently Asked Questions" }
   ],
+
+  // NEW: Quick Answer section for featured snippet capture
+  quickAnswer: {
+    id: "quick-answer",
+    title: "Quick Answer: How to Brine Chicken",
+    ratio: {
+      label: "Standard Ratio",
+      value: "1 cup Diamond Crystal kosher salt per gallon of cold water"
+    },
+    timing: [
+      { protein: "Boneless chicken breasts", time: "30 minutes to 1 hour" },
+      { protein: "Bone-in chicken pieces", time: "3-5 hours" },
+      { protein: "Whole chicken", time: "12-16 hours" },
+      { protein: "Whole turkey", time: "24 hours" }
+    ],
+    steps: [
+      "Dissolve salt completely in cold water",
+      "Submerge chicken, refrigerate immediately",
+      "Remove at time limit—set a timer",
+      "Pat completely dry before cooking"
+    ],
+    proTip: "Dry brining (salt directly on skin, uncovered in fridge) gives crispier skin. Wet brining provides more moisture insurance. Both work—choose based on your priority."
+  },
 
   sections: [
     {
@@ -37,7 +62,7 @@ export const briningData = {
     },
     {
       id: "science",
-      title: "What Brining Actually Does (The Science)",
+      title: "How Does Brining Work?",
       intro: "Understanding the mechanism helps you brine correctly. Three processes occur when meat sits in salt solution:",
       subsections: [
         {
@@ -64,7 +89,7 @@ export const briningData = {
     },
     {
       id: "ratios",
-      title: "Standard Brine Ratios",
+      title: "What Is the Correct Brine Ratio?",
       formula: {
         title: "Standard Brine Formula",
         items: [
@@ -74,6 +99,11 @@ export const briningData = {
           { label: "Optional sugar", value: "Equal parts salt and sugar by weight (aids browning, balances flavor)" }
         ],
         critical: "Always measure salt by weight, not volume. Different salt types have vastly different volumes per gram. Diamond Crystal kosher salt and Morton kosher salt require different amounts for the same salinity."
+      },
+      saltNote: {
+        text: "I recommend Diamond Crystal for its predictable dissolution and the large, hollow flakes that make it easier to control seasoning. Professional kitchens overwhelmingly prefer it for a reason.",
+        linkText: "See my full Diamond Crystal review",
+        linkHref: "/reviews/diamond-crystal-kosher-salt"
       },
       methods: [
         {
@@ -88,7 +118,7 @@ export const briningData = {
     },
     {
       id: "proteins",
-      title: "Which Proteins Benefit From Brining",
+      title: "What Meats Should You Brine (And What to Skip)",
       bestCandidates: {
         title: "Best Candidates: Lean, Low-Fat Proteins",
         categories: [
@@ -123,7 +153,7 @@ export const briningData = {
     },
     {
       id: "timing",
-      title: "Brining Times for Different Proteins",
+      title: "How Long to Brine Chicken, Turkey, and Pork",
       timingGroups: [
         {
           category: "Poultry",
@@ -155,7 +185,7 @@ export const briningData = {
     },
     {
       id: "wet-vs-dry",
-      title: "Wet Brining vs. Dry Brining",
+      title: "Wet Brine vs Dry Brine: Which Is Better?",
       methods: [
         {
           name: "Wet Brining",
@@ -195,7 +225,7 @@ export const briningData = {
     },
     {
       id: "mistakes",
-      title: "Common Brining Mistakes",
+      title: "5 Brining Mistakes That Ruin Meat",
       mistakes: [
         {
           name: "Temperature Safety Violations",
@@ -231,7 +261,7 @@ export const briningData = {
     },
     {
       id: "conclusion",
-      title: "Putting It All Together",
+      title: "Your First Brine: Start Here",
       content: [
         "Brining works because the science is sound. Salt restructures muscle proteins, creating a matrix that traps moisture during cooking. This isn't chef mythology. It's measurable, repeatable chemistry.",
         "The technique transforms economical, lean cuts into reliably juicy results. A properly brined chicken breast tolerates slight overcooking without becoming dry. An unbrined breast has no margin for error.",
@@ -246,17 +276,18 @@ export const briningData = {
 
   faq: {
     questions: [
+      // Original FAQs (refined)
       {
         question: "What does brining actually do to meat?",
         answer: "Brining causes salt to penetrate meat through diffusion, denaturing muscle proteins and creating a gel-like matrix that traps water molecules. This restructured protein can't contract as tightly during cooking, preventing moisture loss and resulting in juicier meat."
       },
       {
         question: "What is the correct brine ratio?",
-        answer: "The standard ratio is 5-6% salt by weight of water, typically about 1 cup of kosher salt per gallon of water. Always measure salt by weight, not volume, as different salt types have vastly different densities."
+        answer: "The standard ratio is 5-6% salt by weight of water, typically about 1 cup of Diamond Crystal kosher salt per gallon of water. Always measure salt by weight, not volume, as different salt types have vastly different densities."
       },
       {
         question: "How long should I brine chicken?",
-        answer: "Boneless chicken breasts: 30 minutes to 1 hour. Bone-in pieces: 3-5 hours. Whole chicken: 12-16 hours maximum. Over-brining creates salty, spongy texture."
+        answer: "Boneless chicken breasts: 30 minutes to 1 hour. Bone-in pieces: 3-5 hours. Whole chicken: 12-16 hours maximum. Over-brining creates salty, spongy texture—set a timer."
       },
       {
         question: "Should I brine beef?",
@@ -277,13 +308,35 @@ export const briningData = {
       {
         question: "Why does my brined chicken have spongy texture?",
         answer: "This indicates over-brining. You exceeded the maximum recommended time, causing proteins to break down too much. Follow strict time guidelines: chicken breasts max 1 hour, whole chicken max 24 hours."
+      },
+      // NEW FAQs for additional keyword coverage
+      {
+        question: "How much salt per gallon of water for brining?",
+        answer: "Use 1 cup of Diamond Crystal kosher salt (or 1/2 cup Morton kosher salt, or 1/2 cup table salt) per gallon of water. This creates the ideal 5-6% salt concentration. Always measure salt by weight for consistency—different salt brands have vastly different volumes."
+      },
+      {
+        question: "Can you brine chicken too long?",
+        answer: "Yes. Over-brining creates spongy, overly salty meat with a cured texture like ham. Maximum times: boneless breasts 1 hour, bone-in pieces 5 hours, whole chicken 24 hours. Set a timer—the damage from over-brining cannot be undone."
+      },
+      {
+        question: "Is dry brining better than wet brining?",
+        answer: "Neither is universally better—they serve different purposes. Dry brining produces crispier skin and more concentrated flavor. Wet brining provides more moisture insurance and is more forgiving for beginners. For roast chicken with crispy skin, dry brine. For lean chicken breasts you're worried about overcooking, wet brine."
+      },
+      {
+        question: "What is equilibrium brining?",
+        answer: "Equilibrium brining calculates exact salt needed based on total weight: (meat weight + water weight) × 0.5-1% = total salt. It takes 24-48+ hours but is impossible to over-brine since the salt concentration can never exceed your target. Preferred for sous vide and precision cooking."
+      },
+      {
+        question: "Why does brined chicken taste better?",
+        answer: "Brining seasons the meat throughout, not just the surface. Salt also enhances our perception of other flavors by suppressing bitterness and amplifying savory notes. The improved moisture retention means juices stay in the meat rather than pooling on your cutting board."
       }
     ]
   },
 
   relatedArticles: [
-    { href: "/blog/kitchen-thermometers-guide", title: "Complete Guide to Kitchen Thermometers" },
-    { href: "/blog/how-to-make-marinara-sauce", title: "How to Make Marinara Sauce Like a Restaurant" },
-    { href: "/blog/making-stock-professional-chef-method", title: "Making Stock: The Professional Method" }
+    { href: "/reviews/diamond-crystal-kosher-salt", title: "Diamond Crystal Kosher Salt Review: The Professional Standard" },
+    { href: "/blog/why-professional-chefs-use-kosher-salt", title: "Why Professional Chefs Use Kosher Salt" },
+    { href: "/blog/making-stock-professional-chef-method", title: "Making Stock: The Professional Method" },
+    { href: "/blog/kitchen-thermometers-guide", title: "Kitchen Thermometer Guide" }
   ]
 }

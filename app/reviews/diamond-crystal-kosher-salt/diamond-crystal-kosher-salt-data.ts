@@ -244,6 +244,12 @@ export const reviewData = {
     title: 'Complete Your Professional Kitchen Setup',
     products: [
       {
+        emoji: '🍗',
+        name: 'How to Brine Chicken & Other Proteins',
+        description: 'Master brining with exact ratios, timing charts, and wet vs dry comparisons. Diamond Crystal is the professional standard for brining—learn why and how to use it.',
+        href: '/blog/hidden-secrets-of-brining'
+      },
+      {
         emoji: '🔪',
         name: 'Victorinox 8" Chef\'s Knife',
         description: 'The workhorse blade that complements precise seasoning. Sharp enough to prep ingredients that showcase your salt\'s clean flavor. Professional kitchen standard.',
