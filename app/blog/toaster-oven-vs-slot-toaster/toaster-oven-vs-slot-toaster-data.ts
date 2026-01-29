@@ -7,8 +7,8 @@ export const comparisonData = {
   hero: {
     title: "Toaster Oven vs Slot Toaster: A Professional Chef's Analysis",
     introduction: [
-      "After 24 years in professional kitchens—where every piece of equipment earns its counter space or gets replaced—I've thought more about toast than most people consider reasonable. At Purple Cafe, we needed consistent, fast toast production for brunch service. At home, I want an appliance that justifies its footprint. These two goals point to different solutions, and understanding the trade-offs helps you pick the right one.",
-      "Slot toasters do one thing. Toaster ovens do many things. The question isn't which is better—it's which matches how you actually cook."
+      "After 24 years in professional kitchens, where every piece of equipment earns its counter space or gets replaced, I've thought more about toast than most people consider reasonable. At Purple Cafe, we needed consistent, fast toast production for brunch service. At home, I want an appliance that justifies its footprint. These two goals point to different solutions, and understanding the trade-offs helps you pick the right one.",
+      "Slot toasters do one thing. Toaster ovens do many things. The question isn't which is better. It's which matches how you actually cook."
     ]
   },
 
@@ -123,7 +123,7 @@ export const comparisonData = {
           content: [
             "**Slot Toaster:** 2-4 minutes for consistent golden brown toast",
             "**Toaster Oven:** 4-8 minutes including necessary preheat time",
-            "For a single slice or pair of slices, slot toasters are roughly twice as fast. This gap narrows when toasting multiple batches—a toaster oven can handle 4-6 slices in one cycle while most slot toasters max out at 2-4 slices."
+            "For a single slice or pair of slices, slot toasters are roughly twice as fast. This gap narrows when toasting multiple batches. A toaster oven can handle 4-6 slices in one cycle while most slot toasters max out at 2-4 slices."
           ]
         },
         {
@@ -131,7 +131,7 @@ export const comparisonData = {
           title: "Browning Consistency",
           content: [
             "**Slot Toaster:** Generally superior. The close proximity of heating elements to bread surface creates even browning across the entire slice. Quality models offer consistent results from batch to batch, even when the toaster is cold vs. already warm.",
-            "**Toaster Oven:** More variable. The larger chamber and greater distance from heating elements can create uneven browning—darker edges, lighter centers, or one side more done than the other. Position on the rack matters. Some models struggle to produce consistent color across multiple batches.",
+            "**Toaster Oven:** More variable. The larger chamber and greater distance from heating elements can create uneven browning: darker edges, lighter centers, or one side more done than the other. Position on the rack matters. Some models struggle to produce consistent color across multiple batches.",
             "Consumer Reports testing found that the best toasters offer a wide range of browning, from very light to very dark, and produce consistent color across all slices in a batch."
           ]
         },
@@ -239,7 +239,7 @@ export const comparisonData = {
     questions: [
       {
         question: "Is a toaster oven more energy efficient than a regular oven?",
-        answer: "Yes. Toaster ovens use 1,200-1,800 watts compared to 2,000-5,000 watts for full-size ovens. For small cooking tasks—reheating, baking small batches, or cooking for 1-2 people—a toaster oven significantly reduces energy consumption."
+        answer: "Yes. Toaster ovens use 1,200-1,800 watts compared to 2,000-5,000 watts for full-size ovens. For small cooking tasks like reheating, baking small batches, or cooking for 1-2 people, a toaster oven significantly reduces energy consumption."
       },
       {
         question: "Can a toaster oven replace a regular toaster?",

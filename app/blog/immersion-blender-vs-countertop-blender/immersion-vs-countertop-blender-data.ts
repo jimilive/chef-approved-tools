@@ -178,11 +178,11 @@ export const comparisonData = {
           title: "Immersion Blenders Dominate For:",
           content: [
             "**1. Pureeing Soup in the Pot**",
-            "The convenience of blending soup without transferring it to another container is transformative. Make soup in stockpot, submerge immersion blender, blend for 60-90 seconds, done. No transfers, no extra dishes, minimal cleanup. Professional kitchens use this for large-batch soup production—a 10-gallon batch would require 15-20 transfers to a countertop blender, but an immersion blender handles it in 5 minutes.",
+            "The convenience of blending soup without transferring it to another container is transformative. Make soup in stockpot, submerge immersion blender, blend for 60-90 seconds, done. No transfers, no extra dishes, minimal cleanup. Professional kitchens use this for large-batch soup production. A 10-gallon batch would require 15-20 transfers to a countertop blender, but an immersion blender handles it in 5 minutes.",
             "**2. Small Batch Sauces**",
             "Making single servings of salad dressing, vinaigrette, or small sauce batches is faster with immersion blenders. Combine ingredients in tall container (usually included), blend for 15-20 seconds, done. No need to pull out and clean a full countertop blender for tiny tasks.",
             "**3. Emulsions and Mayonnaise**",
-            "Making mayonnaise or aioli works better with immersion blenders. The narrow blending cup ensures the blade stays submerged, creating perfect emulsification. Countertop blenders have too much volume—ingredients spread too thin for proper emulsification of small batches. Professional technique: egg yolk, garlic, lemon juice, slowly drizzle oil while blending for perfect emulsion.",
+            "Making mayonnaise or aioli works better with immersion blenders. The narrow blending cup ensures the blade stays submerged, creating perfect emulsification. Countertop blenders have too much volume, and ingredients spread too thin for proper emulsification of small batches. Professional technique: egg yolk, garlic, lemon juice, slowly drizzle oil while blending for perfect emulsion.",
             "**4. Baby Food**",
             "Pureeing small portions of cooked vegetables or fruits for baby food is perfect for immersion blenders. Cook vegetables, blend directly in the cooking pot or small container, portion into containers. Fast, easy, minimal cleanup.",
             "**5. Mashed Potatoes and Similar Applications**",
@@ -219,7 +219,7 @@ export const comparisonData = {
             "**Soup Texture:**",
             "Immersion blenders puree soup to \"smooth\" but not \"silky.\" You may notice very fine particles or slight graininess with fibrous vegetables. For most home cooking, this is perfectly acceptable.",
             "**Why The Difference:**",
-            "Countertop blenders force ingredients through blade assembly repeatedly via vortex action. Immersion blenders rely on you moving the blade through ingredients—less thorough processing.",
+            "Countertop blenders force ingredients through blade assembly repeatedly via vortex action. Immersion blenders rely on you moving the blade through ingredients, which means less thorough processing.",
             "**Practical Impact:**",
             "For daily cooking, immersion blender texture is excellent. For entertaining or restaurant-quality presentation, countertop blenders edge ahead."
           ]
@@ -245,7 +245,7 @@ export const comparisonData = {
             "- Remove blade assembly from jar (if possible)",
             "- Scrub blade assembly thoroughly",
             "- Clean jar base and gasket",
-            "- Clean base unit (wipe with damp cloth—don't submerge)",
+            "- Clean base unit (wipe with damp cloth; don't submerge)",
             "**Cleaning Challenges:**",
             "Blade assemblies trap food particles, gaskets develop odors if not cleaned thoroughly, base has crevices that collect spills, and heavy jars are cumbersome to wash.",
             "**Storage:**",
@@ -267,9 +267,9 @@ export const comparisonData = {
             "- Self-cleaning is highly effective",
             "- No jar or multiple components",
             "- Blade shaft is dishwasher safe (most models)",
-            "Immersion blender cleaning is almost trivially easy. Clean in 60 seconds after making soup—submerge in soapy water in the empty pot, blend briefly, rinse, done.",
+            "Immersion blender cleaning is almost trivially easy. Clean in 60 seconds after making soup: submerge in soapy water in the empty pot, blend briefly, rinse, done.",
             "**Storage:**",
-            "Immersion blenders store in drawers, hang on hooks, or fit in small cabinet spaces. Dimensions: 14-16 inches length, 2-3 inches diameter, 1-2 lbs weight. Occupy minimal space—roughly equivalent to a large spatula. Grabbing from a drawer takes 10 seconds with no assembly required."
+            "Immersion blenders store in drawers, hang on hooks, or fit in small cabinet spaces. Dimensions: 14-16 inches length, 2-3 inches diameter, 1-2 lbs weight. Occupy minimal space, roughly equivalent to a large spatula. Grabbing from a drawer takes 10 seconds with no assembly required."
           ]
         }
       ]
@@ -355,7 +355,7 @@ export const comparisonData = {
       },
       {
         question: "Can I make mayonnaise in a countertop blender?",
-        answer: "Difficult. Countertop blenders require minimum volume for proper blending. Standard mayonnaise recipes don't provide enough volume—ingredients spread too thin. Immersion blenders work much better for emulsions and mayonnaise due to narrow blending cup design."
+        answer: "Difficult. Countertop blenders require minimum volume for proper blending. Standard mayonnaise recipes don't provide enough volume, and ingredients spread too thin. Immersion blenders work much better for emulsions and mayonnaise due to narrow blending cup design."
       },
       {
         question: "Do immersion blenders come with attachments?",

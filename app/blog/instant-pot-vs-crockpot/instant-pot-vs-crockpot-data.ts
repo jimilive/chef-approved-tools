@@ -7,7 +7,7 @@ export const comparisonData = {
   hero: {
     title: "Instant Pot vs Crock Pot: Which One Should You Buy?",
     introduction: [
-      "After 24 years in professional kitchens—where we braise in stockpots on the stove and hotel pans in the oven—I've been testing the Instant Pot Duo Plus at home for the past 6 months. The cooking principles are the same: browning builds flavor, and low-slow heat tenderizes tough cuts. Here's what actually matters for home cooks choosing between these appliances.",
+      "After 24 years in professional kitchens, where we braise in stockpots on the stove and hotel pans in the oven, I've been testing the Instant Pot Duo Plus at home for the past 6 months. The cooking principles are the same: browning builds flavor, and low-slow heat tenderizes tough cuts. Here's what actually matters for home cooks choosing between these appliances.",
       "Choosing between an Instant Pot and a Crock Pot centers on speed versus hands-off convenience. While both appliances make dinner easier, they use fundamentally different cooking methods and excel at different tasks.",
       "Understanding these differences will help you decide which appliance best fits your cooking style, schedule, and family needs."
     ]
@@ -195,9 +195,9 @@ export const comparisonData = {
           option: "instantpot-convenience",
           title: "Instant Pot Convenience",
           content: [
-            "Instant Pots require more active involvement. You need to be home when the cooking finishes to release pressure and serve the meal. However, they offer convenience through speed—you can start cooking when you get home and have dinner ready in 30-45 minutes. The saute function also eliminates the need for a separate pan to brown ingredients.",
+            "Instant Pots require more active involvement. You need to be home when the cooking finishes to release pressure and serve the meal. However, they offer convenience through speed: you can start cooking when you get home and have dinner ready in 30-45 minutes. The saute function also eliminates the need for a separate pan to brown ingredients.",
             "The Instant Pot's multiple functions make it incredibly versatile. Beyond pressure cooking and slow cooking, you can saute, steam, make yogurt, and even bake cheesecakes. This consolidation means fewer appliances cluttering your kitchen.",
-            "Crockpots excel at specific tasks but offer limited functionality beyond slow cooking. However, this simplicity means there's virtually no learning curve—just add ingredients, set the temperature, and walk away."
+            "Crockpots excel at specific tasks but offer limited functionality beyond slow cooking. However, this simplicity means there's virtually no learning curve. Just add ingredients, set the temperature, and walk away."
           ]
         }
       ]
@@ -212,7 +212,7 @@ export const comparisonData = {
           content: [
             "Modern Instant Pots include numerous safety features that address concerns about pressure cooking. Automatic pressure release valves, locking lids that won't open while pressurized, and overpressure protection make today's electric pressure cookers safe and easy to use.",
             "Crockpots pose minimal safety concerns. The low temperatures and long cooking times make them safe to leave unattended all day. However, you should never use a slow cooker to cook frozen meat due to the extended time food spends in the danger zone temperature range where bacteria multiply.",
-            "Instant Pots can safely cook frozen meat because they quickly reach high temperatures. This is a significant benefit for those who forget to defrost ingredients before dinner time—you can cook from frozen without food safety concerns."
+            "Instant Pots can safely cook frozen meat because they quickly reach high temperatures. This is a significant benefit for those who forget to defrost ingredients before dinner time, and you can cook from frozen without food safety concerns."
           ]
         }
       ]
@@ -225,7 +225,7 @@ export const comparisonData = {
           option: "versatility-comparison",
           title: "Versatility Comparison",
           content: [
-            "Instant Pots offer significantly more versatility than traditional Crockpots. The range of cooking modes—pressure cook, slow cook, saute, steam, rice, yogurt, and more—means an Instant Pot can replace multiple appliances. This is particularly valuable for small kitchens with limited storage space.",
+            "Instant Pots offer significantly more versatility than traditional Crockpots. The range of cooking modes, including pressure cook, slow cook, saute, steam, rice, yogurt, and more, means an Instant Pot can replace multiple appliances. This is particularly valuable for small kitchens with limited storage space.",
             "Crockpots do one thing exceptionally well: slow cooking. While this seems limiting, the simplicity is actually an advantage for those who primarily want hands-off cooking for stews, roasts, and soups. You don't need to navigate complex settings or learn multiple cooking methods.",
             "Modern Crockpot multicookers now include pressure cooking modes, attempting to combine the benefits of both appliances. These hybrid models offer the option of fast pressure cooking or slow cooking in one device, providing more flexibility than traditional slow cookers."
           ]
@@ -285,7 +285,7 @@ export const comparisonData = {
       },
       {
         question: "What are the main disadvantages of an Instant Pot?",
-        answer: "Despite the name, Instant Pots aren't truly instant—they need 10-30 minutes to build pressure before cooking begins. You need to be home when cooking finishes to release pressure and serve, eliminating the set-and-forget convenience of slow cookers. The learning curve is steeper with multiple functions and settings. Finally, the flavor profile doesn't match traditional slow cooking for certain dishes."
+        answer: "Despite the name, Instant Pots aren't truly instant. They need 10-30 minutes to build pressure before cooking begins. You need to be home when cooking finishes to release pressure and serve, eliminating the set-and-forget convenience of slow cookers. The learning curve is steeper with multiple functions and settings. Finally, the flavor profile doesn't match traditional slow cooking for certain dishes."
       },
       {
         question: "Can you make desserts in both Instant Pots and Crockpots?",

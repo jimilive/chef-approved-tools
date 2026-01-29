@@ -12,7 +12,7 @@ export const bleachData = {
   hero: {
     title: "Bleach vs Sanitation Solution: Which to Use",
     introduction: [
-      "Professional kitchens rely on proper chemical sanitation—understanding dilution ratios, contact times, and application methods prevents foodborne illness"
+      "Professional kitchens rely on proper chemical sanitation. Understanding dilution ratios, contact times, and application methods prevents foodborne illness"
     ]
   },
 
@@ -97,7 +97,7 @@ export const bleachData = {
       },
       {
         question: "What is the difference between cleaning and sanitizing?",
-        answer: "Cleaning removes visible dirt, food particles, and grease using detergent and mechanical action. Sanitizing reduces bacterial populations to safe levels using chemical agents at specific concentrations. You must clean first, then sanitize—sanitizers don't work effectively on dirty surfaces."
+        answer: "Cleaning removes visible dirt, food particles, and grease using detergent and mechanical action. Sanitizing reduces bacterial populations to safe levels using chemical agents at specific concentrations. You must clean first, then sanitize. Sanitizers don't work effectively on dirty surfaces."
       },
       {
         question: "Can you mix bleach with other cleaning products?",

@@ -10,7 +10,7 @@ export const victorinoxSizeData = {
         answer: "No. A 10-inch makes certain tasks faster and easier, but technique matters infinitely more than blade length. A skilled cook with an 8-inch will outperform a beginner with a 10-inch every single time."
       },
       {
-        question: "I'm 5'10 with average hands—which should I get?",
+        question: "I'm 5'10 with average hands: which should I get?",
         answer: "Start with the 8-inch. At your height with average hands, you're right in the middle zone where either knife could work. The 8-inch is more forgiving for learning and more versatile for mixed tasks. Add the 10-inch later if you find yourself doing a lot of bulk prep."
       },
       {
