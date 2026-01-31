@@ -41,7 +41,7 @@ export const reviewData = {
       text: "Tier 2: Extended Professional Testing",
       icon: "🏆"
     },
-    verdict: "After 18 years of daily home use, informed by my 24 years in professional kitchens, this cutting board represents more than kitchen equipment. It's a generational investment. The 24x18 size provides exceptional work space efficiency, while the 21-pound weight ensures rock-solid stability during even the most aggressive prep work.",
+    verdict: "After 18 years of daily home use, informed by my 24 years in professional kitchens, this cutting board represents more than kitchen equipment. It's a generational investment. The 24x18 size provides serious work space, while the 21-pound weight ensures rock-solid stability during even the most aggressive prep work.",
     verdictStrong: "generational investment",
     ctaText: "Check Price on Amazon →"
   },
@@ -163,7 +163,7 @@ export const reviewData = {
     items: [
       {
         question: "Is a John Boos cutting board worth the money?",
-        answer: "After 18 years of daily use, absolutely yes if you cook regularly and value knife care. The combination of knife edge preservation, exceptional work surface, and generational durability justifies the investment for serious home cooks. This board will outlast you. After 18 years of daily use, mine shows minimal wear and I expect another 20 years easily. The knife sharpening savings alone, extending edge life 3x longer, adds significant value over time."
+        answer: "After 18 years of daily use, absolutely yes if you cook regularly and value knife care. The combination of knife edge preservation, a generous work surface, and generational durability justifies the investment for serious home cooks. This board will outlast you. After 18 years of daily use, mine shows minimal wear and I expect another 20 years easily. The knife sharpening savings alone, extending edge life 3x longer, adds significant value over time."
       },
       {
         question: "How do you maintain a John Boos cutting board?",
@@ -200,7 +200,7 @@ export const reviewData = {
   faqData: [
     {
       question: "Is a John Boos cutting board worth the money?",
-      answer: "After 18 years of daily use, absolutely yes if you cook regularly and value knife care. The combination of knife edge preservation, exceptional work surface, and generational durability justifies the investment for serious home cooks. This board will outlast you. After 18 years of daily use, mine shows minimal wear and I expect another 20 years easily. The knife sharpening savings alone, extending edge life 3x longer, adds significant value over time."
+      answer: "After 18 years of daily use, absolutely yes if you cook regularly and value knife care. The combination of knife edge preservation, a generous work surface, and generational durability justifies the investment for serious home cooks. This board will outlast you. After 18 years of daily use, mine shows minimal wear and I expect another 20 years easily. The knife sharpening savings alone, extending edge life 3x longer, adds significant value over time."
     },
     {
       question: "How do you maintain a John Boos cutting board?",
@@ -252,7 +252,7 @@ export const reviewData = {
   bottomLine: {
     title: "The Bottom Line: My Professional Verdict",
     paragraphs: [
-      "After 18 years of daily use, <LINK>the John Boos Platinum cutting board</LINK> has proven itself as more than kitchen equipment. It's a generational investment. The combination of knife edge preservation, work surface efficiency, and exceptional durability justifies the investment for serious home cooks. The maintenance reality is far simpler than marketing suggests. Basic cleanliness and care yield decades of performance.",
+      "After 18 years of daily use, <LINK>the John Boos Platinum cutting board</LINK> has proven itself as more than kitchen equipment. It's a generational investment. The combination of knife edge preservation, work surface efficiency, and proven durability justifies the investment for serious home cooks. The maintenance reality is far simpler than marketing suggests. Basic cleanliness and care yield decades of performance.",
       "After 18 years, I expect to use <LINK>this board</LINK> for another 20 easily and then pass it to my children. That's genuine buy-it-for-life quality."
     ],
     ctaText: "Check Price on Amazon →"
@@ -265,7 +265,7 @@ export const reviewData = {
       {
         emoji: "🔪",
         name: "Victorinox 8\" Chef Knife",
-        description: "The perfect knife to pair with this board. Professional quality, perfect balance, exceptional value.",
+        description: "The perfect knife to pair with this board. Professional quality, perfect balance, great value.",
         href: "/reviews/victorinox-fibrox-8-inch-chefs-knife"
       },
       {

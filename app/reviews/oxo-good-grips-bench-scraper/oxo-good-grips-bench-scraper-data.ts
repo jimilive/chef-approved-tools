@@ -366,7 +366,7 @@ export const reviewData = {
     consTitle: "Limitations",
     pros: [
       "Multi-purpose: scraping, cutting, transferring, cleaning",
-      "Exceptionally comfortable grip for extended use (tested 6 years professionally)",
+      "Comfortable grip for extended use (tested 6 years professionally)",
       "Built-in measurements for consistent dough portioning",
       "Stainless steel won&apos;t rust or stain (20 years, zero corrosion)",
       "Dishwasher-safe with no degradation after hundreds of cycles",
@@ -503,7 +503,7 @@ export const reviewData = {
     category: "Bench Scrapers & Dough Tools",
     pros: [
       "Multi-purpose design: cuts dough, transfers ingredients, scrapes surfaces, cleans pizza peels",
-      "Exceptionally comfortable non-slip Good Grips handle tested through 6 years professional use",
+      "Comfortable non-slip Good Grips handle tested through 6 years professional use",
       "Built-in measurement markings (inches and cm) for precise dough portioning",
       "Dishwasher-safe stainless steel that won&apos;t rust (tested 20 years with zero corrosion",
       "Professional-grade durability proven through 6 years daily restaurant use at Purple Café"

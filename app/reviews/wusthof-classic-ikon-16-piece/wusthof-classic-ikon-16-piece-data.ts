@@ -40,7 +40,7 @@ export const reviewData = {
       icon: '🏆',
       text: 'Tier 1: Professional Kitchen Use',
     },
-    verdict: 'After 2 years testing in professional kitchens, this WÜSTHOF set has proven exceptional value through German engineering and ergonomic design. The chef\'s knife, santoku, bread knife, and paring knives alone justify the purchase price, saving hundreds compared to individual purchases. The IKON handle ergonomics reduce hand fatigue during extended prep sessions, a significant factor for professional use. While some pieces like the slicer see limited use, the overall performance makes this an outstanding investment.',
+    verdict: 'After 4 years testing in professional kitchens, this WÜSTHOF set has demonstrated its value due to German engineering and ergonomic design. The chef\'s knife, santoku, bread knife, and paring knives alone justify the purchase price, saving hundreds compared to individual purchases. The IKON handle ergonomics reduce hand fatigue during extended prep sessions, a significant factor for professional use. While some pieces like the slicer see limited use, the overall performance makes this an outstanding investment.',
     verdictStrong: 'German engineering meets professional ergonomics',
     ctaText: 'Check Price on Amazon →'
   },
@@ -51,7 +51,7 @@ export const reviewData = {
     sections: [
       {
         title: 'German Engineering Excellence',
-        content: 'After extensive use in professional kitchen environments, these WÜSTHOF knives demonstrate the precision German engineering is known for. The full tang construction provides exceptional balance and durability, while the precision forging creates blades that hold their edge remarkably well under heavy daily use.'
+        content: 'After extensive use in professional kitchen environments, these WÜSTHOF knives demonstrate the precision German engineering is known for. The full tang construction provides excellent balance and durability, while the precision forging creates blades that hold their edge remarkably well under heavy daily use.'
       },
       {
         title: 'Handle Ergonomics During Long Sessions',
@@ -75,7 +75,7 @@ export const reviewData = {
     outstandingPerformance: [
       'Chef, santoku, bread, and paring knives most used',
       'Steel and scissors valuable additions',
-      'Exceptional handle ergonomics during long sessions',
+      'Comfortable handle ergonomics during long sessions',
       'German-forged quality and durability',
       'Hundreds saved vs individual purchases'
     ],
@@ -252,7 +252,7 @@ export const reviewData = {
     dealStatus: 'normal' as const,
     category: 'Knife Sets',
     pros: [
-      'Exceptional handle ergonomics during long prep sessions',
+      'Comfortable handle ergonomics during long prep sessions',
       'Saves hundreds of dollars vs individual purchases',
       'Chef, santoku, bread, and paring knives excellent performers',
       'Steel and scissors included in set',
@@ -270,7 +270,7 @@ export const reviewData = {
     affiliateLinks: [],
     inStock: true,
     expertRating: 4.8,
-    expertOpinion: 'After extensive testing in professional kitchen environments, this German-forged knife set delivers exceptional performance with superior handle ergonomics. The PEtec-enhanced blades are 20% sharper than traditional knives with twice the edge retention. Chef, santoku, bread, and paring knives proved most valuable in daily operations. The full-tang construction and 58-degree HRC tempering provide outstanding balance and durability. While requiring regular steel maintenance, the set represents excellent value versus individual knife purchases.',
+    expertOpinion: 'After extensive testing in professional kitchen environments, this German-forged knife set delivers strong performance with superior handle ergonomics. The PEtec-enhanced blades are 20% sharper than traditional knives with twice the edge retention. Chef, santoku, bread, and paring knives proved most valuable in daily operations. The full-tang construction and 58-degree HRC tempering provide outstanding balance and durability. While requiring regular steel maintenance, the set represents excellent value versus individual knife purchases.',
     dateAdded: '2025-01-15',
     lastUpdated: '2025-01-15'
   }

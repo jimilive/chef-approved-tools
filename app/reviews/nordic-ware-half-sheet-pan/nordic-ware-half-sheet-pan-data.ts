@@ -53,7 +53,7 @@ export const reviewData = {
     paragraphs: [
       "After 10 years of regular home use, the Nordic Ware Natural Aluminum Commercial Baker's Half Sheet has proven itself as the single most versatile piece of baking equipment in my kitchen. This isn't just a baking sheet. It's a complete cooking system that handles everything from roasted vegetables to sheet pan dinners to perfectly crispy cookies.",
       "The natural aluminum construction delivers exceptional heat distribution without hot spots. After a decade of use, these pans have developed beautiful bronze patina that actually improves their non-stick properties. The 13-gauge thickness prevents warping even under broiler heat. The reinforced steel rim maintains perfect flatness through thousands of heating cycles.",
-      "This is the pan professional bakers choose for commercial kitchens. For serious home cooks, it represents exceptional value: commercial-grade performance at consumer pricing."
+      "This is the pan professional bakers choose for commercial kitchens. For serious home cooks, it represents real value: commercial-grade performance at consumer pricing."
     ],
     perfectFor: "Serious home bakers, anyone roasting vegetables regularly, sheet pan dinner enthusiasts, those wanting commercial-grade equipment, cookie bakers",
     skipIf: "You want dishwasher-safe pans, prefer dark non-stick coating, need smaller size for toaster oven, want pans that stay shiny forever"
@@ -255,7 +255,7 @@ export const reviewData = {
     items: [
       {
         question: "Is Nordic Ware half sheet pan worth it?",
-        answer: "After 10 years of regular use, absolutely yes. The Nordic Ware Natural Aluminum Commercial Baker's Half Sheet delivers professional-level performance at exceptional value. The combination of perfect heat distribution, warp-resistant construction, and decade-long durability makes this one of the best kitchen equipment investments. This is the pan professional bakers use in commercial kitchens. For home cooks, it represents commercial quality at consumer pricing."
+        answer: "After 10 years of regular use, absolutely yes. The Nordic Ware Natural Aluminum Commercial Baker's Half Sheet delivers professional-level performance at a great price. The combination of perfect heat distribution, warp-resistant construction, and decade-long durability makes this one of the best kitchen equipment investments. This is the pan professional bakers use in commercial kitchens. For home cooks, it represents commercial quality at consumer pricing."
       },
       {
         question: "Why do Nordic Ware pans turn brown?",
@@ -292,7 +292,7 @@ export const reviewData = {
   faqData: [
     {
       question: "Is Nordic Ware half sheet pan worth it?",
-      answer: "After 10 years of regular use, absolutely yes. The Nordic Ware Natural Aluminum Commercial Baker's Half Sheet delivers professional-level performance at exceptional value. The combination of perfect heat distribution, warp-resistant construction, and decade-long durability makes this one of the best kitchen equipment investments. This is the pan professional bakers use in commercial kitchens. For home cooks, it represents commercial quality at consumer pricing."
+      answer: "After 10 years of regular use, absolutely yes. The Nordic Ware Natural Aluminum Commercial Baker's Half Sheet delivers professional-level performance at a great price. The combination of perfect heat distribution, warp-resistant construction, and decade-long durability makes this one of the best kitchen equipment investments. This is the pan professional bakers use in commercial kitchens. For home cooks, it represents commercial quality at consumer pricing."
     },
     {
       question: "Why do Nordic Ware pans turn brown?",
@@ -330,7 +330,7 @@ export const reviewData = {
     subtitle: "After 10 Years of Daily Use...",
     paragraphs: [
       "The Nordic Ware Natural Aluminum Commercial Baker's Half Sheet has proven itself as the most versatile, reliable piece of baking equipment in my kitchen. From perfectly crispy roasted vegetables to evenly baked cookies to complete sheet pan dinners, this pan handles everything I throw at it.",
-      "The commercial-grade construction delivers professional results. After a decade including countless high-heat roasting and broiling sessions, these pans remain perfectly flat with exceptional heat distribution. The patina that has developed actually improves performance."
+      "The commercial-grade construction delivers professional results. After a decade including countless high-heat roasting and broiling sessions, these pans remain perfectly flat with even heat distribution. The patina that has developed actually improves performance."
     ],
     finalRating: {
       overall: "⭐⭐⭐⭐⭐ 5/5",

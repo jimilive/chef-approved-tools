@@ -89,7 +89,7 @@ export const reviewData = {
       }
     ],
     outstandingPerformance: [
-      "Thin blade provides exceptional control and precision",
+      "Thin blade provides precise control",
       "Perfect balance reduces hand fatigue during extended use",
       "Edge holds sharpness for months with regular honing",
       "NSF certified for commercial kitchen use",
@@ -110,11 +110,11 @@ export const reviewData = {
     sections: [
       {
         title: "Perfect Balance & Control",
-        content: "The lightweight fibrox handle and thin, flexible blade create exceptional balance. Unlike heavy German knives, the Victorinox delivers nimble control for detailed work. No hand fatigue during extended prep sessions. Critical for professional use where you're prepping 200+ covers daily."
+        content: "The lightweight fibrox handle and thin, flexible blade create excellent balance. Unlike heavy German knives, the Victorinox delivers nimble control for detailed work. No hand fatigue during extended prep sessions. Critical for professional use where you're prepping 200+ covers daily."
       },
       {
         title: "Razor-Sharp Edge Retention",
-        content: "Swiss-made high-carbon stainless steel holds an edge exceptionally well. With regular honing before each use, the knife maintains razor sharpness for months. In professional kitchens with daily heavy use, I sharpen quarterly. Home cooks might only need sharpening twice yearly. Sharpens easily when needed. No expensive equipment required."
+        content: "Swiss-made high-carbon stainless steel holds an edge remarkably well. With regular honing before each use, the knife maintains razor sharpness for months. In professional kitchens with daily heavy use, I sharpen quarterly. Home cooks might only need sharpening twice yearly. Sharpens easily when needed. No expensive equipment required."
       },
       {
         title: "NSF Restaurant Certification",
@@ -175,7 +175,7 @@ export const reviewData = {
       },
       {
         question: "How long does a Victorinox knife last?",
-        answer: "With proper care and regular sharpening, 10-20 years easily. I've been using mine for 20 years across multiple professional kitchens. At accessible pricing, even decades of use represents exceptional value: pennies per day for professional-quality cutting performance. Compare to premium knives that may last just as long but cost several times more. Longevity tips: Hand wash immediately after use, sharpen regularly, use wooden/plastic cutting board, store properly (magnetic strip or knife block)."
+        answer: "With proper care and regular sharpening, 10-20 years easily. I've been using mine for 20 years across multiple professional kitchens. At accessible pricing, even decades of use represents serious value: pennies per day for professional-quality cutting performance. Compare to premium knives that may last just as long but cost several times more. Longevity tips: Hand wash immediately after use, sharpen regularly, use wooden/plastic cutting board, store properly (magnetic strip or knife block)."
       },
       {
         question: "Does the plastic handle feel cheap?",
@@ -187,7 +187,7 @@ export const reviewData = {
       },
       {
         question: "How often does a Victorinox knife need sharpening?",
-        answer: "With daily use, professional sharpening every 3-4 months. Hone before each use with a honing steel to maintain the edge between sharpenings. The high-carbon stainless steel holds an edge exceptionally well compared to softer budget knives. I sharpen mine quarterly in a busy kitchen environment, but home cooks using it less frequently might only need sharpening twice yearly. Honing vs Sharpening: Honing (daily, 10 seconds) realigns the edge. Sharpening (quarterly) removes metal to create a new edge. Learn both skills. Your knife will last decades."
+        answer: "With daily use, professional sharpening every 3-4 months. Hone before each use with a honing steel to maintain the edge between sharpenings. The high-carbon stainless steel holds an edge remarkably well compared to softer budget knives. I sharpen mine quarterly in a busy kitchen environment, but home cooks using it less frequently might only need sharpening twice yearly. Honing vs Sharpening: Honing (daily, 10 seconds) realigns the edge. Sharpening (quarterly) removes metal to create a new edge. Learn both skills. Your knife will last decades."
       },
       {
         question: "What size cutting board do I need for an 8-inch knife?",
@@ -228,7 +228,7 @@ export const reviewData = {
     },
     {
       question: "How long does a Victorinox knife last?",
-      answer: "With proper care and regular sharpening, 10-20 years easily. I've been using mine for 20 years across multiple professional kitchens. At accessible pricing, even decades of use represents exceptional value: pennies per day for professional-quality cutting performance. Compare to premium knives that may last just as long but cost several times more. Longevity tips: Hand wash immediately after use, sharpen regularly, use wooden/plastic cutting board, store properly (magnetic strip or knife block)."
+      answer: "With proper care and regular sharpening, 10-20 years easily. I've been using mine for 20 years across multiple professional kitchens. At accessible pricing, even decades of use represents serious value: pennies per day for professional-quality cutting performance. Compare to premium knives that may last just as long but cost several times more. Longevity tips: Hand wash immediately after use, sharpen regularly, use wooden/plastic cutting board, store properly (magnetic strip or knife block)."
     },
     {
       question: "Does the plastic handle feel cheap?",
@@ -240,7 +240,7 @@ export const reviewData = {
     },
     {
       question: "How often does a Victorinox knife need sharpening?",
-      answer: "With daily use, professional sharpening every 3-4 months. Hone before each use with a honing steel to maintain the edge between sharpenings. The high-carbon stainless steel holds an edge exceptionally well compared to softer budget knives. I sharpen mine quarterly in a busy kitchen environment, but home cooks using it less frequently might only need sharpening twice yearly. Honing vs Sharpening: Honing (daily, 10 seconds) realigns the edge. Sharpening (quarterly) removes metal to create a new edge. Learn both skills. Your knife will last decades."
+      answer: "With daily use, professional sharpening every 3-4 months. Hone before each use with a honing steel to maintain the edge between sharpenings. The high-carbon stainless steel holds an edge remarkably well compared to softer budget knives. I sharpen mine quarterly in a busy kitchen environment, but home cooks using it less frequently might only need sharpening twice yearly. Honing vs Sharpening: Honing (daily, 10 seconds) realigns the edge. Sharpening (quarterly) removes metal to create a new edge. Learn both skills. Your knife will last decades."
     },
     {
       question: "What size cutting board do I need for an 8-inch knife?",
@@ -357,7 +357,7 @@ export const reviewData = {
     pros: [
       "Perfect size for 80% of kitchen tasks",
       "Professional quality at accessible pricing",
-      "Exceptionally well-balanced and maneuverable",
+      "Well-balanced and maneuverable",
       "Holds edge well with regular honing",
       "Comfortable grip for extended use",
       "Used in professional kitchens worldwide"

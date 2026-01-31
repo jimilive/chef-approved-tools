@@ -184,11 +184,11 @@ export const reviewData = {
   faqData: [
     {
       question: "Is the Cuisinart DLC-10C still worth buying?",
-      answer: "The original DLC-10C I've used for 30 years has been discontinued, but the current replacement (DLC-10SY) offers the same 7-cup capacity, reliable motor, and proven design. If the replacement is even 75% as good as my original model, it's exceptional value. My 30-year experience proves Cuisinart makes food processors that last. This isn't a brand that cuts corners. Bottom line: For anyone who cooks regularly and wants reliable equipment, this is one of the best investments you can make."
+      answer: "The original DLC-10C I've used for 30 years has been discontinued, but the current replacement (DLC-10SY) offers the same 7-cup capacity, reliable motor, and proven design. If the replacement is even 75% as good as my original model, it's a smart buy. My 30-year experience proves Cuisinart makes food processors that last. This isn't a brand that cuts corners. Bottom line: For anyone who cooks regularly and wants reliable equipment, this is one of the best investments you can make."
     },
     {
       question: "How long do Cuisinart food processors last?",
-      answer: "Based on my 30 years of continuous use with minimal issues, Cuisinart food processors can last multiple decades with proper care. My experience: Only one cracked bowl (still functional) and one broken stem (my fault for forcing it) in 30 years. The motor runs exactly as smoothly as day one. This is genuine buy-it-for-life equipment. Expected lifespan: 20-30 years with regular home use. Parents had one, I got one, and both are still working. This kind of durability is exceptional."
+      answer: "Based on my 30 years of continuous use with minimal issues, Cuisinart food processors can last multiple decades with proper care. My experience: Only one cracked bowl (still functional) and one broken stem (my fault for forcing it) in 30 years. The motor runs exactly as smoothly as day one. This is genuine buy-it-for-life equipment. Expected lifespan: 20-30 years with regular home use. Parents had one, I got one, and both are still working. This kind of durability is rare."
     },
     {
       question: "What's the difference between 7-cup and 14-cup Cuisinart?",

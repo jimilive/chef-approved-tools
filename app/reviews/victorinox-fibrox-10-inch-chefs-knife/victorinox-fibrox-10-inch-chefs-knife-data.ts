@@ -90,7 +90,7 @@ export const reviewData = {
     ],
     outstandingPerformance: [
       "10-inch blade perfect for breaking down steaks and large cuts",
-      "Exceptional reach for slicing motion on oversized vegetables",
+      "Extra reach for slicing motion on oversized vegetables",
       "Professional-grade balance despite longer length",
       "Edge holds sharpness for months with regular honing",
       "NSF certified for commercial kitchen use",
@@ -126,7 +126,7 @@ export const reviewData = {
       },
       {
         title: "Same Professional Quality as 8-Inch",
-        content: "This isn't a different knife. It's the same professional-grade Victorinox with 2 extra inches. Same high-carbon stainless steel, same NSF-certified fibrox handle, same Swiss manufacturing quality, same exceptional edge retention, and same unbeatable value proposition. The only difference is blade length and who it's best suited for."
+        content: "This isn't a different knife. It's the same professional-grade Victorinox with 2 extra inches. Same high-carbon stainless steel, same NSF-certified fibrox handle, same Swiss manufacturing quality, same strong edge retention, and same unbeatable value proposition. The only difference is blade length and who it's best suited for."
       }
     ]
   },
@@ -164,7 +164,7 @@ export const reviewData = {
     items: [
       {
         question: "Is the Victorinox Fibrox 10\" chef's knife worth the money?",
-        answer: "Absolutely. Based on 20 years using this knife (including 10 professionally), it delivers the same performance as chef knives costing hundreds more. The high-carbon stainless steel holds an edge exceptionally well, the Fibrox handle provides superior grip, and it's proven reliable in professional kitchens worldwide. The exceptional value makes it one of the best investments for serious home cooks and professionals alike."
+        answer: "Absolutely. Based on 20 years using this knife (including 10 professionally), it delivers the same performance as chef knives costing hundreds more. The high-carbon stainless steel holds an edge remarkably well, the Fibrox handle provides superior grip, and it's proven reliable in professional kitchens worldwide. The value makes it one of the best investments for serious home cooks and professionals alike."
       },
       {
         question: "Should I get the 10\" or 8\" Victorinox chef's knife?",
@@ -209,7 +209,7 @@ export const reviewData = {
   faqData: [
     {
       question: "Is the Victorinox Fibrox 10\" chef's knife worth the money?",
-      answer: "Absolutely. Based on 20 years using this knife (including 10 professionally), it delivers the same performance as chef knives costing hundreds more. The high-carbon stainless steel holds an edge exceptionally well, the Fibrox handle provides superior grip, and it's proven reliable in professional kitchens worldwide. The exceptional value makes it one of the best investments for serious home cooks and professionals alike."
+      answer: "Absolutely. Based on 20 years using this knife (including 10 professionally), it delivers the same performance as chef knives costing hundreds more. The high-carbon stainless steel holds an edge remarkably well, the Fibrox handle provides superior grip, and it's proven reliable in professional kitchens worldwide. The value makes it one of the best investments for serious home cooks and professionals alike."
     },
     {
       question: "Should I get the 10\" or 8\" Victorinox chef's knife?",
@@ -337,7 +337,7 @@ export const reviewData = {
       "Perfect length for breaking down steaks and large cuts",
       "Ideal for larger hands (6 feet or taller)",
       "Professional quality at accessible pricing",
-      "Exceptionally well-balanced despite longer blade",
+      "Well-balanced despite the longer blade",
       "Holds edge well with regular honing",
       "NSF certified for commercial kitchen use"
     ],

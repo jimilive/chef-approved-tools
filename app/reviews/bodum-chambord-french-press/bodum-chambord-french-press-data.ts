@@ -175,7 +175,7 @@ export const reviewData = {
   faqData: [
     {
       question: "Is Bodum French press worth it?",
-      answer: "After 18 years of testing, absolutely yes. The Bodum Chambord delivers exceptional coffee quality, requires zero maintenance, and has proven virtually indestructible through thousands of brewing cycles."
+      answer: "After 18 years of testing, absolutely yes. The Bodum Chambord delivers excellent coffee quality, requires zero maintenance, and has proven virtually indestructible through thousands of brewing cycles."
     },
     {
       question: "How long does a Bodum French press last?",
@@ -240,7 +240,7 @@ export const reviewData = {
   bottomLine: {
     title: 'The Bottom Line: My Professional Verdict',
     paragraphs: [
-      `After 18 years of professional and home brewing, <LINK>the Bodum Chambord French Press</LINK> has proven itself as genuine buy-it-for-life equipment. Six years of commercial restaurant use followed by 13 years of daily home brewing without a single mechanical failure demonstrates exceptional durability and reliability.`,
+      `After 18 years of professional and home brewing, <LINK>the Bodum Chambord French Press</LINK> has proven itself as genuine buy-it-for-life equipment. Six years of commercial restaurant use followed by 13 years of daily home brewing without a single mechanical failure demonstrates serious durability and reliability.`,
       `The coffee quality is better than any automatic brewer I've used. Full immersion brewing extracts every nuance from quality beans. The simplicity means nothing can break. The durability means it will outlast multiple generations of electric coffee makers.`,
       `Would I buy <LINK>the Bodum Chambord</LINK> again? Without hesitation. It's the most reliable coffee brewing method I've used in 24 years of professional cooking. If mine ever breaks, I'll replace it the same day.`
     ],

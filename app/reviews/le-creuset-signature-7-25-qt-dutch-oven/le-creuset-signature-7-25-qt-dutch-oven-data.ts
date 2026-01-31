@@ -296,7 +296,7 @@ export const reviewData = {
     reviewCount: 7563,
     category: "Dutch Ovens",
     pros: [
-      "Exceptional heat retention and even distribution",
+      "Superior heat retention and even distribution",
       "Enamel interior requires zero seasoning",
       "Light sand-colored interior shows browning",
       "Oven safe to 500°F for versatility",

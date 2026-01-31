@@ -339,7 +339,7 @@ export const reviewData = {
     subtitle: "After 6 Years of Professional Kitchen Testing...",
     paragraphs: [
       "The Norton IM200 Tri-Stone proved itself as professional-grade sharpening equipment in the most demanding environment possible: a 200+ cover restaurant where dull knives meant service delays and lost revenue. This three-stage progressive system delivered consistently sharp edges through 6 years of weekly use on 8-12 knives.",
-      "For serious home cooks wanting restaurant-quality sharpening, this represents exceptional value. The same system that maintained our professional kitchen knives will serve home cooks for decades."
+      "For serious home cooks wanting restaurant-quality sharpening, this represents serious value. The same system that maintained our professional kitchen knives will serve home cooks for decades."
     ],
     finalRating: {
       overall: "⭐⭐⭐⭐⭐ 5/5",
@@ -361,7 +361,7 @@ export const reviewData = {
     title: "The Professional Sharpening System That Lasts Decades",
     paragraphs: [
       "After 6 years maintaining 8-12 knives weekly in a 200+ cover restaurant, the Norton IM200 Tri-Stone has proven itself as professional-grade equipment that delivers restaurant-quality edges. The three-stage progressive system takes the guesswork out of sharpening, and the commercial durability ensures decades of service for home cooks.",
-      "This is the sharpening system I trust to maintain our professional kitchen knives. For serious home cooks who want to keep their knives razor-sharp without relying on expensive professional services, the Norton Tri-Stone delivers exceptional value."
+      "This is the sharpening system I trust to maintain our professional kitchen knives. For serious home cooks who want to keep their knives razor-sharp without relying on expensive professional services, the Norton Tri-Stone delivers serious value."
     ],
     ctaText: "Check Current Price →"
   },
@@ -485,7 +485,7 @@ export const reviewData = {
       "Three-stage progressive system (coarse/medium/fine)",
       "Commercial-grade durability. Lasted 6 years of weekly professional use",
       "Non-slip rubber base stays secure during sharpening",
-      "Exceptional value. Three quality stones for less than singles",
+      "Strong value. Three quality stones for less than singles",
       "Complete control over angle and pressure",
       "Minimal metal removal extends knife lifespan",
       "No moving parts to break or wear out",

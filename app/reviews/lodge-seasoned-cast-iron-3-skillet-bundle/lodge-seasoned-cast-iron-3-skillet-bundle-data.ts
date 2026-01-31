@@ -41,8 +41,8 @@ export const reviewData = {
       text: "Tier 2: Extended Professional Testing",
       icon: "🏆"
     },
-    verdict: "After 7 years of weekly home cooking, informed by my 24 years in professional kitchens, these skillets deliver professional-grade performance at exceptional value. The heat retention is exceptional (5/5), the durability is literally lifetime-quality with proper care, and the ability to handle extreme heat makes these irreplaceable for proper searing.",
-    verdictStrong: "professional-grade performance at exceptional value",
+    verdict: "After 7 years of weekly home cooking, informed by my 24 years in professional kitchens, these skillets deliver professional-grade performance at a price that's hard to argue with. The heat retention is outstanding (5/5), the durability is literally lifetime-quality with proper care, and the ability to handle extreme heat makes these irreplaceable for proper searing.",
+    verdictStrong: "professional-grade performance at a great price",
     ctaText: "Check Price on Amazon →"
   },
 
@@ -119,7 +119,7 @@ export const reviewData = {
       },
       {
         title: "Outstanding Value",
-        content: "Professional quality without premium pricing. <LINK>The Lodge bundle</LINK> delivers exceptional savings when purchasing as a set versus individual skillets, with professional-grade performance that rivals cookware costing 5x more."
+        content: "Professional quality without premium pricing. <LINK>The Lodge bundle</LINK> delivers real savings when purchasing as a set versus individual skillets, with professional-grade performance that rivals cookware costing 5x more."
       }
     ],
     testingEnvironment: [
@@ -181,7 +181,7 @@ export const reviewData = {
 
   // Pros & Cons title overrides
   prosConsTitle: "Pros & Cons Based on 7 Years of Use",
-  prosTitle: "What Makes This Set Exceptional",
+  prosTitle: "What Makes This Set Stand Out",
   consTitle: "Limitations & Learning Curve",
 
   // Who Should Buy
@@ -212,7 +212,7 @@ export const reviewData = {
     items: [
       {
         question: "Is Lodge cast iron worth the investment?",
-        answer: "Absolutely. After 7 years of testing and decades of restaurant experience, Lodge delivers professional-grade performance at exceptional value. The key differences compared to premium brands are surface finish and aesthetics, not cooking performance. Lodge delivers identical heat retention (5/5 rating) and distribution to premium brands, same durability and longevity (lifetime with proper care), is pre-seasoned and ready to use immediately, and is Made in USA with quality control. My verdict: For serious cooking performance, Lodge delivers professional results at budget-friendly pricing."
+        answer: "Absolutely. After 7 years of testing and decades of restaurant experience, Lodge delivers professional-grade performance at a fraction of the price. The key differences compared to premium brands are surface finish and aesthetics, not cooking performance. Lodge delivers identical heat retention (5/5 rating) and distribution to premium brands, same durability and longevity (lifetime with proper care), is pre-seasoned and ready to use immediately, and is Made in USA with quality control. My verdict: For serious cooking performance, Lodge delivers professional results at budget-friendly pricing."
       },
       {
         question: "How do I season and maintain Lodge cast iron?",
@@ -220,7 +220,7 @@ export const reviewData = {
       },
       {
         question: "Should I buy the 3-skillet bundle or individual skillets?",
-        answer: "The bundle makes sense for most home cooks. After 7 years, I use all three sizes equally. Bundle advantages include significant savings vs buying individually, complete size versatility (I use all three equally), and all pre-seasoned and ready to go. My recommendation: Get the bundle. The 12-inch is most versatile if forced to choose one, but having all three gives complete flexibility at exceptional value."
+        answer: "The bundle makes sense for most home cooks. After 7 years, I use all three sizes equally. Bundle advantages include significant savings vs buying individually, complete size versatility (I use all three equally), and all pre-seasoned and ready to go. My recommendation: Get the bundle. The 12-inch is most versatile if forced to choose one, but having all three gives complete flexibility at a great price."
       },
       {
         question: "Can Lodge cast iron go in the oven?",
@@ -241,7 +241,7 @@ export const reviewData = {
   faqData: [
     {
       question: "Is Lodge cast iron worth the investment?",
-      answer: "Absolutely. After 7 years of testing and decades of restaurant experience, Lodge delivers professional-grade performance at exceptional value. The key differences compared to premium brands are surface finish and aesthetics, not cooking performance. Lodge delivers identical heat retention (5/5 rating) and distribution to premium brands, same durability and longevity (lifetime with proper care), is pre-seasoned and ready to use immediately, and is Made in USA with quality control. My verdict: For serious cooking performance, Lodge delivers professional results at budget-friendly pricing."
+      answer: "Absolutely. After 7 years of testing and decades of restaurant experience, Lodge delivers professional-grade performance at a fraction of the price. The key differences compared to premium brands are surface finish and aesthetics, not cooking performance. Lodge delivers identical heat retention (5/5 rating) and distribution to premium brands, same durability and longevity (lifetime with proper care), is pre-seasoned and ready to use immediately, and is Made in USA with quality control. My verdict: For serious cooking performance, Lodge delivers professional results at budget-friendly pricing."
     },
     {
       question: "How do I season and maintain Lodge cast iron?",
@@ -249,7 +249,7 @@ export const reviewData = {
     },
     {
       question: "Should I buy the 3-skillet bundle or individual skillets?",
-      answer: "The bundle makes sense for most home cooks. After 7 years, I use all three sizes equally. Bundle advantages include significant savings vs buying individually, complete size versatility (I use all three equally), and all pre-seasoned and ready to go. My recommendation: Get the bundle. The 12-inch is most versatile if forced to choose one, but having all three gives complete flexibility at exceptional value."
+      answer: "The bundle makes sense for most home cooks. After 7 years, I use all three sizes equally. Bundle advantages include significant savings vs buying individually, complete size versatility (I use all three equally), and all pre-seasoned and ready to go. My recommendation: Get the bundle. The 12-inch is most versatile if forced to choose one, but having all three gives complete flexibility at a great price."
     },
     {
       question: "Can Lodge cast iron go in the oven?",
@@ -268,7 +268,7 @@ export const reviewData = {
   // WHERE TO BUY
   whereToBuy: {
     title: "Where to Buy",
-    introText: "The Lodge 3-skillet bundle is available through Amazon with Prime shipping, verified customer reviews, and easy returns. This is exceptional value for buy-it-for-life cookware.",
+    introText: "The Lodge 3-skillet bundle is available through Amazon with Prime shipping, verified customer reviews, and easy returns. This is serious value for buy-it-for-life cookware.",
     disclaimer: "As an Amazon Associate, I earn from qualifying purchases. Amazon Prime members get free 2-day shipping."
   },
 
@@ -296,7 +296,7 @@ export const reviewData = {
         "Value for Money: 5/5",
         "Ease of Maintenance: 4/5"
       ],
-      wouldBuyAgain: "Would I buy this again? Absolutely. This is equipment that delivers professional performance at exceptional value and will last generations."
+      wouldBuyAgain: "Would I buy this again? Absolutely. This is equipment that delivers professional performance at a fraction of the price and will last generations."
     },
     ctaText: "Check Current Price →"
   },

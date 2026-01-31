@@ -79,7 +79,7 @@ export const reviewData = {
   bottomLine: {
     title: "Bottom Line Up Front",
     headline: "Eighteen years. Two professional kitchens. Thousands of uses. This scraper cost less than $20.",
-    body: "While expensive silicone spatulas ($25-40) offer superior flexibility, this commercial kitchen spatula delivers exceptional value through proven durability. As a professional-grade rubber spatula with one-piece molded design, it eliminates the seams where food can trap and bacteria can hide. The 500°F heat resistance prevents the melting issues that plague cheap grocery store alternatives, making this a true high-heat spatula. The NSF certification ensures it meets commercial sanitation standards.",
+    body: "While expensive silicone spatulas ($25-40) offer superior flexibility, this commercial kitchen spatula delivers serious value through proven durability. As a professional-grade rubber spatula with one-piece molded design, it eliminates the seams where food can trap and bacteria can hide. The 500°F heat resistance prevents the melting issues that plague cheap grocery store alternatives, making this a true high-heat spatula. The NSF certification ensures it meets commercial sanitation standards.",
     perfectFor: "Professional kitchens, daily home cooking, heavy-duty scraping, anyone wanting commercial durability at consumer pricing",
     considerAlternatives: "You need extreme flexibility for delicate folding, pristine white appearance is critical, you primarily do fine pastry work"
   },
@@ -105,7 +105,7 @@ export const reviewData = {
       },
       {
         emoji: "💰",
-        title: "Exceptional Value",
+        title: "Built to Last",
         description: "$15-20 for 18 years of use = roughly $1/year. Outlasts spatulas costing triple the price. Genuine buy-it-for-life equipment."
       }
     ]
@@ -312,7 +312,7 @@ export const reviewData = {
     items: [
       {
         question: "Is the Rubbermaid Commercial scraper worth buying over cheap grocery store spatulas?",
-        answer: "Absolutely yes, especially for the minimal price difference. Cheap grocery store spatulas ($3-8) typically use low-grade plastic or rubber that melts on contact with warm pans, separates at the handle joint after months of use, and lacks proper heat resistance ratings. I've watched countless cheap spatulas melt, crack, or fall apart within 6-12 months. The Rubbermaid Commercial scraper costs $15-20 but has lasted me 18 years across professional and home use. The one-piece molded construction eliminates the handle separation issue, the 500°F heat resistance prevents melting, and the NSF certification ensures it meets commercial sanitation standards. Over 18 years, this works out to roughly $1 per year, exceptional value for daily-use equipment. The durability alone justifies choosing this over cheap alternatives that need replacement annually."
+        answer: "Absolutely yes, especially for the minimal price difference. Cheap grocery store spatulas ($3-8) typically use low-grade plastic or rubber that melts on contact with warm pans, separates at the handle joint after months of use, and lacks proper heat resistance ratings. I've watched countless cheap spatulas melt, crack, or fall apart within 6-12 months. The Rubbermaid Commercial scraper costs $15-20 but has lasted me 18 years across professional and home use. The one-piece molded construction eliminates the handle separation issue, the 500°F heat resistance prevents melting, and the NSF certification ensures it meets commercial sanitation standards. Over 18 years, this works out to roughly $1 per year, hard to argue with for daily-use equipment. The durability alone justifies choosing this over cheap alternatives that need replacement annually."
       },
       {
         question: "How does this compare to expensive silicone spatulas like Le Creuset or GIR?",
@@ -336,7 +336,7 @@ export const reviewData = {
       },
       {
         question: "What's the difference between the 13.5-inch and 9.5-inch sizes?",
-        answer: "Both sizes feature identical construction and materials. The only difference is length. The 13.5-inch version (which this review focuses on) is ideal for professional kitchens, large mixing bowls, and high-volume prep work. The longer handle provides better leverage for scraping thick batters and gives you more reach in deep pots. The 9.5-inch version is perfect for home kitchens, smaller mixing bowls, and everyday tasks. The shorter length offers better control for detail work and takes up less drawer space. I recommend the 13.5-inch for professional use or if you regularly work with large batches, and the 9.5-inch for typical home cooking. Many home cooks find the 9.5-inch to be the sweet spot for versatility. If you can only choose one, consider your primary use case: commercial/high-volume work gets 13.5-inch, everyday home cooking gets 9.5-inch. Both deliver the same exceptional durability and heat resistance."
+        answer: "Both sizes feature identical construction and materials. The only difference is length. The 13.5-inch version (which this review focuses on) is ideal for professional kitchens, large mixing bowls, and high-volume prep work. The longer handle provides better leverage for scraping thick batters and gives you more reach in deep pots. The 9.5-inch version is perfect for home kitchens, smaller mixing bowls, and everyday tasks. The shorter length offers better control for detail work and takes up less drawer space. I recommend the 13.5-inch for professional use or if you regularly work with large batches, and the 9.5-inch for typical home cooking. Many home cooks find the 9.5-inch to be the sweet spot for versatility. If you can only choose one, consider your primary use case: commercial/high-volume work gets 13.5-inch, everyday home cooking gets 9.5-inch. Both deliver the same durability and heat resistance."
       },
       {
         question: "Will this stain over time?",
@@ -491,7 +491,7 @@ export const reviewData = {
       "Clean-Rest™ blade stays elevated off counters",
       "Withstands 500°F heat - won't melt like cheap alternatives",
       "Commercial dishwasher safe and NSF certified",
-      "Exceptional durability: 18 years and still going strong",
+      "Proven durability: 18 years and still going strong",
       "Stiff enough for leverage, flexible enough for scraping",
       "Made in USA with readily available replacements"
     ],

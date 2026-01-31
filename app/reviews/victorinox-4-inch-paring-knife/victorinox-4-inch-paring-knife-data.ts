@@ -9,7 +9,7 @@ export const reviewData = {
   // METADATA
   metadata: {
     title: "Victorinox 4\" Paring Knife: 20 Years Since Culinary School ($10)",
-    description: "20 years of detail work, peeling, and trimming. Victorinox 4\" paring knife with Swiss precision at exceptional value. Still using the same $10 blade.",
+    description: "20 years of detail work, peeling, and trimming. Victorinox 4\" paring knife with Swiss precision at a great price. Still using the same $10 blade.",
     ogTitle: "Victorinox 4\" Paring Knife: 20-Year Professional Review",
     ogDescription: "Victorinox 4\" paring knife tested 20 years. Perfect for detail work.",
     testingPeriod: "20 Years (Including 10 Professional)",
@@ -263,7 +263,7 @@ export const reviewData = {
     products: [
       {
         name: "Victorinox 8-Inch Chef's Knife",
-        description: "The perfect companion to this paring knife - professional chef's knife at exceptional value.",
+        description: "The perfect companion to this paring knife - professional chef's knife at a great price.",
         emoji: "🔪",
         href: "/reviews/victorinox-fibrox-8-inch-chefs-knife"
       },
