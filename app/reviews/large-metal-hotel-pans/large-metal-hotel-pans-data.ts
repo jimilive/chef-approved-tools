@@ -59,7 +59,7 @@ export const reviewData = {
       },
       {
         title: 'Buffet Service Excellence',
-        content: 'Notched lids are game-changers for professional buffet service. The lid cutout fits serving utensils so the spoon stays IN the pan while the lid maintains heat. This is standard practice in professional catering, essential for maintaining safe food temperatures during hours of buffet service.'
+        content: 'Notched lids solve a real problem in buffet service. The lid cutout fits serving utensils so the spoon stays IN the pan while the lid maintains heat. This is standard practice in professional catering, essential for maintaining safe food temperatures during hours of buffet service.'
       },
       {
         title: 'Commercial vs Home Reality',

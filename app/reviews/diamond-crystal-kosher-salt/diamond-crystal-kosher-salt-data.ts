@@ -233,7 +233,7 @@ export const reviewData = {
     paragraphs: [
       `<LINK>Diamond Crystal Kosher Salt</LINK> has earned its place as the only salt I buy. For 6 years at Purple Café, it seasoned thousands of plates without a single complaint. Eighteen years later (starting in 2007), it's still the standard in both my professional memory and my home kitchen.`,
       `The hollow pyramid crystals make it easy to control. The lack of additives keeps the flavor clean. The consistent size means predictable results whether I'm cooking or someone else is following my recipes. It's simply the best all-purpose salt for serious cooking.`,
-      `Is it perfect for everything? No. I keep finishing salts for special occasions and fine sea salt for the table. But for 99% of cooking (seasoning proteins, pasta water, vegetable prep), <LINK>Diamond Crystal</LINK> is unmatched.`
+      `Is it perfect for everything? No. I keep finishing salts for special occasions and fine sea salt for the table. But for 99% of cooking (seasoning proteins, pasta water, vegetable prep), <LINK>Diamond Crystal</LINK>, nothing else comes close.`
     ],
     ctaUrl: '', // Will be filled by affiliateUrl in page.tsx
     ctaText: 'Check Current Price →'
@@ -246,7 +246,7 @@ export const reviewData = {
       {
         emoji: '🍗',
         name: 'How to Brine Chicken & Other Proteins',
-        description: 'Master brining with exact ratios, timing charts, and wet vs dry comparisons. Diamond Crystal is the professional standard for brining—learn why and how to use it.',
+        description: 'Master brining with exact ratios, timing charts, and wet vs dry comparisons. Diamond Crystal is the professional standard for brining. Learn why and how to use it.',
         href: '/blog/hidden-secrets-of-brining'
       },
       {

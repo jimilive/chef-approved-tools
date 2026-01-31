@@ -273,7 +273,7 @@ export const reviewData = {
       {
         emoji: '🍳',
         name: 'Perfect Scrambled Eggs Guide',
-        description: 'Learn my revolutionary no-bowl, no-whisk technique that makes this pan a must-have. Crack eggs directly into this pan for the creamiest scrambled eggs you\'ve ever made.',
+        description: 'Learn my no-bowl, no-whisk technique using this pan. Crack eggs directly into it for the creamiest scrambled eggs you\'ve ever made.',
         href: '/blog/best-scrambled-eggs'
       }
     ]

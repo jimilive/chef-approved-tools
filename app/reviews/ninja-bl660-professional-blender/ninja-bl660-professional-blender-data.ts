@@ -257,7 +257,7 @@ export const reviewData = {
     items: [
       {
         question: "Is the Ninja BL660 as good as a Vitamix?",
-        answer: "No. Absolutely not. After using commercial Vitamix blenders for 24 years in professional kitchens, the performance gap is immediately obvious. The Vitamix has a 2.0 HP motor (50% more power), all-metal drive system, hardened blades, variable speed control, and 15-20 year lifespan. The Ninja has a 1.34 HP motor, plastic components, quality control issues, and 2-3 year expected lifespan. For liquid-heavy smoothies and sauces, the Ninja performs adequately. For thick mixtures, daily use, or commercial volume, the Vitamix is transformatively better."
+        answer: "No. Absolutely not. After using commercial Vitamix blenders for 24 years in professional kitchens, the performance gap is immediately obvious. The Vitamix has a 2.0 HP motor (50% more power), all-metal drive system, hardened blades, variable speed control, and 15-20 year lifespan. The Ninja has a 1.34 HP motor, plastic components, quality control issues, and 2-3 year expected lifespan. For liquid-heavy smoothies and sauces, the Ninja performs adequately. For thick mixtures, daily use, or commercial volume, the Vitamix is significantly better."
       },
       {
         question: "What about the crack you discovered? Should I not buy this?",
@@ -286,7 +286,7 @@ export const reviewData = {
   faqData: [
     {
       question: "Is the Ninja BL660 as good as a Vitamix?",
-      answer: "No. Absolutely not. After using commercial Vitamix blenders for 24 years in professional kitchens, the performance gap is immediately obvious. The Vitamix has a 2.0 HP motor (50% more power), all-metal drive system, hardened blades, variable speed control, and 15-20 year lifespan. The Ninja has a 1.34 HP motor, plastic components, quality control issues, and 2-3 year expected lifespan. For liquid-heavy smoothies and sauces, the Ninja performs adequately. For thick mixtures, daily use, or commercial volume, the Vitamix is transformatively better."
+      answer: "No. Absolutely not. After using commercial Vitamix blenders for 24 years in professional kitchens, the performance gap is immediately obvious. The Vitamix has a 2.0 HP motor (50% more power), all-metal drive system, hardened blades, variable speed control, and 15-20 year lifespan. The Ninja has a 1.34 HP motor, plastic components, quality control issues, and 2-3 year expected lifespan. For liquid-heavy smoothies and sauces, the Ninja performs adequately. For thick mixtures, daily use, or commercial volume, the Vitamix is significantly better."
     },
     {
       question: "What about the crack you discovered? Should I not buy this?",

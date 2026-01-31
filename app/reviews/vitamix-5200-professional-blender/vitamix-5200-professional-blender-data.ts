@@ -258,7 +258,7 @@ export const reviewData = {
   bottomLine: {
     title: 'The Bottom Line: My Professional Verdict',
     paragraphs: [
-      'After 5+ years as our primary blending workhorse at Purple Cafe, the Vitamix 5200 has more than proven its worth. This isn\'t a blender. It\'s a professional-grade food processing system that happens to excel at blending. The 2.0 HP motor delivers commercial-level power that transforms ingredients into restaurant-quality results.',
+      'After 5+ years as our primary blending workhorse at Purple Cafe, the Vitamix 5200 has more than proven its worth. This isn\'t a blender. It\'s a professional-grade food processing system that happens to excel at blending. The 2.0 HP motor delivers commercial-level power that turns ingredients into restaurant-quality results.',
       'The durability is remarkable. Zero maintenance, zero repairs, zero performance degradation after 5+ years of daily commercial abuse. The 7-year warranty is industry-leading, but based on our testing, this machine will outlast its warranty period by a decade or more. For serious home cooks who blend regularly and want buy-it-for-life quality, the Vitamix 5200 justifies its premium pricing through decades of reliable performance.'
     ],
     ctaText: 'Check Price on Vitamix.com →'

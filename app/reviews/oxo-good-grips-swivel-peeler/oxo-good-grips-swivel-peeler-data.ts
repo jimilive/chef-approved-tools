@@ -394,7 +394,7 @@ export const reviewData = {
     title: "The Peeler That Just Works",
     paragraphs: [
       "After 20 years of testing dozens of peelers, including 10 years of professional kitchen use, this OXO Good Grips Swivel Peeler is the one I reach for every single day. The comfortable grip doesn't slip when wet, the sharp blade glides through skins without digging in, and the swivel action follows contours effortlessly.",
-      "At around $10, this is one of the best values in any kitchen. The ergonomic handle is a game-changer for anyone who peels vegetables regularly, and it's especially appreciated by those with arthritis or hand issues. Stop overthinking it and buy one. You'll wonder why you waited so long."
+      "At around $12, this is one of the best values in any kitchen. The ergonomic handle makes a real difference for anyone who peels vegetables regularly, and it's especially appreciated by those with arthritis or hand issues. Stop overthinking it and buy one."
     ],
     ctaText: "Check Price on Amazon →"
   },

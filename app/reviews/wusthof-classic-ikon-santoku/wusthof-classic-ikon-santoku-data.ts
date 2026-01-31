@@ -28,7 +28,7 @@ export const reviewData = {
       'Thinner blade is more susceptible to damage with careless use',
       'Granton dimples add slight complexity to sharpening',
       'Sheepsfoot tip limits precision work like deveining or scoring',
-      'Not a replacement for a chef\'s knife—best as a complementary tool',
+      'Not a replacement for a chef\'s knife, best as a complementary tool',
     ],
     affiliateLinks: [
       {
@@ -117,7 +117,7 @@ export const reviewData = {
       'Requires more maintenance than standard German knives',
       'Thinner blade more susceptible to damage with careless use',
       'Sheepsfoot tip less precise than pointed chef\'s knife',
-      'Not a replacement for a chef\'s knife—best as complementary tool'
+      'Not a replacement for a chef\'s knife, best as complementary tool'
     ]
   },
 
@@ -250,7 +250,7 @@ export const reviewData = {
     paragraphs: [
       'After 14 years, 5 in professional kitchens and 9 at home,<LINK>the Wüsthof Classic Ikon Santoku</LINK> remains one of my most-used knives. I bought it because it was beautiful. I kept using it because that thin blade and 10-degree edge deliver slicing performance that thicker knives cannot match.',
       'This isn\'t a forgiving knife. It requires proper care, regular honing, and respectful storage. If you\'re willing to give it that attention, it rewards you with effortless vegetable prep, superior food release, and a cutting experience that makes prep work genuinely enjoyable.',
-      'The santoku doesn\'t replace a chef\'s knife. It complements one. If you do heavy vegetable prep, meal prep batches, or just appreciate how a truly sharp knife transforms cooking, <LINK>the Classic Ikon Santoku</LINK> earns its place in your kitchen.',
+      'The santoku doesn\'t replace a chef\'s knife. It complements one. If you do heavy vegetable prep, meal prep batches, or just appreciate how a truly sharp knife changes cooking, <LINK>the Classic Ikon Santoku</LINK> earns its place in your kitchen.',
     ],
     ctaUrl: '',
     ctaText: 'Check Price on Amazon',

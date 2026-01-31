@@ -97,7 +97,7 @@ export const reviewData = {
         content: 'Metal hotel pans excel at one thing plastic can\'t do: handling hot food. Restaurants use stainless steel for hot holding on steam tables, warming trays, and buffet service because metal conducts heat efficiently and maintains food temperature. At home, this means keeping mashed potatoes hot during dinner service, holding BBQ sides warm on the grill, or transferring roasted vegetables from oven to table without cooling down.'
       },
       {
-        title: 'BBQ Game Changer',
+        title: 'BBQ Prep Station',
         content: 'Small metal hotel pans improve outdoor cooking. Use 1/6 pans for burger prep stations, holding grilled vegetables, catching drippings, warming buns, or organizing condiments. The slotted lids let you drain fat from cooked bacon or strain hot grease. Stack them on unused grill space to keep food warm. After 20 years of BBQs, these pans make outdoor cooking feel organized and professional instead of chaotic.'
       },
       {

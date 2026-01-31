@@ -290,7 +290,7 @@ export const reviewData = {
     items: [
       {
         question: "Do I really need a bench scraper?",
-        answer: "If you do any regular cooking or baking, yes. After 24 years in professional kitchens and 20 years using this exact bench scraper, I can tell you it transforms your workflow. At Purple Café, I used this tool every single day for 6 years: transferring vegetables, portioning dough, cleaning surfaces. Once you start using one, you&apos;ll wonder how you cooked without it. It&apos;s one of those tools where you don&apos;t realize how much you need it until you have it."
+        answer: "If you do any regular cooking or baking, yes. After 24 years in professional kitchens and 20 years using this exact bench scraper, I can tell you it speeds up your workflow. At Purple Café, I used this tool every single day for 6 years: transferring vegetables, portioning dough, cleaning surfaces. Once you start using one, you&apos;ll wonder how you cooked without it. It&apos;s one of those tools where you don&apos;t realize how much you need it until you have it."
       },
       {
         question: "Is the OXO better than a generic bench scraper?",
@@ -327,7 +327,7 @@ export const reviewData = {
   faqData: [
     {
       question: "Do I really need a bench scraper?",
-      answer: "If you do any regular cooking or baking, yes. After 24 years in professional kitchens and 20 years using this exact bench scraper, I can tell you it transforms your workflow. At Purple Café, I used this tool every single day for 6 years: transferring vegetables, portioning dough, cleaning surfaces. Once you start using one, you'll wonder how you cooked without it."
+      answer: "If you do any regular cooking or baking, yes. After 24 years in professional kitchens and 20 years using this exact bench scraper, I can tell you it speeds up your workflow. At Purple Café, I used this tool every single day for 6 years: transferring vegetables, portioning dough, cleaning surfaces. Once you start using one, it's hard to go back."
     },
     {
       question: "Is the OXO better than a generic bench scraper?",
@@ -385,8 +385,8 @@ export const reviewData = {
   bottomLine: {
     title: "The Most Underrated Tool in Any Kitchen",
     paragraphs: [
-      "After 20 years with this exact bench scraper (including 6 years of daily professional use at Purple Café), I can tell you this is the tool most home cooks don't know they need. It transforms your workflow: chop vegetables, scrape them directly into the pan. Portion dough cleanly without a sticky knife. Keep your cutting board spotless between tasks.",
-      "At $15, this is one of the best investments you can make in your kitchen efficiency. The OXO Good Grips handle makes it comfortable for extended use, the measurement markings help with consistent portioning, and the stainless steel blade will last decades. Once you start using one, you'll wonder how you ever cooked without it."
+      "After 20 years with this exact bench scraper (including 6 years of daily professional use at Purple Café), I can tell you this is the tool most home cooks don't know they need. It speeds up your workflow: chop vegetables, scrape them directly into the pan. Portion dough cleanly without a sticky knife. Keep your cutting board spotless between tasks.",
+      "At $15, this is one of the best investments you can make in your kitchen efficiency. The OXO Good Grips handle makes it comfortable for extended use, the measurement markings help with consistent portioning, and the stainless steel blade will last decades. Once you have one, you won't cook without it."
     ],
     ctaText: "Check Price on Amazon →"
   },

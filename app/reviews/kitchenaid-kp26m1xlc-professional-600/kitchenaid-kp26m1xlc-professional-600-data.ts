@@ -131,7 +131,7 @@ export const reviewData = {
       },
       {
         title: "Attachment Versatility",
-        content: "Compatible with 15+ attachments: pasta makers, meat grinders, ice cream makers. One machine handles pasta, meat grinding, ice cream, and more. This transforms <LINK>the Professional 600</LINK> from a stand mixer into a complete kitchen system, one investment that grows with your cooking ambitions."
+        content: "Compatible with 15+ attachments: pasta makers, meat grinders, ice cream makers. One machine handles pasta, meat grinding, ice cream, and more. This turns <LINK>the Professional 600</LINK> from a stand mixer into a complete kitchen system, one investment that grows with your cooking ambitions."
       },
       {
         title: "Built to Last",
@@ -260,7 +260,7 @@ export const reviewData = {
     },
     {
       question: "What attachments work with the KitchenAid Professional 600?",
-      answer: "The Professional 600 is compatible with all KitchenAid hub attachments including pasta makers (pasta roller, fettuccine cutter, spaghetti cutter), meat grinders, food grinders, ice cream makers, grain mills, spiralizers, and vegetable sheet cutters. Over 15 attachments transform this mixer into a complete kitchen system. The attachment hub is universal across all KitchenAid stand mixers, so your investment in attachments transfers if you ever upgrade models."
+      answer: "The Professional 600 is compatible with all KitchenAid hub attachments including pasta makers (pasta roller, fettuccine cutter, spaghetti cutter), meat grinders, food grinders, ice cream makers, grain mills, spiralizers, and vegetable sheet cutters. Over 15 attachments turn this mixer into a complete kitchen system. The attachment hub is universal across all KitchenAid stand mixers, so your investment in attachments transfers if you ever upgrade models."
     },
     {
       question: "KitchenAid Professional 600 vs 7 Qt: which should I buy?",

@@ -178,7 +178,7 @@ export const reviewData = {
   bottomLine: {
     title: 'Ready to Add These to Your Kitchen?',
     paragraphs: [
-      'These are one of the 11 tools I use most in my home kitchen. After 20 years using similar restaurant-grade tongs professionally, I know what works. Inexpensive, professional-quality—buy a few pairs. You\'ll use them for everything.',
+      'These are one of the 11 tools I use most in my home kitchen. After 20 years using similar restaurant-grade tongs professionally, I know what works. Inexpensive, professional-quality, so buy a few pairs. You\'ll use them for everything.',
       'I keep three pairs in my home kitchen: one for the grill, one for the stove, one for serving. Inexpensive yet built to last. They\'ll outlast typical home kitchen tongs by years.'
     ],
     ctaText: 'Check Price on Amazon →'

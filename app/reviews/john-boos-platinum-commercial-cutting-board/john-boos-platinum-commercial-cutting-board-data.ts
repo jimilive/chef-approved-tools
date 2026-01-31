@@ -61,7 +61,7 @@ export const reviewData = {
       },
       {
         title: "Work Surface Efficiency",
-        content: "The 24x18 size is the sweet spot for serious cooking. Large enough to handle multiple prep tasks without constantly moving ingredients, yet not so massive it becomes unwieldy. When prepping for meals, having this much real estate available transforms efficiency. You can dice onions, mince garlic, and chop vegetables all at once without running out of space."
+        content: "The 24x18 size is the sweet spot for serious cooking. Large enough to handle multiple prep tasks without constantly moving ingredients, yet not so massive it becomes unwieldy. When prepping for meals, having this much real estate available makes a real difference. You can dice onions, mince garlic, and chop vegetables all at once without running out of space."
       },
       {
         title: "Stability During Use",
@@ -126,7 +126,7 @@ export const reviewData = {
       },
       {
         title: "Size and Work Surface Efficiency",
-        content: "The 24x18 size is the sweet spot for serious cooking operations - large enough to handle multiple prep tasks without constantly moving ingredients, yet not so massive that it becomes unwieldy. The generous work surface prevents the constant shuffling of prepped portions that smaller boards require. When prepping for meals, having this much real estate available transforms efficiency. You can dice onions, mince garlic, and chop vegetables all at once without running out of space."
+        content: "The 24x18 size is the sweet spot for serious cooking operations - large enough to handle multiple prep tasks without constantly moving ingredients, yet not so massive that it becomes unwieldy. The generous work surface prevents the constant shuffling of prepped portions that smaller boards require. When prepping for meals, having this much real estate available makes a real difference. You can dice onions, mince garlic, and chop vegetables all at once without running out of space."
       }
     ]
   },

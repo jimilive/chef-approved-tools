@@ -11,7 +11,7 @@ export const reviewData = {
     title: "Robot Coupe R2 DICE: $3,000 Commercial Food Processor (Worth It?)",
     description: "3-year commercial test. Robot Coupe R2 DICE 2 HP motor saves hours daily in restaurant prep. Professional review of this $3,000 prep powerhouse.",
     keywords: ['Robot Coupe R2 Dice', 'commercial food processor', 'restaurant equipment', 'professional kitchen', 'food prep equipment', 'continuous feed processor'],
-    ogTitle: "Robot Coupe R2 Dice: The Commercial Food Processor That Transformed Our Prep Kitchen",
+    ogTitle: "Robot Coupe R2 Dice: The Commercial Food Processor That Runs Our Prep Kitchen",
     ogDescription: "Professional review after 3 years of intensive testing in high-volume restaurant prep kitchen",
     testingPeriod: "3 Years Commercial Testing",
     tier: 1 as const
@@ -196,7 +196,7 @@ export const reviewData = {
     items: [
       {
         question: "Is the Robot Coupe R2 Dice worth it for a restaurant?",
-        answer: "After 3 years in our commercial kitchen, absolutely yes if you process high volumes daily. The combination of speed (850 servings/3 hours), consistent cut quality (5/5 rating), and commercial reliability makes this processor pay for itself through labor savings alone. Professional kitchens report saving significant prep time daily. The continuous feed design and commercial-grade motor process massive volume quickly. This is equipment that transforms prep operations and pays for itself through efficiency gains. Who should skip it: If you only process small volumes occasionally, a quality home food processor will suffice. But for high-volume operations where speed and consistency matter, this is essential equipment. My verdict: After 3 years of daily commercial use, this is the kind of equipment that becomes indispensable. Worth every dollar for serious operations."
+        answer: "After 3 years in our commercial kitchen, absolutely yes if you process high volumes daily. The combination of speed (850 servings/3 hours), consistent cut quality (5/5 rating), and commercial reliability makes this processor pay for itself through labor savings alone. Professional kitchens report saving significant prep time daily. The continuous feed design and commercial-grade motor process massive volume quickly. This is equipment that cuts prep time in half and pays for itself through efficiency gains. Who should skip it: If you only process small volumes occasionally, a quality home food processor will suffice. But for high-volume operations where speed and consistency matter, this is essential equipment. My verdict: After 3 years of daily commercial use, this is the kind of equipment that becomes indispensable. Worth every dollar for serious operations."
       },
       {
         question: "How difficult is cleaning compared to home processors?",
@@ -243,7 +243,7 @@ export const reviewData = {
     headline: "After 3 Years of Daily Commercial Use...",
     text: [
       "The Robot Coupe R2 Dice proved itself as essential commercial equipment that pays for itself through efficiency gains. The combination of 5/5 performance ratings for speed, efficiency, and cut quality, combined with exceptional reliability under high-volume demands, makes this processor significantly superior to home alternatives.",
-      "Professional kitchens report saving hours of labor daily. The continuous feed design and commercial-grade motor process massive volume quickly. This is equipment that transforms prep operations and pays for itself through labor savings."
+      "Professional kitchens report saving hours of labor daily. The continuous feed design and commercial-grade motor process massive volume quickly. This is equipment that cuts prep time in half and pays for itself through labor savings."
     ],
     rating: 4.7,
     breakdown: [
@@ -259,7 +259,7 @@ export const reviewData = {
   bottomLine: {
     title: "The Commercial Food Processor That Pays for Itself",
     paragraphs: [
-      "After 3 years of daily commercial use, the Robot Coupe R2 Dice has proven itself as essential equipment that transforms prep operations. The 2 HP motor and continuous feed design process massive volumes quickly, saving hours of labor daily and delivering ROI in approximately 2 months.",
+      "After 3 years of daily commercial use, the Robot Coupe R2 Dice has proven itself as essential equipment that cuts prep time in half. The 2 HP motor and continuous feed design process massive volumes quickly, saving hours of labor daily and delivering ROI in approximately 2 months.",
       "This is genuine commercial equipment built for professional kitchens. The combination of 5/5 performance ratings for speed, efficiency, and cut quality makes it significantly superior to home alternatives. If you're running any serious food service operation, this processor is an investment that pays dividends in efficiency and consistency."
     ],
     ctaText: "Check Current Price →"
