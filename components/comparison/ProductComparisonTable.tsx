@@ -129,7 +129,7 @@ export default function ProductComparisonTable({
   }
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-6 my-8">
+    <div id="comparison-table" className="bg-white rounded-xl shadow-lg p-6 my-8">
       <h2 className="text-2xl font-bold mb-4 text-slate-900">
         {title}
       </h2>
