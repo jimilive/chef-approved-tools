@@ -21,7 +21,7 @@ export const reviewData = {
 
   // TRACKING DATA
   tracking: {
-    testingPeriod: 'Professional butchering tested',
+    testingPeriod: '20 years (including 10 professional)',
     hook: 'Granton edge reduces drag. Professional precision.',
   },
 

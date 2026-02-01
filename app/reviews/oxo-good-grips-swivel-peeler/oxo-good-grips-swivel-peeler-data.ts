@@ -393,7 +393,7 @@ export const reviewData = {
   testingResults: {
     title: "Testing Results",
     testingEnvironment: [
-      { label: "Testing Duration", value: "16+ years (6 years professional, 10+ years home)" },
+      { label: "Testing Duration", value: "20 years (10 years professional, 10 years home)" },
       { label: "Location", value: "Purple Café prep station + home kitchen" },
       { label: "Primary Use", value: "Vegetable prep: potatoes, carrots, apples" },
       { label: "Volume", value: "Estimated 20,000+ lbs of produce peeled" },
@@ -424,7 +424,7 @@ export const reviewData = {
       },
       {
         title: "Build Quality & Durability",
-        content: "Rustproof stainless steel construction survives commercial kitchen abuse. No blade loosening, no handle degradation, no rust spots. The same peeler I used at Purple Café from 2008-2012 still works in my home kitchen today. That's 16+ years of continuous use, the definition of professional-grade durability at consumer pricing."
+        content: "Rustproof stainless steel construction survives commercial kitchen abuse. No blade loosening, no handle degradation, no rust spots. The same peeler I used at Purple Café from 2008-2012 still works in my home kitchen today. That's 20 years of continuous use, the definition of professional-grade durability at consumer pricing."
       },
       {
         title: "Practical Design Features",
@@ -447,7 +447,7 @@ export const reviewData = {
       },
       {
         title: "Grip Security in Real Conditions",
-        content: "Professional kitchens are wet environments. Produce drips, hands get washed constantly, prep surfaces are wiped down between tasks. The textured Santoprene rubber maintains grip in all these conditions. I've never had this peeler slip during use, not once in 16+ years. That's a safety feature as much as a comfort feature. Slipped peelers cause cuts."
+        content: "Professional kitchens are wet environments. Produce drips, hands get washed constantly, prep surfaces are wiped down between tasks. The textured Santoprene rubber maintains grip in all these conditions. I've never had this peeler slip during use, not once in 20 years. That's a safety feature as much as a comfort feature. Slipped peelers cause cuts."
       },
       {
         title: "Long-Term Value Assessment",

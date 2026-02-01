@@ -8,11 +8,11 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: "Ninja Air Fryer AF101: 4-Year Daily Use Test (Honest Results)",
-    description: "Professional chef tests the Ninja Air Fryer AF101 for 4 years of daily use. What this countertop convection oven does well and what disappoints.",
-    ogTitle: "Ninja Air Fryer AF101 Review: 90-Day Professional Test",
-    ogDescription: "After 90 days testing wings, frozen foods, and everything in between.",
-    testingPeriod: "90 Days Testing",
+    title: "Ninja Air Fryer AF101: 4-Month Daily Use Test (Honest Results)",
+    description: "Professional chef tests the Ninja Air Fryer AF101 for 4 months of daily use. What this countertop convection oven does well and what disappoints.",
+    ogTitle: "Ninja Air Fryer AF101 Review: 4-Month Professional Test",
+    ogDescription: "After 4 months testing wings, frozen foods, and everything in between.",
+    testingPeriod: "4 Months Testing",
     tier: 3
   },
 
@@ -21,7 +21,7 @@ export const reviewData = {
 
   // TRACKING DATA
   tracking: {
-    testingPeriod: "90 days",
+    testingPeriod: "4 months",
     hook: "85% of deep-fryer results with zero oil mess",
   },
 
@@ -32,7 +32,7 @@ export const reviewData = {
 
   // SECTION 1: HERO
   hero: {
-    title: "Ninja Air Fryer AF101 Review: 90-Day Wing & Frozen Food Test",
+    title: "Ninja Air Fryer AF101 Review: 4-Month Wing & Frozen Food Test",
     authorName: "Scott Bradley",
     authorCredentials: "24 Years in Professional Kitchens",
     rating: 4.4,
@@ -41,11 +41,11 @@ export const reviewData = {
       text: "Tier 3: Expert Evaluation",
       icon: "🔬"
     },
-    verdict: "After 90 days of testing with 24 years of professional kitchen experience, the Ninja AF101 is a legitimate cooking tool that delivers approximately 85% of deep-fryer results. Wings come out crispy-skinned with juicy meat inside. However, this is a compact convection oven with a 4-quart capacity sized for small households, not families or gatherings. The non-stick coating requires gentle handling with only wood, silicone, or plastic utensils.",
+    verdict: "After 4 months of testing with 24 years of professional kitchen experience, the Ninja AF101 is a legitimate cooking tool that delivers approximately 85% of deep-fryer results. Wings come out crispy-skinned with juicy meat inside. However, this is a compact convection oven with a 4-quart capacity sized for small households, not families or gatherings. The non-stick coating requires gentle handling with only wood, silicone, or plastic utensils.",
     verdictStrong: "delivers approximately 85% of deep-fryer results",
     ctaText: "Check Amazon Price →",
     badge: {
-      text: "90 DAYS WING & FROZEN FOOD TESTING",
+      text: "4 MONTHS WING & FROZEN FOOD TESTING",
       className: "bg-orange-500/20 border-orange-500/30 text-orange-200"
     }
   },
@@ -53,7 +53,7 @@ export const reviewData = {
   // TESTING IN PROGRESS
   testingInProgress: {
     title: "Testing In Progress",
-    intro: "I purchased the Ninja AF101 in October 2025 specifically to review it for this site. I am currently at 90 days of testing with fresh wings (multiple batches), plus every type of frozen food I could find at the grocery store.",
+    intro: "I purchased the Ninja AF101 in October 2025 specifically to review it for this site. I am currently at 4 months of testing with fresh wings (multiple batches), plus every type of frozen food I could find at the grocery store.",
     nextUpdate: "April 2026 (6-month mark with non-stick durability assessment)",
     tier2Upgrade: "October 2026 (12-month mark with long-term performance data)"
   },
@@ -63,13 +63,13 @@ export const reviewData = {
     title: "Professional Context: Why I Can Evaluate This",
     paragraphs: [
       "Over 24 years in professional kitchens, I have used everything from commercial deep fryers at Mellow Mushroom (churning out hundreds of wings and fries per night) to $15,000 commercial convection ovens at Purple Café and Feierabend. I understand airflow patterns, heating element placement, and what separates good convection from great convection. I know what properly fried chicken wings should taste like: crispy skin with juicy meat inside, proper Maillard reaction browning, no greasiness.",
-      "Air fryers are essentially compact, high-powered convection ovens. The marketing calls them revolutionary, but the technology is just rapid air circulation around food, something commercial convection ovens have done since the 1970s. The question is: can a $70-90 consumer appliance replicate commercial convection performance? After 90 days of testing, I have the answer."
+      "Air fryers are essentially compact, high-powered convection ovens. The marketing calls them revolutionary, but the technology is just rapid air circulation around food, something commercial convection ovens have done since the 1970s. The question is: can a $70-90 consumer appliance replicate commercial convection performance? After 4 months of testing, I have the answer."
     ]
   },
 
   // SECTION 3: REAL-WORLD TESTING
   realWorldTesting: {
-    title: "Real-World Testing: 90 Days with Wings & Frozen Foods",
+    title: "Real-World Testing: 4 Months with Wings & Frozen Foods",
     tests: [
       {
         title: "Fresh Whole Wings Test (The Signature Dish)",
@@ -124,7 +124,7 @@ export const reviewData = {
   faqData: [
     {
       question: "Do air fryers really work or are they just hype?",
-      answer: "After 90 days of testing with 24 years of professional kitchen experience, air fryers are legitimate cooking tools, not gimmicks. The Ninja AF101 delivers approximately 85% of deep-fryer results using rapid air circulation. Wings come out crispy-skinned with juicy meat inside. However, they are compact convection ovens, not magic. You need proper technique and temperature control."
+      answer: "After 4 months of testing with 24 years of professional kitchen experience, air fryers are legitimate cooking tools, not gimmicks. The Ninja AF101 delivers approximately 85% of deep-fryer results using rapid air circulation. Wings come out crispy-skinned with juicy meat inside. However, they are compact convection ovens, not magic. You need proper technique and temperature control."
     },
     {
       question: "How many chicken wings fit in the Ninja AF101?",
@@ -159,7 +159,7 @@ export const reviewData = {
   bottomLine: {
     title: "Final Recommendation",
     paragraphs: [
-      "After 90 days of testing, the Ninja AF101 delivers 85% of deep-fryer results with zero oil mess. For small households who want fried food without the hassle, this is a genuine convenience tool, not a novelty.",
+      "After 4 months of testing, the Ninja AF101 delivers 85% of deep-fryer results with zero oil mess. For small households who want fried food without the hassle, this is a genuine convenience tool, not a novelty.",
       "The 4-quart capacity is perfect for 2-3 people, the compact footprint fits under most cabinets, and the simple controls make it easy to use. However, the non-stick coating requires gentle handling, and you'll cook in batches for larger groups."
     ],
     finalRating: {
@@ -180,7 +180,7 @@ export const reviewData = {
   testingResults: {
     title: "Testing Results",
     testingEnvironment: [
-      { label: "Testing Duration", value: "90 days dedicated testing" },
+      { label: "Testing Duration", value: "4 months dedicated testing" },
       { label: "Location", value: "Home kitchen counter" },
       { label: "Primary Use", value: "Frozen foods, fresh wings, reheating" },
       { label: "Testing Frequency", value: "4-5 times per week" },
@@ -216,7 +216,7 @@ export const reviewData = {
       },
       {
         title: "Daily Use Observations",
-        content: "After 90 days of regular use, the ceramic coating shows no wear. Cleanup is genuinely easy: a quick wipe for light use, soapy water soak for stubborn residue. The unit preheats in 3 minutes versus 15+ for a conventional oven. For quick weeknight cooking, this speed matters. I find myself using it for reheating pizza (better than microwave) and roasting vegetables (faster than oven) more than expected."
+        content: "After 4 months of regular use, the ceramic coating shows no wear. Cleanup is genuinely easy: a quick wipe for light use, soapy water soak for stubborn residue. The unit preheats in 3 minutes versus 15+ for a conventional oven. For quick weeknight cooking, this speed matters. I find myself using it for reheating pizza (better than microwave) and roasting vegetables (faster than oven) more than expected."
       }
     ]
   },
@@ -243,7 +243,7 @@ export const reviewData = {
       },
       {
         title: "Long-Term Durability Projection",
-        content: "Based on 90 days of testing and 24 years of equipment experience: expect 3-5 years of regular home use. The motor and heating element are straightforward and reliable. The weak point is typically the non-stick coating. Treat it gently with proper utensils and it should last. At this price point, 3-5 years represents good value."
+        content: "Based on 4 months of testing and 24 years of equipment experience: expect 3-5 years of regular home use. The motor and heating element are straightforward and reliable. The weak point is typically the non-stick coating. Treat it gently with proper utensils and it should last. At this price point, 3-5 years represents good value."
       }
     ]
   },
@@ -306,7 +306,7 @@ export const reviewData = {
     affiliateLinks: [],
     inStock: true,
     expertRating: 4.4,
-    expertOpinion: "After 90 days of testing with 24 years of professional kitchen experience, the Ninja AF101 is a legitimate cooking tool that delivers approximately 85% of deep-fryer results. Wings come out crispy-skinned with juicy meat inside. However, this is a compact convection oven with a 4-quart capacity sized for small households, not families or gatherings. The non-stick coating requires gentle handling with only wood, silicone, or plastic utensils.",
+    expertOpinion: "After 4 months of testing with 24 years of professional kitchen experience, the Ninja AF101 is a legitimate cooking tool that delivers approximately 85% of deep-fryer results. Wings come out crispy-skinned with juicy meat inside. However, this is a compact convection oven with a 4-quart capacity sized for small households, not families or gatherings. The non-stick coating requires gentle handling with only wood, silicone, or plastic utensils.",
     dateAdded: "2025-10-01",
     lastUpdated: "2025-10-01"
   }

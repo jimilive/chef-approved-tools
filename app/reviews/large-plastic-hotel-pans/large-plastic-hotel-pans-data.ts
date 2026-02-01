@@ -8,11 +8,11 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: 'Why I Ditched Tupperware For Plastic Hotel Pans (20 Years Proof)',
-    description: '20 years of meal prep. Plastic hotel pans organize everything better than Tupperware. Restaurant storage system for $20. NSF-approved, stackable.',
+    title: 'Why I Ditched Tupperware For Plastic Hotel Pans (24 Years Proof)',
+    description: '24 years of meal prep. Plastic hotel pans organize everything better than Tupperware. Restaurant storage system for $20. NSF-approved, stackable.',
     ogTitle: 'Large Plastic Hotel Pans Review: Full & 1/3 Pans for Batch Cooking',
     ogDescription: 'Professional chef review of large plastic hotel pans for serious meal prep and batch cooking.',
-    testingPeriod: '20 Years Using',
+    testingPeriod: '24 Years Using',
     tier: 1
   },
 
@@ -21,7 +21,7 @@ export const reviewData = {
 
   // TRACKING DATA
   tracking: {
-    testingPeriod: '20 years professional use',
+    testingPeriod: '24 years professional use',
     hook: 'Restaurant-grade organization for serious batch cooking',
   },
 
@@ -38,20 +38,20 @@ export const reviewData = {
     rating: 5,
     tierBadge: {
       icon: '🏆',
-      text: 'Tier 1: Professional Kitchen Use + 20 Years Home',
+      text: 'Tier 1: Professional Kitchen Use + 24 Years Home',
     },
-    verdict: 'After 20 years using large hotel pans professionally and at home, full and 1/3 pans are ideal for anyone doing serious batch cooking, party prep, or large-family meal planning. These aren\'t everyday containers. They\'re for when you need serious volume. Marinating 30 chicken thighs for a BBQ. Batch-cooking 20 pounds of pulled pork. Prepping salad ingredients for a family reunion. The standardized sizing means everything stacks perfectly, lids are interchangeable, and you can organize massive amounts of food efficiently. Every restaurant uses these for prep and cold storage because nothing else handles volume this efficiently.',
+    verdict: 'After 24 years using large hotel pans professionally and at home, full and 1/3 pans are ideal for anyone doing serious batch cooking, party prep, or large-family meal planning. These aren\'t everyday containers. They\'re for when you need serious volume. Marinating 30 chicken thighs for a BBQ. Batch-cooking 20 pounds of pulled pork. Prepping salad ingredients for a family reunion. The standardized sizing means everything stacks perfectly, lids are interchangeable, and you can organize massive amounts of food efficiently. Every restaurant uses these for prep and cold storage because nothing else handles volume this efficiently.',
     verdictStrong: 'Professional organization for serious batch cooking',
     ctaText: 'Check Price on Amazon →'
   },
 
   // SECTION 2: TESTING RESULTS
   testingResults: {
-    title: 'Real-World Testing: 20 Years Professional & Home Use',
+    title: 'Real-World Testing: 24 Years Professional & Home Use',
     sections: [
       {
         title: 'Batch Cooking Performance',
-        content: 'Full hotel pans hold massive quantities: 20+ lbs of pulled pork, 5 gallons of soup, 30 marinating chicken pieces. The depth (6 inches) means you can stack food without crushing, store liquids without spilling, and organize ingredients efficiently. After 20 years, I use full pans for every large gathering. They make batch cooking manageable instead of chaotic.'
+        content: 'Full hotel pans hold massive quantities: 20+ lbs of pulled pork, 5 gallons of soup, 30 marinating chicken pieces. The depth (6 inches) means you can stack food without crushing, store liquids without spilling, and organize ingredients efficiently. After 24 years, I use full pans for every large gathering. They make batch cooking manageable instead of chaotic.'
       },
       {
         title: '1/3 Pans: The Home Kitchen Sweet Spot',
@@ -59,7 +59,7 @@ export const reviewData = {
       },
       {
         title: 'Restaurant Durability',
-        content: 'NSF-certified polypropylene survives decades of daily use in commercial kitchens. At home, these pans are virtually indestructible. Dishwasher safe through thousands of cycles, freezer safe, and resistant to staining from acidic foods. The same pans I bought 20 years ago still work perfectly, no cracks, warping, or degradation.'
+        content: 'NSF-certified polypropylene survives decades of daily use in commercial kitchens. At home, these pans are virtually indestructible. Dishwasher safe through thousands of cycles, freezer safe, and resistant to staining from acidic foods. The same pans I bought 24 years ago still work perfectly, no cracks, warping, or degradation.'
       },
       {
         title: 'Space Efficiency',
@@ -67,7 +67,7 @@ export const reviewData = {
       }
     ],
     testingEnvironment: [
-      { label: 'Testing Period', value: '20 years professional kitchens + home use' },
+      { label: 'Testing Period', value: '24 years professional kitchens + home use' },
       { label: 'Usage', value: 'Batch cooking, party prep, large-family meals' },
       { label: 'Conditions', value: 'Home kitchen with standard refrigerator' },
       { label: 'Volume', value: '6-12 large pans in regular rotation' }
@@ -106,13 +106,13 @@ export const reviewData = {
       },
       {
         title: 'The 1/3 Pan: Home Kitchen Versatility',
-        content: 'After 20 years of home testing, 6-inch 1/3 pans are the most useful large size for home kitchens. They fit in standard refrigerators (full pans often don\'t), hold enough for serious batch cooking (8-12 servings), and stack efficiently with other hotel pans. I use 1/3 pans more than full pans at home because they balance capacity with practical refrigerator space. Start here unless you regularly cook for 20+ people.'
+        content: 'After 24 years of home testing, 6-inch 1/3 pans are the most useful large size for home kitchens. They fit in standard refrigerators (full pans often don\'t), hold enough for serious batch cooking (8-12 servings), and stack efficiently with other hotel pans. I use 1/3 pans more than full pans at home because they balance capacity with practical refrigerator space. Start here unless you regularly cook for 20+ people.'
       }
     ]
   },
 
   // SECTION 4: PROS & CONS TITLE
-  prosConsTitle: 'Honest Assessment After 20 Years',
+  prosConsTitle: 'Honest Assessment After 24 Years',
   prosTitle: 'What Makes Large Pans Useful',
   consTitle: 'Limitations to Understand',
 
@@ -156,7 +156,7 @@ export const reviewData = {
     },
     {
       question: 'Are they dishwasher safe?',
-      answer: 'Yes, fully dishwasher safe, even in commercial dishwashers at high temperatures. I\'ve been washing large hotel pans in dishwashers for 20 years with no warping, cracking, or degradation. The NSF-certified polypropylene is designed for this.'
+      answer: 'Yes, fully dishwasher safe, even in commercial dishwashers at high temperatures. I\'ve been washing large hotel pans in dishwashers for 24 years with no warping, cracking, or degradation. The NSF-certified polypropylene is designed for this.'
     },
     {
       question: 'Can I freeze food in these pans?',
@@ -200,7 +200,7 @@ export const reviewData = {
   bottomLine: {
     title: 'The Bottom Line: My Professional Verdict',
     paragraphs: [
-      'After 20 years using large hotel pans professionally and at home, full and 1/3 pans are ideal for anyone doing serious batch cooking, party prep, or large-family meal planning. This isn\'t about everyday storage. It\'s about handling volume efficiently when you\'re cooking at scale.',
+      'After 24 years using large hotel pans professionally and at home, full and 1/3 pans are ideal for anyone doing serious batch cooking, party prep, or large-family meal planning. This isn\'t about everyday storage. It\'s about handling volume efficiently when you\'re cooking at scale.',
       'If you host large gatherings, batch cook weekly, or feed a big family, large plastic hotel pans change how you organize food prep. Trust the restaurant-grade system that professional kitchens rely on for cold storage and prep organization.'
     ],
     ctaText: 'Check Price on Amazon →'
@@ -299,7 +299,7 @@ export const reviewData = {
       }
     ],
     expertRating: 5,
-    expertOpinion: 'After 20 years using large hotel pans professionally and at home, full and 1/3 pans are ideal for serious batch cooking and party prep.',
+    expertOpinion: 'After 24 years using large hotel pans professionally and at home, full and 1/3 pans are ideal for serious batch cooking and party prep.',
     pros: [
       'Full pans handle massive quantities (20+ lbs)',
       '1/3 pans perfect for home-scale batch cooking',

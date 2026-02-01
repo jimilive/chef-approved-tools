@@ -57,7 +57,7 @@ export const reviewData = {
   // Tracking data
   tracking: {
     tier: 1,
-    testingPeriod: "6 years at Purple Café",
+    testingPeriod: "18 years (6 at Purple Café + home)",
     hook: "Restaurant coffee standard. Simple, reliable design.",
   },
 

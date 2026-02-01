@@ -9,11 +9,11 @@ export const reviewData = {
   // METADATA
   metadata: {
     title: "Robot Coupe R2 DICE: $3,000 Commercial Food Processor (Worth It?)",
-    description: "3-year commercial test. Robot Coupe R2 DICE 2 HP motor saves hours daily in restaurant prep. Professional review of this $3,000 prep powerhouse.",
+    description: "5-year commercial test. Robot Coupe R2 DICE 2 HP motor saves hours daily in restaurant prep. Professional review of this $3,000 prep powerhouse.",
     keywords: ['Robot Coupe R2 Dice', 'commercial food processor', 'restaurant equipment', 'professional kitchen', 'food prep equipment', 'continuous feed processor'],
     ogTitle: "Robot Coupe R2 Dice: The Commercial Food Processor That Runs Our Prep Kitchen",
-    ogDescription: "Professional review after 3 years of intensive testing in high-volume restaurant prep kitchen",
-    testingPeriod: "3 Years Commercial Testing",
+    ogDescription: "Professional review after 5 years of intensive testing in high-volume restaurant prep kitchen",
+    testingPeriod: "5 Years Commercial Testing",
     tier: 1 as const
   },
 
@@ -34,7 +34,7 @@ export const reviewData = {
 
   // HEADER
   header: {
-    title: "Robot Coupe R2 Dice: 3-Year Commercial Review (2025)",
+    title: "Robot Coupe R2 Dice: 5-Year Commercial Review (2025)",
     author: "Scott Bradley",
     authorTitle: "Professional Chef • 24 Years Cooking Experience",
     expertRating: 4.7,
@@ -42,14 +42,14 @@ export const reviewData = {
 
   // QUICK STATS
   quickStats: {
-    text: "⭐⭐⭐⭐⭐ 4.7/5 | Based on 3 years of commercial testing\n💼 Commercial-Grade Investment | Professional food processor\n✔ 2 HP Motor | ✔ 850 Servings/3 Hours | ✔ Continuous Feed"
+    text: "⭐⭐⭐⭐⭐ 4.7/5 | Based on 5 years of commercial testing\n💼 Commercial-Grade Investment | Professional food processor\n✔ 2 HP Motor | ✔ 850 Servings/3 Hours | ✔ Continuous Feed"
   },
 
   // PROFESSIONAL VERDICT
   professionalVerdict: {
     title: "Professional Verdict",
     paragraphs: [
-      "After 3 years as our primary food processor at Purple Cafe, the Robot Coupe R2 Dice proved itself as essential commercial equipment. The combination of 5/5 performance ratings for speed, efficiency, and cut quality, combined with exceptional reliability under high-volume demands, makes this processor significantly superior to home alternatives.",
+      "After 5 years as our primary food processor at Purple Cafe, the Robot Coupe R2 Dice proved itself as essential commercial equipment. The combination of 5/5 performance ratings for speed, efficiency, and cut quality, combined with exceptional reliability under high-volume demands, makes this processor significantly superior to home alternatives.",
       "The continuous feed design and 2 HP motor process up to 850 servings in 3 hours, drastically cutting prep time. Professional kitchens report saving hours daily. This machine pays for itself through labor efficiency alone."
     ],
     perfectFor: "Commercial kitchens, high-volume operations, restaurants needing consistent cuts, catering businesses, operations prioritizing efficiency",
@@ -58,7 +58,7 @@ export const reviewData = {
 
   // HERO FEATURES
   heroFeatures: {
-    title: "Why This Processor Earned 3 Years of Daily Commercial Use",
+    title: "Why This Processor Earned 5 Years of Daily Commercial Use",
     features: [
       {
         emoji: "⚡",
@@ -73,7 +73,7 @@ export const reviewData = {
       {
         emoji: "✂️",
         title: "Consistent Cut Quality",
-        description: "26 processing plates deliver precision cuts and uniform results essential for presentation standards. Rated 5/5 for cut quality after 3 years of commercial testing."
+        description: "26 processing plates deliver precision cuts and uniform results essential for presentation standards. Rated 5/5 for cut quality after 5 years of commercial testing."
       },
       {
         emoji: "💪",
@@ -111,7 +111,7 @@ export const reviewData = {
       { label: "Location", value: "Purple Cafe prep kitchen" },
       { label: "Primary Use", value: "Cheese shredding operations" },
       { label: "Volume", value: "Daily high-volume restaurant operations" },
-      { label: "Duration", value: "3 years of continuous testing" }
+      { label: "Duration", value: "5 years of continuous testing" }
     ],
     outstandingPerformance: [
       "Excellent speed and efficiency (5/5 rating)",
@@ -134,7 +134,7 @@ export const reviewData = {
     sections: [
       {
         title: "Commercial vs. Residential Power",
-        content: "The 2 HP fan-cooled induction motor running at 1,725 RPM is what separates commercial equipment from home alternatives. Home food processors typically run 400-700 watts; the Robot Coupe delivers over 1,400 watts of sustained power. This means no bogging down on hard cheeses, no overheating during extended prep sessions, and consistent speed under continuous load. In 3 years of daily commercial use, the motor never faltered."
+        content: "The 2 HP fan-cooled induction motor running at 1,725 RPM is what separates commercial equipment from home alternatives. Home food processors typically run 400-700 watts; the Robot Coupe delivers over 1,400 watts of sustained power. This means no bogging down on hard cheeses, no overheating during extended prep sessions, and consistent speed under continuous load. In 5 years of daily commercial use, the motor never faltered."
       },
       {
         title: "Continuous Feed Efficiency",
@@ -142,7 +142,7 @@ export const reviewData = {
       },
       {
         title: "Cut Quality and Consistency",
-        content: "Professional presentation demands uniform cuts. The Robot Coupe's 26 processing plates deliver precision that manual cutting cannot match: every slice the same thickness, every shred the same size. After 3 years, we rated cut quality 5/5. This consistency matters for cooking times (uniform pieces cook evenly) and presentation (professional plating requires uniformity)."
+        content: "Professional presentation demands uniform cuts. The Robot Coupe's 26 processing plates deliver precision that manual cutting cannot match: every slice the same thickness, every shred the same size. After 5 years, we rated cut quality 5/5. This consistency matters for cooking times (uniform pieces cook evenly) and presentation (professional plating requires uniformity)."
       },
       {
         title: "ROI Calculation for Commercial Operations",
@@ -194,7 +194,7 @@ export const reviewData = {
   faqData: [
     {
       question: "Is the Robot Coupe R2 Dice worth it for a restaurant?",
-      answer: "After 3 years in our commercial kitchen, absolutely yes if you process high volumes daily. The combination of speed (850 servings/3 hours), consistent cut quality (5/5 rating), and commercial reliability makes this processor pay for itself through labor savings alone. Professional kitchens report saving significant prep time daily. The continuous feed design and commercial-grade motor process massive volume quickly. This is equipment that cuts prep time in half and pays for itself through efficiency gains. Who should skip it: If you only process small volumes occasionally, a quality home food processor will suffice. But for high-volume operations where speed and consistency matter, this is essential equipment. My verdict: After 3 years of daily commercial use, this is the kind of equipment that becomes indispensable. Worth every dollar for serious operations."
+      answer: "After 5 years in our commercial kitchen, absolutely yes if you process high volumes daily. The combination of speed (850 servings/3 hours), consistent cut quality (5/5 rating), and commercial reliability makes this processor pay for itself through labor savings alone. Professional kitchens report saving significant prep time daily. The continuous feed design and commercial-grade motor process massive volume quickly. This is equipment that cuts prep time in half and pays for itself through efficiency gains. Who should skip it: If you only process small volumes occasionally, a quality home food processor will suffice. But for high-volume operations where speed and consistency matter, this is essential equipment. My verdict: After 5 years of daily commercial use, this is the kind of equipment that becomes indispensable. Worth every dollar for serious operations."
     },
     {
       question: "How difficult is cleaning compared to home processors?",
@@ -243,7 +243,7 @@ export const reviewData = {
   // FINAL VERDICT
   finalVerdict: {
     title: "The Bottom Line: My Professional Verdict",
-    headline: "After 3 Years of Daily Commercial Use...",
+    headline: "After 5 Years of Daily Commercial Use...",
     text: [
       "The Robot Coupe R2 Dice proved itself as essential commercial equipment that pays for itself through efficiency gains. The combination of 5/5 performance ratings for speed, efficiency, and cut quality, combined with exceptional reliability under high-volume demands, makes this processor significantly superior to home alternatives.",
       "Professional kitchens report saving hours of labor daily. The continuous feed design and commercial-grade motor process massive volume quickly. This is equipment that cuts prep time in half and pays for itself through labor savings."
@@ -262,7 +262,7 @@ export const reviewData = {
   bottomLine: {
     title: "The Commercial Food Processor That Pays for Itself",
     paragraphs: [
-      "After 3 years of daily commercial use, the Robot Coupe R2 Dice has proven itself as essential equipment that cuts prep time in half. The 2 HP motor and continuous feed design process massive volumes quickly, saving hours of labor daily and delivering ROI in approximately 2 months.",
+      "After 5 years of daily commercial use, the Robot Coupe R2 Dice has proven itself as essential equipment that cuts prep time in half. The 2 HP motor and continuous feed design process massive volumes quickly, saving hours of labor daily and delivering ROI in approximately 2 months.",
       "This is genuine commercial equipment built for professional kitchens. The combination of 5/5 performance ratings for speed, efficiency, and cut quality makes it significantly superior to home alternatives. If you're running any serious food service operation, this processor is an investment that pays dividends in efficiency and consistency."
     ],
     ctaText: "Check Current Price →"
@@ -357,7 +357,7 @@ export const reviewData = {
     affiliateLinks: [],
     inStock: true,
     expertRating: 4.7,
-    expertOpinion: "After 3 years of intensive testing in Purple Cafe's high-volume prep kitchen, the Robot Coupe R2 Dice proved essential for cheese shredding and vegetable prep operations. The 2 HP motor and continuous feed design drastically reduced prep time while maintaining consistent quality. Saves 60-90 minutes daily in commercial operations, paying for itself in approximately 2 months through labor savings.",
+    expertOpinion: "After 5 years of intensive testing in Purple Cafe's high-volume prep kitchen, the Robot Coupe R2 Dice proved essential for cheese shredding and vegetable prep operations. The 2 HP motor and continuous feed design drastically reduced prep time while maintaining consistent quality. Saves 60-90 minutes daily in commercial operations, paying for itself in approximately 2 months through labor savings.",
     dateAdded: "2025-01-15",
     lastUpdated: "2025-01-15"
   }

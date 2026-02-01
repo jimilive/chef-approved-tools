@@ -18,7 +18,7 @@ export const EDITORIAL_METADATA: Record<string, EditorialMetadata> = {
   },
   'vitamix-5200-professional-blender': {
     tier: 1,
-    testingPeriod: '6 years in restaurant operations',
+    testingPeriod: '5 years in restaurant operations',
     hook: 'Restaurant workhorse. 10-year warranty justified by performance.',
     revenueScore: 92
   },
@@ -48,7 +48,7 @@ export const EDITORIAL_METADATA: Record<string, EditorialMetadata> = {
   },
   'victorinox-fibrox-10-inch-chefs-knife': {
     tier: 1,
-    testingPeriod: 'Professional kitchen tested',
+    testingPeriod: '20 years (including 10 professional)',
     hook: 'Longer blade for high-volume prep. Restaurant standard.',
     revenueScore: 80
   },
@@ -66,7 +66,7 @@ export const EDITORIAL_METADATA: Record<string, EditorialMetadata> = {
   },
   'bodum-chambord-french-press': {
     tier: 1,
-    testingPeriod: 'Years at Purple Café',
+    testingPeriod: '18 years (6 at Purple Café + home)',
     hook: 'Restaurant coffee standard. Simple, reliable design.',
     revenueScore: 68
   },
@@ -78,7 +78,7 @@ export const EDITORIAL_METADATA: Record<string, EditorialMetadata> = {
   },
   'victorinox-offset-bread-knife': {
     tier: 1,
-    testingPeriod: 'Professional kitchen tested',
+    testingPeriod: '20 years (including 10 professional)',
     hook: 'Offset design for clean slicing. Professional ergonomics.',
     revenueScore: 65
   },
@@ -102,19 +102,19 @@ export const EDITORIAL_METADATA: Record<string, EditorialMetadata> = {
   },
   'victorinox-4-inch-paring-knife': {
     tier: 1,
-    testingPeriod: 'Professional kitchen tested',
+    testingPeriod: '20 years (including 10 professional)',
     hook: 'Precision work. Professional quality at budget price.',
     revenueScore: 56
   },
   'victorinox-granton-edge-boning-knife': {
     tier: 1,
-    testingPeriod: 'Professional butchering tested',
+    testingPeriod: '20 years (including 10 professional)',
     hook: 'Granton edge reduces drag. Professional precision.',
     revenueScore: 54
   },
   'zuperia-bar-mops': {
     tier: 3,
-    testingPeriod: '40 years at every kitchen job',
+    testingPeriod: '24 years in professional kitchens',
     hook: 'Industry standard. 100% ring spun cotton. Restaurant grade.',
     revenueScore: 50
   },
@@ -168,7 +168,7 @@ export const EDITORIAL_METADATA: Record<string, EditorialMetadata> = {
   },
   'black-decker-toaster-oven': {
     tier: 2,
-    testingPeriod: '5 Years',
+    testingPeriod: '48 years across 4 models (1977-present)',
     hook: 'Budget-friendly. Reliable everyday performance.',
     revenueScore: 55
   },
@@ -222,13 +222,13 @@ export const EDITORIAL_METADATA: Record<string, EditorialMetadata> = {
   },
   'ninja-air-fryer-af101': {
     tier: 3,
-    testingPeriod: '90 days',
+    testingPeriod: '4 months',
     hook: '85% of deep-fryer results with zero oil mess',
     revenueScore: 33
   },
   'ninja-bl660-professional-blender': {
     tier: 3,
-    testingPeriod: '90 days',
+    testingPeriod: '4 months',
     hook: 'Adequate budget blending with concerning quality control issues',
     revenueScore: 32
   },
@@ -237,6 +237,12 @@ export const EDITORIAL_METADATA: Record<string, EditorialMetadata> = {
     testingPeriod: '17 years (2009-present)',
     hook: 'My personal fish spatula since 2009. Used professionally at Purple Café for fish service.',
     revenueScore: 70
+  },
+  'henckels-sharpening-steel': {
+    tier: 1,
+    testingPeriod: '20 years (2005-present)',
+    hook: '20 years of daily professional use and still functional',
+    revenueScore: 53
   }
 }
 

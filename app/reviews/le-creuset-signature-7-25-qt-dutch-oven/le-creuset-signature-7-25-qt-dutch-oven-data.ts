@@ -21,7 +21,7 @@ export const reviewData = {
 
   // TRACKING DATA
   tracking: {
-    testingPeriod: "10 Years",
+    testingPeriod: "12 Years",
     hook: "Buy-it-for-life cookware. Zero staining after a decade.",
   },
 

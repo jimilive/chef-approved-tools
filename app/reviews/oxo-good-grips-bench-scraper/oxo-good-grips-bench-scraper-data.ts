@@ -393,7 +393,7 @@ export const reviewData = {
   testingResults: {
     title: "Testing Results",
     testingEnvironment: [
-      { label: "Testing Duration", value: "10+ years professional and home use" },
+      { label: "Testing Duration", value: "20 years professional and home use" },
       { label: "Location", value: "Multiple professional kitchens + home" },
       { label: "Primary Use", value: "Dough portioning, board scraping, ingredient transfer" },
       { label: "Secondary Uses", value: "Cutting brownies, lifting cookies, vegetable chopping" },
@@ -451,7 +451,7 @@ export const reviewData = {
       },
       {
         title: "Professional vs. Consumer Use",
-        content: "In professional kitchens, a bench scraper sees 50+ uses per day. At home, maybe 5-10 times per cooking session. Either way, the OXO version handles the workload. This isn't a tool you replace often. Mine has lasted 10+ years with zero issues. For something under $15 that you'll use for a decade, the value is exceptional."
+        content: "In professional kitchens, a bench scraper sees 50+ uses per day. At home, maybe 5-10 times per cooking session. Either way, the OXO version handles the workload. This isn't a tool you replace often. Mine has lasted 20 years with zero issues. For something under $15 that you'll use for decades, the value is exceptional."
       }
     ]
   },

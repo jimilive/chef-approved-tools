@@ -70,7 +70,7 @@ export const reviewData = {
       { label: 'Location', value: 'Professional restaurant kitchen operations' },
       { label: 'Primary Users', value: 'Kitchen staff and management' },
       { label: 'Usage Frequency', value: 'Daily professional use, 5-6 days per week' },
-      { label: 'Duration', value: '2 years of continuous professional testing' }
+      { label: 'Duration', value: '4 years of continuous professional testing' }
     ],
     outstandingPerformance: [
       'Chef, santoku, bread, and paring knives most used',

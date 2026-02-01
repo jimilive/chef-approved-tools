@@ -23,7 +23,7 @@ export const reviewData = {
 
   // TRACKING DATA
   tracking: {
-    testingPeriod: "8 Years",
+    testingPeriod: "18 Years",
     hook: "Home baker favorite. Powerful 575-watt motor.",
   },
 

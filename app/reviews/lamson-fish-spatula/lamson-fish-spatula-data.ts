@@ -18,7 +18,7 @@ export const reviewData = {
     description: 'Lamson fish spatula review from a chef with 24 years of professional kitchen experience. Why this stainless steel fish turner is the one I recommend.',
     ogTitle: 'Lamson Fish Spatula Review: A Chef\'s 24-Year Verdict',
     ogDescription: 'Lamson fish spatula review from a chef with 24 years of professional kitchen experience. Why this stainless steel fish turner is the one I recommend.',
-    testingPeriod: 'Professional Kitchen Testing',
+    testingPeriod: '17 years (2009-present)',
     tier: 1
   },
 

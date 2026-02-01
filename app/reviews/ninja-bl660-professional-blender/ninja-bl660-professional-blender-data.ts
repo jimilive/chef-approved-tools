@@ -9,10 +9,10 @@ export const reviewData = {
   // METADATA
   metadata: {
     title: "Ninja BL660 Blender: Pitcher Cracked After 2 Weeks ($90 Wasted?)",
-    description: "90 days testing the Ninja BL660 blender, wing sauce was perfect, but the pitcher cracked within 2 weeks. Honest review of quality control issues.",
-    ogTitle: "Ninja BL660 Professional Blender Review: Honest 90-Day Test",
-    ogDescription: "After 90 days testing the Ninja BL660 (including a quality control issue), here's what you need to know before buying.",
-    testingPeriod: "90 Days Testing",
+    description: "4 months testing the Ninja BL660 blender, wing sauce was perfect, but the pitcher cracked within 2 weeks. Honest review of quality control issues.",
+    ogTitle: "Ninja BL660 Professional Blender Review: Honest 4-Month Test",
+    ogDescription: "After 4 months testing the Ninja BL660 (including a quality control issue), here's what you need to know before buying.",
+    testingPeriod: "4 Months Testing",
     tier: 3
   },
 
@@ -21,7 +21,7 @@ export const reviewData = {
 
   // TRACKING DATA
   tracking: {
-    testingPeriod: "90 days",
+    testingPeriod: "4 months",
     hook: "Adequate budget blending with concerning quality control issues",
   },
 
@@ -32,7 +32,7 @@ export const reviewData = {
 
   // SECTION 1: HERO
   hero: {
-    title: "Ninja BL660 Professional Blender Review: Brutally Honest 90-Day Test",
+    title: "Ninja BL660 Professional Blender Review: Brutally Honest 4-Month Test",
     authorName: "Scott Bradley",
     authorCredentials: "24 Years in Professional Kitchens",
     rating: 3.8,
@@ -41,11 +41,11 @@ export const reviewData = {
       text: "Tier 3: Expert Evaluation",
       icon: "🔬"
     },
-    verdict: "After 90 days of testing with 24 years of professional kitchen experience behind me, the Ninja BL660 delivers adequate performance for smoothies, sauces, and frozen drinks at a budget price point ($80-100). However, a concerning quality control issue (crack in pitcher base within 2 weeks) significantly undermines long-term confidence. This is adequate budget blending with major durability concerns. Not professional-grade equipment despite the marketing name.",
+    verdict: "After 4 months of testing with 24 years of professional kitchen experience behind me, the Ninja BL660 delivers adequate performance for smoothies, sauces, and frozen drinks at a budget price point ($80-100). However, a concerning quality control issue (crack in pitcher base within 2 weeks) significantly undermines long-term confidence. This is adequate budget blending with major durability concerns. Not professional-grade equipment despite the marketing name.",
     verdictStrong: "adequate budget blending with major durability concerns",
     ctaText: "Check Amazon Price →",
     badge: {
-      text: "90 DAYS PROFESSIONAL TESTING",
+      text: "4 MONTHS PROFESSIONAL TESTING",
       className: "bg-orange-500/20 border-orange-500/30 text-orange-200"
     }
   },
@@ -53,7 +53,7 @@ export const reviewData = {
   // TESTING IN PROGRESS
   testingInProgress: {
     title: "Testing In Progress",
-    intro: "I purchased the Ninja BL660 in October 2025 specifically to review it for this site. I'm currently at 90 days of testing with smoothies, margaritas, wing sauce, and salsa, plus monitoring a quality control issue that appeared within 2 weeks (small crack in pitcher base).",
+    intro: "I purchased the Ninja BL660 in October 2025 specifically to review it for this site. I'm currently at 4 months of testing with smoothies, margaritas, wing sauce, and salsa, plus monitoring a quality control issue that appeared within 2 weeks (small crack in pitcher base).",
     nextUpdate: "April 2026 (6-month mark with crack progression assessment)",
     tier2Upgrade: "October 2026 (12-month mark if pitcher survives long-term testing)"
   },
@@ -69,7 +69,7 @@ export const reviewData = {
   testingResults: {
     title: "Testing Results",
     testingEnvironment: [
-      { label: "Testing Duration", value: "2+ years of daily use" },
+      { label: "Testing Duration", value: "4 months of daily use" },
       { label: "Location", value: "Home kitchen counter" },
       { label: "Primary Use", value: "Daily smoothie preparation" },
       { label: "Secondary Uses", value: "Meal prep for sauces and dressings" },
@@ -91,7 +91,7 @@ export const reviewData = {
     sections: [
       {
         title: "Daily Smoothie Performance",
-        content: "After 2+ years of daily use, the Ninja BL660 starts every morning the same way: frozen berries, banana, protein powder, liquid. The 1100-watt motor never hesitates. What sets this apart from cheaper blenders is the stacked blade system, three sets of blades at different heights means ingredients don't get stuck at the top waiting to fall. No tamper needed. In professional kitchens, we called this 'set it and forget it' equipment. The BL660 earned that label."
+        content: "After 4 months of daily use, the Ninja BL660 starts every morning the same way: frozen berries, banana, protein powder, liquid. The 1100-watt motor never hesitates. What sets this apart from cheaper blenders is the stacked blade system, three sets of blades at different heights means ingredients don't get stuck at the top waiting to fall. No tamper needed. In professional kitchens, we called this 'set it and forget it' equipment. The BL660 earned that label."
       },
       {
         title: "Ice Crushing Capability",
@@ -99,7 +99,7 @@ export const reviewData = {
       },
       {
         title: "Build Quality & Durability",
-        content: "The base unit is solid, heavy enough to stay put during high-speed blending, with suction cup feet that actually work. The pitcher is thick BPA-free plastic, not the thin stuff that cracks. After 2+ years of daily use, no cracks, no leaks, no motor issues. The blade assembly removes completely for cleaning, which matters more than people realize. Trapped residue under fixed blades is how blenders start smelling like yesterday's smoothie."
+        content: "The base unit is solid, heavy enough to stay put during high-speed blending, with suction cup feet that actually work. The pitcher is thick BPA-free plastic, but a small crack appeared at the blade assembly seal within 2 weeks of use. The blade assembly removes completely for cleaning, which matters more than people realize. Trapped residue under fixed blades is how blenders start smelling like yesterday's smoothie."
       },
       {
         title: "Single-Serve System",
@@ -137,13 +137,13 @@ export const reviewData = {
     paragraphs: [
       "Over 24 years in professional kitchens, I've destroyed at least a dozen blenders: Vitamix 5200s running 8+ hours daily at Purple Café, Robot Coupe commercial models for high-volume sauce production, Waring heavy-duty units that lasted 2 years before motor failure. I know what motor power actually means (not just wattage marketing), how blade design affects blending efficiency, which features matter versus marketing gimmicks, and what separates 2-year appliances from 15-year investments.",
       "At Purple Café, we used Vitamix 5200 blenders for smoothie operations, 30-50 drinks per shift, ice crushing, frozen fruit, daily abuse. Those blenders ran for 5+ years with zero maintenance beyond cleaning. At Mellow Mushroom, we used cheaper commercial blenders for pizza sauce emulsification and salad dressings, they failed within 18-24 months under restaurant volume. I understand the difference between consumer-grade and commercial-grade equipment at a fundamental level.",
-      "The Ninja BL660 promises \"professional\" performance at $80-100, roughly 1/5 the cost of a Vitamix 5200 ($400-500). The marketing emphasizes 1000-watt motor power and a tiered blade system. After 90 days of home testing, I can evaluate whether this is legitimate value or just budget-grade equipment with professional-sounding marketing."
+      "The Ninja BL660 promises \"professional\" performance at $80-100, roughly 1/5 the cost of a Vitamix 5200 ($400-500). The marketing emphasizes 1000-watt motor power and a tiered blade system. After 4 months of home testing, I can evaluate whether this is legitimate value or just budget-grade equipment with professional-sounding marketing."
     ]
   },
 
   // SECTION 3: REAL-WORLD TESTING
   realWorldTesting: {
-    title: "Real-World Testing: 90 Days of Smoothies, Sauces & Margaritas",
+    title: "Real-World Testing: 4 Months of Smoothies, Sauces & Margaritas",
     tests: [
       {
         title: "Smoothie Test (The Daily Driver)",
@@ -277,7 +277,7 @@ export const reviewData = {
     },
     {
       question: "How long will the Ninja BL660 last?",
-      answer: "Based on 90 days of use and 24 years of commercial kitchen equipment experience: expect 2-3 years of regular home use (2-4 times per week). Quality control issues, budget-grade construction, and consumer-grade motor design suggest this is not a decade-spanning appliance. The Vitamix costs 1/4 the price but lasts 1/6 as long, so the Vitamix is actually cheaper per year of use if you'll use it regularly."
+      answer: "Based on 4 months of use and 24 years of commercial kitchen equipment experience: expect 2-3 years of regular home use (2-4 times per week). Quality control issues, budget-grade construction, and consumer-grade motor design suggest this is not a decade-spanning appliance. The Vitamix costs 1/4 the price but lasts 1/6 as long, so the Vitamix is actually cheaper per year of use if you'll use it regularly."
     },
     {
       question: "Should I buy the Ninja BL660 or save up for a Vitamix?",
@@ -296,7 +296,7 @@ export const reviewData = {
   bottomLine: {
     title: "Final Recommendation",
     paragraphs: [
-      "After 90 days of testing, the Ninja BL660 delivers adequate performance for smoothies, sauces, and frozen drinks at a budget price. However, quality control concerns (crack within 2 weeks) significantly impact long-term confidence.",
+      "After 4 months of testing, the Ninja BL660 delivers adequate performance for smoothies, sauces, and frozen drinks at a budget price. However, quality control concerns (crack within 2 weeks) significantly impact long-term confidence.",
       "This is adequate budget blending for occasional use. Not professional-grade equipment despite the marketing name. I will update this review with Ninja's warranty response."
     ],
     finalRating: {
@@ -372,7 +372,7 @@ export const reviewData = {
     affiliateLinks: [],
     inStock: true,
     expertRating: 3.8,
-    expertOpinion: "After 90 days of testing with 24 years of professional kitchen experience behind me, the Ninja BL660 delivers adequate performance for smoothies, sauces, and frozen drinks at a budget price point ($80-100). However, a concerning quality control issue (crack in pitcher base within 2 weeks) significantly undermines long-term confidence. This is adequate budget blending with major durability concerns. Not professional-grade equipment despite the marketing name.",
+    expertOpinion: "After 4 months of testing with 24 years of professional kitchen experience behind me, the Ninja BL660 delivers adequate performance for smoothies, sauces, and frozen drinks at a budget price point ($80-100). However, a concerning quality control issue (crack in pitcher base within 2 weeks) significantly undermines long-term confidence. This is adequate budget blending with major durability concerns. Not professional-grade equipment despite the marketing name.",
     dateAdded: "2025-10-01",
     lastUpdated: "2025-10-01"
   }

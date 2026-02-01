@@ -21,7 +21,7 @@ export const reviewData = {
 
   // TRACKING DATA
   tracking: {
-    testingPeriod: "Professional kitchen tested",
+    testingPeriod: "20 years (including 10 professional)",
     hook: "Precision work. Professional quality at budget price.",
   },
 
