@@ -274,6 +274,11 @@ const nextConfig = {
 
       // ===== SEO CANNIBALIZATION FIXES - Merged Blog Posts =====
       {
+        source: '/blog/cookware-materials-explained',
+        destination: '/guides/cookware-materials',
+        permanent: true,
+      },
+      {
         source: '/blog/cast-iron-mistakes-ruin-pan',
         destination: '/blog/cast-iron-seasoning-care',
         permanent: true,
@@ -537,19 +542,6 @@ const nextConfig = {
       {
         source: '/reviews/zwilling-9-inch-sharpening-steel',
         destination: '/reviews/henckels-sharpening-steel',
-        permanent: true,
-      },
-
-      // ===== OLD ROOT-LEVEL GUIDE URLS =====
-      // These were moved to /guides/ subdirectory
-      {
-        source: '/best-budget-chef-knife',
-        destination: '/guides/best-budget-chef-knife',
-        permanent: true,
-      },
-      {
-        source: '/best-knife-for-cutting-meat',
-        destination: '/guides/best-knife-for-cutting-meat',
         permanent: true,
       },
 

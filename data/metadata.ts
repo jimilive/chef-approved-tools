@@ -387,8 +387,8 @@ export const METADATA = {
     } as PageMetadata,
 
     'best-cookware': {
-      title: "Best Cookware: What Survives 24 Years Restaurant Use",
-      description: "Stainless steel handles tomato sauce, cast iron lasts decades, nonstick fails fast. Real performance testing from 24 years in professional kitchens.",
+      title: "Best Cookware Sets for Home Cooks (Pro Kitchen Tested)",
+      description: "Which pans to actually buy for your home kitchen. Specific product picks from a chef with 24 years of professional kitchen experience.",
       canonical: "https://www.chefapprovedtools.com/guides/best-cookware",
       author: "Scott Bradley",
       imageUrl: "/images/og/best-cookware.jpg",

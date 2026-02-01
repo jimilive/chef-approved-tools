@@ -6,6 +6,8 @@ import AuthorBio from '@/components/review/AuthorBio'
 import { getGuideMetadata } from '@/data/metadata'
 import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/schema'
 
+export const revalidate = 3600
+
 const guideMetadata = getGuideMetadata('best-cookware')
 
 export const metadata: Metadata = {

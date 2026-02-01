@@ -6,11 +6,6 @@
       "source": "/go/amazon/:path*",
       "destination": "https://amazon.com/:path*",
       "statusCode": 302
-    },
-    {
-      "source": "/products/:path*",
-      "destination": "/reviews/:path*",
-      "permanent": true
     }
   ],
   "headers": [
