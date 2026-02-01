@@ -301,48 +301,7 @@ export const reviewData = {
   // FAQ DATA
   faq: {
     title: "Frequently Asked Questions",
-    items: [
-      {
-        question: "How long does the OXO Good Grips Swivel Peeler typically last?",
-        answer: "With proper care, this peeler can last 15-20 years. Mine has been in daily use for over 20 years and still performs excellently. The blade stays sharp for 5 years of regular use, and replacement blades are available if needed."
-      },
-      {
-        question: "Is this peeler dishwasher safe?",
-        answer: "Yes, the OXO Good Grips Swivel Peeler is completely dishwasher safe. I've run mine through hundreds of dishwasher cycles without any degradation to the blade sharpness or handle integrity."
-      },
-      {
-        question: "Will this work well for people with arthritis or hand pain?",
-        answer: "Absolutely. The oversized, soft, non-slip handle was specifically designed for people with arthritis. The ergonomic design reduces hand strain significantly compared to thin-handled peelers, and the sharp blade requires minimal downward pressure."
-      },
-      {
-        question: "What's the difference between the swivel peeler and the Y-peeler?",
-        answer: "The swivel peeler has an in-line blade that pivots, making it ideal for round vegetables like potatoes and apples. The Y-peeler has a horizontal blade orientation that's better for speed-peeling long vegetables like carrots and cucumbers. Both have the same comfortable Good Grips handle."
-      },
-      {
-        question: "Can this peeler handle tough-skinned vegetables?",
-        answer: "It excels at most vegetables and fruits, but very thick-skinned produce like butternut squash is better handled with a sharp knife. For potatoes, carrots, apples, pears, cucumbers, zucchini, and similar items, this peeler is perfect."
-      },
-      {
-        question: "Does the blade need sharpening?",
-        answer: "No, the stainless steel blade cannot be sharpened at home. However, it stays sharp for many years of regular use. When it eventually dulls, OXO sells replacement blades, though many users (including me) find the blade lasts 20+ years without replacement."
-      },
-      {
-        question: "Is this peeler made in the USA?",
-        answer: "The OXO Good Grips Swivel Peeler is manufactured in China to OXO's quality specifications. While not made in the USA, it maintains excellent quality control and durability standards backed by OXO's satisfaction guarantee."
-      },
-      {
-        question: "Can I use this to peel hard cheeses?",
-        answer: "Yes! The sharp blade works excellently for shaving hard cheeses like Parmesan and Romano into thin shavings. In professional kitchens, we regularly use it for cheese garnishes on pasta dishes and salads."
-      },
-      {
-        question: "What's the handle made of?",
-        answer: "The handle features OXO's proprietary Good Grips material - a soft, non-slip santoprene rubber that provides excellent grip even when wet or greasy. The ergonomic shape and cushioned material make it comfortable for extended use."
-      },
-      {
-        question: "Is there a warranty on this peeler?",
-        answer: "OXO backs all their products with a satisfaction guarantee. If you're not satisfied with the peeler for any reason, OXO will replace or refund it. This warranty reflects their confidence in the product's quality and durability."
-      }
-    ]
+    items: [] as { question: string; answer: string }[],
   },
 
   // FAQ SCHEMA DATA
@@ -530,3 +489,9 @@ export const reviewData = {
     lastUpdated: "2025-10-12"
   }
 }
+
+// Populate FAQ items from faqData (single source of truth)
+reviewData.faq.items = reviewData.faqData.map(faq => ({
+  question: faq.question,
+  answer: faq.answer
+}))

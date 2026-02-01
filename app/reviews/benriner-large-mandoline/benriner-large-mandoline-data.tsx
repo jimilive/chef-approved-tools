@@ -337,56 +337,7 @@ export const reviewData = {
   // SECTION 7: FAQ
   faq: {
     title: 'Frequently Asked Questions',
-    items: [
-      {
-        question: 'Is the Benriner mandoline worth it?',
-        answer: (
-          <p>After years of professional use, absolutely yes. The Japanese precision engineering delivers consistent results that justify the investment. Cuts prep time significantly and produces restaurant-quality uniform slices. For serious home cooks or professionals, this is the standard.</p>
-        ),
-      },
-      {
-        question: 'How dangerous is a mandoline slicer?',
-        answer: (
-          <p>Extremely sharp blade requires serious respect. Always use the hand guard, never slice without it. Professional kitchens require cut-resistant gloves when using mandolines. The blade is sharp enough to slice through fingernails easily. This is not an exaggeration. With proper safety protocols, it&apos;s safe. Without them, it&apos;s one of the most dangerous tools in the kitchen.</p>
-        ),
-      },
-      {
-        question: "What's the difference between Benriner and cheap mandolines?",
-        answer: (
-          <p>The blade quality is night and day. Benriner uses high-carbon Japanese stainless steel that stays sharp significantly longer. Cheap mandolines dull quickly and produce inconsistent results. The adjustment mechanism on Benriner is precise and repeatable. Budget mandolines often have loose, imprecise adjustments that defeat the purpose of uniform slicing.</p>
-        ),
-      },
-      {
-        question: 'What vegetables work best on a mandoline?',
-        answer: (
-          <p>Excellent for: cucumbers, potatoes, radishes, carrots, zucchini, apples, onions, cabbage. Basically any firm vegetable or fruit that you want uniformly sliced. Avoid: very soft items like tomatoes (unless extremely ripe), leafy greens, or anything too irregular in shape. Soft items get crushed rather than cleanly sliced.</p>
-        ),
-      },
-      {
-        question: 'Should I get the Large or Original Benriner?',
-        answer: (
-          <p>The Large (reviewed here) is more versatile and stable for serious cooking. It handles full-size onions, potatoes, and cabbage without awkward positioning. The Original is more compact but has limited capacity, but it includes 3 julienne blade inserts for different cut sizes. Both include hand guard. For professional or serious home use, always choose the Large. Note: The Large version comes with a straight blade only (no julienne blades) included.</p>
-        ),
-      },
-      {
-        question: 'How do you clean a Benriner mandoline safely?',
-        answer: (
-          <p>Rinse immediately after use to prevent food from drying on blade. Use a brush or sponge, never your bare hand directly on blade. Dishwasher safe, but hand washing preserves blade edge longer. Always clean with extreme caution. The blade is sharp enough to cut through sponges easily. Many professionals keep a dedicated brush just for mandoline cleaning.</p>
-        ),
-      },
-      {
-        question: 'How long does the blade stay sharp?',
-        answer: (
-          <p>With proper care, the blade stays professionally sharp for years. In our restaurant environment with daily use, we found minimal dulling over time. The Japanese stainless steel holds an edge far better than budget alternatives. When it does eventually dull, replacement blades are available and reasonably priced.</p>
-        ),
-      },
-      {
-        question: 'Is the hand guard effective?',
-        answer: (
-          <p>The included hand guard is well-designed and effective when used properly. It has spikes that grip the food securely and keeps your fingers safely away from the blade. That said, many professional cooks prefer cut-resistant gloves as additional protection. The hand guard is good, but the blade is so sharp that extra precaution is never wasted.</p>
-        ),
-      },
-    ],
+    items: [] as { question: string; answer: string }[],
   },
 
   // SECTION 8: WHERE TO BUY (not in current version - add minimal version)
@@ -468,3 +419,9 @@ export const reviewData = {
     ],
   },
 }
+
+// Populate FAQ items from faqData (single source of truth)
+reviewData.faq.items = reviewData.faqData.map(faq => ({
+  question: faq.question,
+  answer: faq.answer
+}))

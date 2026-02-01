@@ -127,7 +127,7 @@ export default async function RubbermaidScraperReview() {
       affiliateUrl={affiliateUrl}
       gitDates={gitDates}
       categoryBreadcrumb={categoryBreadcrumb}
-      faqData={reviewData.faq.items}
+      faqData={reviewData.faqData}
       tier={reviewData.metadata.tier as 1 | 2 | 3}
       testingPeriod={reviewData.tracking.testingPeriod}
       hook={reviewData.tracking.hook}

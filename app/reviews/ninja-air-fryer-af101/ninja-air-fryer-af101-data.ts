@@ -117,32 +117,7 @@ export const reviewData = {
   // FAQ data
   faq: {
     title: "Frequently Asked Questions",
-    items: [
-      {
-        question: "Do air fryers really work or are they just hype?",
-        answer: "After 90 days of testing with 24 years of professional kitchen experience, air fryers are legitimate cooking tools, not gimmicks. The Ninja AF101 delivers approximately 85% of deep-fryer results using rapid air circulation. Wings come out crispy-skinned with juicy meat inside. However, they are compact convection ovens, not magic. You need proper technique and temperature control."
-      },
-      {
-        question: "How many chicken wings fit in the Ninja AF101?",
-        answer: "Approximately 5 full chicken wings in a single layer without overcrowding. For best results, wings should not touch or overlap. If you are cooking for more than 2-3 people, expect to cook in multiple batches. The 4-quart capacity is sized for small households, not families or gatherings."
-      },
-      {
-        question: "Can I use metal utensils in the Ninja air fryer?",
-        answer: "No. Use only wood, silicone, or plastic utensils. I learned this the hard way by scratching the non-stick coating with a metal spatula. The scratches are permanent and will reduce the lifespan of the basket. Treat the non-stick surface gently to maximize longevity."
-      },
-      {
-        question: "How does the Ninja AF101 compare to deep frying?",
-        answer: "The AF101 delivers approximately 85% of deep-fryer results. Wings have crispy skin and juicy meat, but they lack the deep golden-brown color and slight greasiness of true deep-fried wings. The texture is excellent, but the visual appearance and exact flavor profile are slightly different. For home use without oil management and cleanup, this is an excellent trade-off."
-      },
-      {
-        question: "Is the Ninja AF101 loud?",
-        answer: "The fan is audible but not loud. It is quieter than commercial fryers and louder than complete silence. The noise level is comparable to a household convection oven. You will hear it running, but it would not disrupt a conversation in the next room. For apartment living or open-concept homes, the noise is acceptable."
-      },
-      {
-        question: "Why should I follow package instructions instead of the quick reference guide?",
-        answer: "The included quick reference guide is generic and often inaccurate for specific products. Frozen food manufacturers test their products extensively and provide timing based on their specific formulations. Following package instructions and adjusting based on your preference produces better results than following the guide blindly. After 2-3 test runs per food type, you will dial in perfect timing."
-      }
-    ]
+    items: [] as { question: string; answer: string }[],
   },
 
   // FAQ SCHEMA DATA
@@ -336,3 +311,9 @@ export const reviewData = {
     lastUpdated: "2025-10-01"
   }
 }
+
+// Populate FAQ items from faqData (single source of truth)
+reviewData.faq.items = reviewData.faqData.map(faq => ({
+  question: faq.question,
+  answer: faq.answer
+}))

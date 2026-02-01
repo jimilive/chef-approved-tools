@@ -254,32 +254,7 @@ export const reviewData = {
   // FAQ data
   faq: {
     title: "Frequently Asked Questions",
-    items: [
-      {
-        question: "Is the Ninja BL660 as good as a Vitamix?",
-        answer: "No. Absolutely not. After using commercial Vitamix blenders for 24 years in professional kitchens, the performance gap is immediately obvious. The Vitamix has a 2.0 HP motor (50% more power), all-metal drive system, hardened blades, variable speed control, and 15-20 year lifespan. The Ninja has a 1.34 HP motor, plastic components, quality control issues, and 2-3 year expected lifespan. For liquid-heavy smoothies and sauces, the Ninja performs adequately. For thick mixtures, daily use, or commercial volume, the Vitamix is significantly better."
-      },
-      {
-        question: "What about the crack you discovered? Should I not buy this?",
-        answer: "The crack appeared within 2 weeks of careful use, no drops, no thermal shock, just standard blending. This is a serious quality control concern that suggests manufacturing inconsistency or design weakness. I will update this review with how Ninja's customer service handles the warranty replacement. If you buy the BL660, inspect the pitcher base carefully when it arrives, test it immediately within the return window, and keep your receipt for warranty claims."
-      },
-      {
-        question: "Can I make nut butter or hummus in the Ninja BL660?",
-        answer: "I attempted nut butter once, the motor struggled, bogged down, and couldn't create the vortex needed for thick mixtures. The 1000-watt motor isn't powerful enough for thick, paste-like mixtures. For nut butters, hummus, or thick smoothie bowls, you need either a Vitamix (2.0 HP motor) or a food processor. The Ninja BL660 is designed for liquid-heavy blending: smoothies with adequate liquid, sauces, frozen drinks."
-      },
-      {
-        question: "How loud is the Ninja BL660?",
-        answer: "Measured at approximately 85-90 decibels during operation, comparable to most household blenders. You can't have a conversation in the same room while blending. For noise-sensitive households, early morning smoothies will wake people up. This is a standard blender noise level, not silent, not ear-splitting."
-      },
-      {
-        question: "How long will the Ninja BL660 last?",
-        answer: "Based on 90 days of use and 24 years of commercial kitchen equipment experience: expect 2-3 years of regular home use (2-4 times per week). Quality control issues, budget-grade construction, and consumer-grade motor design suggest this is not a decade-spanning appliance. The Vitamix costs 1/4 the price but lasts 1/6 as long, so the Vitamix is actually cheaper per year of use if you'll use it regularly."
-      },
-      {
-        question: "Should I buy the Ninja BL660 or save up for a Vitamix?",
-        answer: "Buy the Ninja if: You blend 2-3 times per week maximum, primarily make smoothies with adequate liquid, and either can't afford $400 right now or aren't sure you'll use a blender enough to justify premium pricing. Save for Vitamix if: You blend 4+ times per week, make thick mixtures, want genuine commercial-grade performance, or plan to use this blender for 10+ years."
-      }
-    ]
+    items: [] as { question: string; answer: string }[],
   },
 
   // FAQ SCHEMA DATA
@@ -402,3 +377,9 @@ export const reviewData = {
     lastUpdated: "2025-10-01"
   }
 }
+
+// Populate FAQ items from faqData (single source of truth)
+reviewData.faq.items = reviewData.faqData.map(faq => ({
+  question: faq.question,
+  answer: faq.answer
+}))

@@ -160,56 +160,7 @@ export const reviewData = {
   // SECTION 6: FAQ
   faq: {
     title: "Frequently Asked Questions",
-    items: [
-      {
-        question: "Why is Victorinox so affordable compared to Wusthof or Shun?",
-        answer: "The Victorinox is accessibly priced because you're not paying for premium aesthetics, exotic handle materials, or brand prestige. You're paying for what matters: cutting performance. You're not getting exotic wood or fancy handle materials (it's molded plastic fibrox), Damascus steel patterns, thick heavy blade, or luxury brand premium pricing. You ARE getting: professional-grade high-carbon stainless steel, excellent edge retention and easy re-sharpening, perfect balance and control, NSF commercial certification, and Swiss manufacturing quality. The truth from 24 years professional cooking: Once you're cutting, you don't see the handle. You feel the balance, control, and sharpness. The Victorinox delivers where it matters: actual cutting performance, at a fraction of typical premium costs."
-      },
-      {
-        question: "Is an affordable knife really good enough for serious cooking?",
-        answer: "Absolutely yes. This is the exact knife used in professional kitchens worldwide, from casual dining to fine dining operations. It's not a 'budget alternative.' It's professional equipment that happens to be accessible. After 24 years in professional kitchens, including 10 years using Victorinox at Purple Café, Feierabend, Paragary's, and Il Pizzaiolo, I can tell you that line cooks and chefs prefer Victorinox because it works better for actual cooking than expensive knives. The thin blade and perfect balance deliver more control than heavy, thick premium knives. NSF certification means this knife meets the same commercial standards as equipment costing many times more. It's approved for professional use, not just 'home cooking.' The knife doesn't know its price point. It only knows how sharp it is and how well it cuts. The Victorinox excels at both."
-      },
-      {
-        question: "Victorinox vs Wusthof: Which should I buy?",
-        answer: "For 95% of home cooks, the Victorinox is the smarter choice. Victorinox advantages: Exceptional value vs premium pricing, lighter/better balance, thin blade offers more control, easier to sharpen, less intimidating for new cooks. Wusthof advantages: Beautiful aesthetics (wood handle, full bolster), heavier/more substantial feel, lifetime warranty, premium brand prestige. My verdict: The Victorinox cuts just as well as the Wusthof. After 20 years, I still use my Victorinox daily because it works better for actual cooking. Spend the difference on a quality cutting board or Dutch oven instead."
-      },
-      {
-        question: "How long does a Victorinox knife last?",
-        answer: "With proper care and regular sharpening, 10-20 years easily. I've been using mine for 20 years across multiple professional kitchens. At accessible pricing, even decades of use represents serious value: pennies per day for professional-quality cutting performance. Compare to premium knives that may last just as long but cost several times more. Longevity tips: Hand wash immediately after use, sharpen regularly, use wooden/plastic cutting board, store properly (magnetic strip or knife block)."
-      },
-      {
-        question: "Does the plastic handle feel cheap?",
-        answer: "The fibrox handle feels utilitarian, not luxurious, but that's intentional and actually an advantage for professional use. Fibrox handle benefits: Superior grip (textured surface prevents slipping even with wet hands), dishwasher safe (unlike wood handles), NSF certified (meets commercial sanitation standards), lightweight (reduces hand fatigue), durable (doesn't absorb odors, bacteria, or stains). The professional perspective: In restaurant kitchens, we don't care about aesthetics. We care about grip, durability, and sanitation. The fibrox handle excels at all three."
-      },
-      {
-        question: "Do professional chefs really use Victorinox?",
-        answer: "Yes, extensively. Walk into any professional kitchen and you'll see Victorinox knives everywhere, from small cafes to fine dining establishments. Why pros choose Victorinox: Performance over prestige (chefs care about how it cuts, not how it looks), practical pricing (replacing lost knives is less painful), versatile (thin blade excels at detailed work), NSF certified (meets health department requirements), easy maintenance (kitchen staff can sharpen without expensive equipment). Personal experience: I've used Victorinox for 20 years (including 10 years across four professional kitchens: Purple Café, Feierabend, Paragary's, Il Pizzaiolo). Some chefs brought expensive Japanese knives for specific tasks, but the Victorinox handled 80% of daily cutting."
-      },
-      {
-        question: "How often does a Victorinox knife need sharpening?",
-        answer: "With daily use, professional sharpening every 3-4 months. Hone before each use with a honing steel to maintain the edge between sharpenings. The high-carbon stainless steel holds an edge remarkably well compared to softer budget knives. I sharpen mine quarterly in a busy kitchen environment, but home cooks using it less frequently might only need sharpening twice yearly. Honing vs Sharpening: Honing (daily, 10 seconds) realigns the edge. Sharpening (quarterly) removes metal to create a new edge. Learn both skills. Your knife will last decades."
-      },
-      {
-        question: "What size cutting board do I need for an 8-inch knife?",
-        answer: "Minimum 15x20 inches for comfortable prep work. I recommend 18x24 inches or larger for versatility. The John Boos 18x24 commercial board pairs perfectly with this knife and provides ample workspace for efficient meal prep. Larger boards prevent ingredients from falling off and give you room to organize your mise en place. Material matters: Use wood or plastic boards only. Glass and ceramic boards will destroy your edge in weeks."
-      },
-      {
-        question: "Can I put a Victorinox knife in the dishwasher?",
-        answer: "Technically the fibrox handle is dishwasher-safe, but I strongly recommend hand washing to preserve the blade edge. Why hand wash: Dishwasher detergents are abrasive and will dull the edge faster. High heat can affect blade temper over time. Contact with other utensils can chip or damage the blade. Hand washing takes 30 seconds and extends knife life by years. Proper hand washing: Wash immediately after use with warm water and dish soap. Dry completely before storing. Never leave soaking in sink."
-      },
-      {
-        question: "Should I buy the 8-inch or 10-inch Victorinox chef knife?",
-        answer: "For most home cooks, the 8-inch is the better choice. It handles 90% of tasks with better maneuverability and control. Choose 8-inch if: You have limited counter space, prefer nimble/precise cutting, are new to cooking, want one versatile knife, have smaller hands. Choose 10-inch if: You regularly break down whole chickens/large roasts, prep in bulk for meal prep, have large cutting boards, prefer longer blade for slicing. Professional advice: I own both and use the 8-inch for 90% of tasks. The 10-inch comes out for breaking down proteins and large vegetable prep. Start with the 8-inch, add the 10-inch later if needed."
-      },
-      {
-        question: "Where is the Victorinox Fibrox made?",
-        answer: "The Victorinox Fibrox is made in Ibach, Switzerland, where Victorinox has manufactured knives since 1884. The same factory produces the iconic Swiss Army Knife. Swiss manufacturing means strict quality control, precision engineering, and over 140 years of knife-making expertise. The high-carbon stainless steel blade and fibrox handle are both produced to Swiss quality standards. This isn't outsourced production. It's genuine Swiss craftsmanship at an accessible price point."
-      },
-      {
-        question: "Is Victorinox better than Wüsthof for beginners?",
-        answer: "Yes, for most beginners, Victorinox is the better choice. Here's why: The lighter weight (5.6 oz vs 8.5 oz) is easier to control while learning proper technique. The softer steel is more forgiving: it flexes rather than chips if you make mistakes. The lower price means less anxiety about damaging an expensive knife while learning. The thin blade provides better feedback as you develop knife skills. Once you've mastered the basics with a Victorinox, you'll know exactly what you want (or don't want) in a premium knife if you decide to upgrade later."
-      }
-    ]
+    items: [] as { question: string; answer: string }[],
   },
 
   // FAQ SCHEMA DATA (separate for schema markup)
@@ -422,3 +373,9 @@ export const reviewData = {
     verdict: "The Victorinox delivers 95% of the Wüsthof's performance at 30% of the price. The Wüsthof feels more substantial and premium in hand, but for actual cutting tasks, the Victorinox's lighter weight and better balance provide superior control. The Mercer is a solid budget alternative, but the Victorinox's superior edge retention and NSF certification make it worth the small price difference."
   }
 }
+
+// Populate FAQ items from faqData (single source of truth)
+reviewData.faq.items = reviewData.faqData.map(faq => ({
+  question: faq.question,
+  answer: faq.answer
+}))

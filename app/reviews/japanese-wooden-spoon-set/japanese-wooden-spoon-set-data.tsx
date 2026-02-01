@@ -150,32 +150,7 @@ export const reviewData = {
   // FAQ
   faq: {
     title: 'Frequently Asked Questions',
-    items: [
-      {
-        question: 'Are these wooden spoons really dishwasher safe?',
-        answer: "Yes, genuinely dishwasher safe based on 3 years of testing. I've run these through my home dishwasher over 100 times (hot water cycles, heated dry, placed wherever they fit among dishes) with zero degradation. No splitting, warping, or roughness has developed. This is exceptional for wooden utensils; most wooden spoons I've owned previously cracked or warped within months of dishwasher use."
-      },
-      {
-        question: 'Will the 9-inch length work for my cooking needs?',
-        answer: 'The 9-inch length excels for everyday cooking in 10-12 inch skillets, 2-4 quart saucepans, and similar standard home cookware. This covers approximately 90% of typical stovetop cooking tasks. The limitation appears with large stockpots (8+ quarts) or deep Dutch ovens where the spoons fall completely into the pot when released.'
-      },
-      {
-        question: 'Do these spoons scratch non-stick or cast iron cookware?',
-        answer: "No scratching on either surface after 3 years of regular use. The natural wood is soft enough to give against pan surfaces rather than gouging them. On non-stick pans, I've used these for aggressive stirring without damaging coating. On cast iron, they allow firm stirring without compromising seasoning layers."
-      },
-      {
-        question: 'Why six identical spoons instead of varied sizes?',
-        answer: "The six-piece identical set means consistent performance. You always know exactly what you're grabbing. The downside is zero size variety. For cooks who value consistency and want multiple spoons ready for multi-pot cooking sessions, identical pieces are beneficial. Having six working spoons available means I rarely run short mid-cooking."
-      },
-      {
-        question: 'How long will these spoons last?',
-        answer: "Based on current condition after 3 years of daily use and 100+ dishwasher cycles, I'd estimate 5-10 year lifespan minimum with normal home use. They show virtually no wear: no splitting, warping, or surface degradation. Even a 5-year lifespan makes them exceptionally cost-effective."
-      },
-      {
-        question: 'Why have you purchased five sets of these spoons?',
-        answer: "Two sets for my own kitchen (12 total spoons) and three sets as gifts for family and friends who cook regularly. After the first set proved its value, I wanted backups. The three gift sets went to people I knew would appreciate practical, dishwasher-safe cooking tools. When I give kitchen tools as gifts, I only recommend items I genuinely use and trust."
-      }
-    ]
+    items: [] as { question: string; answer: string }[],
   },
 
   // FAQ Data (for schema)
@@ -258,3 +233,9 @@ export const reviewData = {
     ]
   }
 }
+
+// Populate FAQ items from faqData (single source of truth)
+reviewData.faq.items = reviewData.faqData.map(faq => ({
+  question: faq.question,
+  answer: faq.answer
+}))

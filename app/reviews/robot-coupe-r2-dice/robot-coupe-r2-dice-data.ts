@@ -190,51 +190,54 @@ export const reviewData = {
     link: { text: "professional kitchen starter kit", href: "/kitchen-bundle" }
   },
 
-  // FAQ DATA
+  // FAQ DATA (for schema)
+  faqData: [
+    {
+      question: "Is the Robot Coupe R2 Dice worth it for a restaurant?",
+      answer: "After 3 years in our commercial kitchen, absolutely yes if you process high volumes daily. The combination of speed (850 servings/3 hours), consistent cut quality (5/5 rating), and commercial reliability makes this processor pay for itself through labor savings alone. Professional kitchens report saving significant prep time daily. The continuous feed design and commercial-grade motor process massive volume quickly. This is equipment that cuts prep time in half and pays for itself through efficiency gains. Who should skip it: If you only process small volumes occasionally, a quality home food processor will suffice. But for high-volume operations where speed and consistency matter, this is essential equipment. My verdict: After 3 years of daily commercial use, this is the kind of equipment that becomes indispensable. Worth every dollar for serious operations."
+    },
+    {
+      question: "How difficult is cleaning compared to home processors?",
+      answer: "More involved, taking 8-10 minutes vs 3-5 minutes for home units. The continuous feed chute, bowl, and blades all require thorough cleaning. However, the time saved in processing far outweighs cleaning time. For efficient cleaning: disassemble components immediately after use, soak in warm soapy water while still warm, use a brush for the feed chute, and dry thoroughly to prevent water spots on polycarbonate. Most commercial operations factor this into their closing procedures."
+    },
+    {
+      question: "Is this worth it for serious home cooks?",
+      answer: "Only if you regularly process large volumes (10+ pounds per session). For typical home use, even serious cooking, a Cuisinart DLC-10 or KitchenAid processor handles 95% of tasks at a fraction of the investment. The R2 Dice excels when you need to process ingredients for dozens of servings multiple times per week. If you're meal-prepping for one family or cooking for dinner parties occasionally, residential equipment is more appropriate and easier to maintain."
+    },
+    {
+      question: "What is the difference between R2 Dice and R2N?",
+      answer: "The R2 Dice has a 2 HP motor vs the R2N's standard motor. For dense vegetables, hard cheeses, and continuous high-volume use, the extra horsepower prevents stalling and maintains consistent speed under load. For lighter-duty commercial use (smaller cafes, prep volumes under 50 servings per service), the R2N is adequate at lower cost. But for serious commercial operations processing hundreds of servings daily, the R2 Dice's power advantage is worth the investment."
+    },
+    {
+      question: "How long do the blades and discs last under commercial use?",
+      answer: "Based on our Purple Cafe experience: shredding discs last 12-18 months with daily heavy use, slicing blades 18-24 months. The S-blade for chopping lasts 2+ years with proper care. Replacement components are reasonably priced for commercial equipment. Performance degradation is gradual, and you'll notice slightly longer processing times before complete failure. Keep spare discs on hand for busy operations to avoid downtime."
+    },
+    {
+      question: "What electrical requirements are needed?",
+      answer: "Requires a standard 120V 15-amp circuit. Verify your kitchen circuit can handle the load, especially if sharing with other equipment. Dedicated circuit recommended for heavy daily use to prevent breaker trips during peak operations. Most commercial kitchens have adequate power, but verify before installation. The 2 HP motor draws significant amperage during startup and under heavy load."
+    },
+    {
+      question: "How does this compare to the Cuisinart DLC-10 for commercial use?",
+      answer: "The R2 Dice is purpose-built for commercial operations with a 2 HP motor, continuous feed design, and commercial-grade construction. The Cuisinart is excellent for home use but cannot sustain the speed and durability needed for daily commercial operations. The Cuisinart will overheat and stall under continuous high-volume processing. It's designed for batch processing with rest periods between uses. The Robot Coupe handles continuous operation for hours without degradation."
+    },
+    {
+      question: "What size operation needs the Robot Coupe R2 Dice?",
+      answer: "This processor is designed for operations processing significant volumes daily. If you're preparing food for 50+ covers per service, catering events regularly, or running high-volume prep operations, the R2 Dice delivers the speed and reliability you need. For smaller operations or occasional high-volume needs, consider the standard R2N model or quality home processors. The continuous feed design and commercial motor really shine when you're processing pounds of ingredients multiple times per day."
+    },
+    {
+      question: "Can I use the Robot Coupe R2 Dice for purées and wet ingredients?",
+      answer: "While the R2 Dice can handle some wet ingredients, it excels at slicing, shredding, and dicing rather than puréeing. The continuous feed design and processing discs are optimized for solid foods. For purées, soups, and sauces, we used our Vitamix 5200 blender alongside the Robot Coupe. Together, they covered every processing need in our commercial kitchen. The Robot Coupe for prep work, the Vitamix for purées and liquid-based tasks."
+    },
+    {
+      question: "What maintenance does the Robot Coupe R2 Dice require?",
+      answer: "Daily maintenance is straightforward: thorough cleaning of all components after each use, checking blade sharpness weekly, and inspecting seals monthly. The polycarbonate bowl should be checked for cracks or wear every few months. Every 6-12 months under commercial use, have components professionally inspected. Blades should be professionally sharpened or replaced when performance decreases. Proper maintenance extends component life significantly and ensures consistent performance throughout the machine's lifespan."
+    }
+  ],
+
+  // FAQ (visible on page - populated from faqData)
   faq: {
     title: "Frequently Asked Questions About Robot Coupe R2 Dice",
-    items: [
-      {
-        question: "Is the Robot Coupe R2 Dice worth it for a restaurant?",
-        answer: "After 3 years in our commercial kitchen, absolutely yes if you process high volumes daily. The combination of speed (850 servings/3 hours), consistent cut quality (5/5 rating), and commercial reliability makes this processor pay for itself through labor savings alone. Professional kitchens report saving significant prep time daily. The continuous feed design and commercial-grade motor process massive volume quickly. This is equipment that cuts prep time in half and pays for itself through efficiency gains. Who should skip it: If you only process small volumes occasionally, a quality home food processor will suffice. But for high-volume operations where speed and consistency matter, this is essential equipment. My verdict: After 3 years of daily commercial use, this is the kind of equipment that becomes indispensable. Worth every dollar for serious operations."
-      },
-      {
-        question: "How difficult is cleaning compared to home processors?",
-        answer: "More involved, taking 8-10 minutes vs 3-5 minutes for home units. The continuous feed chute, bowl, and blades all require thorough cleaning. However, the time saved in processing far outweighs cleaning time. For efficient cleaning: disassemble components immediately after use, soak in warm soapy water while still warm, use a brush for the feed chute, and dry thoroughly to prevent water spots on polycarbonate. Most commercial operations factor this into their closing procedures."
-      },
-      {
-        question: "Is this worth it for serious home cooks?",
-        answer: "Only if you regularly process large volumes (10+ pounds per session). For typical home use, even serious cooking, a Cuisinart DLC-10 or KitchenAid processor handles 95% of tasks at a fraction of the investment. The R2 Dice excels when you need to process ingredients for dozens of servings multiple times per week. If you're meal-prepping for one family or cooking for dinner parties occasionally, residential equipment is more appropriate and easier to maintain."
-      },
-      {
-        question: "What is the difference between R2 Dice and R2N?",
-        answer: "The R2 Dice has a 2 HP motor vs the R2N's standard motor. For dense vegetables, hard cheeses, and continuous high-volume use, the extra horsepower prevents stalling and maintains consistent speed under load. For lighter-duty commercial use (smaller cafes, prep volumes under 50 servings per service), the R2N is adequate at lower cost. But for serious commercial operations processing hundreds of servings daily, the R2 Dice's power advantage is worth the investment."
-      },
-      {
-        question: "How long do the blades and discs last under commercial use?",
-        answer: "Based on our Purple Cafe experience: shredding discs last 12-18 months with daily heavy use, slicing blades 18-24 months. The S-blade for chopping lasts 2+ years with proper care. Replacement components are reasonably priced for commercial equipment. Performance degradation is gradual, and you'll notice slightly longer processing times before complete failure. Keep spare discs on hand for busy operations to avoid downtime."
-      },
-      {
-        question: "What electrical requirements are needed?",
-        answer: "Requires a standard 120V 15-amp circuit. Verify your kitchen circuit can handle the load, especially if sharing with other equipment. Dedicated circuit recommended for heavy daily use to prevent breaker trips during peak operations. Most commercial kitchens have adequate power, but verify before installation. The 2 HP motor draws significant amperage during startup and under heavy load."
-      },
-      {
-        question: "How does this compare to the Cuisinart DLC-10 for commercial use?",
-        answer: "The R2 Dice is purpose-built for commercial operations with a 2 HP motor, continuous feed design, and commercial-grade construction. The Cuisinart is excellent for home use but cannot sustain the speed and durability needed for daily commercial operations. The Cuisinart will overheat and stall under continuous high-volume processing. It's designed for batch processing with rest periods between uses. The Robot Coupe handles continuous operation for hours without degradation."
-      },
-      {
-        question: "What size operation needs the Robot Coupe R2 Dice?",
-        answer: "This processor is designed for operations processing significant volumes daily. If you're preparing food for 50+ covers per service, catering events regularly, or running high-volume prep operations, the R2 Dice delivers the speed and reliability you need. For smaller operations or occasional high-volume needs, consider the standard R2N model or quality home processors. The continuous feed design and commercial motor really shine when you're processing pounds of ingredients multiple times per day."
-      },
-      {
-        question: "Can I use the Robot Coupe R2 Dice for purées and wet ingredients?",
-        answer: "While the R2 Dice can handle some wet ingredients, it excels at slicing, shredding, and dicing rather than puréeing. The continuous feed design and processing discs are optimized for solid foods. For purées, soups, and sauces, we used our Vitamix 5200 blender alongside the Robot Coupe. Together, they covered every processing need in our commercial kitchen. The Robot Coupe for prep work, the Vitamix for purées and liquid-based tasks."
-      },
-      {
-        question: "What maintenance does the Robot Coupe R2 Dice require?",
-        answer: "Daily maintenance is straightforward: thorough cleaning of all components after each use, checking blade sharpness weekly, and inspecting seals monthly. The polycarbonate bowl should be checked for cracks or wear every few months. Every 6-12 months under commercial use, have components professionally inspected. Blades should be professionally sharpened or replaced when performance decreases. Proper maintenance extends component life significantly and ensures consistent performance throughout the machine's lifespan."
-      }
-    ]
+    items: [] as { question: string; answer: string }[],
   },
 
   // FINAL VERDICT
@@ -359,3 +362,9 @@ export const reviewData = {
     lastUpdated: "2025-01-15"
   }
 }
+
+// Populate FAQ items from faqData (single source of truth)
+reviewData.faq.items = reviewData.faqData.map(faq => ({
+  question: faq.question,
+  answer: faq.answer
+}))

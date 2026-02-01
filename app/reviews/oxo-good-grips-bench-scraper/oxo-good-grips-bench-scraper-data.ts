@@ -287,75 +287,42 @@ export const reviewData = {
   // FAQ data
   faq: {
     title: "Frequently Asked Questions",
-    items: [
-      {
-        question: "Do I really need a bench scraper?",
-        answer: "If you do any regular cooking or baking, yes. After 24 years in professional kitchens and 20 years using this exact bench scraper, I can tell you it speeds up your workflow. At Purple Café, I used this tool every single day for 6 years: transferring vegetables, portioning dough, cleaning surfaces. Once you start using one, you&apos;ll wonder how you cooked without it. It&apos;s one of those tools where you don&apos;t realize how much you need it until you have it."
-      },
-      {
-        question: "Is the OXO better than a generic bench scraper?",
-        answer: "Yes, significantly better for daily use. The Good Grips handle makes a real difference during extended prep sessions. After 6 years of professional use, I can confirm the comfort advantage matters. The measurement markings are genuinely useful for consistent dough portioning. Generic scrapers work but become uncomfortable after 15-20 minutes of continuous use. The OXO&apos;s extra $7-9 is worth it if you use it regularly."
-      },
-      {
-        question: "Can I use this to cut dough?",
-        answer: "Yes, it&apos;s one of the primary uses. The stainless steel blade cuts cleanly through all types of dough: bread, pizza, cookie, pastry. At Purple Café, we portioned dozens of pizza dough balls daily with this scraper. The straight edge gives clean cuts without dragging or tearing. The measurement markings help create consistent portions. It&apos;s far superior to using a knife, which pulls and tears dough."
-      },
-      {
-        question: "Will this scratch my cutting board?",
-        answer: "No, when used properly. The beveled edge is designed to scrape surfaces clean without digging in. Hold it at a slight angle (not straight down) and it glides across wood, plastic, or stone boards without damage. I&apos;ve used mine on my John Boos maple cutting board for years with zero scratches. The key is technique: shallow angle, gentle pressure, let the beveled edge do the work."
-      },
-      {
-        question: "Can I clean wood pizza peels with this?",
-        answer: "Yes, but technique matters. Wood pizza peels (especially soft pine) require gentle cleaning. Hold the bench scraper nearly flat against the peel surface (shallow angle, not straight down) and use light pressure. This removes stuck dough and flour without gouging the wood. At Purple Café, I cleaned our soft pine pizza peels this way for 6 years with no damage. But if you press too hard or use the wrong angle, you&apos;ll leave marks. Gentle pressure, shallow angle, let the blade glide."
-      },
-      {
-        question: "Is it dishwasher-safe?",
-        answer: "Yes, completely dishwasher-safe. I&apos;ve run this exact scraper through hundreds of dishwasher cycles over 20 years (including 6 years of daily professional use at Purple Café), with zero degradation to the blade or handle. No rust, no loosening, no handle deterioration. The etched measurements don&apos;t fade. That said, it&apos;s easy to hand wash if you prefer."
-      },
-      {
-        question: "How long will this last?",
-        answer: "Decades with proper care. I&apos;ve been using this exact OXO bench scraper for 20 years (including 6 years of daily professional restaurant use. Same scraper, still fully functional, no replacements needed. The stainless steel doesn&apos;t rust or degrade. The Good Grips handle stays comfortable. There&apos;s no wear mechanism that would cause failure. Expect 15-20+ years minimum for home use."
-      },
-      {
-        question: "What else can I use this for besides transferring ingredients?",
-        answer: "Many tasks: cutting and portioning all types of dough, scraping cutting boards clean between tasks, removing stuck-on food from surfaces, cleaning work surfaces during prep, spreading frosting or filling, dividing cookie dough into portions, cleaning wood pizza peels (gently), scraping countertops, and even as an emergency spatula. At Purple Café, I used it for all of these tasks daily. It&apos;s incredibly versatile."
-      }
-    ]
+    items: [] as { question: string; answer: string }[],
   },
 
   // FAQ SCHEMA DATA
   faqData: [
     {
       question: "Do I really need a bench scraper?",
-      answer: "If you do any regular cooking or baking, yes. After 24 years in professional kitchens and 20 years using this exact bench scraper, I can tell you it speeds up your workflow. At Purple Café, I used this tool every single day for 6 years: transferring vegetables, portioning dough, cleaning surfaces. Once you start using one, it's hard to go back."
+      answer: "If you do any regular cooking or baking, yes. After 24 years in professional kitchens and 20 years using this exact bench scraper, I can tell you it speeds up your workflow. At Purple Café, I used this tool every single day for 6 years: transferring vegetables, portioning dough, cleaning surfaces. Once you start using one, you'll wonder how you cooked without it. It's one of those tools where you don't realize how much you need it until you have it."
     },
     {
       question: "Is the OXO better than a generic bench scraper?",
-      answer: "Yes, significantly better for daily use. The Good Grips handle makes a real difference during extended prep sessions. After 6 years of professional use, I can confirm the comfort advantage matters. The measurement markings are genuinely useful for consistent dough portioning. The OXO's extra $7-9 is worth it if you use it regularly."
+      answer: "Yes, significantly better for daily use. The Good Grips handle makes a real difference during extended prep sessions. After 6 years of professional use, I can confirm the comfort advantage matters. The measurement markings are genuinely useful for consistent dough portioning. Generic scrapers work but become uncomfortable after 15-20 minutes of continuous use. The OXO's extra $7-9 is worth it if you use it regularly."
     },
     {
       question: "Can I use this to cut dough?",
-      answer: "Yes, it's one of the primary uses. The stainless steel blade cuts cleanly through all types of dough. At Purple Café, we portioned dozens of pizza dough balls daily with this scraper. The straight edge gives clean cuts without dragging or tearing."
+      answer: "Yes, it's one of the primary uses. The stainless steel blade cuts cleanly through all types of dough: bread, pizza, cookie, pastry. At Purple Café, we portioned dozens of pizza dough balls daily with this scraper. The straight edge gives clean cuts without dragging or tearing. The measurement markings help create consistent portions. It's far superior to using a knife, which pulls and tears dough."
     },
     {
       question: "Will this scratch my cutting board?",
-      answer: "No, when used properly. The beveled edge is designed to scrape surfaces clean without digging in. Hold it at a slight angle (not straight down) and it glides across wood, plastic, or stone boards without damage. I've used mine on my John Boos maple cutting board for years with zero scratches."
+      answer: "No, when used properly. The beveled edge is designed to scrape surfaces clean without digging in. Hold it at a slight angle (not straight down) and it glides across wood, plastic, or stone boards without damage. I've used mine on my John Boos maple cutting board for years with zero scratches. The key is technique: shallow angle, gentle pressure, let the beveled edge do the work."
     },
     {
       question: "Can I clean wood pizza peels with this?",
-      answer: "Yes, but technique matters. Hold the bench scraper nearly flat against the peel surface and use light pressure. At Purple Café, I cleaned our soft pine pizza peels this way for 6 years with no damage. Gentle pressure, shallow angle, let the blade glide."
+      answer: "Yes, but technique matters. Wood pizza peels (especially soft pine) require gentle cleaning. Hold the bench scraper nearly flat against the peel surface (shallow angle, not straight down) and use light pressure. This removes stuck dough and flour without gouging the wood. At Purple Café, I cleaned our soft pine pizza peels this way for 6 years with no damage. But if you press too hard or use the wrong angle, you'll leave marks. Gentle pressure, shallow angle, let the blade glide."
     },
     {
       question: "Is it dishwasher-safe?",
-      answer: "Yes, completely dishwasher-safe. I've run this exact scraper through hundreds of dishwasher cycles over 20 years with zero degradation. No rust, no loosening, no handle deterioration."
+      answer: "Yes, completely dishwasher-safe. I've run this exact scraper through hundreds of dishwasher cycles over 20 years (including 6 years of daily professional use at Purple Café), with zero degradation to the blade or handle. No rust, no loosening, no handle deterioration. The etched measurements don't fade. That said, it's easy to hand wash if you prefer."
     },
     {
       question: "How long will this last?",
-      answer: "Decades with proper care. I've been using this exact OXO bench scraper for 20 years (including 6 years of daily professional restaurant use. Same scraper, still fully functional. Expect 15-20+ years minimum for home use."
+      answer: "Decades with proper care. I've been using this exact OXO bench scraper for 20 years (including 6 years of daily professional restaurant use. Same scraper, still fully functional, no replacements needed. The stainless steel doesn't rust or degrade. The Good Grips handle stays comfortable. There's no wear mechanism that would cause failure. Expect 15-20+ years minimum for home use."
     },
     {
-      question: "What else can I use this for?",
-      answer: "Many tasks: cutting and portioning dough, scraping cutting boards, cleaning work surfaces, spreading frosting, dividing cookie dough, cleaning wood pizza peels (gently), scraping countertops. At Purple Café, I used it for all of these tasks daily."
+      question: "What else can I use this for besides transferring ingredients?",
+      answer: "Many tasks: cutting and portioning all types of dough, scraping cutting boards clean between tasks, removing stuck-on food from surfaces, cleaning work surfaces during prep, spreading frosting or filling, dividing cookie dough into portions, cleaning wood pizza peels (gently), scraping countertops, and even as an emergency spatula. At Purple Café, I used it for all of these tasks daily. It's incredibly versatile."
     }
   ],
 
@@ -522,3 +489,9 @@ export const reviewData = {
     lastUpdated: "2025-11-14"
   }
 }
+
+// Populate FAQ items from faqData (single source of truth)
+reviewData.faq.items = reviewData.faqData.map(faq => ({
+  question: faq.question,
+  answer: faq.answer
+}))

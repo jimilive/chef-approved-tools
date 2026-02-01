@@ -261,40 +261,7 @@ export const reviewData = {
   // FAQ data
   faq: {
     title: "Frequently Asked Questions About Norton Tri-Stone Sharpener",
-    items: [
-      {
-        question: "Is the Norton Tri-Stone sharpener worth it?",
-        answer: "After 6 years of professional kitchen use maintaining 8-12 knives weekly, absolutely yes. The three-stage progressive system (coarse/medium/fine) delivers restaurant-quality results that rival sharpening services costing substantially more. For serious home cooks maintaining multiple knives, this pays for itself quickly compared to professional sharpening services. The Norton lasted 6 years in demanding commercial conditions. It'll last decades in home use."
-      },
-      {
-        question: "How do you use the Norton IM200 Tri-Stone?",
-        answer: "Progressive three-stage process: 1) Coarse (120 grit): Repair damaged edges, establish bevel (5-10 passes per side), 2) Medium (280 grit): Refine edge, remove coarse scratches (8-12 passes per side), 3) Fine (320 grit): Polish to razor-sharp finish (10-15 passes per side). Maintain consistent 20-degree angle. Use light pressure. The stones cut effectively without aggressive force."
-      },
-      {
-        question: "Do you need oil or water with Norton Tri-Stone?",
-        answer: "The Norton IM200 can be used with light mineral oil OR water. In 6 years of professional use, I used light mineral oil exclusively. Why oil works better: Prevents rust on carbon steel knives, suspends metal particles better than water, stones don't require pre-soaking, creates smoother sharpening action. Use just enough to create thin film on stone surface. Excessive oil isn't better."
-      },
-      {
-        question: "How long does the Norton Tri-Stone last?",
-        answer: "With proper care, 10-20 years for home use. Mine lasted 6 years of weekly professional use (300+ sharpening sessions) with minimal wear. Norton's aluminum oxide abrasive maintains cutting ability far longer than cheap stones that glaze over quickly. The stones will wear down gradually but remain effective. When surface becomes uneven, flatten with diamond plate or coarse sandpaper on glass."
-      },
-      {
-        question: "What's the difference between Norton Tri-Stone and single stones?",
-        answer: "The Tri-Stone provides complete sharpening progression in one system. Benefits over buying individual stones: Cost (three quality stones for less than premium singles cost separately), Convenience (no switching stones or setups mid-sharpening), Consistency (all three stones mounted in one base maintains alignment), Space (takes up 1/3 the storage space of three individual stones). For serious sharpening, individual Japanese water stones offer finer grits. But for maintaining kitchen knives to professional standards, the Tri-Stone is ideal."
-      },
-      {
-        question: "Can beginners use the Norton Tri-Stone?",
-        answer: "Yes, but expect a learning curve. Manual sharpening requires developing muscle memory for consistent angles. Benefits for beginners: Three grits eliminate guesswork about which stone to use, non-slip base provides stability while learning, forgiving stones that cut effectively without excessive pressure, visual feedback, you can see the edge developing. Realistic timeline: 3-5 practice sessions to develop decent technique. 10-15 sessions to achieve consistently sharp results. Worth the investment. This skill lasts a lifetime."
-      },
-      {
-        question: "How do you clean Norton sharpening stones?",
-        answer: "Simple maintenance after each use: 1) Wipe stones with paper towel to remove metal particles and oil, 2) If using water, rinse stones thoroughly, 3) Dry completely before storing, 4) Store in dry location. Deep cleaning (monthly): Scrub with dish soap and stiff brush, rinse thoroughly, dry completely. If stones become loaded with metal particles, soak in mineral spirits overnight, scrub, rinse, dry. Proper cleaning maintains cutting effectiveness and extends stone life."
-      },
-      {
-        question: "Norton Tri-Stone vs electric sharpener: which is better?",
-        answer: "Different tools for different priorities. Norton Tri-Stone advantages: Complete control over angle and pressure, removes minimal metal (knives last longer), can repair damaged edges effectively, works with any knife style or size, no moving parts to break. Electric sharpener advantages: Faster (2-3 minutes vs 10-15 minutes), consistent angles automatically, easier for beginners. After 6 years in professional kitchen, I chose manual stones. Better edge quality, more control, longer knife lifespan."
-      }
-    ]
+    items: [] as { question: string; answer: string }[],
   },
 
   // FAQ SCHEMA DATA
@@ -505,3 +472,9 @@ export const reviewData = {
     lastUpdated: "2025-10-13"
   }
 }
+
+// Populate FAQ items from faqData (single source of truth)
+reviewData.faq.items = reviewData.faqData.map(faq => ({
+  question: faq.question,
+  answer: faq.answer
+}))

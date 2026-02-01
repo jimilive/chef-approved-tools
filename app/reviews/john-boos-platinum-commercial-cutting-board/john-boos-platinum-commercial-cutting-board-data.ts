@@ -160,40 +160,7 @@ export const reviewData = {
   // FAQ data
   faq: {
     title: "Frequently Asked Questions About John Boos Cutting Boards",
-    items: [
-      {
-        question: "Is a John Boos cutting board worth the money?",
-        answer: "After 18 years of daily use, absolutely yes if you cook regularly and value knife care. The combination of knife edge preservation, a generous work surface, and generational durability justifies the investment for serious home cooks. This board will outlast you. After 18 years of daily use, mine shows minimal wear and I expect another 20 years easily. The knife sharpening savings alone, extending edge life 3x longer, adds significant value over time."
-      },
-      {
-        question: "How do you maintain a John Boos cutting board?",
-        answer: "Despite marketing claims about frequent oiling, maintenance is far simpler than advertised. Daily: Wash with warm soapy water, dry immediately. Never: Soak in water or put in dishwasher. Rarely: Apply food-grade mineral oil (I oil it maybe 2-3 times per year). The key is preventing water absorption by washing and drying promptly."
-      },
-      {
-        question: "What size John Boos cutting board should I buy?",
-        answer: "For serious home cooks, the 24x18 size is the sweet spot. It provides enough work surface to prep multiple ingredients without constant shuffling, while not being so massive it becomes unwieldy. My recommendation: Get the largest size your counter and budget allow. You'll never regret having more work surface."
-      },
-      {
-        question: "John Boos vs other wood cutting board brands?",
-        answer: "John Boos is the professional standard for a reason. Advantages include NSF certification, proven commercial durability, Made in USA quality, edge-grain construction that balances knife-friendliness with longevity, and established reputation in professional kitchens. John Boos represents the standard that others are measured against."
-      },
-      {
-        question: "Can you put a John Boos cutting board in the dishwasher?",
-        answer: "Absolutely not. Never put any wood cutting board in the dishwasher. The combination of high heat, harsh detergents, and prolonged water exposure causes warping, cracking, and rapid deterioration. A board that should last 20 years will be ruined in months. Proper cleaning: Wash with warm soapy water immediately after use, dry thoroughly with a towel, stand on edge to air dry completely."
-      },
-      {
-        question: "How long does a John Boos cutting board last?",
-        answer: "With basic care, expect 40 years easily. This is genuine generational equipment. After 18 years of daily home use, my board shows minimal wear. I expect another 20 years easily, then I'll pass it to my children. That's not marketing hyperbole. It's the reality of quality hardwood construction."
-      },
-      {
-        question: "Is edge-grain or end-grain better for cutting boards?",
-        answer: "Edge-grain (like this John Boos) offers the best balance of performance, durability, and maintenance for most users. Edge-grain advantages: More stable construction (less warping), easier to maintain, lower cost, excellent knife-friendliness, proven durability. After 18 years with this edge-grain board, my knives maintain sharpness exceptionally well."
-      },
-      {
-        question: "How do you remove stains from a John Boos cutting board?",
-        answer: "Most stains come out with coarse salt and lemon juice. Sprinkle coarse salt generously over stained area, cut a lemon in half and use it to scrub the salt into the stain, let sit for 5-10 minutes, rinse with warm water, dry immediately, and re-oil the treated area. Prevention: Wash the board immediately after cutting beets, turmeric, or other staining foods."
-      }
-    ]
+    items: [] as { question: string; answer: string }[],
   },
 
   // FAQ SCHEMA DATA
@@ -324,3 +291,9 @@ export const reviewData = {
     detail: "/images/products/john-boos-platinum-commercial-cutting-board/john-boos-platinum-commercial-cutting-board-2.webp"
   }
 }
+
+// Populate FAQ items from faqData (single source of truth)
+reviewData.faq.items = reviewData.faqData.map(faq => ({
+  question: faq.question,
+  answer: faq.answer
+}))

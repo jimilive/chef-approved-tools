@@ -252,40 +252,7 @@ export const reviewData = {
   // FAQ data
   faq: {
     title: "Frequently Asked Questions About Nordic Ware Half Sheet Pans",
-    items: [
-      {
-        question: "Is Nordic Ware half sheet pan worth it?",
-        answer: "After 10 years of regular use, absolutely yes. The Nordic Ware Natural Aluminum Commercial Baker's Half Sheet delivers professional-level performance at a great price. The combination of perfect heat distribution, warp-resistant construction, and decade-long durability makes this one of the best kitchen equipment investments. This is the pan professional bakers use in commercial kitchens. For home cooks, it represents commercial quality at consumer pricing."
-      },
-      {
-        question: "Why do Nordic Ware pans turn brown?",
-        answer: "The bronze patina that develops on natural aluminum is normal, expected, and actually improves performance. This isn't damage. It's the pan developing its character. Why patina is good: Creates natural non-stick surface; Indicates proper seasoning from use; Protects the aluminum underneath; Sign of a well-used, professional pan. Professional bakers prefer pans with patina. Don't fight it. Embrace it. After 10 years, my pans have beautiful bronze color and perform better than when new."
-      },
-      {
-        question: "Can you put Nordic Ware in the dishwasher?",
-        answer: "Nordic Ware recommends hand washing, and I agree. Dishwasher detergent is extremely harsh on natural aluminum and will cause discoloration and potentially damage the pan. Proper cleaning (takes 2 minutes): 1) Let pan cool completely, 2) Wash with warm water, dish soap, and non-abrasive sponge, 3) For stubborn stuck-on food: Make paste of baking soda and water, let sit 15 minutes, scrub gently, 4) Dry thoroughly before storing. Hand washing protects your investment and maintains the patina that improves performance."
-      },
-      {
-        question: "Do Nordic Ware pans warp?",
-        answer: "After 10 years including countless broiler sessions at 500°F+, my Nordic Ware pans remain perfectly flat. The 13-gauge aluminum thickness and reinforced steel rim prevent warping that plagues thinner pans. Warp prevention features: Heavy 13-gauge construction (thicker than most consumer pans); Reinforced steel rim maintains rigidity; Natural aluminum expands/contracts evenly without stress points. Cheap thin pans warp from thermal stress. Nordic Ware's commercial-grade thickness eliminates this problem."
-      },
-      {
-        question: "What's the difference between half sheet and quarter sheet pans?",
-        answer: "Size matters for functionality: Half Sheet (18x13\"): Fits standard home ovens, perfect for sheet pan dinners, roasting vegetables for 4-6 people, batch cookie baking. Quarter Sheet (13x9\"): Toaster oven size, small batch baking, reheating individual portions. Full Sheet (26x18\"): Commercial only, too large for most home ovens. My recommendation: Start with two half sheets. They're the most versatile size for home cooking. Add quarter sheets later if needed for toaster oven use."
-      },
-      {
-        question: "How many Nordic Ware sheet pans do I need?",
-        answer: "Minimum 2, ideally 3-4 half sheet pans for serious home cooking. Why multiple pans matter: Batch cookie baking (one baking, one loading/cooling); Sheet pan dinners with multiple components; Meal prep for the week; One clean pan always available. I own 4 Nordic Ware half sheets after 10 years. They're in constant rotation. Easily the most-used pans in my kitchen."
-      },
-      {
-        question: "Do you need parchment paper with Nordic Ware?",
-        answer: "Not always, but it helps with cleanup and prevents sticking for certain foods. Use parchment for: Cookies, sticky marinades, delicate fish, anything with high sugar content. Skip parchment for: Roasted vegetables (you want browning contact), broiling (parchment can burn), anything you want to crisp. The patina that develops over time creates natural non-stick properties, but parchment still simplifies cleanup for many applications."
-      },
-      {
-        question: "Nordic Ware vs other sheet pans: what's the difference?",
-        answer: "Having tested various pans over 24 years, here's what sets Nordic Ware apart: vs Cheap pans ($10-15): Warp immediately, uneven heating, thin gauge aluminum, short lifespan. vs Dark non-stick pans: Over-brown bottoms due to dark surface, coating degrades over time, not broiler-safe. vs Stainless steel: Poor heat distribution, hot spots, foods stick more, heavier weight. Nordic Ware advantage: Commercial 13-gauge thickness, warp-resistant, even heat distribution, decades of durability, professional baker's choice."
-      }
-    ]
+    items: [] as { question: string; answer: string }[],
   },
 
   // FAQ SCHEMA DATA
@@ -482,3 +449,9 @@ export const reviewData = {
     lastUpdated: "2025-10-13"
   }
 }
+
+// Populate FAQ items from faqData (single source of truth)
+reviewData.faq.items = reviewData.faqData.map(faq => ({
+  question: faq.question,
+  answer: faq.answer
+}))

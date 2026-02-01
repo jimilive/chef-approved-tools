@@ -241,32 +241,7 @@ export const reviewData = {
   // FAQ data
   faq: {
     title: "Frequently Asked Questions",
-    items: [
-      {
-        question: "Is Method All-Purpose Cleaner really non-toxic and safe?",
-        answer: "Yes, genuinely non-toxic. The formula is plant-based, biodegradable, and free from harsh chemicals like ammonia, bleach, or phosphates. It's safe to use on food prep surfaces without rinsing. After 5 years of daily use in my kitchen, I've had zero concerns about safety around food, children, or pets. This is as safe as cleaners get while still being effective."
-      },
-      {
-        question: "How does Method compare to traditional cleaners like Formula 409?",
-        answer: "Method matches the cleaning power of chemical cleaners like 409 or Fantastik but without harsh fumes, chemical residue, or environmental concerns. After 5 years of testing, I can confidently say Method cuts grease just as effectively. The difference is you can breathe normally while using it, and you don't need to worry about toxic residue on food surfaces. It's the rare product that doesn't compromise power for safety."
-      },
-      {
-        question: "Does Method work well on greasy stovetops?",
-        answer: "Exceptionally well. This is where Method truly shines. Spray it on cooking grease splatters, wait 5-10 seconds, and wipe clean. No scrubbing needed. I've watched it dissolve grease that would normally require aggressive scrubbing. For very heavy, baked-on grease, let it sit for 30-60 seconds. This is the primary reason I switched to Method after years of using harsh degreasers."
-      },
-      {
-        question: "Is Method streak-free on stainless steel?",
-        answer: "Yes, but technique matters. Clean with Method, then immediately follow with a dry cloth to buff the surface. This prevents water spots and streaking. I use it on all my stainless steel appliances with excellent results. The two-step process (clean, then dry) takes seconds and produces streak-free shine every time."
-      },
-      {
-        question: "Is Method safe for all kitchen surfaces?",
-        answer: "Safe for virtually all common kitchen surfaces: countertops (granite, quartz, laminate), stovetops, appliances, glass, stainless steel, sealed wood, tile, and more. I use it on everything from my John Boos cutting board to Le Creuset enamel. Avoid using on unsealed natural stone or unfinished wood. When in doubt, test on a small inconspicuous area first."
-      },
-      {
-        question: "What scent options are available?",
-        answer: "Method offers multiple scent options including French Lavender, Pink Grapefruit, Ylang Ylang, Cucumber, and more. All scents are derived from natural fragrances, pleasant but not overwhelming. I personally use Pink Grapefruit, which has a fresh, clean scent that dissipates quickly. Unlike chemical cleaners with artificial perfumes, these natural scents are subtle and enjoyable."
-      }
-    ]
+    items: [] as { question: string; answer: string }[],
   },
 
   // FAQ SCHEMA DATA
@@ -412,3 +387,9 @@ export const reviewData = {
     lastUpdated: "2025-10-13"
   }
 }
+
+// Populate FAQ items from faqData (single source of truth)
+reviewData.faq.items = reviewData.faqData.map(faq => ({
+  question: faq.question,
+  answer: faq.answer
+}))

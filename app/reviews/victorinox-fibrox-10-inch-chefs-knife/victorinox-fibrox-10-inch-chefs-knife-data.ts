@@ -161,48 +161,7 @@ export const reviewData = {
   // SECTION 6: FAQ
   faq: {
     title: "Frequently Asked Questions",
-    items: [
-      {
-        question: "Is the Victorinox Fibrox 10\" chef's knife worth the money?",
-        answer: "Absolutely. Based on 20 years using this knife (including 10 professionally), it delivers the same performance as chef knives costing hundreds more. The high-carbon stainless steel holds an edge remarkably well, the Fibrox handle provides superior grip, and it's proven reliable in professional kitchens worldwide. The value makes it one of the best investments for serious home cooks and professionals alike."
-      },
-      {
-        question: "Should I get the 10\" or 8\" Victorinox chef's knife?",
-        answer: "Choose the 10\" if you have larger hands (generally if you're over 6 feet tall), regularly break down whole proteins, or do extensive meal prep with large vegetables. The 8\" is better for smaller hands, compact kitchens, or more precise cutting work. I keep both in my home kitchen - the 8\" for daily tasks and the 10\" for bigger jobs like breaking down chickens or portioning large roasts."
-      },
-      {
-        question: "How do I sharpen the Victorinox Fibrox knife?",
-        answer: "Hone the knife before each use with a honing steel (10 seconds). For actual sharpening, either take it to a professional sharpener monthly or learn to use a whetstone. I recommend a 1000/6000 grit whetstone for home use. The high-carbon stainless steel sharpens easily and holds an edge well between sharpenings. Avoid pull-through sharpeners as they can damage the blade geometry."
-      },
-      {
-        question: "Can I put the Victorinox Fibrox knife in the dishwasher?",
-        answer: "The Fibrox handle is technically dishwasher-safe, but I strongly recommend hand-washing the entire knife. Dishwashers can dull the blade, cause it to knock against other items, and reduce its lifespan. Hand-wash immediately after use, dry completely, and store properly. This takes 30 seconds and will keep your knife performing like new for decades."
-      },
-      {
-        question: "What cutting board should I use with this knife?",
-        answer: "Use wood or high-quality plastic cutting boards. Never use glass, ceramic, or marble cutting boards as they will dull the blade quickly. I use end-grain wooden cutting boards in my professional kitchen as they're gentle on knife edges while being durable and naturally antimicrobial. A good cutting board is just as important as a good knife for maintaining edge sharpness."
-      },
-      {
-        question: "How long does the Victorinox Fibrox knife last?",
-        answer: "With proper care, this knife will last decades. I've been using Victorinox knives for 20 years, and they show minimal wear. The key is regular honing, proper sharpening when needed, hand-washing, and storing properly. The Fibrox handle is incredibly durable and resistant to cracking or degrading. This is genuinely a buy-it-for-life tool if you maintain it correctly."
-      },
-      {
-        question: "Is the 10\" knife too big for home cooking?",
-        answer: "Not if you have larger hands or regularly work with whole proteins and large vegetables. The 10\" excels at breaking down steaks, portioning roasts, and slicing through large butternut squash. However, if you have smaller hands or a compact kitchen, the 8\" version will be more comfortable. Consider your hand size and the types of cutting tasks you do most often."
-      },
-      {
-        question: "Does this knife come sharp from the factory?",
-        answer: "Yes, Victorinox knives arrive very sharp from the factory. You can start using it immediately for professional-level cutting. However, I recommend giving it a few passes on a honing steel before first use to align the edge, and then hone it regularly before each use to maintain peak sharpness. This simple habit keeps the knife performing at its best."
-      },
-      {
-        question: "What warranty does Victorinox offer?",
-        answer: "Victorinox offers a lifetime warranty against defects in material and workmanship. This covers manufacturing defects but not normal wear, misuse, or abuse. In my 20 years using Victorinox knives, I've never needed to use the warranty - these knives are incredibly reliable. The warranty is reassuring, but the real value is in the proven durability and performance."
-      },
-      {
-        question: "How does this compare to expensive Japanese chef knives?",
-        answer: "Japanese knives typically use harder steel that holds an edge longer but is more delicate and requires expert sharpening. The Victorinox uses softer German-style steel that's more forgiving, easier to sharpen, and more durable for heavy-duty work. For professional restaurant use and serious home cooking, the Victorinox is often the better choice due to its reliability and ease of maintenance. I use both types in my kitchen, but the Victorinox is my workhorse for daily tasks."
-      }
-    ]
+    items: [] as { question: string; answer: string }[],
   },
 
   // FAQ SCHEMA DATA (separate for schema markup)
@@ -401,3 +360,9 @@ export const reviewData = {
     verdict: "The Victorinox delivers 95% of the Wüsthof's performance at 30% of the price. The Wüsthof feels more substantial and premium in hand, but for actual cutting tasks with large proteins and vegetables, the Victorinox's lighter weight and better balance provide superior control during extended use. The Mercer is a solid budget alternative, but the Victorinox's superior edge retention and NSF certification make it worth the small price difference."
   }
 }
+
+// Populate FAQ items from faqData (single source of truth)
+reviewData.faq.items = reviewData.faqData.map(faq => ({
+  question: faq.question,
+  answer: faq.answer
+}))

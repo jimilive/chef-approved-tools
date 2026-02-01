@@ -110,7 +110,7 @@ export default async function RobotCoupeR2DiceReview() {
       affiliateUrl={affiliateUrl}
       gitDates={gitDates}
       categoryBreadcrumb={categoryBreadcrumb}
-      faqData={reviewData.faq.items}
+      faqData={reviewData.faqData}
       tier={reviewData.metadata.tier as 1 | 2 | 3}
       testingPeriod="5 years commercial use"
       hook="Commercial power. Prep time reduced by 60% vs manual."

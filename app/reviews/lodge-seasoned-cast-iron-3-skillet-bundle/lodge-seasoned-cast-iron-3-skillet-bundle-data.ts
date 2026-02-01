@@ -209,32 +209,7 @@ export const reviewData = {
   // FAQ data
   faq: {
     title: "Frequently Asked Questions About Lodge Cast Iron",
-    items: [
-      {
-        question: "Is Lodge cast iron worth the investment?",
-        answer: "Absolutely. After 7 years of testing and decades of restaurant experience, Lodge delivers professional-grade performance at a fraction of the price. The key differences compared to premium brands are surface finish and aesthetics, not cooking performance. Lodge delivers identical heat retention (5/5 rating) and distribution to premium brands, same durability and longevity (lifetime with proper care), is pre-seasoned and ready to use immediately, and is Made in USA with quality control. My verdict: For serious cooking performance, Lodge delivers professional results at budget-friendly pricing."
-      },
-      {
-        question: "How do I season and maintain Lodge cast iron?",
-        answer: "Lodge comes pre-seasoned, but here's what actually works after 7 years: For daily maintenance, clean while still warm with hot water and stiff brush, avoid soap unless dealing with stuck-on food, dry completely immediately - this is critical, and apply thin coat of oil while still warm. The critical rule: Never leave water or acidic products on the surface. This is the #1 cause of seasoning damage and rust. The truth about seasoning: If you use cast iron regularly, cooking maintains seasoning naturally."
-      },
-      {
-        question: "Should I buy the 3-skillet bundle or individual skillets?",
-        answer: "The bundle makes sense for most home cooks. After 7 years, I use all three sizes equally. Bundle advantages include significant savings vs buying individually, complete size versatility (I use all three equally), and all pre-seasoned and ready to go. My recommendation: Get the bundle. The 12-inch is most versatile if forced to choose one, but having all three gives complete flexibility at a great price."
-      },
-      {
-        question: "Can Lodge cast iron go in the oven?",
-        answer: "Yes, Lodge cast iron is oven-safe to 500°F+ (no plastic handles). This is one of its biggest advantages. Perfect for sear-then-roast techniques, cornbread baking, frittatas, and braising. Pro tip: Preheat cast iron in oven for 10-15 minutes before adding food for maximum heat retention."
-      },
-      {
-        question: "How long does Lodge cast iron last?",
-        answer: "With proper care, literally forever. After 7 years of weekly use, mine show minimal wear and will last decades more. Solid iron construction with no moving parts, no coatings to wear off, seasoning improves with use, and can be fully restored even if badly neglected. Durability rating: 5/5 with proper care. This is genuinely buy-it-for-life cookware."
-      },
-      {
-        question: "What size Lodge skillet should I buy first?",
-        answer: "The 12-inch skillet is the most versatile if you can only choose one size. It handles large steaks and family-sized meals, still works adequately for smaller portions, provides maximum cooking surface for versatility, and offers best value for single-skillet purchase. My recommendation: Get the bundle if possible. All three sizes get equal use in my kitchen."
-      }
-    ]
+    items: [] as { question: string; answer: string }[],
   },
 
   // FAQ SCHEMA DATA
@@ -361,3 +336,9 @@ export const reviewData = {
     lastUpdated: "2024-09-23"
   }
 }
+
+// Populate FAQ items from faqData (single source of truth)
+reviewData.faq.items = reviewData.faqData.map(faq => ({
+  question: faq.question,
+  answer: faq.answer
+}))
