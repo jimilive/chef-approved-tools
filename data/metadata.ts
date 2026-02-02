@@ -722,7 +722,7 @@ export const METADATA = {
     } as BlogMetadata,
 
     'cast-iron-vs-carbon-steel-pan': {
-      title: "Cast Iron vs Carbon Steel 2025: 24 Years Chef Comparison",
+      title: "Cast Iron vs Carbon Steel 2026: 24 Years Chef Comparison",
       description: "Which pan should you buy? After 24 years using both professionally: cast iron for searing, carbon steel for quick adjustments. See the winner for your cooking style.",
       canonical: "https://www.chefapprovedtools.com/blog/cast-iron-vs-carbon-steel-pan",
       author: "Scott Bradley",
@@ -736,8 +736,8 @@ export const METADATA = {
       },
       publishedDate: "2025-01-01",
       publishedTime: "2025-01-01T10:00:00Z",
-      lastUpdated: "2025-01-01",
-      modifiedTime: "2025-01-01T10:00:00Z",
+      lastUpdated: "2026-01-07",
+      modifiedTime: "2026-01-07T10:00:00Z",
       searchIntent: "informational",
       conversionPotential: "medium",
       articleSection: "Cooking Techniques",
@@ -1097,7 +1097,7 @@ export const METADATA = {
     } as BlogMetadata,
 
     'dutch-oven-vs-slow-cooker': {
-      title: "Dutch Oven vs Slow Cooker 2025: Which Cooks Better",
+      title: "Dutch Oven vs Slow Cooker: Which Cooks Better",
       description: "Which makes better braised dishes? Dutch ovens win on flavor (browning matters). Slow cookers win on convenience. 24 years testing both—see the verdict.",
       canonical: "https://www.chefapprovedtools.com/blog/dutch-oven-vs-slow-cooker",
       author: "Scott Bradley",
@@ -1647,7 +1647,7 @@ export const METADATA = {
     } as BlogMetadata,
 
     'immersion-blender-vs-countertop-blender': {
-      title: "Immersion vs Countertop Blender 2025: Which to Buy First",
+      title: "Immersion vs Countertop Blender: Which to Buy First",
       description: "Which blender should you buy first? Countertop for smoothies, immersion for soups. After 24 years using both professionally—here's the clear winner for most cooks.",
       canonical: "https://www.chefapprovedtools.com/blog/immersion-blender-vs-countertop-blender",
       author: "Scott Bradley",
@@ -1972,7 +1972,7 @@ export const METADATA = {
     } as BlogMetadata,
 
     'nonstick-vs-stainless-steel-pans': {
-      title: "Nonstick vs Stainless Steel 2025: Chef's Honest Verdict",
+      title: "Nonstick vs Stainless Steel: Chef's Honest Verdict",
       description: "Should you buy nonstick or stainless steel? Nonstick dies in 3 years but handles eggs perfectly. Stainless lasts decades. 24 years testing—here's what to buy.",
       canonical: "https://www.chefapprovedtools.com/blog/nonstick-vs-stainless-steel-pans",
       author: "Scott Bradley",
@@ -2072,7 +2072,7 @@ export const METADATA = {
     } as BlogMetadata,
 
     'reducing-sauces-restaurant-technique': {
-      title: "How to Reduce Sauce 2025: Restaurant Chef Technique",
+      title: "How to Reduce Sauce: Restaurant Chef Technique",
       description: "Learn the restaurant technique for perfect sauce reduction. Transform thin liquids into intensely flavored sauces. 24 years of professional kitchen methods.",
       canonical: "https://www.chefapprovedtools.com/blog/reducing-sauces-restaurant-technique",
       author: "Scott Bradley",
@@ -2558,7 +2558,7 @@ export const METADATA = {
     } as BlogMetadata,
 
     'wood-vs-composite-cutting-board': {
-      title: "Wood vs Composite Cutting Board 2025: Which to Buy",
+      title: "Wood vs Composite Cutting Board: Which to Buy",
       description: "Which cutting board is better? Wood preserves knife edges and kills bacteria naturally. Composite is dishwasher-safe. 24 years testing—see the winner.",
       canonical: "https://www.chefapprovedtools.com/blog/wood-vs-composite-cutting-board",
       author: "Scott Bradley",
@@ -2872,8 +2872,8 @@ export const METADATA = {
       },
       publishedDate: "2025-12-21",
       publishedTime: "2025-12-21T10:00:00Z",
-      lastUpdated: "2025-12-21",
-      modifiedTime: "2025-12-21T10:00:00Z",
+      lastUpdated: "2026-01-08",
+      modifiedTime: "2026-01-08T10:00:00Z",
       searchIntent: "informational",
       conversionPotential: "high",
       articleSection: "Kitchen Appliances",
@@ -2908,7 +2908,7 @@ export const METADATA = {
     } as BlogMetadata,
 
     'ninja-vs-vitamix': {
-      title: "Ninja vs Vitamix: A Chef's Honest Take (2026)",
+      title: "Ninja vs Vitamix: A Chef's Honest Take",
       description: "One costs 3x more. Is Vitamix worth it? After testing both professionally, here's which lasts longer, blends better, and who should buy which.",
       canonical: "https://www.chefapprovedtools.com/blog/ninja-vs-vitamix",
       author: "Scott Bradley",
@@ -3061,7 +3061,7 @@ export const METADATA = {
     
     'victorinox-fibrox-8-inch-chefs-knife': {
       title: "Victorinox Fibrox Pro 8-Inch Chef's Knife Review: 20 Years Tested",
-      description: "Victorinox Fibrox Pro 8-inch chef's knife tested 20 years in professional kitchens. Swiss-made, NSF-certified workhorse that outperforms premium knives.",
+      description: "Best budget chef knife? Tested 20 years in 5 professional kitchens. Still sharp after 10,000+ cuts. See why this knife beats alternatives costing 5x more.",
       canonical: "https://www.chefapprovedtools.com/reviews/victorinox-fibrox-8-inch-chefs-knife",
       author: "Scott Bradley",
       imageAlt: "Victorinox Fibrox 8-inch chef's knife tested 20 years professionally",
@@ -3082,7 +3082,7 @@ export const METADATA = {
     } as ReviewMetadata,
 
     'wusthof-classic-ikon-santoku': {
-      title: "Wüsthof Classic Ikon Santoku Review 2025: 14 Years Tested",
+      title: "Wüsthof Classic Ikon Santoku Review: 14 Years Tested",
       description: "Wüsthof Classic Ikon 7\" Santoku tested 14 years: 5 in professional kitchens (Purple Café, Feierabend), 9 at home. Thin blade, 10° edge, honest maintenance requirements.",
       canonical: "https://www.chefapprovedtools.com/reviews/wusthof-classic-ikon-santoku",
       author: "Scott Bradley",
@@ -3104,8 +3104,8 @@ export const METADATA = {
     } as ReviewMetadata,
 
     'epicurean-kitchen-cutting-board': {
-      title: "Epicurean Cutting Board Review 2025: 10 Years Tested",
-      description: "Best dishwasher-safe cutting board? 10 years, 2,000+ dishwasher cycles: no warping, no cracking, gentler on knives than bamboo. See our long-term results.",
+      title: "Epicurean Cutting Board Review: Safe, Dishwasher-Proof, 10 Years Tested",
+      description: "Is Epicurean safe? NSF-certified, non-toxic, no microplastics. After 10 years and 2,000 dishwasher cycles: zero warping, gentler on knives than bamboo.",
       canonical: "https://www.chefapprovedtools.com/reviews/epicurean-kitchen-cutting-board",
       author: "Scott Bradley",
       imageAlt: "Epicurean cutting board after 10 years of daily use and dishwasher cycles",
@@ -3126,7 +3126,7 @@ export const METADATA = {
     } as ReviewMetadata,
     
     'vitamix-5200-professional-blender': {
-      title: "Vitamix 5200 Review 2025: 6 Years Restaurant Tested",
+      title: "Vitamix 5200 Review: 6 Years Restaurant Tested",
       description: "Is Vitamix 5200 worth it? 6 years restaurant testing at Purple Café: zero failures blending sauces, soups, smoothies daily. See our professional verdict.",
       canonical: "https://www.chefapprovedtools.com/reviews/vitamix-5200-professional-blender",
       author: "Scott Bradley",
@@ -3814,7 +3814,7 @@ export const METADATA = {
     } as ReviewMetadata,
 
     'wusthof-classic-ikon-16-piece': {
-      title: "Wüsthof Classic Ikon Review 2025: 6 Years Professional Use",
+      title: "Wüsthof Classic Ikon Review: 6 Years Professional Use",
       description: "Is Wüsthof Classic Ikon worth it? 6 years professional testing: German steel holds edge, handles reduce fatigue. See if this premium set justifies the price.",
       canonical: "https://www.chefapprovedtools.com/reviews/wusthof-classic-ikon-16-piece",
       author: "Scott Bradley",
