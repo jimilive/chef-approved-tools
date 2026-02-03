@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import { ReactNode } from 'react'
+import { processBoldMarkdown } from '@/lib/format-content'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { getProductOgImage, getProductHeroImage } from '@/lib/images'
 import { getReviewGitDates } from '@/lib/git-dates'
@@ -115,7 +117,7 @@ export default async function EpicureanKitchenCuttingBoardReview() {
   // Helper function to process inline affiliate links
   const processInlineLinks = (content: string) => {
     const parts = content.split(/(<LINK>|<\/LINK>)/)
-    const elements: (string | JSX.Element)[] = []
+    const elements: ReactNode[] = []
     let isInsideLink = false
     let linkContent = ''
     let linkIndex = 0
@@ -142,7 +144,7 @@ export default async function EpicureanKitchenCuttingBoardReview() {
       } else if (isInsideLink) {
         linkContent += parts[i]
       } else if (parts[i]) {
-        elements.push(parts[i])
+        elements.push(processBoldMarkdown(parts[i]))
       }
     }
 
