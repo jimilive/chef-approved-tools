@@ -9,10 +9,7 @@ import { restingMeatData } from './resting-meat-data'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import {
-  BlogLayout,
-  BlogHero,
-  BlogFAQ,
-  BlogEmailCapture
+  BlogLayout, BlogHero, BlogFAQ, BlogEmailCapture
 } from '@/components/blog'
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA'
 import AuthorBio from '@/components/review/AuthorBio'
@@ -29,20 +26,11 @@ export default function RestingMeatPage() {
 
   // Generate schemas from data
   const articleSchema = generateArticleSchema({
-    headline: blogMeta.title,
-    description: blogMeta.description,
-    datePublished: blogMeta.publishedDate,
-    dateModified: blogMeta.lastUpdated,
-    authorName: 'Scott Bradley',
-    urlPrefix: 'blog',
-    urlSuffix: 'why-resting-meat-key-cooking',
-    images: []
+    headline: blogMeta.title, description: blogMeta.description, datePublished: blogMeta.publishedDate, dateModified: blogMeta.lastUpdated, authorName: 'Scott Bradley', urlPrefix: 'blog', urlSuffix: 'why-resting-meat-key-cooking', images: []
   })
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.chefapprovedtools.com' },
-    { name: 'Blog', url: 'https://www.chefapprovedtools.com/blog' },
-    { name: restingMeatData.breadcrumb.title, url: 'https://www.chefapprovedtools.com/blog/why-resting-meat-key-cooking' }
+    { name: 'Home', url: 'https://www.chefapprovedtools.com' }, { name: 'Blog', url: 'https://www.chefapprovedtools.com/blog' }, { name: restingMeatData.breadcrumb.title, url: 'https://www.chefapprovedtools.com/blog/why-resting-meat-key-cooking' }
   ])
 
   const faqSchema = generateFAQSchema(restingMeatData.faq.questions)
@@ -181,8 +169,7 @@ export default function RestingMeatPage() {
             <Link href={carryOverSection.thermometerLink.href} className="text-orange-700 hover:text-orange-800 underline">
               {carryOverSection.thermometerLink.text}
             </Link>
-            —it changed how I cooked at home after decades in restaurants.
-          </p>
+. It changed how I cooked at home after decades in restaurants. </p>
 
           {/* Pro Tip Callout */}
           <div className="bg-gradient-to-br from-purple-50 to-indigo-50 border-l-4 border-purple-600 p-6 my-8 rounded-r-lg">

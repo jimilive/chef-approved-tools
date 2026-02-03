@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import {
-  generateArticleSchema,
-  generateBreadcrumbSchema,
-  generateFAQSchema
+  generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema
 } from '@/lib/schema';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Flame, Thermometer, AlertTriangle, ThermometerSun } from 'lucide-react';
@@ -13,29 +11,11 @@ import BlogFAQ from '@/components/blog/BlogFAQ';
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
 import AuthorBio from '@/components/review/AuthorBio';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
-import { roastingData } from './roasting-data';
-
-export const metadata = generateBlogMetadata('vegetable-roasting-guide');
-
-const articleSchema = generateArticleSchema({
-  headline: "Vegetable Roasting Guide: Times and Temperatures for Perfect Results",
-  description: "Master vegetable roasting from a professional chef with 24 years of restaurant experience. Learn exact times, temperatures, and techniques for perfectly roasted vegetables every time.",
-  datePublished: "2025-10-15",
-  dateModified: "2025-11-07",
-  authorName: "Scott Bradley",
-  urlPrefix: 'blog',
-  urlSuffix: 'vegetable-roasting-guide'
-});
-
-const breadcrumbSchema = generateBreadcrumbSchema([
-  { name: "Home", url: "https://www.chefapprovedtools.com" },
-  { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
-  { name: "Vegetable Roasting Guide", url: "https://www.chefapprovedtools.com/blog/vegetable-roasting-guide" }
-]);
-
-const faqSchema = generateFAQSchema(roastingData.faq.questions);
-
-// ISR: Regenerate page every hour for fresh content while allowing search engine caching
+import { roastingData } from './roasting-data'; export const metadata = generateBlogMetadata('vegetable-roasting-guide'); const articleSchema = generateArticleSchema({
+  headline: "Vegetable Roasting Guide: Times and Temperatures for Perfect Results", description: "Master vegetable roasting from a professional chef with 24 years of restaurant experience. Learn exact times, temperatures, and techniques for perfectly roasted vegetables every time.", datePublished: "2025-10-15", dateModified: "2025-11-07", authorName: "Scott Bradley", urlPrefix: 'blog', urlSuffix: 'vegetable-roasting-guide'
+}); const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: "Home", url: "https://www.chefapprovedtools.com" }, { name: "Blog", url: "https://www.chefapprovedtools.com/blog" }, { name: "Vegetable Roasting Guide", url: "https://www.chefapprovedtools.com/blog/vegetable-roasting-guide" }
+]); const faqSchema = generateFAQSchema(roastingData.faq.questions); // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
 
 
@@ -73,21 +53,17 @@ export default function VegetableRoastingGuidePage() {
               Restaurant Reality
             </p>
             <p className="mb-0">
-              In professional kitchens, we roast vegetables for every service: Brussels sprouts, carrots, cauliflower, butternut squash. Every single day. New cooks would throw all the vegetables on one sheet pan at 425°F and wonder why some were burnt while others were raw. Different vegetables have different densities, water contents, and sugar levels, and they require different treatment. Learning proper roasting times and temperatures turned vegetables from sad side dishes into menu highlights that people ordered specifically. In professional kitchens, you can tell who has line experience by how they roast potatoes. The pros always use two pans instead of one, not for volume, but for air circulation. Pan crowding is just as important as temperature, maybe more so. Those little choices separate restaurant results from home frustration. Today I&apos;m giving you the exact times, temps, and techniques that create perfect roasted vegetables every time.
-            </p>
+              In professional kitchens, we roast vegetables for every service: Brussels sprouts, carrots, cauliflower, butternut squash. Every single day. New cooks would throw all the vegetables on one sheet pan at 425°F and wonder why some were burnt while others were raw. Different vegetables have different densities, water contents, and sugar levels, and they require different treatment. Learning proper roasting times and temperatures turned vegetables from sad side dishes into menu highlights that people ordered specifically. In professional kitchens, you can tell who has line experience by how they roast potatoes. The pros always use two pans instead of one, not for volume, but for air circulation. Pan crowding is just as important as temperature, maybe more so. Those little choices separate restaurant results from home frustration. Today I&apos;m giving you the exact times, temps, and techniques that create perfect roasted vegetables every time. </p>
           </div>
 
           <p>
-            Most home cooks think roasting vegetables is as simple as &quot;throw them in the oven until they look done.&quot; But every restaurant cook knows: perfect roasting is about heat discipline, spacing, and timing. Roasted vegetables shouldn&apos;t be difficult. Throw them in the oven with oil and heat, right? Yet home cooks consistently end up with vegetables that are either mushy and greasy, or burnt on the outside and raw inside, or just bland and disappointing.
-          </p>
+            Most home cooks think roasting vegetables is as simple as &quot;throw them in the oven until they look done.&quot; But every restaurant cook knows: perfect roasting is about heat discipline, spacing, and timing. Roasted vegetables shouldn&apos;t be difficult. Throw them in the oven with oil and heat, right? Yet home cooks consistently end up with vegetables that are either mushy and greasy, or burnt on the outside and raw inside, or just bland and disappointing. </p>
 
           <p>
-            <strong>The problem isn&apos;t your vegetables or your oven.</strong> It&apos;s not understanding that <strong>different vegetables need different temperatures, different cut sizes, and different cooking times.</strong> Treating all vegetables the same guarantees inconsistent results.
-          </p>
+            <strong>The problem isn&apos;t your vegetables or your oven.</strong> It&apos;s not understanding that <strong>different vegetables need different temperatures, different cut sizes, and different cooking times.</strong> Treating all vegetables the same guarantees inconsistent results. </p>
 
           <p>
-            Once you understand the principles and know the right numbers, roasted vegetables become reliably delicious every single time. Get those three right, and you&apos;ll never serve soggy or burnt veggies again.
-          </p>
+            Once you understand the principles and know the right numbers, roasted vegetables become reliably delicious every single time. Get those three right, and you&apos;ll never serve soggy or burnt veggies again. </p>
 
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
             <h2 className="font-bold text-blue-800 mb-3">In This Guide:</h2>
@@ -116,12 +92,10 @@ export default function VegetableRoastingGuidePage() {
           </p>
 
           <p>
-            <strong>Why it matters:</strong> Raw broccoli is bitter. Roasted broccoli is sweet and nutty. The difference is caramelization.
-          </p>
+            <strong>Why it matters:</strong> Raw broccoli is bitter. Roasted broccoli is sweet and nutty. The difference is caramelization. </p>
 
           <p>
-            <strong>The Maillard reaction:</strong> Amino acids and sugars react at high heat, creating hundreds of flavor compounds that don&apos;t exist in raw vegetables.
-          </p>
+            <strong>The Maillard reaction:</strong> Amino acids and sugars react at high heat, creating hundreds of flavor compounds that don&apos;t exist in raw vegetables. </p>
 
           <h3>Moisture Evaporation</h3>
 
@@ -130,12 +104,10 @@ export default function VegetableRoastingGuidePage() {
           </p>
 
           <p>
-            <strong>Why it matters:</strong> Wet surfaces steam, dry surfaces brown. Roasting concentrates flavors by removing water.
-          </p>
+            <strong>Why it matters:</strong> Wet surfaces steam, dry surfaces brown. Roasting concentrates flavors by removing water. </p>
 
           <p>
-            <strong>The result:</strong> Vegetables shrink (water loss) but become more intensely flavored.
-          </p>
+            <strong>The result:</strong> Vegetables shrink (water loss) but become more intensely flavored. </p>
 
           <div className="bg-amber-50 border-l-4 border-amber-400 p-6 my-8 rounded-r-lg">
             <p className="font-bold text-slate-900 mb-2 flex items-center gap-2">
@@ -143,35 +115,29 @@ export default function VegetableRoastingGuidePage() {
               Common Misconception
             </p>
             <p className="mb-0">
-              You can&apos;t roast vegetables at 350°F. That&apos;s baking, not roasting. True roasting requires 400°F minimum, preferably 425-450°F. Lower temperatures steam vegetables instead of caramelizing them. Use high heat or don&apos;t bother.
-            </p>
+              You can&apos;t roast vegetables at 350°F. That&apos;s baking, not roasting. True roasting requires 400°F minimum, preferably 425-450°F. Lower temperatures steam vegetables instead of caramelizing them. Use high heat or don&apos;t bother. </p>
           </div>
 
           <h2 id="problem">The Problem: Why Home Roasting Fails</h2>
 
           <p>
-            Most home cooks use too little heat and too much food. The oven gets crowded, the vegetables steam instead of roast, and the result is limp instead of crisp.
-          </p>
+            Most home cooks use too little heat and too much food. The oven gets crowded, the vegetables steam instead of roast, and the result is limp instead of crisp. </p>
 
           <p>
-            Here&apos;s what&apos;s actually happening: every vegetable is full of water. When too many pieces touch, that water evaporates and creates steam. Steam softens instead of browning. The magic of roasting comes from dry heat and air flow, the same reason restaurant fryers and convection ovens make food so consistent.
-          </p>
+            Here&apos;s what&apos;s actually happening: every vegetable is full of water. When too many pieces touch, that water evaporates and creates steam. Steam softens instead of browning. The magic of roasting comes from dry heat and air flow, the same reason restaurant fryers and convection ovens make food so consistent. </p>
 
           <p>
-            You don&apos;t need fancy equipment. You just need to think like a line cook: hot pan, dry ingredients, plenty of space, and patience.
-          </p>
+            You don&apos;t need fancy equipment. You just need to think like a line cook: hot pan, dry ingredients, plenty of space, and patience. </p>
 
           <h2 id="rules">The Universal Roasting Rules</h2>
 
           <h3>Rule #1: High Heat (400-450°F)</h3>
 
           <p>
-            <strong>Why:</strong> Caramelization happens at 320°F+. Higher heat = faster browning, less time for vegetables to become mushy.
-          </p>
+            <strong>Why:</strong> Caramelization happens at 320°F+. Higher heat = faster browning, less time for vegetables to become mushy. </p>
 
           <p>
-            <strong>Standard temp:</strong> 425°F is the sweet spot for most vegetables. Roasting works between 400–450°F. Lower temps make soggy vegetables; higher ones burn oil before browning occurs.
-          </p>
+            <strong>Standard temp:</strong> 425°F is the sweet spot for most vegetables. Roasting works between 400–450°F. Lower temps make soggy vegetables; higher ones burn oil before browning occurs. </p>
 
           <p>
             <strong>Exceptions:</strong> Delicate vegetables (tomatoes, asparagus) can go slightly lower (375-400°F)
@@ -180,30 +146,25 @@ export default function VegetableRoastingGuidePage() {
           <h3>Rule #2: Single Layer, No Overcrowding</h3>
 
           <p>
-            <strong>Why:</strong> Crowded vegetables steam each other instead of roasting. This is the #1 culprit for failed roasting.
-          </p>
+            <strong>Why:</strong> Crowded vegetables steam each other instead of roasting. This is the #1 culprit for failed roasting. </p>
 
           <p>
-            <strong>The test:</strong> Every vegetable piece should have space around it. If pan looks packed, use two pans. Give each piece breathing room. On a restaurant sheet pan, nothing overlaps. If food covers more than 75% of the pan, use another one.
-          </p>
+            <strong>The test:</strong> Every vegetable piece should have space around it. If pan looks packed, use two pans. Give each piece breathing room. On a restaurant sheet pan, nothing overlaps. If food covers more than 75% of the pan, use another one. </p>
 
           <h3>Rule #3: Consistent Size</h3>
 
           <p>
-            <strong>Why:</strong> Different sizes cook at different rates. 1/2&quot; cubes will be done while 2&quot; chunks are raw.
-          </p>
+            <strong>Why:</strong> Different sizes cook at different rates. 1/2&quot; cubes will be done while 2&quot; chunks are raw. </p>
 
           <p>
-            <strong>The standard:</strong> Cut to similar sizes within 1/4&quot; of each other. Uniform size ensures even cooking. Professionals use the &quot;half-inch rule&quot;: most vegetables roast beautifully when cut into ½-inch to ¾-inch pieces.
-          </p>
+            <strong>The standard:</strong> Cut to similar sizes within 1/4&quot; of each other. Uniform size ensures even cooking. Professionals use the &quot;half-inch rule&quot;: most vegetables roast beautifully when cut into ½-inch to ¾-inch pieces. </p>
 
           <h2 id="method">The Professional Method: Restaurant Technique Step-by-Step</h2>
 
           <h3>Step 1: Preheat to 425°F (220°C)</h3>
 
           <p>
-            Always preheat for a full 10 minutes. The pan should be hot before food ever touches it. That first contact is where caramelization begins. Cold pans soak up energy that should sear vegetables.
-          </p>
+            Always preheat for a full 10 minutes. The pan should be hot before food ever touches it. That first contact is where caramelization begins. Cold pans soak up energy that should sear vegetables. </p>
 
           <h3>Step 2: Cut Evenly</h3>
 
@@ -215,42 +176,36 @@ export default function VegetableRoastingGuidePage() {
               merchant="internal"
             >
               <Link href="/blog/essential-knife-cuts-every-cook-should-master" className="text-orange-700 hover:text-orange-800 underline">essential knife cuts guide</Link>
-            </CTAVisibilityTracker> for proper technique.
-          </p>
+            </CTAVisibilityTracker> for proper technique. </p>
 
           <h3>Step 3: Dry and Oil Properly</h3>
 
           <p>
-            After washing, dry vegetables thoroughly. Water is the enemy of browning. Toss with just enough oil to coat. Too much causes soggy edges. A glossy film is plenty. Excess oil burns and turns bitter. Olive oil is great for flavor; avocado or grapeseed oil hold up to higher heat.
-          </p>
+            After washing, dry vegetables thoroughly. Water is the enemy of browning. Toss with just enough oil to coat. Too much causes soggy edges. A glossy film is plenty. Excess oil burns and turns bitter. Olive oil is great for flavor; avocado or grapeseed oil hold up to higher heat. </p>
 
           <h3>Step 4: Season Generously</h3>
 
           <p>
-            Salt early so it penetrates and draws moisture to the surface. Add pepper, herbs, or spices after roasting to prevent burning.
-          </p>
+            Salt early so it penetrates and draws moisture to the surface. Add pepper, herbs, or spices after roasting to prevent burning. </p>
 
           <h3>Step 5: Spread Out</h3>
 
           <p>
-            This cannot be overstated: give vegetables space. In restaurant kitchens, we&apos;d rather run three half-full sheet pans than one overloaded tray, because we know the results are incomparable.
-          </p>
+            This cannot be overstated: give vegetables space. In restaurant kitchens, we&apos;d rather run three half-full sheet pans than one overloaded tray, because we know the results are incomparable. </p>
 
           <h3>Step 6: Don&apos;t Stir Too Often</h3>
 
           <p>
-            Once every 10–15 minutes is enough. Constant stirring breaks crust formation and interrupts browning. Stir once halfway through roasting maximum. You&apos;ll break crusts and lose caramelization if you stir more.
-          </p>
+            Once every 10–15 minutes is enough. Constant stirring breaks crust formation and interrupts browning. Stir once halfway through roasting maximum. You&apos;ll break crusts and lose caramelization if you stir more. </p>
 
           <h3>Step 7: Finish With Heat or Acid</h3>
 
           <p>
-            Restaurants finish roasted vegetables under a broiler for 1–2 minutes or with a quick splash of vinegar or lemon juice to brighten flavor.
-          </p>
+            Restaurants finish roasted vegetables under a broiler for 1–2 minutes or with a quick splash of vinegar or lemon juice to brighten flavor. </p>
 
           <BlogNewsletterCTA
             slug="vegetable-roasting-guide"
-            description="Get my free &quot;11 Essential Tools I Use Most&quot; PDF—the exact equipment I rely on after 24 years in professional kitchens, including sheet pans that create perfect roasted vegetables. No fluff, just the tools that actually matter."
+            description="Get my free &quot;11 Essential Tools I Use Most&quot; PDF, the exact equipment I rely on after 24 years in professional kitchens, including sheet pans that create perfect roasted vegetables. No fluff, just the tools that actually matter."
           />
 
           <h2 id="chart">Complete Vegetable Roasting Chart</h2>
@@ -377,52 +332,42 @@ export default function VegetableRoastingGuidePage() {
           <h3>Mistake #1: Overcrowding</h3>
 
           <p>
-            This is the #1 culprit. Crowded pans create steam. Crowded vegetables steam each other instead of roasting. Too much oil or crowding makes vegetables soggy.
-          </p>
+            This is the #1 culprit. Crowded pans create steam. Crowded vegetables steam each other instead of roasting. Too much oil or crowding makes vegetables soggy. </p>
 
           <p>
-            <strong>Fix:</strong> Use two pans or roast in batches. Use more space and higher heat. That single change, giving vegetables breathing room, will transform your roasting more than any other adjustment.
-          </p>
+            <strong>Fix:</strong> Use two pans or roast in batches. Use more space and higher heat. That single change, giving vegetables breathing room, will transform your roasting more than any other adjustment. </p>
 
           <h3>Mistake #2: Not Preheating the Pan</h3>
 
           <p>
-            Cold pans soak up energy that should sear vegetables.
-          </p>
+            Cold pans soak up energy that should sear vegetables. </p>
 
           <p>
-            <strong>Fix:</strong> Always heat the pan empty for 10 minutes before adding vegetables.
-          </p>
+            <strong>Fix:</strong> Always heat the pan empty for 10 minutes before adding vegetables. </p>
 
           <h3>Mistake #3: Using Too Much Oil</h3>
 
           <p>
-            A glossy film is plenty. Excess oil burns and turns bitter, creating greasy, soggy vegetables.
-          </p>
+            A glossy film is plenty. Excess oil burns and turns bitter, creating greasy, soggy vegetables. </p>
 
           <p>
-            <strong>Fix:</strong> Toss lightly in a bowl first, don&apos;t drizzle directly on the pan.
-          </p>
+            <strong>Fix:</strong> Toss lightly in a bowl first, don&apos;t drizzle directly on the pan. </p>
 
           <h3>Mistake #4: Wrong Temperature</h3>
 
           <p>
-            Under 400°F = limp, steamed vegetables. Over 450°F = burnt oil and blackened edges before interiors cook.
-          </p>
+            Under 400°F = limp, steamed vegetables. Over 450°F = burnt oil and blackened edges before interiors cook. </p>
 
           <p>
-            <strong>Fix:</strong> Stick between 425–440°F for most vegetables. When in doubt, use 425°F.
-          </p>
+            <strong>Fix:</strong> Stick between 425–440°F for most vegetables. When in doubt, use 425°F. </p>
 
           <h3>Mistake #5: Stirring Too Much</h3>
 
           <p>
-            You&apos;ll break crusts and lose caramelization. Constant stirring interrupts the browning process.
-          </p>
+            You&apos;ll break crusts and lose caramelization. Constant stirring interrupts the browning process. </p>
 
           <p>
-            <strong>Fix:</strong> Stir once halfway through roasting. That&apos;s it.
-          </p>
+            <strong>Fix:</strong> Stir once halfway through roasting. That&apos;s it. </p>
 
           <h2 id="equipment">Equipment That Makes It Foolproof</h2>
 
@@ -437,8 +382,7 @@ export default function VegetableRoastingGuidePage() {
                   merchant="internal"
                 >
                   <Link href="/reviews/nordic-ware-half-sheet-pan" className="text-orange-700 hover:text-orange-800 underline">Nordic Ware Half Sheet Pan</Link>
-                </CTAVisibilityTracker>, professional aluminum for even browning. The industry workhorse.
-              </li>
+                </CTAVisibilityTracker>, professional aluminum for even browning. The industry workhorse. </li>
               <li>
                 <strong>Spatula:</strong> <CTAVisibilityTracker
                   ctaId="vegetable-roasting-guide-scraper-1"
@@ -447,17 +391,13 @@ export default function VegetableRoastingGuidePage() {
                   merchant="internal"
                 >
                   <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-orange-700 hover:text-orange-800 underline">Rubbermaid Commercial Cook&apos;s Scraper</Link>
-                </CTAVisibilityTracker>, great for flipping without tearing.
-              </li>
+                </CTAVisibilityTracker>, great for flipping without tearing. </li>
               <li>
-                <strong>Oil:</strong> Use high smoke point oils: grapeseed, avocado, or light olive.
-              </li>
+                <strong>Oil:</strong> Use high smoke point oils: grapeseed, avocado, or light olive. </li>
               <li>
-                <strong>Thermometer:</strong> For accurate oven calibration. Ovens vary by up to 25°F.
-              </li>
+                <strong>Thermometer:</strong> For accurate oven calibration. Ovens vary by up to 25°F. </li>
               <li>
-                <strong>Tongs:</strong> Spring-loaded stainless for turning hot pans safely.
-              </li>
+                <strong>Tongs:</strong> Spring-loaded stainless for turning hot pans safely. </li>
             </ul>
           </div>
 
@@ -467,56 +407,47 @@ export default function VegetableRoastingGuidePage() {
             <div className="border border-gray-200 rounded-lg p-4">
               <p className="font-bold text-slate-900 mb-2">If vegetables turn out soggy:</p>
               <p className="text-slate-700 text-sm mb-0">
-                Too much oil or crowding. Use more space and higher heat. Make sure vegetables are thoroughly dry before roasting.
-              </p>
+                Too much oil or crowding. Use more space and higher heat. Make sure vegetables are thoroughly dry before roasting. </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
               <p className="font-bold text-slate-900 mb-2">If they burn before cooking through:</p>
               <p className="text-slate-700 text-sm mb-0">
-                Pieces are too small or oven too hot. Cut larger, reduce temp by 15°F, or use a lower rack position.
-              </p>
+                Pieces are too small or oven too hot. Cut larger, reduce temp by 15°F, or use a lower rack position. </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
               <p className="font-bold text-slate-900 mb-2">If they taste bland:</p>
               <p className="text-slate-700 text-sm mb-0">
-                Salted too late. Season early and finish with acid (lemon, vinegar) or fresh herbs after roasting.
-              </p>
+                Salted too late. Season early and finish with acid (lemon, vinegar) or fresh herbs after roasting. </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
               <p className="font-bold text-slate-900 mb-2">If they stick:</p>
               <p className="text-slate-700 text-sm mb-0">
-                Didn&apos;t preheat pan or use enough oil. Try parchment for delicate veggies next time, or make sure your pan is fully preheated.
-              </p>
+                Didn&apos;t preheat pan or use enough oil. Try parchment for delicate veggies next time, or make sure your pan is fully preheated. </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
               <p className="font-bold text-slate-900 mb-2">If they&apos;re unevenly browned:</p>
               <p className="text-slate-700 text-sm mb-0">
-                Your oven has hot spots. Rotate pans halfway through cooking. Also verify pieces are cut to uniform size.
-              </p>
+                Your oven has hot spots. Rotate pans halfway through cooking. Also verify pieces are cut to uniform size. </p>
             </div>
           </div>
 
           <h2>The Bottom Line: Stop Guessing, Start Measuring</h2>
 
           <p>
-            After roasting vegetables daily for 24 years in professional kitchens, here&apos;s what I want home cooks to understand:
-          </p>
+            After roasting vegetables daily for 24 years in professional kitchens, here&apos;s what I want home cooks to understand: </p>
 
           <p>
-            <strong>Perfectly roasted vegetables aren&apos;t a matter of luck or skill. They&apos;re a matter of following correct times and temperatures.</strong> Perfect roasting isn&apos;t about skill. It&apos;s about understanding the relationship between heat, spacing, and timing.
-          </p>
+            <strong>Perfectly roasted vegetables aren&apos;t a matter of luck or skill. They&apos;re a matter of following correct times and temperatures.</strong> Perfect roasting isn&apos;t about skill. It&apos;s about understanding the relationship between heat, spacing, and timing. </p>
 
           <p>
-            Most home cooks roast vegetables at random temps for random times and hope for the best. Stop guessing. Use this chart. Follow the numbers. Match cut sizes to listed specifications. Your vegetables will be perfect every single time.
-          </p>
+            Most home cooks roast vegetables at random temps for random times and hope for the best. Stop guessing. Use this chart. Follow the numbers. Match cut sizes to listed specifications. Your vegetables will be perfect every single time. </p>
 
           <p>
-            The universal rules:
-          </p>
+            The universal rules: </p>
           <ol>
             <li><strong>High heat</strong> (425°F for most vegetables)</li>
             <li><strong>Single layer</strong> (don&apos;t overcrowd. Use multiple pans if needed)</li>
@@ -526,12 +457,10 @@ export default function VegetableRoastingGuidePage() {
           </ol>
 
           <p>
-            Follow those five rules and reference the timing chart, and you&apos;ll never serve sad, pale, steamed vegetables again. Once you internalize these principles, roasting becomes one of the easiest and most forgiving techniques in your repertoire.
-          </p>
+            Follow those five rules and reference the timing chart, and you&apos;ll never serve sad, pale, steamed vegetables again. Once you internalize these principles, roasting becomes one of the easiest and most forgiving techniques in your repertoire. </p>
 
           <p>
-            Start with 425°F, cut evenly, dry thoroughly, spread out generously, and resist the urge to stir constantly. These four habits will deliver restaurant-quality results every time.
-          </p>
+            Start with 425°F, cut evenly, dry thoroughly, spread out generously, and resist the urge to stir constantly. These four habits will deliver restaurant-quality results every time. </p>
 
         </div>
 

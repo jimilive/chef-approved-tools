@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import {
-  generateArticleSchema,
-  generateBreadcrumbSchema,
-  generateFAQSchema
+  generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema
 } from '@/lib/schema';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
@@ -12,29 +10,11 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import BlogFAQ from '@/components/blog/BlogFAQ';
 import AuthorBio from '@/components/review/AuthorBio';
-import { oxidizationData } from './oxidization-data';
-
-export const metadata = generateBlogMetadata('oxidization-effect-on-food');
-
-const articleSchema = generateArticleSchema({
-  headline: "Oxidization's Effect on Food: Why Your Produce Turns Brown (And How to Stop It)",
-  description: "Learn how oxidation affects food quality and professional techniques to prevent browning, preserve flavor, and extend ingredient freshness in your kitchen.",
-  datePublished: "2025-09-21",
-  dateModified: "2025-10-24",
-  authorName: "Scott Bradley",
-  urlPrefix: 'blog',
-  urlSuffix: 'oxidization-effect-on-food'
-});
-
-const breadcrumbSchema = generateBreadcrumbSchema([
-  { name: "Home", url: "https://www.chefapprovedtools.com" },
-  { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
-  { name: "Food Oxidation Guide", url: "https://www.chefapprovedtools.com/blog/oxidization-effect-on-food" }
-]);
-
-const faqSchema = generateFAQSchema(oxidizationData.faq.questions);
-
-// ISR: Regenerate page every hour for fresh content while allowing search engine caching
+import { oxidizationData } from './oxidization-data'; export const metadata = generateBlogMetadata('oxidization-effect-on-food'); const articleSchema = generateArticleSchema({
+  headline: "Oxidization's Effect on Food: Why Your Produce Turns Brown (And How to Stop It)", description: "Learn how oxidation affects food quality and professional techniques to prevent browning, preserve flavor, and extend ingredient freshness in your kitchen.", datePublished: "2025-09-21", dateModified: "2025-10-24", authorName: "Scott Bradley", urlPrefix: 'blog', urlSuffix: 'oxidization-effect-on-food'
+}); const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: "Home", url: "https://www.chefapprovedtools.com" }, { name: "Blog", url: "https://www.chefapprovedtools.com/blog" }, { name: "Food Oxidation Guide", url: "https://www.chefapprovedtools.com/blog/oxidization-effect-on-food" }
+]); const faqSchema = generateFAQSchema(oxidizationData.faq.questions); // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
 
 
@@ -70,25 +50,20 @@ export default function OxidizationPage() {
               Restaurant Reality: Timing Prep Around Oxidation
             </p>
             <p className="mb-0">
-              In professional kitchens, timing prep around oxidation is critical. Make guacamole at 10 AM for evening service and by 5 PM, it&apos;s turned gray-brown and unappetizing. The lesson: oxidation doesn&apos;t care about your prep schedule. Either acidify immediately or make it closer to service. Work with oxidation, not against it.
-            </p>
+              In professional kitchens, timing prep around oxidation is critical. Make guacamole at 10 AM for evening service and by 5 PM, it&apos;s turned gray-brown and unappetizing. The lesson: oxidation doesn&apos;t care about your prep schedule. Either acidify immediately or make it closer to service. Work with oxidation, not against it. </p>
           </div>
 
           <p>
-            You slice an apple and walk away for five minutes. When you return, it&apos;s brown. Your guacamole turns gray. Your pesto loses its bright green color. Fresh basil wilts and darkens within hours.
-          </p>
+            You slice an apple and walk away for five minutes. When you return, it&apos;s brown. Your guacamole turns gray. Your pesto loses its bright green color. Fresh basil wilts and darkens within hours. </p>
 
           <p>
-            This is oxidation—and it&apos;s one of the most common (and frustrating) chemical reactions in cooking.
-          </p>
+            This is oxidation, and it&apos;s one of the most common (and frustrating) chemical reactions in cooking. </p>
 
           <p>
-            <strong>Oxidation affects color, flavor, texture, and nutritional value of food.</strong> Understanding how it works and how to prevent it is the difference between restaurant-quality ingredients and disappointing results.
-          </p>
+            <strong>Oxidation affects color, flavor, texture, and nutritional value of food.</strong> Understanding how it works and how to prevent it is the difference between restaurant-quality ingredients and disappointing results. </p>
 
           <p>
-            Let me explain what oxidation actually is, why it matters, and exactly how to control it.
-          </p>
+            Let me explain what oxidation actually is, why it matters, and exactly how to control it. </p>
 
           <h2 className="flex items-center gap-2">
             <Beaker className="w-6 h-6 text-orange-700" />
@@ -99,23 +74,19 @@ export default function OxidizationPage() {
 
           <p>
             <strong className="font-semibold text-slate-900">Oxidation = Reaction with Oxygen</strong>{' '}
-            When food is exposed to oxygen in the air, chemical reactions occur that change the food&apos;s properties. This is oxidation.
-          </p>
+            When food is exposed to oxygen in the air, chemical reactions occur that change the food&apos;s properties. This is oxidation. </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Enzymatic Browning (Most Common)</strong>{' '}
-            Foods contain enzymes (like polyphenol oxidase) that react with oxygen when cells are damaged (by cutting, bruising, or biting). This creates brown pigments called melanins.
-          </p>
+            Foods contain enzymes (like polyphenol oxidase) that react with oxygen when cells are damaged (by cutting, bruising, or biting). This creates brown pigments called melanins. </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Non-Enzymatic Oxidation</strong>{' '}
-            Some oxidation happens without enzymes—like fats going rancid or vitamin C degrading. This is slower but equally damaging to food quality.
-          </p>
+            Some oxidation happens without enzymes, like fats going rancid or vitamin C degrading. This is slower but equally damaging to food quality. </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Why It Happens</strong>{' '}
-            Oxidation is a natural process. In nature, it helps plants seal wounds (brown flesh protects the apple from infection). In your kitchen, it&apos;s usually unwanted.
-          </p>
+            Oxidation is a natural process. In nature, it helps plants seal wounds (brown flesh protects the apple from infection). In your kitchen, it&apos;s usually unwanted. </p>
 
           <div className="bg-amber-50 border-l-4 border-amber-400 p-6 my-8 rounded-r-lg">
             <p className="font-semibold text-slate-900 mb-2 flex items-center gap-2">
@@ -123,8 +94,7 @@ export default function OxidizationPage() {
               Note
             </p>
             <p className="mb-0 text-slate-700">
-              Oxidation isn&apos;t always bad. Browning an onion, searing meat, and aging cheese all involve beneficial oxidation. The key is controlling when and where it happens.
-            </p>
+              Oxidation isn&apos;t always bad. Browning an onion, searing meat, and aging cheese all involve beneficial oxidation. The key is controlling when and where it happens. </p>
           </div>
 
           <h2 className="flex items-center gap-2">
@@ -136,81 +106,66 @@ export default function OxidizationPage() {
 
           <p>
             <strong className="font-semibold text-slate-900">Apples and Pears</strong>{' '}
-            Cut surfaces brown within minutes due to high polyphenol oxidase enzyme levels.
-          </p>
+            Cut surfaces brown within minutes due to high polyphenol oxidase enzyme levels. </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Avocados</strong>{' '}
-            Turn brown extremely quickly. Guacamole can oxidize in 30 minutes unprotected.
-          </p>
+            Turn brown extremely quickly. Guacamole can oxidize in 30 minutes unprotected. </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Bananas</strong>{' '}
-            Brown spots on skins are oxidation. Peeled bananas brown rapidly.
-          </p>
+            Brown spots on skins are oxidation. Peeled bananas brown rapidly. </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Potatoes</strong>{' '}
-            Raw cut potatoes oxidize to gray-brown within 5-10 minutes.
-          </p>
+            Raw cut potatoes oxidize to gray-brown within 5-10 minutes. </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Artichokes</strong>{' '}
-            Extremely prone to oxidation. Turn brown almost immediately when cut.
-          </p>
+            Extremely prone to oxidation. Turn brown almost immediately when cut. </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Eggplant</strong>{' '}
-            Cut surfaces oxidize quickly, especially at warm temperatures.
-          </p>
+            Cut surfaces oxidize quickly, especially at warm temperatures. </p>
 
           <h3>Leafy Greens and Herbs</h3>
 
           <p>
             <strong className="font-semibold text-slate-900">Basil</strong>{' '}
-            Fresh basil oxidizes within hours, turning black and losing flavor.
-          </p>
+            Fresh basil oxidizes within hours, turning black and losing flavor. </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Lettuce</strong>{' '}
-            Cut edges brown, especially iceberg and romaine.
-          </p>
+            Cut edges brown, especially iceberg and romaine. </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Spinach</strong>{' '}
-            Wilts and darkens when exposed to air too long.
-          </p>
+            Wilts and darkens when exposed to air too long. </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Parsley and Cilantro</strong>{' '}
-            Stems oxidize faster than leaves, turning slimy.
-          </p>
+            Stems oxidize faster than leaves, turning slimy. </p>
 
           <h3>Specialty Items</h3>
 
           <p>
             <strong className="font-semibold text-slate-900">Fresh Pasta</strong>{' '}
-            Oxidizes and dries out within hours if not stored properly.
-          </p>
+            Oxidizes and dries out within hours if not stored properly. </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Fresh Juice</strong>{' '}
-            Vitamin C oxidizes rapidly; fresh juice loses nutrition and flavor.
-          </p>
+            Vitamin C oxidizes rapidly; fresh juice loses nutrition and flavor. </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Cooking Oils</strong>{' '}
-            Unsaturated fats oxidize over time, becoming rancid.
-          </p>
+            Unsaturated fats oxidize over time, becoming rancid. </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Nuts</strong>{' '}
-            High-fat nuts go rancid through oxidation (especially walnuts, pecans).
-          </p>
+            High-fat nuts go rancid through oxidation (especially walnuts, pecans). </p>
 
           <p className="italic">
-            At Il Pizzaiolo, we prepped basil for service by covering it with olive oil immediately after cutting. Exposed basil turned black in 30 minutes; oil-covered basil stayed green for 4-6 hours.
-          </p>
+            At Il Pizzaiolo, we prepped basil for service by covering it with olive oil immediately after cutting. Exposed basil turned black in 30 minutes; oil-covered basil stayed green for 4-6 hours. </p>
 
           <h2>Effects of Oxidation on Food Quality</h2>
 
@@ -218,73 +173,60 @@ export default function OxidizationPage() {
 
           <p>
             <strong className="font-semibold text-slate-900">Browning</strong>{' '}
-            Brown apples, gray guacamole, black basil—all visual turn-offs that suggest (incorrectly) that food has spoiled.
-          </p>
+            Brown apples, gray guacamole, black basil, all visual turn-offs that suggest (incorrectly) that food has spoiled. </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Color Loss</strong>{' '}
-            Bright green pesto turns dull olive-green. Vibrant red strawberries become dull.
-          </p>
+            Bright green pesto turns dull olive-green. Vibrant red strawberries become dull. </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Appearance of Spoilage</strong>{' '}
-            Even though oxidized food is usually safe to eat, it looks unappealing and customers (or family) won&apos;t want it.
-          </p>
+            Even though oxidized food is usually safe to eat, it looks unappealing and customers (or family) won&apos;t want it. </p>
 
           <h3>Flavor Changes</h3>
 
           <p>
             <strong className="font-semibold text-slate-900">Off Flavors</strong>{' '}
-            Oxidation creates bitter, metallic, or stale flavors. Fresh juice tastes flat after oxidation.
-          </p>
+            Oxidation creates bitter, metallic, or stale flavors. Fresh juice tastes flat after oxidation. </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Loss of Aromatic Compounds</strong>{' '}
-            Herbs lose their fresh, bright flavors. Oils develop rancid tastes.
-          </p>
+            Herbs lose their fresh, bright flavors. Oils develop rancid tastes. </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Reduced Sweetness</strong>{' '}
-            Oxidation can break down sugars, making fruit taste less sweet.
-          </p>
+            Oxidation can break down sugars, making fruit taste less sweet. </p>
 
           <p className="italic">
-            At Paragary&apos;s in Sacramento, we learned that oxidized olive oil tasted bitter and ruined vinaigrettes. We started buying smaller bottles and using them faster—better oil, better salads.
-          </p>
+            At Paragary&apos;s in Sacramento, we learned that oxidized olive oil tasted bitter and ruined vinaigrettes. We started buying smaller bottles and using them faster, better oil, better salads. </p>
 
           <h3>Texture Changes</h3>
 
           <p>
             <strong className="font-semibold text-slate-900">Softening</strong>{' '}
-            Cut apples and pears soften as oxidation progresses.
-          </p>
+            Cut apples and pears soften as oxidation progresses. </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Sliminess</strong>{' '}
-            Oxidation can break down cell walls, creating slimy textures in leafy greens.
-          </p>
+            Oxidation can break down cell walls, creating slimy textures in leafy greens. </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Drying Out</strong>{' '}
-            Surface oxidation can create a dry, leathery texture on cut produce.
-          </p>
+            Surface oxidation can create a dry, leathery texture on cut produce. </p>
 
           <h3>Nutritional Loss</h3>
 
           <p>
             <strong className="font-semibold text-slate-900">Vitamin C Degradation</strong>{' '}
-            Vitamin C (ascorbic acid) is extremely susceptible to oxidation. Fresh juice can lose 50% of vitamin C within hours.
-          </p>
+            Vitamin C (ascorbic acid) is extremely susceptible to oxidation. Fresh juice can lose 50% of vitamin C within hours. </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Antioxidant Loss</strong>{' '}
-            Many beneficial plant compounds (polyphenols, flavonoids) degrade through oxidation.
-          </p>
+            Many beneficial plant compounds (polyphenols, flavonoids) degrade through oxidation. </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Enzyme Activity</strong>{' '}
-            Beneficial enzymes in raw food can be destroyed by oxidation.
-          </p>
+            Beneficial enzymes in raw food can be destroyed by oxidation. </p>
 
           <div className="bg-blue-50 border-l-4 border-blue-600 p-6 my-8 rounded-r-lg">
             <p className="font-semibold text-slate-900 mb-2 flex items-center gap-2">
@@ -292,8 +234,7 @@ export default function OxidizationPage() {
               Pro Tip
             </p>
             <p className="mb-0 text-slate-700">
-              Oxidation speeds up with heat, light, and time. This is why professional kitchens prep ingredients as close to service as possible and store everything covered, cold, and in the dark.
-            </p>
+              Oxidation speeds up with heat, light, and time. This is why professional kitchens prep ingredients as close to service as possible and store everything covered, cold, and in the dark. </p>
           </div>
 
           <h2 className="flex items-center gap-2">
@@ -305,8 +246,7 @@ export default function OxidizationPage() {
 
           <p>
             <strong className="font-semibold text-slate-900">Why It Works:</strong>{' '}
-            Acid (citric acid, ascorbic acid) lowers pH, which deactivates the enzymes that cause browning.
-          </p>
+            Acid (citric acid, ascorbic acid) lowers pH, which deactivates the enzymes that cause browning. </p>
 
           <p>
             <strong>How to Do It:</strong>
@@ -350,15 +290,13 @@ export default function OxidizationPage() {
           </ul>
 
           <p className="italic">
-            At Purple Café, we kept squeeze bottles of lemon juice at every station. Cut an apple? Hit it with lemon immediately. This became automatic.
-          </p>
+            At Purple Café, we kept squeeze bottles of lemon juice at every station. Cut an apple? Hit it with lemon immediately. This became automatic. </p>
 
           <h3>Method #2: Water Submersion</h3>
 
           <p>
             <strong className="font-semibold text-slate-900">Why It Works:</strong>{' '}
-            Blocking oxygen access prevents oxidation. No air = no oxidation.
-          </p>
+            Blocking oxygen access prevents oxidation. No air = no oxidation. </p>
 
           <p>
             <strong>How to Do It:</strong>
@@ -381,15 +319,13 @@ export default function OxidizationPage() {
 
           <p>
             <strong className="font-semibold text-slate-900">Limitations:</strong>{' '}
-            Soaking too long (over 2 hours) can leach flavor and nutrients. This is a short-term solution.
-          </p>
+            Soaking too long (over 2 hours) can leach flavor and nutrients. This is a short-term solution. </p>
 
           <h3>Method #3: Blanching (For Greens and Herbs)</h3>
 
           <p>
             <strong className="font-semibold text-slate-900">Why It Works:</strong>{' '}
-            Brief exposure to boiling water denatures the enzymes that cause oxidation. Dead enzymes can&apos;t cause browning.
-          </p>
+            Brief exposure to boiling water denatures the enzymes that cause oxidation. Dead enzymes can&apos;t cause browning. </p>
 
           <p>
             <strong>How to Do It:</strong>
@@ -413,15 +349,13 @@ export default function OxidizationPage() {
 
           <p>
             <strong className="font-semibold text-slate-900">The Trade-Off:</strong>{' '}
-            Blanching changes texture slightly and reduces raw flavor. It&apos;s worth it for pesto and sauces where color matters.
-          </p>
+            Blanching changes texture slightly and reduces raw flavor. It&apos;s worth it for pesto and sauces where color matters. </p>
 
           <h3>Method #4: Oil Coating</h3>
 
           <p>
             <strong className="font-semibold text-slate-900">Why It Works:</strong>{' '}
-            Oil creates a barrier between food and oxygen. No oxygen exposure = slower oxidation.
-          </p>
+            Oil creates a barrier between food and oxygen. No oxygen exposure = slower oxidation. </p>
 
           <p>
             <strong>How to Do It:</strong>
@@ -450,15 +384,13 @@ export default function OxidizationPage() {
           </ul>
 
           <p className="italic">
-            At Feierabend, we made herb oils for service—blended herbs with oil, which preserved color and created a usable product. Two benefits from one technique.
-          </p>
+            At Feierabend, we made herb oils for service, blended herbs with oil, which preserved color and created a usable product. Two benefits from one technique. </p>
 
           <h3>Method #5: Vacuum Sealing</h3>
 
           <p>
             <strong className="font-semibold text-slate-900">Why It Works:</strong>{' '}
-            Removes oxygen completely from storage environment.
-          </p>
+            Removes oxygen completely from storage environment. </p>
 
           <p>
             <strong>How to Do It:</strong>
@@ -490,8 +422,7 @@ export default function OxidizationPage() {
               Chef&apos;s Insight
             </p>
             <p className="mb-0 text-slate-700">
-              Professional kitchens combine methods. We&apos;d submerge artichokes in acidulated water, then drain and toss with oil before storing. Layering prevention techniques works better than relying on just one.
-            </p>
+              Professional kitchens combine methods. We&apos;d submerge artichokes in acidulated water, then drain and toss with oil before storing. Layering prevention techniques works better than relying on just one. </p>
           </div>
 
           <h2>Food-Specific Prevention Strategies</h2>
@@ -523,8 +454,7 @@ export default function OxidizationPage() {
 
           <p>
             <strong className="font-semibold text-slate-900">Commercial Trick:</strong>{' '}
-            Some restaurants add a thin layer of water on top of guacamole, which they pour off before service. The water blocks oxygen.
-          </p>
+            Some restaurants add a thin layer of water on top of guacamole, which they pour off before service. The water blocks oxygen. </p>
 
           <h3>Potatoes</h3>
 
@@ -546,7 +476,7 @@ export default function OxidizationPage() {
             <strong>Solution:</strong>
           </p>
           <ul>
-            <li>Tear (don&apos;t cut) if possible—reduces cell damage</li>
+            <li>Tear (don&apos;t cut) if possible, reduces cell damage</li>
             <li>If cutting, use very sharp knife</li>
             <li>Toss immediately with olive oil</li>
             <li>Or: blanch for 5 seconds, ice bath, dry, store with oil</li>
@@ -575,7 +505,7 @@ export default function OxidizationPage() {
             <li>Buy small quantities</li>
             <li>Store in airtight containers</li>
             <li>Keep in freezer for long-term storage (up to 6 months)</li>
-            <li>Smell before using—rancid nuts smell off</li>
+            <li>Smell before using, rancid nuts smell off</li>
           </ul>
 
           <h2>Storage Tips to Minimize Oxidation</h2>
@@ -584,23 +514,19 @@ export default function OxidizationPage() {
 
           <p>
             <strong className="font-semibold text-slate-900">Keep It Cold</strong>{' '}
-            Oxidation slows dramatically at refrigerator temperatures. Cold = slower chemical reactions.
-          </p>
+            Oxidation slows dramatically at refrigerator temperatures. Cold = slower chemical reactions. </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Block Air Exposure</strong>{' '}
-            Use airtight containers, press plastic wrap directly on surfaces, or vacuum seal.
-          </p>
+            Use airtight containers, press plastic wrap directly on surfaces, or vacuum seal. </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Minimize Light</strong>{' '}
-            Light accelerates oxidation. Store in opaque containers or dark places.
-          </p>
+            Light accelerates oxidation. Store in opaque containers or dark places. </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Reduce Time</strong>{' '}
-            The less time between prep and use, the better. Prep as close to cooking time as practical.
-          </p>
+            The less time between prep and use, the better. Prep as close to cooking time as practical. </p>
 
           <h3>Container Choices</h3>
 
@@ -628,39 +554,32 @@ export default function OxidizationPage() {
 
           <p>
             <strong className="font-semibold text-slate-900">Caramelizing Onions</strong>{' '}
-            The browning is oxidation—and it&apos;s delicious.
-          </p>
+            The browning is oxidation, and it&apos;s delicious. </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Searing Meat</strong>{' '}
-            Maillard reaction (browning) involves oxidation and creates incredible flavor.
-          </p>
+            Maillard reaction (browning) involves oxidation and creates incredible flavor. </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Aging Cheese</strong>{' '}
-            Controlled oxidation develops complex flavors.
-          </p>
+            Controlled oxidation develops complex flavors. </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Curing Meats</strong>{' '}
-            Oxidation is part of the curing process.
-          </p>
+            Oxidation is part of the curing process. </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Wine and Beer</strong>{' '}
-            Controlled oxidation develops depth and character.
-          </p>
+            Controlled oxidation develops depth and character. </p>
 
           <p>
             <strong className="font-semibold text-slate-900">The Difference:</strong>{' '}
-            Controlled vs. uncontrolled oxidation. You want oxidation during cooking (for flavor), not during storage (which degrades quality).
-          </p>
+            Controlled vs. uncontrolled oxidation. You want oxidation during cooking (for flavor), not during storage (which degrades quality). </p>
 
           <h2>The Bottom Line on Oxidation</h2>
 
           <p>
-            Oxidation is inevitable—it&apos;s basic chemistry. But you can control it with simple techniques:
-          </p>
+            Oxidation is inevitable, it&apos;s basic chemistry. But you can control it with simple techniques: </p>
 
           <ol>
             <li><strong>Use acid</strong> (lemon/lime juice) immediately after cutting</li>
@@ -671,19 +590,16 @@ export default function OxidizationPage() {
           </ol>
 
           <p>
-            Professional kitchens don&apos;t have magic—we just understand oxidation and work with it instead of against it.
-          </p>
+            Professional kitchens don&apos;t have magic. We just understand oxidation and work with it instead of against it. </p>
 
           <p>
-            The next time you cut an apple, don&apos;t just watch it turn brown. Hit it with lemon juice. The science is simple, the technique is easy, and the results speak for themselves.
-          </p>
+            The next time you cut an apple, don&apos;t just watch it turn brown. Hit it with lemon juice. The science is simple, the technique is easy, and the results speak for themselves. </p>
         </div>
 
         <div className="not-prose mt-12 p-6 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl">
           <h3 className="text-white text-2xl font-bold mb-3">Want More Cooking Science &amp; Techniques?</h3>
           <p className="text-white mb-6 leading-relaxed">
-            Join 5,000+ home cooks getting my weekly email with professional techniques, cooking science explained, and equipment recommendations from 24 years in restaurant kitchens.
-          </p>
+            Join 5,000+ home cooks getting my weekly email with professional techniques, cooking science explained, and equipment recommendations from 24 years in restaurant kitchens. </p>
           <CTAVisibilityTracker
             ctaId="oxidization-effect-on-food-newsletter-cta"
             position="final_cta"

@@ -10,10 +10,7 @@ import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import HowToSchema from '@/components/HowToSchema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import {
-  BlogLayout,
-  BlogHero,
-  BlogFAQ,
-  BlogEmailCapture
+  BlogLayout, BlogHero, BlogFAQ, BlogEmailCapture
 } from '@/components/blog'
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA'
 import AuthorBio from '@/components/review/AuthorBio'
@@ -31,20 +28,11 @@ export default function EssentialKnifeCutsPage() {
 
   // Generate schemas from data
   const articleSchema = generateArticleSchema({
-    headline: blogMeta.title,
-    description: blogMeta.description,
-    datePublished: blogMeta.publishedDate,
-    dateModified: blogMeta.lastUpdated,
-    authorName: 'Scott Bradley',
-    urlPrefix: 'blog',
-    urlSuffix: 'essential-knife-cuts-every-cook-should-master',
-    images: []
+    headline: blogMeta.title, description: blogMeta.description, datePublished: blogMeta.publishedDate, dateModified: blogMeta.lastUpdated, authorName: 'Scott Bradley', urlPrefix: 'blog', urlSuffix: 'essential-knife-cuts-every-cook-should-master', images: []
   })
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.chefapprovedtools.com' },
-    { name: 'Blog', url: 'https://www.chefapprovedtools.com/blog' },
-    { name: educationalData.breadcrumb.title, url: 'https://www.chefapprovedtools.com/blog/essential-knife-cuts-every-cook-should-master' }
+    { name: 'Home', url: 'https://www.chefapprovedtools.com' }, { name: 'Blog', url: 'https://www.chefapprovedtools.com/blog' }, { name: educationalData.breadcrumb.title, url: 'https://www.chefapprovedtools.com/blog/essential-knife-cuts-every-cook-should-master' }
   ])
 
   const faqSchema = generateFAQSchema(educationalData.faq.questions)
@@ -251,8 +239,7 @@ export default function EssentialKnifeCutsPage() {
                             {cut.proTip.link.text}
                           </Link>
                         </CTAVisibilityTracker>
-                        {' '}for edge maintenance.
-                      </>
+                        {' '}for edge maintenance. </>
                     )}
                   </p>
                 </div>

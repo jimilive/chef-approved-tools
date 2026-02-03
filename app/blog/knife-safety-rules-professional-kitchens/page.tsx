@@ -4,10 +4,7 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import { AlertTriangle, Shield, CheckCircle2, Zap, ChefHat } from 'lucide-react'
 import {
-  BlogLayout,
-  BlogHero,
-  BlogFAQ,
-  BlogEmailCapture
+  BlogLayout, BlogHero, BlogFAQ, BlogEmailCapture
 } from '@/components/blog'
 import AuthorBio from '@/components/review/AuthorBio'
 import { getBlogMetadata } from '@/data/metadata'
@@ -20,20 +17,11 @@ export default function KnifeSafetyPost() {
   const blogMeta = getBlogMetadata('knife-safety-rules-professional-kitchens')
 
   const articleSchema = generateArticleSchema({
-    headline: blogMeta.title,
-    description: blogMeta.description,
-    datePublished: blogMeta.publishedDate,
-    dateModified: blogMeta.lastUpdated,
-    authorName: 'Scott Bradley',
-    urlPrefix: 'blog',
-    urlSuffix: 'knife-safety-rules-professional-kitchens',
-    images: []
+    headline: blogMeta.title, description: blogMeta.description, datePublished: blogMeta.publishedDate, dateModified: blogMeta.lastUpdated, authorName: 'Scott Bradley', urlPrefix: 'blog', urlSuffix: 'knife-safety-rules-professional-kitchens', images: []
   })
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.chefapprovedtools.com' },
-    { name: 'Blog', url: 'https://www.chefapprovedtools.com/blog' },
-    { name: educationalData.breadcrumb.title, url: 'https://www.chefapprovedtools.com/blog/knife-safety-rules-professional-kitchens' }
+    { name: 'Home', url: 'https://www.chefapprovedtools.com' }, { name: 'Blog', url: 'https://www.chefapprovedtools.com/blog' }, { name: educationalData.breadcrumb.title, url: 'https://www.chefapprovedtools.com/blog/knife-safety-rules-professional-kitchens' }
   ])
 
   const faqSchema = generateFAQSchema(educationalData.faq.questions)
@@ -103,11 +91,9 @@ export default function KnifeSafetyPost() {
           <div className="not-prose bg-orange-50 border border-orange-200 rounded-xl p-6 my-6">
             <h3 className="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
               <Shield className="w-5 h-5" />
-              Want My Knife Maintenance Routine?
-            </h3>
+              Want My Knife Maintenance Routine? </h3>
             <p className="text-slate-700 mb-4">
-              Join my free email series for the <strong>&quot;Professional Knife Care Checklist&quot;</strong> — how chefs clean, hone, and store blades for decades of use.
-            </p>
+              Join my free email series for the <strong>&quot;Professional Knife Care Checklist&quot;</strong> — how chefs clean, hone, and store blades for decades of use. </p>
             <Link href="/newsletter" className="bg-orange-900 !text-white hover:bg-orange-800 px-6 py-2 rounded-lg font-semibold transition-colors inline-block">
               Get the Free Guide
             </Link>
@@ -124,8 +110,7 @@ export default function KnifeSafetyPost() {
                   if (p.includes('**Rubbermaid')) {
                     return (
                       <p key={i}>
-                        I&apos;ve used a <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-orange-700 hover:text-orange-800 underline">Rubbermaid Commercial Cook&apos;s Scraper</Link> for 19 years, and it&apos;s perfect for transferring chopped veggies or herbs without damaging your knife.
-                      </p>
+                        I&apos;ve used a <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-orange-700 hover:text-orange-800 underline">Rubbermaid Commercial Cook&apos;s Scraper</Link> for 19 years, and it&apos;s perfect for transferring chopped veggies or herbs without damaging your knife. </p>
                     )
                   }
                   return <p key={i}>{p}</p>
@@ -175,10 +160,10 @@ export default function KnifeSafetyPost() {
           <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 my-6">
             <h3 className="font-bold text-slate-800 mb-4">Essential Safety Equipment</h3>
             <ul className="space-y-3">
-              <li><strong>Chef Knife:</strong> <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-800 underline">Victorinox Fibrox 8&quot; Chef&apos;s Knife</Link> — balanced, slip-resistant, professional standard.</li>
+              <li><strong>Chef Knife:</strong> <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-800 underline">Victorinox Fibrox 8&quot; Chef&apos;s Knife</Link>, balanced, slip-resistant, professional standard.</li>
               <li><strong>Honing Steel:</strong> A quality ceramic honing rod realigns your edge without removing metal.</li>
               <li><strong>Cutting Board:</strong> <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-700 hover:text-orange-800 underline">John Boos Platinum Commercial Cutting Board</Link> or <Link href="/reviews/epicurean-kitchen-cutting-board" className="text-orange-700 hover:text-orange-800 underline">Epicurean Kitchen Cutting Board</Link>.</li>
-              <li><strong>Scraper:</strong> <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-orange-700 hover:text-orange-800 underline">Rubbermaid Commercial Cook&apos;s Scraper</Link> — transfer food safely.</li>
+              <li><strong>Scraper:</strong> <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-orange-700 hover:text-orange-800 underline">Rubbermaid Commercial Cook&apos;s Scraper</Link>, transfer food safely.</li>
               <li><strong>Knife Storage:</strong> Magnetic strips or knife blocks prevent accidents and protect edges.</li>
             </ul>
           </div>

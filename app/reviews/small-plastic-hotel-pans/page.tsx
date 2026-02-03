@@ -11,16 +11,7 @@ import SizeSelector from '@/components/SizeSelector'
 import AmazonCTA from '@/components/AmazonCTA'
 import ReviewLayout from '@/components/review/ReviewLayout'
 import {
-  ReviewHero,
-  TestingResultsGrid,
-  PerformanceAnalysis,
-  ProsConsGrid,
-  WhoShouldBuyGrid,
-  FAQSection,
-  EmailCaptureSection,
-  BottomLineSection,
-  RelatedProductsGrid,
-  RelatedArticlesGrid
+  ReviewHero, TestingResultsGrid, PerformanceAnalysis, ProsConsGrid, WhoShouldBuyGrid, FAQSection, EmailCaptureSection, BottomLineSection, RelatedProductsGrid, RelatedArticlesGrid
 } from '@/components/review'
 
 // Import review data
@@ -43,33 +34,12 @@ export async function generateMetadata(): Promise<Metadata> {
   const productData = product
 
   return {
-    title: centralMeta.title,
-    description: centralMeta.description,
-    alternates: {
-      canonical: centralMeta.canonical,
-    },
-    openGraph: {
-      title: centralMeta.ogTitle || centralMeta.title,
-      description: centralMeta.ogDescription || centralMeta.description,
-      url: centralMeta.canonical,
-      siteName: 'Chef Approved Tools',
-      images: [
+    title: centralMeta.title, description: centralMeta.description, alternates: {
+      canonical: centralMeta.canonical, }, openGraph: {
+      title: centralMeta.ogTitle || centralMeta.title, description: centralMeta.ogDescription || centralMeta.description, url: centralMeta.canonical, siteName: 'Chef Approved Tools', images: [
         {
-          url: getProductOgImage(PRODUCT_SLUG),
-          width: 1200,
-          height: 630,
-          alt: centralMeta.imageAlt || `${productData.name} - Professional Review`,
-        },
-      ],
-      type: 'article',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: centralMeta.ogTitle || centralMeta.title,
-      description: centralMeta.ogDescription || centralMeta.description,
-      images: [getProductOgImage(PRODUCT_SLUG)],
-    },
-  }
+          url: getProductOgImage(PRODUCT_SLUG), width: 1200, height: 630, alt: centralMeta.imageAlt || `${productData.name} - Professional Review`, }, ], type: 'article', }, twitter: {
+      card: 'summary_large_image', title: centralMeta.ogTitle || centralMeta.title, description: centralMeta.ogDescription || centralMeta.description, images: [getProductOgImage(PRODUCT_SLUG)], }, }
 }
 
 export default async function ProductReview() {
@@ -91,11 +61,7 @@ export default async function ProductReview() {
 
   // Merge Supabase data with legacy data
   const productData = product ? {
-    ...reviewData.legacyProductData,
-    ...product,
-    pros: product.pros && product.pros.length > 0 ? product.pros : reviewData.legacyProductData.pros,
-    cons: product.cons && product.cons.length > 0 ? product.cons : reviewData.legacyProductData.cons,
-    affiliateLinks: product.affiliateLinks && product.affiliateLinks.length > 0
+    ...reviewData.legacyProductData, ...product, pros: product.pros && product.pros.length > 0 ? product.pros : reviewData.legacyProductData.pros, cons: product.cons && product.cons.length > 0 ? product.cons : reviewData.legacyProductData.cons, affiliateLinks: product.affiliateLinks && product.affiliateLinks.length > 0
       ? product.affiliateLinks
       : reviewData.legacyProductData.affiliateLinks
   } : reviewData.legacyProductData
@@ -134,11 +100,7 @@ export default async function ProductReview() {
                 <SizeSelector
                   title="Choose Your Size:"
                   options={reviewData.sizeOptions.options.map((option) => ({
-                    id: option.id,
-                    label: `${option.size} — ${option.depth}`,
-                    description: `${option.dimensions} | ${option.capacity} | ${option.bestFor}`,
-                    affiliateUrl: option.affiliateUrl,
-                    ctaId: `hero-cta-${option.id}`
+                    id: option.id, label: `${option.size} — ${option.depth}`, description: `${option.dimensions} | ${option.capacity} | ${option.bestFor}`, affiliateUrl: option.affiliateUrl, ctaId: `hero-cta-${option.id}`
                   }))}
                   defaultSize={reviewData.sizeOptions.options.find(o => o.recommended)?.id || reviewData.sizeOptions.options[0].id}
                   ctaText="Check Price on Amazon →"
@@ -246,11 +208,7 @@ export default async function ProductReview() {
                 <SizeSelector
                   title="Choose Your Size:"
                   options={reviewData.sizeOptions.options.map((option) => ({
-                    id: option.id,
-                    label: `${option.size} — ${option.depth}`,
-                    description: `${option.dimensions} | ${option.capacity} | ${option.bestFor}`,
-                    affiliateUrl: option.affiliateUrl,
-                    ctaId: `bottom-line-${option.id}`
+                    id: option.id, label: `${option.size} — ${option.depth}`, description: `${option.dimensions} | ${option.capacity} | ${option.bestFor}`, affiliateUrl: option.affiliateUrl, ctaId: `bottom-line-${option.id}`
                   }))}
                   defaultSize={reviewData.sizeOptions.options.find(o => o.recommended)?.id || reviewData.sizeOptions.options[0].id}
                   ctaText={reviewData.bottomLine.ctaText}

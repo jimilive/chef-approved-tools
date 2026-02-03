@@ -10,10 +10,7 @@ import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import HowToSchema from '@/components/HowToSchema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import {
-  BlogLayout,
-  BlogHero,
-  BlogFAQ,
-  BlogEmailCapture
+  BlogLayout, BlogHero, BlogFAQ, BlogEmailCapture
 } from '@/components/blog'
 import AuthorBio from '@/components/review/AuthorBio'
 import { getBlogMetadata } from '@/data/metadata'
@@ -29,20 +26,11 @@ export default function BestScrambledEggsPage() {
 
   // Generate schemas from data
   const articleSchema = generateArticleSchema({
-    headline: blogMeta.title,
-    description: blogMeta.description,
-    datePublished: blogMeta.publishedDate,
-    dateModified: blogMeta.lastUpdated,
-    authorName: 'Scott Bradley',
-    urlPrefix: 'blog',
-    urlSuffix: 'best-scrambled-eggs',
-    images: []
+    headline: blogMeta.title, description: blogMeta.description, datePublished: blogMeta.publishedDate, dateModified: blogMeta.lastUpdated, authorName: 'Scott Bradley', urlPrefix: 'blog', urlSuffix: 'best-scrambled-eggs', images: []
   })
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.chefapprovedtools.com' },
-    { name: 'Blog', url: 'https://www.chefapprovedtools.com/blog' },
-    { name: educationalData.breadcrumb.title, url: 'https://www.chefapprovedtools.com/blog/best-scrambled-eggs' }
+    { name: 'Home', url: 'https://www.chefapprovedtools.com' }, { name: 'Blog', url: 'https://www.chefapprovedtools.com/blog' }, { name: educationalData.breadcrumb.title, url: 'https://www.chefapprovedtools.com/blog/best-scrambled-eggs' }
   ])
 
   const faqSchema = generateFAQSchema(educationalData.faq.questions)
@@ -207,8 +195,7 @@ export default function BestScrambledEggsPage() {
                         {item.linkText}
                       </Link>
                     </CTAVisibilityTracker>
-                    {' '}for this technique—the nonstick surface and even heating are ideal for eggs.
-                  </>
+                    {' '}for this technique, the nonstick surface and even heating are ideal for eggs. </>
                 )}
               </li>
             ))}
@@ -234,8 +221,7 @@ export default function BestScrambledEggsPage() {
                         nonstick pan
                       </Link>
                     </CTAVisibilityTracker>{' '}
-                    over medium-low heat. Let it warm for 1-2 minutes. Lower heat = more control.
-                  </>
+                    over medium-low heat. Let it warm for 1-2 minutes. Lower heat = more control. </>
                 ) : (
                   <span dangerouslySetInnerHTML={{ __html: step.content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
                 )}
@@ -280,8 +266,7 @@ export default function BestScrambledEggsPage() {
                         Cuisinart 8-inch pan
                       </Link>
                     </CTAVisibilityTracker>
-                    {' '}is perfect for this technique.
-                  </>
+                    {' '}is perfect for this technique. </>
                 )}
               </li>
             ))}
@@ -322,8 +307,7 @@ export default function BestScrambledEggsPage() {
                               Cuisinart pan
                             </Link>
                           </CTAVisibilityTracker>
-                          {' '}solves this issue.
-                        </>
+                          {' '}solves this issue. </>
                       ) : (
                         row.cells[1]
                       )}
@@ -381,8 +365,7 @@ export default function BestScrambledEggsPage() {
                 {cleanupSection.tools[1].name}
               </Link>
             </CTAVisibilityTracker>
-            {' '}for quick drying.
-          </p>
+            {' '}for quick drying. </p>
 
           {/* Story */}
           <h2>{storySection.title}</h2>
@@ -407,8 +390,7 @@ export default function BestScrambledEggsPage() {
                       nonstick pan
                     </Link>
                   </CTAVisibilityTracker>
-                  , stir whites around intact yolks, and experience the difference.
-                </p>
+                  , stir whites around intact yolks, and experience the difference. </p>
               )
             }
             return <p key={index}>{paragraph}</p>

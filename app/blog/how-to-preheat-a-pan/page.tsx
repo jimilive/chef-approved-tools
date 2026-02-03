@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import {
-  generateArticleSchema,
-  generateBreadcrumbSchema,
-  generateFAQSchema
+  generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema
 } from '@/lib/schema';
 import HowToSchema from '@/components/HowToSchema';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
@@ -13,29 +11,11 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import BlogFAQ from '@/components/blog/BlogFAQ';
 import AuthorBio from '@/components/review/AuthorBio';
-import { preheatData } from './preheat-data';
-
-export const metadata = generateBlogMetadata('how-to-preheat-a-pan');
-
-const articleSchema = generateArticleSchema({
-  headline: "How To Preheat A Pan (Most People Do This Wrong)",
-  description: "Professional chef explains the science of preheating stainless steel and cast iron pans. How to prevent sticking and achieve perfect sear every time.",
-  datePublished: "2025-10-02",
-  dateModified: "2025-10-21",
-  authorName: "Scott Bradley",
-  urlPrefix: 'blog',
-  urlSuffix: 'how-to-preheat-a-pan'
-});
-
-const breadcrumbSchema = generateBreadcrumbSchema([
-  { name: "Home", url: "https://www.chefapprovedtools.com" },
-  { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
-  { name: "How To Preheat A Pan (Most People Do This Wrong)", url: "https://www.chefapprovedtools.com/blog/how-to-preheat-a-pan" }
-]);
-
-const faqSchema = generateFAQSchema(preheatData.faq.questions);
-
-// ISR: Regenerate page every hour for fresh content while allowing search engine caching
+import { preheatData } from './preheat-data'; export const metadata = generateBlogMetadata('how-to-preheat-a-pan'); const articleSchema = generateArticleSchema({
+  headline: "How To Preheat A Pan (Most People Do This Wrong)", description: "Professional chef explains the science of preheating stainless steel and cast iron pans. How to prevent sticking and achieve perfect sear every time.", datePublished: "2025-10-02", dateModified: "2025-10-21", authorName: "Scott Bradley", urlPrefix: 'blog', urlSuffix: 'how-to-preheat-a-pan'
+}); const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: "Home", url: "https://www.chefapprovedtools.com" }, { name: "Blog", url: "https://www.chefapprovedtools.com/blog" }, { name: "How To Preheat A Pan (Most People Do This Wrong)", url: "https://www.chefapprovedtools.com/blog/how-to-preheat-a-pan" }
+]); const faqSchema = generateFAQSchema(preheatData.faq.questions); // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
 
 
@@ -61,10 +41,7 @@ export default function HowToPreheatPanPost() {
         totalTime="PT5M"
         tools={["Stainless steel or cast iron pan", "Cooking oil with high smoke point"]}
         steps={[
-          { name: "Place Pan on Burner", text: "Set your pan on the burner over medium heat. Starting with medium (not high) gives you control and prevents warping." },
-          { name: "Wait 2-3 Minutes", text: "Let the pan heat undisturbed for 2-3 minutes. The metal needs time to heat evenly across the entire surface." },
-          { name: "Test with Water Droplet", text: "Flick a few drops of water onto the pan. If they sizzle and evaporate slowly, it's not ready. If they bead up and dance across the surface (Leidenfrost effect), the pan is properly preheated." },
-          { name: "Add Oil", text: "Add oil to the hot pan. It should shimmer and flow easily across the surface, indicating proper temperature for cooking." }
+          { name: "Place Pan on Burner", text: "Set your pan on the burner over medium heat. Starting with medium (not high) gives you control and prevents warping." }, { name: "Wait 2-3 Minutes", text: "Let the pan heat undisturbed for 2-3 minutes. The metal needs time to heat evenly across the entire surface." }, { name: "Test with Water Droplet", text: "Flick a few drops of water onto the pan. If they sizzle and evaporate slowly, it's not ready. If they bead up and dance across the surface (Leidenfrost effect), the pan is properly preheated." }, { name: "Add Oil", text: "Add oil to the hot pan. It should shimmer and flow easily across the surface, indicating proper temperature for cooking." }
         ]}
       />
 
@@ -79,12 +56,10 @@ export default function HowToPreheatPanPost() {
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <p>
-            In every professional kitchen I&apos;ve worked in, preheating is the difference between a golden sear and a gray, steamed mess. It&apos;s why steaks crust beautifully and eggs slide cleanly off the pan — and why home cooks often wonder why their food sticks or burns.
-          </p>
+            In every professional kitchen I&apos;ve worked in, preheating is the difference between a golden sear and a gray, steamed mess. It&apos;s why steaks crust beautifully and eggs slide cleanly off the pan, and why home cooks often wonder why their food sticks or burns. </p>
 
           <p>
-            This guide walks you through the science and timing behind proper preheating so you can cook like a restaurant chef: clean, confident, and in control.
-          </p>
+            This guide walks you through the science and timing behind proper preheating so you can cook like a restaurant chef: clean, confident, and in control. </p>
 
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
             <h2 className="font-bold text-blue-800 mb-3">In This Guide:</h2>
@@ -102,22 +77,18 @@ export default function HowToPreheatPanPost() {
           <h2 id="problem">The Problem: Why Preheating Matters</h2>
 
           <p>
-            Most home cooks start cooking too soon. They drop food into a cold or unevenly heated pan, and what happens? Food sticks, releases water, and never browns properly.
-          </p>
+            Most home cooks start cooking too soon. They drop food into a cold or unevenly heated pan, and what happens? Food sticks, releases water, and never browns properly. </p>
 
           <p>
-            When metal is cold, oil pools instead of spreading evenly. The result: hot and cool spots that fight against caramelization — the key to flavor.
-          </p>
+            When metal is cold, oil pools instead of spreading evenly. The result: hot and cool spots that fight against caramelization, the key to flavor. </p>
 
           <p>
-            Chefs never skip preheating. It&apos;s what makes stainless behave like nonstick and gives every sear that deep, even crust.
-          </p>
+            Chefs never skip preheating. It&apos;s what makes stainless behave like nonstick and gives every sear that deep, even crust. </p>
 
           <h2 id="science">The Science of Heat Transfer</h2>
 
           <p>
-            Different cookware materials heat differently. Knowing how each responds helps you preheat precisely.
-          </p>
+            Different cookware materials heat differently. Knowing how each responds helps you preheat precisely. </p>
 
           <div className="overflow-x-auto my-8">
             <table className="min-w-full border border-gray-300 text-sm">
@@ -152,18 +123,17 @@ export default function HowToPreheatPanPost() {
                   <td className="border border-gray-300 px-4 py-2">Nonstick</td>
                   <td className="border border-gray-300 px-4 py-2">Moderate</td>
                   <td className="border border-gray-300 px-4 py-2">1–2 min</td>
-                  <td className="border border-gray-300 px-4 py-2">Never go above medium heat — coating can degrade.</td>
+                  <td className="border border-gray-300 px-4 py-2">Never go above medium heat, coating can degrade.</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
           <p>
-            Heat travels through metal by conduction, and each surface expands slightly as it heats. That expansion closes microscopic pores that cause sticking. If you add oil or food too early, those pores are still open — your food bonds to the pan.
-          </p>
+            Heat travels through metal by conduction, and each surface expands slightly as it heats. That expansion closes microscopic pores that cause sticking. If you add oil or food too early, those pores are still open, your food bonds to the pan. </p>
 
           <p>
-            That&apos;s why pros say: <strong>&quot;Heat, oil, food — in that order.&quot;</strong>
+            That&apos;s why pros say: <strong>&quot;Heat, oil, food, in that order.&quot;</strong>
           </p>
 
           <h2 id="method">The Professional Preheating Method</h2>
@@ -171,31 +141,26 @@ export default function HowToPreheatPanPost() {
           <h3>Step 1: Start with a Dry Pan</h3>
 
           <p>
-            Never oil a cold pan. Place your stainless or carbon steel pan dry over medium heat.
-          </p>
+            Never oil a cold pan. Place your stainless or carbon steel pan dry over medium heat. </p>
 
           <h3>Step 2: Wait for the Sweet Spot</h3>
 
           <p>
-            For stainless, 1–2 minutes is enough. For cast iron, closer to 5.
-          </p>
+            For stainless, 1–2 minutes is enough. For cast iron, closer to 5. </p>
 
           <h3>Step 3: Add Oil, Then Wait Again</h3>
 
           <p>
-            Once the pan is warm, add oil. Watch for it to shimmer — not smoke. The shimmer tells you the oil&apos;s surface tension has changed and it&apos;s ready to cook.
-          </p>
+            Once the pan is warm, add oil. Watch for it to shimmer, not smoke. The shimmer tells you the oil&apos;s surface tension has changed and it&apos;s ready to cook. </p>
 
           <h3>Step 4: Add Food and Listen</h3>
 
           <p>
-            The right preheat gives you a quiet, steady sizzle. Too cold? No sound. Too hot? The oil pops violently.
-          </p>
+            The right preheat gives you a quiet, steady sizzle. Too cold? No sound. Too hot? The oil pops violently. </p>
 
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
             <p className="text-blue-800 mb-0">
-              <strong>Pro Tip:</strong> Always match the preheat to your ingredient.
-            </p>
+              <strong>Pro Tip:</strong> Always match the preheat to your ingredient. </p>
           </div>
 
           <ul>
@@ -206,8 +171,7 @@ export default function HowToPreheatPanPost() {
           <h2 id="testing">Testing Temperature Like a Chef</h2>
 
           <p>
-            Forget guessing. Here&apos;s how we test in real kitchens:
-          </p>
+            Forget guessing. Here&apos;s how we test in real kitchens: </p>
 
           <h3>The Water Drop Test</h3>
 
@@ -221,14 +185,12 @@ export default function HowToPreheatPanPost() {
           <h3>The Oil Shimmer Test</h3>
 
           <p>
-            Watch for oil to move like silk. No visible smoke — just shimmer.
-          </p>
+            Watch for oil to move like silk. No visible smoke, just shimmer. </p>
 
           <h3>The Infrared Thermometer Trick</h3>
 
           <p>
-            Want to be exact? Aim for:
-          </p>
+            Want to be exact? Aim for: </p>
 
           <ul>
             <li>Stainless searing: 375–425°F</li>
@@ -239,11 +201,9 @@ export default function HowToPreheatPanPost() {
           <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6 my-6">
             <h3 className="text-xl font-bold text-yellow-800 mb-3 flex items-center gap-2">
               <Flame className="w-5 h-5" />
-              Chef&apos;s Tip:
-            </h3>
+              Chef&apos;s Tip: </h3>
             <p className="text-yellow-800 mb-0">
-              Never preheat an empty nonstick pan for long. Coatings start to degrade above 500°F — even the best brands. Always preheat with oil or food in the pan.
-            </p>
+              Never preheat an empty nonstick pan for long. Coatings start to degrade above 500°F, even the best brands. Always preheat with oil or food in the pan. </p>
           </div>
 
           <h2 id="mistakes">Common Mistakes (And How to Avoid Them)</h2>
@@ -251,52 +211,42 @@ export default function HowToPreheatPanPost() {
           <h3>Mistake #1: Adding Oil Too Early</h3>
 
           <p>
-            Oil burns while the pan is still heating.
-          </p>
+            Oil burns while the pan is still heating. </p>
 
           <p>
-            <strong>Fix:</strong> Heat dry, then add oil just before cooking.
-          </p>
+            <strong>Fix:</strong> Heat dry, then add oil just before cooking. </p>
 
           <h3>Mistake #2: Starting on High Heat</h3>
 
           <p>
-            You&apos;ll overshoot and burn the pan surface.
-          </p>
+            You&apos;ll overshoot and burn the pan surface. </p>
 
           <p>
-            <strong>Fix:</strong> Use medium to medium-high — control first, power later.
-          </p>
+            <strong>Fix:</strong> Use medium to medium-high, control first, power later. </p>
 
           <h3>Mistake #3: Cooking Cold Food</h3>
 
           <p>
-            Cold meat drops the surface temp instantly.
-          </p>
+            Cold meat drops the surface temp instantly. </p>
 
           <p>
-            <strong>Fix:</strong> Let proteins rest at room temperature 10–15 minutes before cooking.
-          </p>
+            <strong>Fix:</strong> Let proteins rest at room temperature 10–15 minutes before cooking. </p>
 
           <h3>Mistake #4: Overcrowding</h3>
 
           <p>
-            Overcrowding kills heat, creating steam instead of sear.
-          </p>
+            Overcrowding kills heat, creating steam instead of sear. </p>
 
           <p>
-            <strong>Fix:</strong> Leave space. Cook in batches.
-          </p>
+            <strong>Fix:</strong> Leave space. Cook in batches. </p>
 
           <h3>Mistake #5: Not Letting Food Release Naturally</h3>
 
           <p>
-            When food sticks, most people panic and pry.
-          </p>
+            When food sticks, most people panic and pry. </p>
 
           <p>
-            <strong>Fix:</strong> Wait. Once browned, proteins release on their own — that&apos;s the signal to flip.
-          </p>
+            <strong>Fix:</strong> Wait. Once browned, proteins release on their own, that&apos;s the signal to flip. </p>
 
           <h2 id="equipment">Recommended Pans &amp; Tools</h2>
 
@@ -304,8 +254,7 @@ export default function HowToPreheatPanPost() {
             <h3 className="font-bold text-slate-800 mb-4">Essential Pans for Proper Preheating</h3>
             <ul className="space-y-3">
               <li>
-                <strong>Stainless:</strong> All-Clad D3 stainless skillet — even heat, responsive.
-              </li>
+                <strong>Stainless:</strong> All-Clad D3 stainless skillet, even heat, responsive. </li>
               <li>
                 <strong>Cast Iron:</strong> <CTAVisibilityTracker
                   ctaId="blog-preheat-pan-lodge-1"
@@ -314,11 +263,9 @@ export default function HowToPreheatPanPost() {
                   merchant="internal"
                 >
                   <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-700 hover:text-orange-800 underline">Lodge 12&quot; Cast Iron Skillet</Link>
-                </CTAVisibilityTracker> — ideal for searing and oven finish.
-              </li>
+                </CTAVisibilityTracker> — ideal for searing and oven finish. </li>
               <li>
-                <strong>Carbon Steel:</strong> Matfer Bourgeat carbon steel fry pan — lightweight with pro heat control.
-              </li>
+                <strong>Carbon Steel:</strong> Matfer Bourgeat carbon steel fry pan, lightweight with pro heat control. </li>
               <li>
                 <strong>Thermometer:</strong> Instant-read thermometer — for instant surface readings. See <CTAVisibilityTracker
                   ctaId="blog-preheat-pan-thermometer-guide-1"
@@ -327,20 +274,17 @@ export default function HowToPreheatPanPost() {
                   merchant="internal"
                 >
                   <Link href="/blog/kitchen-thermometers-guide" className="text-orange-700 hover:text-orange-800 underline">Kitchen Thermometer Guide</Link>
-                </CTAVisibilityTracker>.
-              </li>
+                </CTAVisibilityTracker>. </li>
             </ul>
           </div>
 
           <h2>Putting It All Together</h2>
 
           <p>
-            Proper preheating is one of those foundational skills that separates confident cooks from frustrated ones. It&apos;s not glamorous, and it requires patience, but it&apos;s the difference between food that sticks and tears versus food that releases cleanly with a perfect crust.
-          </p>
+            Proper preheating is one of those foundational skills that separates confident cooks from frustrated ones. It&apos;s not glamorous, and it requires patience, but it&apos;s the difference between food that sticks and tears versus food that releases cleanly with a perfect crust. </p>
 
           <p>
-            In professional kitchens, we preheat during mise en place — the prep period before service. By the time orders start coming in, every pan is already at optimal temperature. That habit eliminates 90% of sticking problems and ensures consistent results across hundreds of dishes.
-          </p>
+            In professional kitchens, we preheat during mise en place, the prep period before service. By the time orders start coming in, every pan is already at optimal temperature. That habit eliminates 90% of sticking problems and ensures consistent results across hundreds of dishes. </p>
 
           <p>
             Start with these four rules: heat the pan dry, wait for the right temperature (use the water drop test), add oil and watch for shimmer, then add food and listen for a steady sizzle. Master this sequence and you&apos;ll cook better with any pan you own. See <CTAVisibilityTracker
@@ -350,8 +294,7 @@ export default function HowToPreheatPanPost() {
               merchant="internal"
             >
               <Link href="/blog/stainless-steel-why-food-sticks" className="text-blue-700 underline">Stainless Steel Cooking: Why Food Sticks</Link>
-            </CTAVisibilityTracker> for more on preventing sticking.
-          </p>
+            </CTAVisibilityTracker> for more on preventing sticking. </p>
 
           <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 mt-8">
             <h3 className="text-xl font-bold text-orange-800 mb-3">Keep Learning: Related Guides</h3>

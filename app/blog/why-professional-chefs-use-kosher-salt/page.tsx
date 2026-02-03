@@ -9,10 +9,7 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import {
-  BlogLayout,
-  BlogHero,
-  BlogFAQ,
-  BlogEmailCapture
+  BlogLayout, BlogHero, BlogFAQ, BlogEmailCapture
 } from '@/components/blog'
 import AuthorBio from '@/components/review/AuthorBio'
 import { getBlogMetadata } from '@/data/metadata'
@@ -28,20 +25,11 @@ export default function WhyChefsUseKosherSaltPage() {
 
   // Generate schemas from data
   const articleSchema = generateArticleSchema({
-    headline: blogMeta.title,
-    description: blogMeta.description,
-    datePublished: blogMeta.publishedDate,
-    dateModified: blogMeta.lastUpdated,
-    authorName: 'Scott Bradley',
-    urlPrefix: 'blog',
-    urlSuffix: 'why-professional-chefs-use-kosher-salt',
-    images: []
+    headline: blogMeta.title, description: blogMeta.description, datePublished: blogMeta.publishedDate, dateModified: blogMeta.lastUpdated, authorName: 'Scott Bradley', urlPrefix: 'blog', urlSuffix: 'why-professional-chefs-use-kosher-salt', images: []
   })
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.chefapprovedtools.com' },
-    { name: 'Blog', url: 'https://www.chefapprovedtools.com/blog' },
-    { name: educationalData.breadcrumb.title, url: 'https://www.chefapprovedtools.com/blog/why-professional-chefs-use-kosher-salt' }
+    { name: 'Home', url: 'https://www.chefapprovedtools.com' }, { name: 'Blog', url: 'https://www.chefapprovedtools.com/blog' }, { name: educationalData.breadcrumb.title, url: 'https://www.chefapprovedtools.com/blog/why-professional-chefs-use-kosher-salt' }
   ])
 
   const faqSchema = generateFAQSchema(educationalData.faq.questions)
@@ -148,8 +136,7 @@ export default function WhyChefsUseKosherSaltPage() {
                 Diamond Crystal Kosher Salt
               </Link>
             </CTAVisibilityTracker>
-            {' '}is often the only salt used. Cases of it delivered monthly. Every station has a container within reach. Why? Because when you&apos;re seasoning hundreds of plates per service, you need salt that&apos;s predictable, fast to pinch, and clean-tasting every single time.
-          </p>
+            {' '}is often the only salt used. Cases of it delivered monthly. Every station has a container within reach. Why? Because when you&apos;re seasoning hundreds of plates per service, you need salt that&apos;s predictable, fast to pinch, and clean-tasting every single time. </p>
 
           <p>
             But why do professional cooks consistently reach for kosher salt over table salt, sea salt, or fancy finishing salts? And what makes brands like{' '}
@@ -163,8 +150,7 @@ export default function WhyChefsUseKosherSaltPage() {
                 Diamond Crystal Kosher Salt
               </Link>
             </CTAVisibilityTracker>
-            {' '}the industry standard?
-          </p>
+            {' '}the industry standard? </p>
 
           <p>{introSection.content[2]}</p>
 
@@ -194,8 +180,7 @@ export default function WhyChefsUseKosherSaltPage() {
                 Diamond Crystal
               </Link>
             </CTAVisibilityTracker>
-            {' '}is a standout. Here&apos;s why professional cooks swear by it:
-          </p>
+            {' '}is a standout. Here&apos;s why professional cooks swear by it: </p>
           <ul>
             {diamondCrystalSection.benefits.map((benefit, index) => (
               <li key={index}>
@@ -217,8 +202,7 @@ export default function WhyChefsUseKosherSaltPage() {
                   Diamond Crystal Kosher Salt review
                 </Link>
               </CTAVisibilityTracker>
-              {' '}for more details.
-            </p>
+              {' '}for more details. </p>
           </div>
 
           <p>{diamondCrystalSection.closing}</p>
@@ -256,8 +240,7 @@ export default function WhyChefsUseKosherSaltPage() {
                 {enhancesSection.pairsWith[1].name}
               </Link>
             </CTAVisibilityTracker>
-            {' '}for optimal prep work.
-          </p>
+            {' '}for optimal prep work. </p>
 
           {/* Using Kosher Salt Correctly */}
           <h2>{techniqueSection.title}</h2>
@@ -283,8 +266,7 @@ export default function WhyChefsUseKosherSaltPage() {
                   {techniqueSection.proTip.link.text}
                 </Link>
               </CTAVisibilityTracker>
-              {' '}for more expert techniques.
-            </p>
+              {' '}for more expert techniques. </p>
           </div>
 
           {/* Other Kitchen Uses */}
@@ -331,13 +313,12 @@ export default function WhyChefsUseKosherSaltPage() {
                 Diamond Crystal Kosher Salt
               </Link>
             </CTAVisibilityTracker>
-            {' '}provides the most predictable, reliable results.
-          </p>
+            {' '}provides the most predictable, reliable results. </p>
 
           {/* Final Thoughts */}
           <h2>{bottomLineSection.title}</h2>
           <p>
-            Kosher salt isn&apos;t just a seasoning — it&apos;s a chef&apos;s tool. From controlling flavor to creating the perfect crust on steak, it&apos;s integral to professional cooking.{' '}
+            Kosher salt isn&apos;t just a seasoning, it&apos;s a chef&apos;s tool. From controlling flavor to creating the perfect crust on steak, it&apos;s integral to professional cooking.{' '}
             <CTAVisibilityTracker
               ctaId="blog-kosher-salt-review-6"
               position="final_cta"
@@ -348,8 +329,7 @@ export default function WhyChefsUseKosherSaltPage() {
                 Diamond Crystal Kosher Salt
               </Link>
             </CTAVisibilityTracker>
-            {' '}is a trusted choice because of its texture, purity, and consistency.
-          </p>
+            {' '}is a trusted choice because of its texture, purity, and consistency. </p>
 
           <p>{bottomLineSection.content[1]}</p>
 
@@ -367,8 +347,7 @@ export default function WhyChefsUseKosherSaltPage() {
                 Kitchen Starter Kit
               </Link>
             </CTAVisibilityTracker>
-            {' '}for chef-approved essentials.
-          </p>
+            {' '}for chef-approved essentials. </p>
         </div>
 
         {/* FAQ - Single Source of Truth */}
