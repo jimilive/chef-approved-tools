@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { processBoldMarkdown } from '@/lib/format-content'
 import { comparisonData } from './immersion-vs-countertop-blender-data'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
@@ -76,7 +77,7 @@ export default function ImmersionVsCountertopBlenderComparison() {
                 <div key={subIndex} className={`bg-gray-50 rounded-lg p-6 ${subIndex > 0 ? 'mt-4' : ''}`}>
                   <h4 className="text-lg font-semibold text-slate-900 mb-3">{subsection.title}</h4>
                   {subsection.content.map((paragraph, pIndex) => (
-                    <p key={pIndex} className="text-slate-700 leading-relaxed mb-3 last:mb-0">{paragraph}</p>
+                    <p key={pIndex} className="text-slate-700 leading-relaxed mb-3 last:mb-0">{processBoldMarkdown(paragraph)}</p>
                   ))}
                 </div>
               ))}

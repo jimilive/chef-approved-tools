@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import { processBoldMarkdown } from '@/lib/format-content'
 
 interface PerformanceSection {
   title: string
@@ -38,7 +39,7 @@ export default function PerformanceAnalysis({
         >
           <h3 className="text-lg font-semibold text-slate-900 mb-4 mt-0">{section.title}</h3>
           <div className="text-slate-700 leading-[1.7]">
-            {section.content}
+            {processBoldMarkdown(section.content)}
           </div>
 
           {/* Optional metrics grid */}

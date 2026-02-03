@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { ReactNode } from 'react'
+import { processBoldMarkdown } from '@/lib/format-content'
 
 interface TestingEnvironmentItem {
   label: string
@@ -27,9 +28,14 @@ interface TestingResultsGridProps {
 
 // Helper to process content and inject links
 function processContentWithLinks(content: ReactNode, links?: SectionLink[]): ReactNode {
-  // If content is not a string or no links, return as-is
-  if (typeof content !== 'string' || !links || links.length === 0) {
+  // If content is not a string, return as-is
+  if (typeof content !== 'string') {
     return content
+  }
+
+  // If no links, just process bold markdown
+  if (!links || links.length === 0) {
+    return processBoldMarkdown(content)
   }
 
   // Build result by finding and replacing link text
@@ -70,7 +76,7 @@ function processContentWithLinks(content: ReactNode, links?: SectionLink[]): Rea
     result = newResult
   })
 
-  return <>{result}</>
+  return <>{result.map((part, i) => typeof part === 'string' ? <span key={`bold-${i}`}>{processBoldMarkdown(part)}</span> : part)}</>
 }
 
 export default function TestingResultsGrid({

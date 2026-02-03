@@ -306,7 +306,7 @@ export default function UnderstandingUmamiPage() {
           </h2>
           <p>{renderFormattedText(msgSection.intro)}</p>
           {msgSection.content.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
+            <p key={index}>{renderFormattedText(paragraph)}</p>
           ))}
 
           <h3>{msgSection.myth.title}</h3>
@@ -336,7 +336,7 @@ export default function UnderstandingUmamiPage() {
           {/* Conclusion */}
           <h2>{conclusionSection.title}</h2>
           {conclusionSection.content.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
+            <p key={index}>{renderFormattedText(paragraph)}</p>
           ))}
           <p><strong>The key lessons:</strong></p>
           <ul>

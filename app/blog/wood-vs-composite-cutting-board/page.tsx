@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { processBoldMarkdown } from '@/lib/format-content'
 import { comparisonData } from './wood-vs-composite-data'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import {
@@ -99,9 +100,7 @@ export default function WoodVsCompositeComparison() {
                     {subsection.title}
                   </h4>
                   {subsection.content.map((paragraph, pIndex) => (
-                    <p key={pIndex} className="text-slate-700 leading-relaxed mb-3 last:mb-0">
-                      {paragraph}
-                    </p>
+                    <p key={pIndex} className="text-slate-700 leading-relaxed mb-3 last:mb-0">{processBoldMarkdown(paragraph)}</p>
                   ))}
                 </div>
               ))}
