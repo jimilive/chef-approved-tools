@@ -79,7 +79,7 @@ export const leadMagnetContent = {
     {
       title: "Why Only 11 Tools?",
       content: [
-        "I've been cooking since I was 10 years old—45 years of experience, including 24 years working professionally from Wendy's at 15 to managing kitchen operations at Mellow Mushroom and 6 years at Purple Café.",
+        "After 24 years working professionally, from managing kitchen operations at Mellow Mushroom to 6 years at Purple Café, I know which tools actually earn their space.",
         "When I set up my home kitchen, I kept only what I actually reach for. Everything else is marketing.",
         "These 11 tools handle 99% of what I cook at home. No junk drawers. No single-use gadgets. Just workhorses that earn their space."
       ]

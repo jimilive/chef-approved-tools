@@ -219,7 +219,7 @@ export default function KitchenStarterKitPage() {
           </p>
 
           <p>
-            I still keep a <strong>Thermapen</strong> in my apron—2-second readings, no nonsense. It rotates automatically for easy reading from any angle, and the accuracy is within 0.7°F across the entire range. Worth every penny in a professional setting.
+            A good instant-read thermometer gives you 2-5 second readings with no guesswork. Look for one with a thin probe tip, auto-rotating display, and accuracy within 1°F. You don&apos;t need to spend $100; reliable options exist in the $20-30 range.
           </p>
 
           {/* <CTAVisibilityTracker
@@ -425,17 +425,7 @@ export default function KitchenStarterKitPage() {
               <strong>Lodge Cast Iron Skillet (10&quot; or 12&quot;)</strong> – My favorite pan for searing and roasting
             </li>
             <li>
-              {/* <CTAVisibilityTracker
-                ctaId="thermapen-equipment-link"
-                position="mid_article"
-                productSlug="thermapen-thermometer"
-                merchant="internal"
-              >
-                
-                  Thermapen Thermometer
-                
-              </CTAVisibilityTracker> */}
-              <strong>Thermapen Thermometer</strong> – Precision and speed you can trust in professional settings
+              <strong>Instant-Read Thermometer</strong> – Accuracy and speed for safe, consistent cooking
             </li>
             <li>
               <strong>Rubbermaid Bench Scraper</strong> – 19 years and still going strong
