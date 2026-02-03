@@ -257,7 +257,7 @@ export default function ReviewTiersPage() {
               <ul className="space-y-2 text-slate-700">
                 <li>• <strong>24 years professional kitchen experience</strong></li>
                 <li>• <strong>24 years in professional kitchens</strong></li>
-                <li>• <strong>7 years kitchen management</strong> (Mellow Mushroom, Purple Cafe)</li>
+                <li>• <strong>4 years kitchen management</strong> (Mellow Mushroom, Il Pizzaiolo)</li>
                 <li>• <strong>Managed $80K+ monthly revenue</strong> operations</li>
                 <li>• <strong>A.A.S. Culinary Arts</strong> - Seattle Central College</li>
                 <li>• <strong>B.S. Business Administration</strong> - University of Montana</li>
