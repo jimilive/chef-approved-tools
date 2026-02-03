@@ -286,7 +286,13 @@ export const productImages: Record<string, {
   'large-metal-hotel-pans': {},
   'large-plastic-hotel-pans': {},
   'ninja-bl660-professional-blender': {},
-  'nordic-ware-half-sheet-pan': {},
+  'nordic-ware-half-sheet-pan': {
+    hero: '/images/products/nordic-ware-half-sheet-pan/NordicHalfSheetPan1600x1200_watermarked.jpg',
+    og: '/images/products/nordic-ware-half-sheet-pan/NordicHalfSheetPan1200x630_watermarked.jpg',
+    gallery: [
+      '/images/products/nordic-ware-half-sheet-pan/NordicHalfSheetPan1600x1200_watermarked.jpg',
+    ]
+  },
   'norton-im200-tri-stone-sharpener': {},
   'robot-coupe-r2-dice': {},
   'rubbermaid-commercial-cooks-scraper': {},
