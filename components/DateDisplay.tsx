@@ -1,3 +1,5 @@
+import { formatDate } from '@/lib/format-date'
+
 /**
  * DateDisplay Component
  *
@@ -25,16 +27,6 @@ export default function DateDisplay({
   variant = 'blog',
   className = ''
 }: DateDisplayProps) {
-
-  // Format date as "Month DD, YYYY"
-  const formatDate = (isoDate: string): string => {
-    const date = new Date(isoDate)
-    return date.toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    })
-  }
 
   const publishedFormatted = formatDate(published)
   const updatedFormatted = updated ? formatDate(updated) : null

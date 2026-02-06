@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X, Search } from 'lucide-react'
@@ -29,6 +29,39 @@ export default function Header() {
       document.removeEventListener('keydown', handleEscape)
       document.body.style.overflow = 'unset'
     }
+  }, [isMobileMenuOpen])
+
+  // Focus trap: keep Tab cycling inside mobile menu when open
+  const menuRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!isMobileMenuOpen || !menuRef.current) return
+
+    const focusableEls = menuRef.current.querySelectorAll<HTMLElement>(
+      'a[href], button, input, [tabindex]:not([tabindex="-1"])'
+    )
+    const firstEl = focusableEls[0]
+    const lastEl = focusableEls[focusableEls.length - 1]
+
+    const handleTab = (e: KeyboardEvent) => {
+      if (e.key !== 'Tab') return
+      if (e.shiftKey) {
+        if (document.activeElement === firstEl) {
+          e.preventDefault()
+          lastEl?.focus()
+        }
+      } else {
+        if (document.activeElement === lastEl) {
+          e.preventDefault()
+          firstEl?.focus()
+        }
+      }
+    }
+
+    document.addEventListener('keydown', handleTab)
+    firstEl?.focus()
+
+    return () => document.removeEventListener('keydown', handleTab)
   }, [isMobileMenuOpen])
 
   const navigation = [
@@ -137,7 +170,7 @@ export default function Header() {
             />
 
             {/* Mobile Menu Panel */}
-            <div className="lg:hidden fixed left-0 right-0 top-16 z-30 bg-slate-900 border-t border-gray-600 shadow-xl transform transition-transform duration-200 ease-in-out">
+            <div ref={menuRef} className="lg:hidden fixed left-0 right-0 top-16 z-30 bg-slate-900 border-t border-gray-600 shadow-xl transform transition-transform duration-200 ease-in-out">
               <div className="px-4 pt-4 pb-6 space-y-2 max-h-[calc(100vh-4rem)] overflow-y-auto">
                 {/* Mobile Search */}
                 <div className="pb-4 border-b border-gray-600 mb-2">

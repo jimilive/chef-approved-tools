@@ -2,8 +2,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
-
   const footerLinks = {
     shop: [
       { name: 'Knives & Cutting Tools', href: '/knives' },
@@ -109,8 +107,8 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-gray-700 px-5 py-6">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="text-sm text-slate-400">
-            © {currentYear} Chef Approved Tools. All rights reserved. |
+          <p className="text-sm text-slate-400" suppressHydrationWarning>
+            © {new Date().getFullYear()} Chef Approved Tools. All rights reserved. |
             As an Amazon Associate, I earn from qualifying purchases.
           </p>
         </div>

@@ -23,10 +23,17 @@ interface ComparisonRow {
   format?: string  // Optional format hint: 'stars', 'proUse', 'priceTier'
 }
 
+interface ComparisonProduct {
+  name: string
+  brand?: string
+  affiliateLink: string
+  [key: string]: string | number | boolean | undefined  // Dynamic category-specific fields
+}
+
 interface ProductComparisonTableProps {
   title?: string  // Table title (default: "Compare Products")
   subtitle?: string  // Table subtitle
-  products: Record<string, any>[]  // Array of products (any shape)
+  products: ComparisonProduct[]
   comparisonRows: ComparisonRow[]  // Which fields to compare
   highlightedProduct: string  // Product name to highlight
   trustMessage?: string  // Custom trust message at bottom
@@ -94,14 +101,13 @@ export default function ProductComparisonTable({
   }
 
   // Handle affiliate click with tracking
-  const handleAffiliateClick = (product: Record<string, unknown>) => {
-    const merchant = getMerchant(product.affiliateLink as string)
-    const productName = (product.name as string) || 'Unknown Product'
-    trackAffiliateClick(merchant, productName, 'comparison_table', 0)
+  const handleAffiliateClick = (product: ComparisonProduct) => {
+    const merchant = getMerchant(product.affiliateLink)
+    trackAffiliateClick(merchant, product.name, 'comparison_table', 0)
   }
 
   // Helper to render cell value
-  const renderCellValue = (product: Record<string, any>, row: ComparisonRow) => {
+  const renderCellValue = (product: ComparisonProduct, row: ComparisonRow) => {
     const value = product[row.field]
 
     // Use format hint if provided
@@ -120,7 +126,7 @@ export default function ProductComparisonTable({
     }
 
     // Special handling for priceTier
-    if (row.field === 'priceTier' || row.format === 'priceTier') {
+    if ((row.field === 'priceTier' || row.format === 'priceTier') && typeof value === 'string') {
       return getPriceTierLabel(value)
     }
 

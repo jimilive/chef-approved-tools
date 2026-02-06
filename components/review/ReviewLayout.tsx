@@ -36,6 +36,7 @@ import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import AuthorBio from '@/components/review/AuthorBio'
 import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
+import { formatDate } from '@/lib/format-date'
 
 // ==================== TYPES ====================
 
@@ -159,16 +160,6 @@ export default function ReviewLayout({
   const faqSchema = faqData && faqData.length > 0 ? generateFAQSchema(faqData) : null
 
   // ==================== DATE FORMATTING ====================
-
-  const formatDate = (dateString: string | null): string => {
-    if (!dateString) return ''
-    const date = new Date(dateString)
-    return date.toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    })
-  }
 
   const hasVisibleDates = showDates && gitDates && (gitDates.firstPublished || gitDates.lastUpdated)
 

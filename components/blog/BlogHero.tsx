@@ -1,3 +1,5 @@
+import { formatDate } from '@/lib/format-date'
+
 interface BlogHeroProps {
   title: string
   introduction: string[]
@@ -27,15 +29,6 @@ interface BlogHeroProps {
  * />
  * ```
  */
-// Format date consistently without timezone issues
-// Uses UTC to ensure server/client render the same output
-function formatDate(dateString: string): string {
-  const [year, month, day] = dateString.split('-').map(Number)
-  const months = ['January', 'February', 'March', 'April', 'May', 'June',
-    'July', 'August', 'September', 'October', 'November', 'December']
-  return `${months[month - 1]} ${day}, ${year}`
-}
-
 export default function BlogHero({
   title,
   introduction,
