@@ -16,6 +16,13 @@ function getSupabaseAdmin() {
   return createClient(supabaseUrl, supabaseKey)
 }
 
+function validateAuth(request: Request): boolean {
+  const apiKey = process.env.ADMIN_API_KEY
+  if (!apiKey) return false
+  const authHeader = request.headers.get('authorization')
+  return authHeader === `Bearer ${apiKey}`
+}
+
 /**
  * POST - Create a new competitor product (minimal fields for comparison tables)
  *
@@ -29,6 +36,9 @@ function getSupabaseAdmin() {
  * }
  */
 export async function POST(request: Request) {
+  if (!validateAuth(request)) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  }
   const supabaseAdmin = getSupabaseAdmin()
   try {
     const body = await request.json()
@@ -62,7 +72,8 @@ export async function POST(request: Request) {
         .select()
 
       if (error) {
-        return NextResponse.json({ error: error.message }, { status: 500 })
+        console.error('Error updating product affiliate link:', error)
+        return NextResponse.json({ error: 'Failed to update product' }, { status: 500 })
       }
 
       return NextResponse.json({
@@ -94,7 +105,7 @@ export async function POST(request: Request) {
 
     if (error) {
       console.error('Error creating product:', error)
-      return NextResponse.json({ error: error.message }, { status: 500 })
+      return NextResponse.json({ error: 'Failed to create product' }, { status: 500 })
     }
 
     return NextResponse.json({
@@ -103,13 +114,16 @@ export async function POST(request: Request) {
       message: `Created new competitor product: ${slug}`,
       data
     })
-  } catch (error: any) {
+  } catch (error) {
     console.error('Error in POST /api/admin/products:', error)
-    return NextResponse.json({ error: error.message }, { status: 500 })
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
   }
 }
 
 export async function PUT(request: Request) {
+  if (!validateAuth(request)) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  }
   const supabaseAdmin = getSupabaseAdmin()
   try {
     const body = await request.json()
@@ -135,16 +149,16 @@ export async function PUT(request: Request) {
     if (error) {
       console.error('Error updating product:', error)
       return NextResponse.json(
-        { error: error.message },
+        { error: 'Failed to update product' },
         { status: 500 }
       )
     }
 
     return NextResponse.json({ success: true, data })
-  } catch (error: any) {
+  } catch (error) {
     console.error('Error in PUT /api/admin/products:', error)
     return NextResponse.json(
-      { error: error.message },
+      { error: 'Internal server error' },
       { status: 500 }
     )
   }

@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import { Analytics as VercelAnalytics } from '@vercel/analytics/next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import ErrorBoundary from '@/components/ErrorBoundary'
 import dynamic from 'next/dynamic'
 
 // Dynamic import with SSR disabled to prevent hydration mismatches
@@ -318,7 +319,7 @@ export default function RootLayout({
         </noscript>
 
         {/* Third-party scripts (GTM JS loader) - Client-only, no SSR */}
-        <ThirdPartyScripts />
+        <ErrorBoundary><ThirdPartyScripts /></ErrorBoundary>
 
         {/* Skip to main content for accessibility */}
         <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-orange-900 text-white px-4 py-2 rounded-md z-50">
@@ -337,14 +338,14 @@ export default function RootLayout({
         <Footer />
 
         {/* Cookie Consent (GDPR/CCPA Compliance) - Client-only, no SSR */}
-        <CookieConsent />
+        <ErrorBoundary><CookieConsent /></ErrorBoundary>
 
         {/* Exit Intent Modal - Client-only, no SSR */}
-        <ExitIntentWrapper />
+        <ErrorBoundary><ExitIntentWrapper /></ErrorBoundary>
 
         {/* Analytics - Page views and scroll tracking - Client-only, no SSR */}
-        <Analytics />
-        <ScrollTracker />
+        <ErrorBoundary><Analytics /></ErrorBoundary>
+        <ErrorBoundary><ScrollTracker /></ErrorBoundary>
 
         {/* Vercel Analytics */}
         <VercelAnalytics />

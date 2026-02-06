@@ -8,8 +8,7 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { getGuideMetadata } from '@/data/metadata'
 
-// Force dynamic rendering since we fetch from Supabase
-export const dynamic = 'force-dynamic'
+export const revalidate = 3600 // 1 hour ISR - fetches from Supabase
 
 const guideMetadata = getGuideMetadata('best-chef-knives')
 

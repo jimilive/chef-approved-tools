@@ -9,8 +9,7 @@ import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers
 import { getGuideMetadata } from '@/data/metadata';
 import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/schema';
 
-// Force dynamic rendering since we fetch from Supabase
-export const dynamic = 'force-dynamic'
+export const revalidate = 3600 // 1 hour ISR - fetches from Supabase
 
 const guideMetadata = getGuideMetadata('affordable-kitchen-appliances')
 

@@ -144,7 +144,7 @@ export default function TermsOfServicePage() {
             </p>
             <div className="bg-gray-50 p-4 rounded-lg">
               <p><strong>Email:</strong> legal@chefapprovedtools.com</p>
-              <p><strong>Website:</strong> https://chefapprovedtools.com/contact</p>
+              <p><strong>Website:</strong> https://www.chefapprovedtools.com/contact</p>
             </div>
 
             <div className="mt-8 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-400">

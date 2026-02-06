@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
 }
 
-export const dynamic = 'force-dynamic'
+export const revalidate = 3600 // 1 hour ISR - fetches from Supabase
 
 export default async function ChefApprovedKitchenKit() {
   // Fetch all products from Supabase

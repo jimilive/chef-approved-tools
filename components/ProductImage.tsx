@@ -35,6 +35,7 @@ export default function ProductImage({
         className={`object-contain ${className}`}
         priority={priority}
         sizes={sizes || '(max-width: 768px) 100vw, 50vw'}
+        quality={75}
       />
     )
   }
@@ -48,6 +49,7 @@ export default function ProductImage({
       className={`object-contain ${className}`}
       priority={priority}
       sizes={sizes}
+      quality={75}
     />
   )
 }
