@@ -97,6 +97,7 @@ export default function ReviewHero({
                 alt="Scott Bradley"
                 width={40}
                 height={40}
+                sizes="40px"
                 className="rounded-full flex-shrink-0"
               />
                 <div className="min-w-0">
@@ -190,6 +191,7 @@ export default function ReviewHero({
                 alt="Scott Bradley"
                 width={48}
                 height={48}
+                sizes="48px"
                 className="rounded-full flex-shrink-0"
               />
               <div className="min-w-0">

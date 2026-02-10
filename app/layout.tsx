@@ -143,11 +143,10 @@ export default function RootLayout({
         {/* Run: npm run build && find .next/static/css -name "*.css" to get the latest filename */}
         {/* <link rel="preload" href="/_next/static/css/34ae4f707512af1f.css" as="style" /> */}
 
-        {/* Resource hints for critical third-party domains */}
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://www.google-analytics.com" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Preconnects removed: GTM and GA4 are deferred 3-5 seconds via
+            ThirdPartyScripts, and Google Fonts are cached. Preconnecting to
+            origins that aren't used immediately wastes early connection time
+            and hurts mobile performance. */}
 
         {/* Critical CSS inline for immediate rendering - Above the fold only */}
         {/* Font loading is handled by Next.js font optimization with display:optional */}

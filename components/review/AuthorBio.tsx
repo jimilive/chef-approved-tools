@@ -24,6 +24,7 @@ export default function AuthorBio({
         alt={imageAlt}
         width={100}
         height={100}
+        sizes="100px"
         className="rounded-full object-cover"
       />
       <div>
