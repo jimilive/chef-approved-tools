@@ -20,8 +20,8 @@ import { useEffect } from 'react'
  * Note: GTM loads GA4 automatically via GTM configuration
  * We no longer load GA4 directly to avoid duplicate tracking
  *
- * Note: Microsoft Clarity is loaded directly in app/layout.tsx <head>
- * for reliable initialization as recommended by Clarity docs
+ * Note: Microsoft Clarity was removed to eliminate third-party cookie
+ * issues that were hurting Lighthouse Best Practices scores
  *
  * IMPORTANT: The noscript fallback for GTM is in app/layout.tsx
  * to avoid hydration mismatches (this component uses ssr: false)
