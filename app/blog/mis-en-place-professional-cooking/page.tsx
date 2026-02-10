@@ -174,7 +174,7 @@ export default function MiseEnPlacePage() {
 
           {/* Pro Tip: Trash Bowl */}
           <div className="bg-gradient-to-br from-orange-50 to-amber-50 border-l-4 border-orange-600 p-6 my-8 rounded-r-lg">
-            <h4 className="text-lg font-bold text-slate-900 mt-0">{benefitsSection.proTip.title}</h4>
+            <p className="text-lg font-bold text-slate-900 mt-0">{benefitsSection.proTip.title}</p>
             <p className="mb-0" dangerouslySetInnerHTML={{ __html: benefitsSection.proTip.content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
           </div>
 
@@ -195,10 +195,10 @@ export default function MiseEnPlacePage() {
 
           {/* Checklist Callout */}
           <div className="bg-gradient-to-br from-emerald-50 to-teal-50 border-l-4 border-emerald-600 p-6 my-8 rounded-r-lg">
-            <h4 className="text-lg font-bold text-slate-900 mt-0 flex items-center gap-2">
+            <p className="text-lg font-bold text-slate-900 mt-0 flex items-center gap-2">
               <CheckCircle2 className="w-5 h-5 text-emerald-600" />
               {elementsSection.checklist.title}
-            </h4>
+            </p>
             <p className="font-semibold mb-2">{elementsSection.checklist.subtitle}</p>
             <ul className="space-y-1 mb-4">
               {elementsSection.checklist.items.map((item, index) => (

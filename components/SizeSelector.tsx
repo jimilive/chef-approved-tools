@@ -93,7 +93,6 @@ export default function SizeSelector({
           rel="nofollow noopener noreferrer sponsored"
           onClick={handleClick}
           className="text-base text-orange-700 underline hover:text-orange-800 transition-colors"
-          aria-label={`View ${selectedOption.label} product details on Amazon`}
         >
           View product details
         </a>

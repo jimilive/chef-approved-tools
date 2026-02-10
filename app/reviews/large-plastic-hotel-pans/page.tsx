@@ -187,7 +187,7 @@ export default async function LargePlasticHotelPansReview() {
 
                 {/* Lid Options */}
                 <div className="mt-6 pt-6 border-t border-gray-200">
-                  <h3 className="font-bold text-base mb-3 text-gray-900">Lids</h3>
+                  <p className="font-bold text-base mb-3 text-gray-900">Lids</p>
                   <div className="grid gap-2 sm:grid-cols-2">
                     {reviewData.sizeOptions.lidOptions.map((lid) => (
                       <a
