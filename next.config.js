@@ -199,8 +199,8 @@ const nextConfig = {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://s.pinimg.com https://www.clarity.ms https://ct.pinterest.com",
-              "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://region1.google-analytics.com https://region1.analytics.google.com https://analytics.google.com https://chefapprovedtools.activehosted.com https://www.clarity.ms",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://s.pinimg.com https://www.clarity.ms https://scripts.clarity.ms https://ct.pinterest.com",
+              "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://region1.google-analytics.com https://region1.analytics.google.com https://analytics.google.com https://chefapprovedtools.activehosted.com https://www.clarity.ms https://c.clarity.ms https://c.bing.com",
               "img-src 'self' data: https: http:",
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
               "font-src 'self' data: https://fonts.gstatic.com",
