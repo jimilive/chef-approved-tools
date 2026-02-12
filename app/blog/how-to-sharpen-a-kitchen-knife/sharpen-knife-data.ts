@@ -105,6 +105,11 @@ export const sharpenKnifeData = {
       href: "/blog/santoku-vs-chef-knife",
       title: "Santoku vs Chef Knife",
       description: "Understanding the differences helps you sharpen each style correctly."
+    },
+    {
+      href: "/blog/essential-knife-cuts-every-cook-should-master",
+      title: "Essential Knife Cuts Every Cook Should Master",
+      description: "Sharp knives make these 5 fundamental cuts cleaner and safer."
     }
   ]
 }

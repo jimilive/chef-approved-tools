@@ -163,6 +163,15 @@ export default function NonstickVsStainlessSteelComparison() {
             </div>
           </section>
 
+        <div className="mt-12 p-6 bg-slate-50 rounded-xl">
+          <h3 className="text-2xl font-bold mb-4">Related Guides</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Link href="/guides/best-cookware" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → Best Cookware Guide
+            </Link>
+          </div>
+        </div>
+
         <BlogFAQ questions={comparisonData.faq.questions} />
         <BlogEmailCapture />
         <AuthorBio />

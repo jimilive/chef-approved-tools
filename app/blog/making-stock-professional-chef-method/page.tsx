@@ -250,7 +250,7 @@ export default function MakingStockPage() {
             Pour through a fine-mesh strainer lined with cheesecloth. Don&rsquo;t press the solids. Let gravity do the work. Pressing forces cloudy particles through the filter and ruins clarity you worked hours to achieve. </p>
 
           <p>
-            Cool quickly over an ice bath to drop temperature below 70°F within 2 hours (the USDA danger zone rule). At Purple Café, we used ice wands dropped directly into hot stock. They cool from the inside without diluting. </p>
+            Cool quickly over an ice bath to drop temperature below 70°F within 2 hours (the USDA danger zone rule). Proper <Link href="/blog/how-to-store-raw-foods-safely" className="text-orange-700 no-underline">safe food storage</Link> applies here too. At Purple Café, we used ice wands dropped directly into hot stock. They cool from the inside without diluting. </p>
 
           <p>
             For home use, place your stock container in a larger vessel filled with ice water and stir occasionally to speed cooling. Once cooled, refrigerate immediately. </p>

@@ -293,6 +293,18 @@ export const reviewData = {
         description: "Full guide to choosing the right budget chef knife.",
         emoji: "📋",
         href: "/guides/best-budget-chef-knife"
+      },
+      {
+        name: "Essential Knife Cuts Every Cook Should Master",
+        description: "The 5 fundamental cuts used in professional kitchens every day.",
+        emoji: "🥕",
+        href: "/blog/essential-knife-cuts-every-cook-should-master"
+      },
+      {
+        name: "Paring Knife vs Chef's Knife",
+        description: "When to reach for each knife for the most efficient cuts.",
+        emoji: "📖",
+        href: "/blog/paring-knife-vs-chefs-knife"
       }
     ]
   },

@@ -268,6 +268,8 @@ export const educationalData = {
     ]
   }, relatedArticles: [
     {
+      href: "/blog/paring-knife-vs-chefs-knife", title: "Paring Knife vs Chef's Knife", description: "When to use each knife for the safest, most efficient cuts."
+    }, {
       href: "/blog/essential-knife-cuts-every-cook-should-master", title: "The 5 Essential Knife Cuts Every Home Cook Should Master", description: "Master the fundamental knife cuts used in professional kitchens every day."
     }, {
       href: "/blog/how-to-steel-a-knife", title: "How to Steel a Knife", description: "Learn the professional honing technique that keeps your knives sharp between sharpenings."

@@ -195,6 +195,6 @@ export const educationalData = {
       }
     ]
   }, relatedArticles: [
-    { href: "/blog/knife-safety-rules-professional-kitchens", title: "Knife Safety: 10 Rules From 24 Years in Pro Kitchens" }, { href: "/blog/how-to-steel-a-knife", title: "How to Steel a Knife" }
+    { href: "/blog/paring-knife-vs-chefs-knife", title: "Paring Knife vs Chef's Knife: When to Use Each" }, { href: "/blog/knife-safety-rules-professional-kitchens", title: "Knife Safety: 10 Rules From 24 Years in Pro Kitchens" }, { href: "/blog/how-to-steel-a-knife", title: "How to Steel a Knife" }
   ]
 }

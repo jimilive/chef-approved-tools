@@ -275,6 +275,12 @@ export const reviewData = {
         name: 'Perfect Scrambled Eggs Guide',
         description: 'Learn my no-bowl, no-whisk technique using this pan. Crack eggs directly into it for the creamiest scrambled eggs you\'ve ever made.',
         href: '/blog/best-scrambled-eggs'
+      },
+      {
+        emoji: '📖',
+        name: 'Best Cookware Guide',
+        description: 'Complete guide to choosing the right cookware for your kitchen.',
+        href: '/guides/best-cookware'
       }
     ]
   }

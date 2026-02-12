@@ -748,6 +748,7 @@ export const educationalData = {
   },
 
   relatedArticles: [
+    { href: "/guides/best-cookware", title: "Best Cookware Guide" },
     { href: "/blog/cast-iron-vs-carbon-steel-pan", title: "Cast Iron vs Carbon Steel: Which Should You Buy?" },
     { href: "/blog/guide-cooking-oils-smoke-points", title: "Guide to Cooking Oils & Smoke Points" },
     { href: "/blog/how-to-sear-steaks-like-restaurant-chef", title: "How to Sear Steaks Like a Restaurant Chef" },

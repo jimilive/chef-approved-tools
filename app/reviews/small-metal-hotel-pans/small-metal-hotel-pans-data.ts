@@ -234,6 +234,12 @@ export const reviewData = {
         name: 'Hotel Pan System Guide',
         description: 'Complete guide to restaurant organization.',
         href: '/blog/hotel-pan-system-restaurant-organization-home'
+      },
+      {
+        emoji: '🥩',
+        name: 'How to Store Raw Foods Safely',
+        description: 'Proper food storage techniques to keep your kitchen safe.',
+        href: '/blog/how-to-store-raw-foods-safely'
       }
     ]
   },

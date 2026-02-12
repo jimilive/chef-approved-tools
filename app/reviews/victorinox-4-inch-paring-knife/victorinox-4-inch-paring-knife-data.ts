@@ -245,6 +245,12 @@ export const reviewData = {
         description: "The professional chef's choice for seasoning.",
         emoji: "🧂",
         href: "/reviews/diamond-crystal-kosher-salt"
+      },
+      {
+        name: "Paring Knife vs Chef's Knife",
+        description: "When to reach for a paring knife instead of your chef's knife.",
+        emoji: "📖",
+        href: "/blog/paring-knife-vs-chefs-knife"
       }
     ]
   },

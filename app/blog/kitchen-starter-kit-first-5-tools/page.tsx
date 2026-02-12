@@ -400,6 +400,8 @@ export default function KitchenStarterKitPage() {
             <li>How to Choose Your First Chef Knife</li>
             <li>How to Season Cast Iron Like a Restaurant Chef</li>
             <li>10 Kitchen Tools You&apos;re Wasting Money On</li>
+            <li><Link href="/blog/how-to-store-raw-foods-safely" className="text-orange-700 hover:text-orange-700 font-medium">How to Store Raw Foods Safely</Link></li>
+            <li><Link href="/blog/paring-knife-vs-chefs-knife" className="text-orange-700 hover:text-orange-700 font-medium">Paring Knife vs Chef&apos;s Knife</Link></li>
           </ul>
 
           <h3>Buying Guides:</h3>
@@ -417,6 +419,7 @@ export default function KitchenStarterKitPage() {
               </CTAVisibilityTracker>
             </li> */}
             <li>Best Chef Knives: Budget to Premium</li>
+            <li><Link href="/guides/best-cookware" className="text-orange-700 hover:text-orange-700 font-medium">Best Cookware Guide</Link></li>
             <li>
               <CTAVisibilityTracker
                 ctaId="cookware-materials-link"

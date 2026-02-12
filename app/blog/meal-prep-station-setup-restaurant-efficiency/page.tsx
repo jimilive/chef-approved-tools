@@ -150,7 +150,7 @@ export default function MealPrepStationSetupPage() {
           </h2>
 
           <p>
-            In pro kitchens, flow is everything. You move from left to right, clean to dirty, raw to cooked. This keeps the workspace safe, efficient, and predictable. </p>
+            In pro kitchens, flow is everything. You move from left to right, clean to dirty, raw to cooked. Understanding <Link href="/blog/how-to-store-raw-foods-safely" className="text-blue-700 underline">proper raw food storage</Link> is part of that same discipline. This keeps the workspace safe, efficient, and predictable. </p>
 
           <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">
             Create a Logical Workflow

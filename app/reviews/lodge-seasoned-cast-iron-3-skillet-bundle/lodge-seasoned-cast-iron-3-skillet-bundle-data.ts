@@ -297,6 +297,12 @@ export const reviewData = {
         name: "Le Creuset 7.25-Qt Dutch Oven",
         description: "Perfect complement to Lodge - use Le Creuset for braising, Lodge for high-heat searing. Best of both worlds.",
         href: "/reviews/le-creuset-signature-7-25-qt-dutch-oven"
+      },
+      {
+        emoji: "📖",
+        name: "Best Cookware Guide",
+        description: "Complete guide to choosing the right cookware for your kitchen.",
+        href: "/guides/best-cookware"
       }
     ]
   },

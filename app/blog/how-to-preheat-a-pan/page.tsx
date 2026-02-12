@@ -88,7 +88,7 @@ export default function HowToPreheatPanPost() {
           <h2 id="science">The Science of Heat Transfer</h2>
 
           <p>
-            Different cookware materials heat differently. Knowing how each responds helps you preheat precisely. </p>
+            Different <Link href="/guides/best-cookware" className="text-orange-700 no-underline">cookware materials</Link> heat differently. Knowing how each responds helps you preheat precisely. </p>
 
           <div className="overflow-x-auto my-8">
             <table className="min-w-full border border-gray-300 text-sm">

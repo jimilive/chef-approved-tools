@@ -260,6 +260,12 @@ export const reviewData = {
         name: "Bread Science: Gluten Development",
         description: "Understanding gluten for better Dutch oven bread. The science behind perfect loaves.",
         href: "/blog/bread-science-gluten-development"
+      },
+      {
+        emoji: "📖",
+        name: "Best Cookware Guide",
+        description: "Complete guide to choosing the right cookware for your kitchen.",
+        href: "/guides/best-cookware"
       }
     ]
   },

@@ -338,6 +338,7 @@ export default function ChooseFirstChefKnifePost() {
                 >
                   <Link href="/blog/how-to-sharpen-a-kitchen-knife" className="text-orange-700 underline">How to Sharpen a Kitchen Knife</Link>
                 </CTAVisibilityTracker></li>
+                <li>• <Link href="/blog/paring-knife-vs-chefs-knife" className="text-orange-700 underline">Paring Knife vs Chef&apos;s Knife</Link></li>
               </ul>
             </div>
 
@@ -374,8 +375,7 @@ export default function ChooseFirstChefKnifePost() {
             <div>
               <h4 className="font-bold text-orange-800 mb-2">Complete Buying Guides:</h4>
               <ul className="text-orange-700 space-y-1 text-sm">
-                {/* <li>• Best Chef Knives Guide: Budget to Premium</li> */}
-                {/* <li>• Cookware Materials Explained: Cast Iron vs Stainless vs Nonstick</li> */}
+                <li>• <Link href="/blog/essential-knife-cuts-every-cook-should-master" className="text-orange-700 underline">Essential Knife Cuts Every Cook Should Master</Link></li>
               </ul>
             </div>
           </div>

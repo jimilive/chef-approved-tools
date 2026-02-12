@@ -161,6 +161,6 @@ export const briningData = {
       }
     ]
   }, relatedArticles: [
-    { href: "/blog/what-is-mirepoix", title: "What Is Mirepoix? The Aromatic Flavor Base" }, { href: "/blog/why-cook-chicken-wings-longer", title: "Why You Should Cook Chicken Wings Longer" }, { href: "/reviews/diamond-crystal-kosher-salt", title: "Diamond Crystal Kosher Salt Review: The Professional Standard" }, { href: "/blog/why-professional-chefs-use-kosher-salt", title: "Why Professional Chefs Use Kosher Salt" }, { href: "/blog/making-stock-professional-chef-method", title: "Making Stock: The Professional Method" }, { href: "/blog/kitchen-thermometers-guide", title: "Kitchen Thermometer Guide" }
+    { href: "/blog/how-to-store-raw-foods-safely", title: "How to Store Raw Foods Safely" }, { href: "/blog/what-is-mirepoix", title: "What Is Mirepoix? The Aromatic Flavor Base" }, { href: "/blog/why-cook-chicken-wings-longer", title: "Why You Should Cook Chicken Wings Longer" }, { href: "/reviews/diamond-crystal-kosher-salt", title: "Diamond Crystal Kosher Salt Review: The Professional Standard" }, { href: "/blog/why-professional-chefs-use-kosher-salt", title: "Why Professional Chefs Use Kosher Salt" }, { href: "/blog/making-stock-professional-chef-method", title: "Making Stock: The Professional Method" }, { href: "/blog/kitchen-thermometers-guide", title: "Kitchen Thermometer Guide" }
   ]
 }

@@ -280,6 +280,12 @@ export const reviewData = {
         description: "See how Victorinox compares to premium Wüsthof knives.",
         emoji: "⚖️",
         href: "/blog/victorinox-budget-vs-wusthof-premium-knives"
+      },
+      {
+        name: "Paring Knife vs Chef's Knife",
+        description: "When to reach for each knife for the most efficient cuts.",
+        emoji: "📖",
+        href: "/blog/paring-knife-vs-chefs-knife"
       }
     ]
   },
