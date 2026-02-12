@@ -66,7 +66,7 @@ export const sharpenKnifeData = {
     victorinox8: 'victorinox-fibrox-8-inch-chefs-knife'
   },
 
-  // Two FAQs cherry-picked from old tri-stone blog post
+  // 7 FAQs (2 from old tri-stone blog post + 5 added for featured snippet targeting)
   faq: {
     questions: [
       {
@@ -76,6 +76,26 @@ export const sharpenKnifeData = {
       {
         question: "How do I remove the burr after sharpening?",
         answer: "The burr is removed by progressing through finer grits with lighter pressure. Each finer stone creates a smaller burr until it is microscopic. On your finest stone, use very light strokes (just the weight of the knife), alternating sides after each stroke. Five to ten alternating passes with minimal pressure should break off the remaining burr cleanly. You can also finish with a few passes on a honing steel to align any remaining micro-burr and leave the cleanest possible edge."
+      },
+      {
+        question: "What angle should I sharpen my kitchen knife?",
+        answer: "Most Western and German knives (Victorinox, Wusthof, Henckels) sharpen best at 15 to 20 degrees per side. Japanese knives use a steeper 10 to 15 degrees. If you are not sure, 15 to 20 degrees works for the majority of kitchen knives. A simple way to visualize it: lay the blade flat on the stone, then raise the spine about two stacked quarters off the surface. Consistency matters more than hitting an exact number. A steady 22 degrees produces a better edge than wobbling between 15 and 25."
+      },
+      {
+        question: "Can you sharpen a serrated knife?",
+        answer: "Technically yes, but it is a different process. Each serration has to be sharpened individually using a tapered ceramic rod worked into the scallop at the correct angle. It is slow, tedious work. Most home cooks are better off having a professional do it or simply replacing the knife when it dulls. Serrated knives stay sharp longer than straight edges because the points of the serrations do most of the cutting, so replacement is infrequent."
+      },
+      {
+        question: "Is a whetstone the same as a sharpening stone?",
+        answer: "Yes. \"Whetstone\" is just an older term for sharpening stone. \"Whet\" means to sharpen a blade, not \"wet.\" Both oil stones and water stones are technically whetstones. The confusion comes from people assuming \"whet\" refers to water, but it has nothing to do with the lubricant. Any stone used to sharpen a blade is a whetstone regardless of whether you use oil or water on it."
+      },
+      {
+        question: "Should I sharpen my own knives or pay a professional?",
+        answer: "Learning to sharpen yourself gives you control and saves money long-term. Professional sharpening is fine, but it means you are without your knives and dependent on someone else's schedule. A good sharpening stone like the Norton IM200 pays for itself after a few uses compared to repeated professional services. The learning curve is real, but after ten knives you will have the feel for it. I recommend learning the skill."
+      },
+      {
+        question: "Do electric knife sharpeners work?",
+        answer: "They work in the sense that they remove metal and create an edge. The trade-offs: they remove more metal than necessary, shortening your knife's lifespan. The angle is preset with no control. And the results are adequate but not comparable to what a stone produces. For someone who will genuinely never learn to use a stone, an electric sharpener is better than cooking with a dull knife. But if you are willing to put in the practice, a stone produces a better edge with less metal removal every time."
       }
     ]
   },
