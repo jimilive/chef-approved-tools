@@ -80,9 +80,9 @@ export const categoryConfigs: Record<string, CategoryConfig> = {
         description: 'Step-by-step guide to selecting the right chef knife based on hand size, cutting style, and budget.'
       },
       {
-        title: 'How to Sharpen a Knife with a Tri-Stone',
-        href: '/blog/how-to-sharpen-with-tri-stone',
-        description: 'Master professional sharpening techniques using a three-stage whetstone system.'
+        title: 'How to Sharpen a Kitchen Knife',
+        href: '/blog/how-to-sharpen-a-kitchen-knife',
+        description: 'Professional chef guide to sharpening kitchen knives on a tri-stone system.'
       },
       {
         title: 'Essential Knife Cuts Every Cook Should Master',
@@ -399,9 +399,9 @@ export const categoryConfigs: Record<string, CategoryConfig> = {
 
     relatedBlogs: [
       {
-        title: 'How to Sharpen a Knife with a Tri-Stone',
-        href: '/blog/how-to-sharpen-with-tri-stone',
-        description: 'Master professional sharpening techniques using a three-stage whetstone system.'
+        title: 'How to Sharpen a Kitchen Knife',
+        href: '/blog/how-to-sharpen-a-kitchen-knife',
+        description: 'Professional chef guide to sharpening kitchen knives on a tri-stone system.'
       },
       {
         title: 'How to Steel a Knife',

@@ -290,7 +290,7 @@ export const educationalData = {
     }, {
       href: "/blog/how-to-steel-a-knife", title: "How to Steel a Knife: Honing Guide for Sharp Edges"
     }, {
-      href: "/blog/how-to-sharpen-with-tri-stone", title: "How to Sharpen with a Tri-Stone: Complete Tutorial"
+      href: "/blog/how-to-sharpen-a-kitchen-knife", title: "How to Sharpen a Kitchen Knife: A Professional Chef's Guide"
     }
   ]
 }

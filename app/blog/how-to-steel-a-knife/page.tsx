@@ -303,6 +303,20 @@ export default async function HowToSteelAKnifePage() {
             </table>
           </div>
 
+          <p>
+            For a complete guide to sharpening technique, see our blog post on{' '}
+            <CTAVisibilityTracker
+              ctaId="blog-how-to-steel-a-knife-sharpen-link-1"
+              position="mid_article"
+              productSlug="how-to-steel-a-knife"
+              merchant="internal"
+            >
+              <Link href="/blog/how-to-sharpen-a-kitchen-knife" className="text-blue-700 underline">
+                how to sharpen a kitchen knife
+              </Link>
+            </CTAVisibilityTracker>.
+          </p>
+
           {/* Common Mistakes */}
           <h2>{mistakesSection.title}</h2>
           <ul>

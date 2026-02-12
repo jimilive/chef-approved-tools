@@ -58,7 +58,7 @@ export const educationalData = {
         "**Steeling a knife is not sharpening it.** When you sharpen a knife, you remove metal from the edge to create a new bevel. When you hone or steel it, you're simply **realigning the existing edge** that's bent or rolled from use.",
         "A honing steel brings that fine edge back to center, making your knife feel sharp again without grinding away precious metal. Think of honing as alignment maintenance; sharpening is edge reconstruction."
       ],
-      sharpeningGuideLink: { href: "/reviews/norton-im200-tri-stone-sharpener", text: "sharpening with a tri-stone" }
+      sharpeningGuideLink: { href: "/blog/how-to-sharpen-a-kitchen-knife", text: "how to sharpen a kitchen knife" }
     },
     {
       id: "why-honing-matters",
@@ -176,7 +176,7 @@ export const educationalData = {
     questions: [
       {
         question: "What's the difference between honing and sharpening a knife?",
-        answer: "Honing (using a steel) realigns the edge without removing metal, while sharpening (using a stone) removes metal to create a new edge. At Purple Café, we honed knives before every service but only sharpened every 2-4 weeks. Think of honing as straightening a bent edge and sharpening as rebuilding a dull edge. Honing maintains sharpness; sharpening restores it."
+        answer: "Honing (using a steel) realigns the edge without removing metal, while sharpening (using a stone) removes metal to create a new edge. At Purple Café, we honed knives before every service but only sharpened every 1-3 months. Think of honing as straightening a bent edge and sharpening as rebuilding a dull edge. Honing maintains sharpness; sharpening restores it."
       },
       {
         question: "How often should I steel my kitchen knives?",
@@ -196,7 +196,7 @@ export const educationalData = {
       },
       {
         question: "Why isn't my knife getting sharper when I steel it?",
-        answer: "Honing steel realigns edges but doesn't sharpen dull knives. If steeling doesn't restore sharpness, your knife is dull and needs actual sharpening with a stone. Other causes: wrong angle (too steep or too shallow), damaged steel rod (inspect for grooves), or applying too much pressure (light pressure works better). Remember: steeling maintains sharp knives; it can't fix dull ones."
+        answer: "Honing steel realigns edges but doesn't sharpen dull knives. If steeling doesn't restore sharpness, your knife is dull and needs actual sharpening with a stone. Other causes: wrong angle (too steep or too shallow), damaged steel rod (inspect for grooves), or applying too much pressure (light pressure works better). Remember: steeling maintains sharp knives; it can't fix dull ones. When your knife is truly dull, it needs proper sharpening on a stone."
       },
       {
         question: "Can I damage my knife by using a honing steel?",
@@ -219,6 +219,8 @@ export const educationalData = {
 
   relatedArticles: [
     { href: "/reviews/victorinox-fibrox-8-inch-chefs-knife", title: "Victorinox Fibrox 8\" Chef's Knife", description: "The professional-grade chef's knife that responds beautifully to regular honing and sharpening." },
+    { href: "/reviews/norton-im200-tri-stone-sharpener", title: "Norton IM200 Tri-Stone Sharpener Review", description: "When honing isn't enough, here's the sharpening system that survived 6 years at Purple Cafe." },
+    { href: "/blog/how-to-sharpen-a-kitchen-knife", title: "How to Sharpen a Kitchen Knife", description: "Complete guide to sharpening technique when honing no longer restores your edge." },
     { href: "/guides/knife-care", title: "Complete Knife Care Guide", description: "Professional knife maintenance techniques including honing, sharpening, storage, and cleaning." }
   ]
 }

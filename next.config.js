@@ -279,6 +279,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/blog/how-to-sharpen-with-tri-stone',
+        destination: '/blog/how-to-sharpen-a-kitchen-knife',
+        permanent: true,
+      },
+      {
         source: '/blog/cast-iron-mistakes-ruin-pan',
         destination: '/blog/cast-iron-seasoning-care',
         permanent: true,

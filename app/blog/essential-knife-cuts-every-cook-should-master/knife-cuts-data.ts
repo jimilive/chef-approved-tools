@@ -164,7 +164,7 @@ export const educationalData = {
     }
   ], relatedGuides: {
     technique: [
-      { href: "/blog/knife-safety-rules-professional-kitchens", title: "Knife Safety: 10 Rules From 24 Years in Pro Kitchens" }, { href: "/blog/how-to-steel-a-knife", title: "How to Steel a Knife: Honing Guide for Sharp Edges" }, { href: "/blog/how-to-sharpen-with-tri-stone", title: "How to Sharpen with a Tri-Stone" }
+      { href: "/blog/knife-safety-rules-professional-kitchens", title: "Knife Safety: 10 Rules From 24 Years in Pro Kitchens" }, { href: "/blog/how-to-steel-a-knife", title: "How to Steel a Knife: Honing Guide for Sharp Edges" }, { href: "/blog/how-to-sharpen-a-kitchen-knife", title: "How to Sharpen a Kitchen Knife" }
     ], equipment: [
       { href: "/reviews/victorinox-fibrox-8-inch-chefs-knife", title: "Victorinox Fibrox 8\" Chef's Knife Review" }, { href: "/reviews/rubbermaid-commercial-cooks-scraper", title: "Rubbermaid Commercial Cook's Scraper Review" }, { href: "/reviews/diamond-crystal-kosher-salt", title: "Diamond Crystal Kosher Salt Review" }
     ]

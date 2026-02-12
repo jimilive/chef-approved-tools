@@ -336,7 +336,7 @@ export default function ChooseFirstChefKnifePost() {
                   productSlug="how-to-choose-first-chef-knife"
                   merchant="internal"
                 >
-                  <Link href="/blog/how-to-sharpen-with-tri-stone" className="text-orange-700 underline">How to Sharpen with a Tri-Stone</Link>
+                  <Link href="/blog/how-to-sharpen-a-kitchen-knife" className="text-orange-700 underline">How to Sharpen a Kitchen Knife</Link>
                 </CTAVisibilityTracker></li>
               </ul>
             </div>

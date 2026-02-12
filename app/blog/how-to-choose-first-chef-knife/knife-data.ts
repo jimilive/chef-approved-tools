@@ -31,6 +31,6 @@ export const knifeData = {
       }
     ]
   }, relatedLinks: [
-    { href: "/blog/knife-safety-rules-professional-kitchens", text: "Knife Safety Rules From Professional Kitchens" }, { href: "/blog/how-to-steel-a-knife", text: "How to Steel a Knife" }, { href: "/blog/how-to-sharpen-with-tri-stone", text: "How to Sharpen with a Tri-Stone" }, { href: "/reviews/victorinox-fibrox-8-inch-chefs-knife", text: "Victorinox Fibrox 8\" Chef's Knife Review" }
+    { href: "/blog/knife-safety-rules-professional-kitchens", text: "Knife Safety Rules From Professional Kitchens" }, { href: "/blog/how-to-steel-a-knife", text: "How to Steel a Knife" }, { href: "/blog/how-to-sharpen-a-kitchen-knife", text: "How to Sharpen a Kitchen Knife" }, { href: "/reviews/victorinox-fibrox-8-inch-chefs-knife", text: "Victorinox Fibrox 8\" Chef's Knife Review" }
   ]
 }
