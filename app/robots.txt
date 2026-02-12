@@ -1,57 +1,95 @@
 # Chef Approved Tools - robots.txt
-# Updated: December 20, 2025
-# Purpose: Explicitly allow AI crawlers for visibility in AI search engines
+# Updated: February 12, 2026
+# Purpose: Allow all crawlers, explicitly welcome AI agents for AI search visibility
 
+# === DEFAULT RULES (applies to Googlebot and all unlisted crawlers) ===
 User-agent: *
 Allow: /
-
-# === AI CRAWLERS - EXPLICITLY ALLOWED ===
-
-# OpenAI / ChatGPT
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: OAI-SearchBot
-Allow: /
-
-# Anthropic / Claude
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: Claude-User
-Allow: /
-
-User-agent: Claude-SearchBot
-Allow: /
-
-# Perplexity
-User-agent: PerplexityBot
-Allow: /
-
-# Google AI Training
-User-agent: Google-Extended
-Allow: /
-
-# === BLOCKED PATHS ===
-
 Disallow: /admin/
 Disallow: /test/
 Disallow: /_next/
 Disallow: /api/
-
-# Block query parameter variations (prevent duplicate content)
 Disallow: /*?filter=
 Disallow: /*?type=
 Disallow: /*&filter=
 Disallow: /*&type=
-
-# === CONFIGURATION ===
-
 Crawl-delay: 1
 
-Host: https://www.chefapprovedtools.com
+# === OPENAI ===
+# Training crawler (content used for GPT models)
+User-agent: GPTBot
+Allow: /
 
+# User-driven browsing from ChatGPT
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ChatGPT-User/2.0
+Allow: /
+
+# ChatGPT search results
+User-agent: OAI-SearchBot
+Allow: /
+
+# === ANTHROPIC (Claude) ===
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# === PERPLEXITY ===
+User-agent: PerplexityBot
+Allow: /
+
+# On-demand fetcher when users click citations
+User-agent: Perplexity-User
+Allow: /
+
+# === GOOGLE AI ===
+# Gemini / Bard / Vertex AI
+User-agent: Google-Extended
+Allow: /
+
+# === APPLE ===
+# Siri, Spotlight, Safari AI features
+User-agent: Applebot-Extended
+Allow: /
+
+# === AMAZON ===
+# Alexa and Amazon AI features (relevant for affiliate visibility)
+User-agent: Amazonbot
+Allow: /
+
+# === META ===
+# Meta AI training crawler
+User-agent: meta-externalagent
+Allow: /
+
+# Facebook link previews (for Pinterest/social sharing)
+User-agent: facebookexternalhit
+Allow: /
+
+# === MICROSOFT / BING ===
+User-agent: Timesbot
+Allow: /
+
+# === OTHER AI SEARCH ===
+# You.com AI search
+User-agent: YouBot
+Allow: /
+
+# Diffbot (used by multiple AI platforms)
+User-agent: Diffbot
+Allow: /
+
+# ByteDance / TikTok AI
+User-agent: Bytespider
+Allow: /
+
+# === CONFIGURATION ===
+Host: https://www.chefapprovedtools.com
 Sitemap: https://www.chefapprovedtools.com/sitemap.xml
