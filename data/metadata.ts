@@ -1546,31 +1546,6 @@ export const METADATA = {
       competitorGap: "Professional chef perspective with 24 years experience",
     } as BlogMetadata,
 
-    'how-to-sharpen-with-tri-stone': {
-      title: "How to Sharpen with a Stone: Professional Technique",
-      description: "Master knife sharpening with whetstones using proper angles and pressure. Three-stage progression from coarse to fine from 24 years sharpening knives.",
-      canonical: "https://www.chefapprovedtools.com/blog/how-to-sharpen-with-tri-stone",
-      author: "Scott Bradley",
-      imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
-      imageAlt: "How to Sharpen with a Stone: Professional Chef's Technique (2025)",
-      keywords: {
-        primary: "how to sharpen with tri stone",
-        secondary: [],
-        searchVolume: 500,
-        difficulty: "medium",
-      },
-      publishedDate: "2025-10-16",
-      publishedTime: "2025-10-16T10:00:00Z",
-      lastUpdated: "2025-10-16",
-      modifiedTime: "2025-10-16T10:00:00Z",
-      searchIntent: "informational",
-      conversionPotential: "medium",
-      articleSection: "Cooking Techniques",
-      internalLinks: [],
-      competitorUrls: [],
-      competitorGap: "Professional chef perspective with 24 years experience",
-    } as BlogMetadata,
-
     'how-to-steel-a-knife': {
       title: "How To Steel A Knife: Honing vs Sharpening Explained",
       description: "Honing realigns the edge daily. Sharpening removes metal every few months. 24 years maintaining restaurant knives—the difference explained, proper technique.",
