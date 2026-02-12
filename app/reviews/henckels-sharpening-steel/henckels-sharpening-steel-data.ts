@@ -36,7 +36,7 @@ export const reviewData = {
   // Metadata
   metadata: {
     title: "Henckels Honing Steel: 20 Years Since Culinary School (Still Perfect)",
-    description: "Culinary school 2005, still using it today. Henckels honing steel keeps professional knives sharp between sharpenings. The $30 tool that lasts decades.",
+    description: "Culinary school 2005, still using it today. Henckels honing steel keeps professional knives sharp between sessions on a stone. A necessary tool that lasts decades.",
     ogTitle: "J.A. Henckels Sharpening Steel: 20-Year Professional Review",
     ogDescription: "After 20 years of daily professional and home use, this steel is still the tool I reach for before every shift. Tier 1 testing from Seattle kitchens.",
     tier: 1,
@@ -121,7 +121,7 @@ export const reviewData = {
       },
       {
         title: 'Professional Kitchen Context',
-        content: `In restaurant kitchens, everyone has a steel in their knife roll. You hone at the start of your shift, during breaks if you're doing heavy prep work, and anytime a knife doesn't feel quite right.\n\nA steel is standard equipment because it keeps your knives functional throughout service. You don't have time to stop and professionally sharpen a knife mid-shift. A quick honing gets you back to work.\n\n**Professional standard:** Hone before service, hone during long prep sessions, hone when knives feel off. It's muscle memory for anyone who's worked on a line.`
+        content: `At Purple Cafe, everyone had a steel in their knife roll. You hone at the start of your shift, during breaks if you're doing heavy prep work, and anytime a knife doesn't feel quite right.\n\nIn a 200-cover restaurant, a steel is standard equipment because it keeps your knives functional throughout service. You don't have time to stop and sharpen a knife on a stone mid-shift. A quick honing gets you back to work.\n\n**Professional standard:** Hone before service, hone during long prep sessions, hone when knives feel off. It's muscle memory for anyone who's worked on a line.`
       },
       {
         title: '20 Years of Wear and Performance',
@@ -129,7 +129,7 @@ export const reviewData = {
       },
       {
         title: 'Alternatives and Comparisons',
-        content: `**Ceramic honing rods** remove slightly more metal than steel rods, which some people prefer. I've stuck with steel because that's what I learned on and it works for my knives.\n\n**Diamond-coated rods** are more aggressive, closer to actual sharpening than honing. They remove more metal, which can be useful for very dull knives, but I prefer standard steel for daily maintenance.\n\n**Length matters:** Longer steels (12 inches) work better for longer knives like chef's knives and slicers. Shorter steels (8-10 inches) are more portable but harder to use with big blades. The 10-inch length handles everything in my kit.`
+        content: `**Ceramic honing rods** remove slightly more metal than steel rods, which some people prefer. I've stuck with steel because that's what I learned on and it works for my knives.\n\n**Diamond-coated rods** are more aggressive, closer to actual sharpening than honing. They remove more metal, which can be useful for very dull knives, but I prefer standard steel for daily maintenance.\n\n**When honing isn't enough:** If your knife no longer responds to the steel, the edge has dulled beyond what alignment can fix. That's when you need a sharpening stone. The Norton IM200 Tri-Stone is the system I used at Purple Cafe for 6 years.\n\n**Length matters:** Longer steels (12 inches) work better for longer knives like chef's knives and slicers. Shorter steels (8-10 inches) are more portable but harder to use with big blades. The 10-inch length handles everything in my kit.`
       }
     ]
   },
@@ -171,7 +171,7 @@ export const reviewData = {
     },
     {
       question: "Will this sharpen my knives?",
-      answer: "No. A honing steel realigns the edge; it doesn't sharpen. When your knives feel dull even after honing, you need professional sharpening to remove metal and create a new edge. Think of honing as daily maintenance and sharpening as periodic major service. Both are necessary for keeping knives functional. Honing extends the time between sharpenings, but it can't replace actual sharpening."
+      answer: "No. A honing steel realigns the edge; it doesn't sharpen. When your knives feel dull even after honing, you need to sharpen on a stone to remove metal and create a new edge. A tri-stone system like the Norton IM200 handles this well. Think of honing as daily maintenance and sharpening as periodic major service. Both are necessary for keeping knives functional. Honing extends the time between sharpenings, but it can't replace actual sharpening."
     },
     {
       question: "What angle should I use when honing?",
@@ -191,7 +191,7 @@ export const reviewData = {
     },
     {
       question: "What's the difference between steel, ceramic, and diamond honing rods?",
-      answer: "Steel rods (like this one) realign edges with minimal metal removal - true honing. Ceramic rods remove slightly more metal, which some prefer for maintaining sharper edges. Diamond-coated rods are more aggressive and closer to actual sharpening than honing. I use standard steel for daily maintenance because it's what I learned on and it works for my knives without removing unnecessary metal. Choose based on your maintenance philosophy and knife types."
+      answer: "Steel rods (like this one) realign edges with minimal metal removal - true honing. Ceramic rods remove slightly more metal, which some prefer for maintaining sharper edges. Diamond-coated rods are more aggressive and closer to actual sharpening than honing. I use standard steel for daily maintenance because it's what I learned on and it works for my knives without removing unnecessary metal. When honing isn't enough, a proper sharpening stone is the next step. Choose based on your maintenance philosophy and knife types."
     },
     {
       question: "Does the length of the steel matter?",
@@ -253,10 +253,10 @@ export const reviewData = {
         href: '/reviews/victorinox-fibrox-10-inch-chefs-knife'
       },
       {
-        emoji: '🧽',
-        name: 'OXO Bench Scraper',
-        description: 'Another culinary school essential still in my kit.',
-        href: '/reviews/oxo-good-grips-bench-scraper'
+        emoji: '🔪',
+        name: 'Norton IM200 Tri-Stone Sharpener',
+        description: 'When honing isn\'t enough, this is the sharpening system I used at Purple Cafe for 6 years.',
+        href: '/reviews/norton-im200-tri-stone-sharpener'
       }
     ]
   }

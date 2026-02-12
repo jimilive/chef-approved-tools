@@ -92,6 +92,6 @@ export async function getSharpenerComparison() {
       { label: 'Best For', field: 'bestFor' },
       { label: 'Price Tier', field: 'priceTier', format: 'priceTier' },
     ],
-    trustMessage: 'This comparison is based on 24 years of professional kitchen experience testing sharpening equipment. The Norton IM200 has been my personal sharpening system for over a decade. All recommendations are honest assessments - we earn a small commission if you purchase through our links.'
+    trustMessage: 'This comparison is based on 24 years of professional kitchen experience testing sharpening equipment. The Norton IM200 is the best sharpening system I have used. All recommendations are honest assessments - we earn a small commission if you purchase through our links.'
   }
 }

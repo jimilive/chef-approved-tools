@@ -92,6 +92,8 @@ export const reviewData = {
     paragraphs: [
       "For 6 years at Purple Café, the Norton Tri-Stone kept our <LINK>Victorinox chef knives</LINK> and other professional cutlery performing at peak sharpness through 200+ cover nights. This wasn't equipment tucked away in a drawer for occasional use. This was a critical maintenance tool that saw weekly action in a demanding commercial environment.",
       "Every Saturday morning before weekend service, I'd sharpen 8-12 knives: chef knives, paring knives, boning knives, bread knives. Each knife got the full three-stone treatment, progressing from coarse through medium to fine. By the time prep started, every blade was razor-sharp and ready for 48 hours of continuous service.",
+      "Purple Cafe actually had two Norton tri-stones. They got the second one after the first two years because the first stone had suffered serious abuse from cooks learning to sharpen. People would run their knives perpendicular to the stone at inconsistent angles, and over time that dimpled the stone right in the center. That dished-out stone then progressively altered the curve of every blade sharpened on it, so the edge no longer made clean contact with the cutting board. The second tri-stone was restricted: only the chefs and people the chefs trusted were allowed to use it.",
+      "There is science behind why keeping knives sharp matters beyond just speed and safety. A sharp blade slices cleanly through plant cells with minimal damage, but a dull blade crushes through them, rupturing far more cells than necessary. Those ruptured cells release an enzyme called polyphenol oxidase, which mixes with polyphenols and oxygen to trigger enzymatic browning. I had a knife I only used for cutting herbs. It held its factory edge so well I rarely had to steel it. When I cut herbs with that knife, they stayed green until the third day. With a dull knife, herbs start browning in five minutes to an hour. Same herbs, same storage. The only variable was the edge.",
       "Sharp knives were as critical to our operation as our <LINK>KitchenAid commercial mixer</LINK> and <LINK>Robot Coupe food processor</LINK>, equipment that simply cannot fail. In a professional kitchen running 200+ covers on weekend nights, a dull knife isn't just inconvenient. It slows service, compromises safety, and costs money.",
       "The Norton Tri-Stone never failed. Over 6 years of weekly sharpening sessions (300+ total sharpening sessions on dozens of different knives), the stones maintained their cutting effectiveness without significant wear. The non-slip base never budged on our stainless steel prep tables. The three-stage progression consistently delivered professional-quality edges."
     ]
@@ -105,7 +107,7 @@ export const reviewData = {
       {
         title: "Stage 1: Coarse Stone (120 Grit)",
         purpose: "Repair damaged edges, establish initial bevel, remove chips or rolls.",
-        description: "This is your heavy-lifting stone. When a knife is truly dull, the edge rolled over, visible damage, hasn't been sharpened in months, you start here. The coarse stone aggressively removes metal to create a new edge geometry. In professional use, I'd spend 5-10 passes per side on this stone for knives in poor condition.",
+        description: "This is your heavy-lifting stone. When a knife is truly dull, the edge rolled over, visible damage, hasn't been sharpened in months, you start here. The coarse stone aggressively removes metal to create a new edge geometry. In professional use, five to ten passes per side on this stone handles knives in poor condition.",
         whenToUse: "Badly dulled knives, edge repairs, establishing bevels on new knives.",
         whenToSkip: "Knives that just need touch-ups can skip straight to medium or fine."
       },
@@ -113,13 +115,13 @@ export const reviewData = {
         title: "Stage 2: Medium Stone (280 Grit)",
         purpose: "Refine edge, remove coarse stone scratches, develop working sharpness.",
         description: "This is where most of your sharpening time is spent. The medium stone refines the rough edge from the coarse stone and brings the knife to good working sharpness. For knives in decent condition that just need regular maintenance, you start here and skip the coarse stone entirely.",
-        note: "In professional use, I'd do 8-12 passes per side on this stone for regular weekly maintenance. After the medium stone, a knife is already sharp enough for most kitchen tasks."
+        note: "Five to ten passes per side on this stone for regular maintenance. After the medium stone, a knife is already sharp enough for most kitchen tasks."
       },
       {
         title: "Stage 3: Fine Stone (320 Grit)",
         purpose: "Polish edge to razor-sharp finish, remove micro-scratches, maximize cutting performance.",
         description: "The fine stone is your finishing stone. It polishes the edge created by the medium stone to maximum sharpness, the difference between \"sharp enough to work\" and \"paper-slicing razor-sharp.\" This is the stone that creates the mirror-polished edge you see on professional kitchen knives.",
-        note: "I'd spend 10-15 passes per side on the fine stone, using progressively lighter pressure for the final passes. After this stage, knives would slice paper cleanly, shave arm hair, and glide through tomato skin with zero pressure."
+        note: "Five to ten passes per side on the fine stone, using progressively lighter pressure for the final passes. After this stage, knives would slice paper cleanly, shave arm hair, and glide through tomato skin with zero pressure."
       }
     ]
   },
@@ -129,6 +131,13 @@ export const reviewData = {
     title: "Professional Sharpening Technique",
     intro: "The difference between a properly sharpened knife and a dull one is the difference between working with our <LINK>premium John Boos cutting board</LINK> versus a cheap plastic one, night and day. Here's the technique I developed over 6 years of professional sharpening:",
     techniques: [
+      {
+        title: "The Parallel Sweep Method (How the Chefs Did It)",
+        paragraphs: [
+          "At Purple Cafe, the chefs sharpened with the stone oriented lengthwise away from the body. The knife is held roughly parallel to the stone, tip facing away. You sweep the blade from tip to heel across the full length of the stone, moving from one corner lengthwise to the opposite corner in a single controlled stroke.",
+          "This method uses the entire stone surface for each pass, which distributes wear evenly and prevents the dimpling that ruins stones and blades over time. Five to ten passes per side on each grit, then move to the next finer stone and repeat. For a comprehensive step-by-step walkthrough, see our blog post on <LINK>how to sharpen a kitchen knife</LINK>."
+        ]
+      },
       {
         title: "The 20-Degree Angle Rule",
         paragraphs: [
@@ -177,7 +186,7 @@ export const reviewData = {
       {
         title: "Minimal Metal Removal",
         paragraphs: [
-          "Good knives represent significant investment. Electric sharpeners remove metal aggressively. They have to, because they're optimized for speed. A <LINK>$50 Victorinox chef knife</LINK> sharpened weekly on an electric sharpener might last 3-5 years before wearing down to nothing. The same knife sharpened manually on stones can last 10-15 years.",
+          "Good knives represent significant investment. Electric sharpeners remove metal aggressively. They have to, because they're optimized for speed. A <LINK>Victorinox chef knife</LINK> sharpened weekly on an electric sharpener might last 3-5 years before wearing down to nothing. The same knife sharpened manually on stones can last 10-15 years.",
           "Manual stones remove only what's necessary to restore sharpness. This preservation of blade life matters when you're maintaining a dozen professional knives."
         ]
       },
@@ -252,9 +261,9 @@ export const reviewData = {
     paragraphs: [
       "Here's the reality: if the Norton Tri-Stone survived 6 years of weekly professional use sharpening 8-12 knives in a 200+ cover restaurant, it'll serve the average home cook for decades.",
       "Most home cooks sharpen 2-4 knives monthly at most. That's maybe 50 sharpening sessions per year versus the 300+ sessions I put this system through over 6 years. At home usage rates, this sharpener could easily last 20-30 years.",
-      "The cost-per-sharpening becomes essentially zero. Professional sharpening services charge anywhere from reasonable to expensive per knife. After 10-20 uses, the Norton has paid for itself compared to professional services.",
+      "Being able to maintain your own knives means you never depend on outside services or wait weeks to get an edge back. After 10-20 uses, the technique becomes second nature, and your knives stay sharp on your schedule, not someone else's.",
       "This sharpener belongs in every serious home cook's <LINK>professional kitchen starter kit</LINK>. It's the difference between maintaining your knives at professional standards versus accepting progressively duller edges until you finally pay someone else to sharpen them.",
-      "For detailed sharpening instructions and technique tips, see our companion guide on <LINK>proper knife care and maintenance</LINK>."
+      "For detailed sharpening instructions and the full technique walkthrough, see our blog post on <LINK>how to sharpen a kitchen knife</LINK>."
     ]
   },
 
@@ -272,7 +281,7 @@ export const reviewData = {
     },
     {
       question: "How do you use the Norton IM200 Tri-Stone?",
-      answer: "Progressive three-stage process: 1) Coarse (120 grit): Repair damaged edges, establish bevel (5-10 passes per side), 2) Medium (280 grit): Refine edge, remove coarse scratches (8-12 passes per side), 3) Fine (320 grit): Polish to razor-sharp finish (10-15 passes per side). Maintain consistent 20-degree angle. Use light pressure. The stones cut effectively without aggressive force."
+      answer: "Progressive three-stage process: 1) Coarse (120 grit): Repair damaged edges, establish bevel (five to ten passes per side), 2) Medium (280 grit): Refine edge, remove coarse scratches (five to ten passes per side), 3) Fine (320 grit): Polish to razor-sharp finish (five to ten passes per side). Maintain consistent 20-degree angle. Use light pressure. The stones cut effectively without aggressive force."
     },
     {
       question: "Do you need oil or water with Norton Tri-Stone?",
@@ -396,7 +405,7 @@ export const reviewData = {
       },
       {
         title: "Long-Term Value Calculation",
-        content: "The Norton IM200 costs approximately $60 and lasts decades with proper care. Replacement stones cost $15-25 each when eventually needed. Compare this to professional sharpening services at $5-10 per knife, or electric sharpeners that wear out and need replacement. Over 10 years of use, the Norton system costs pennies per sharpening. That's professional-grade value."
+        content: "The Norton IM200 lasts decades with proper care. After years of monthly professional use, and being used properly, the stones on the second tri-stone at Purple Cafe showed minimal wear and still cut effectively. At home usage rates of a couple of knives every few months, this system could easily serve you for 20-30 years without replacement. That kind of longevity is rare in kitchen equipment."
       },
       {
         title: "Proper Technique Summary",
@@ -432,6 +441,12 @@ export const reviewData = {
         name: 'Victorinox Granton Edge Boning Knife',
         description: 'Specialty blades need sharpening too. The granton hollows require careful stone technique.',
         href: '/reviews/victorinox-granton-edge-boning-knife'
+      },
+      {
+        emoji: '📖',
+        name: 'How to Sharpen a Kitchen Knife',
+        description: 'Our complete guide to professional sharpening technique, from the science of why it matters to step-by-step instructions.',
+        href: '/blog/how-to-sharpen-a-kitchen-knife'
       }
     ]
   },

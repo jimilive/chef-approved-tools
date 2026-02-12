@@ -1,11 +1,12 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink, getAllAffiliateLinks } from '@/lib/product-helpers'
 import { getProductOgImage, getProductHeroImage } from '@/lib/images'
 import { getReviewGitDates } from '@/lib/git-dates'
 import { getTierBadge } from '@/lib/editorial-metadata'
 import { getCategoryBreadcrumb } from '@/lib/category-helpers'
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import MultiVendorCTA from '@/components/MultiVendorCTA'
+import AmazonCTA from '@/components/AmazonCTA'
 import ReviewLayout from '@/components/review/ReviewLayout'
 import {
   ReviewHero,
@@ -45,7 +46,7 @@ function processInlineLinks(text: string): React.ReactNode {
         'Victorinox chef knife': '/reviews/victorinox-fibrox-10-inch-chefs-knife',
         'Le Creuset Dutch oven': '/reviews/le-creuset-signature-7-25-qt-dutch-oven',
         'professional kitchen starter kit': '/kitchen-bundle',
-        'proper knife care and maintenance': '/guides/knife-care'
+        'how to sharpen a kitchen knife': '/blog/how-to-sharpen-a-kitchen-knife'
       }
       const href = linkMap[linkText]
       if (href) {
@@ -123,6 +124,7 @@ export default async function NortonTriStoneSharpenerReview() {
   } : reviewData.legacyProductData
 
   const affiliateUrl = product ? getPrimaryAffiliateLink(product) : '#'
+  const affiliateLinks = product ? getAllAffiliateLinks(product) : []
 
   // Get comparison table data
   const comparisonData = await getSharpenerComparison()
@@ -411,66 +413,16 @@ export default async function NortonTriStoneSharpenerReview() {
             </p>
           </div>
 
-          {/* STRONG FINAL CTA */}
-          <div className="bg-yellow-100 p-8 my-8 rounded-lg text-center border-3 border-yellow-400">
-            <h3 className="mt-0 text-3xl font-bold text-slate-900">
-              {reviewData.bottomLine.ctaTitle}
-            </h3>
-
-            <p className="text-lg my-5 text-slate-700">
-              {reviewData.bottomLine.ctaSubtitle}
-            </p>
-
-            <CTAVisibilityTracker
-              ctaId={`${reviewData.productSlug}-final-cta`}
-              position="final_cta"
-              productSlug={reviewData.productSlug}
-              merchant="amazon"
-            >
-              <a
-                href={affiliateUrl}
-                target="_blank"
-                rel="nofollow noopener noreferrer sponsored"
-                className="inline-block bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl"
-              >
-                {reviewData.bottomLine.ctaText}
-              </a>
-            </CTAVisibilityTracker>
-
-            {/* Text link under button */}
-            <p className="text-center mt-3 text-sm">
-              <a
-                href={affiliateUrl}
-                className="text-orange-700 hover:text-orange-800 underline font-medium"
-                target="_blank"
-                rel="nofollow noopener noreferrer sponsored"
-              >
-                → View {productData.name} on Amazon
-              </a>
-            </p>
-          </div>
+          {/* FINAL CTA */}
+          <MultiVendorCTA
+            ctaId="norton-final-cta"
+            productSlug={PRODUCT_SLUG}
+            productName={productData.name}
+            affiliateLinks={affiliateLinks}
+            position="final_cta"
+            boxHeading={reviewData.bottomLine.ctaTitle}
+          />
         </section>
-
-        {/* Footer & Last Updated */}
-        <div className="bg-gray-50 p-5 my-8 rounded border-l-4 border-gray-500">
-          <p className="my-2">
-            <strong>📅 Last Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric'
-            })}
-          </p>
-          <p className="my-2">
-            <strong>🔍 Next Review:</strong> {new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', {
-              year: 'numeric',
-              month: 'long'
-            })}
-          </p>
-          <p className="my-2">
-            <strong>💬 Questions about knife sharpening?</strong> Leave a comment below. I read and respond
-            to every question.
-          </p>
-        </div>
 
         {/* EMAIL CAPTURE */}
         <EmailCaptureSection />
