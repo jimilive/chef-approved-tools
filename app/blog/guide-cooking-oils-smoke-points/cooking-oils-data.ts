@@ -99,6 +99,6 @@ export const educationalData = {
       }
     ]
   }, relatedArticles: [
-    { href: "/blog/fat-is-flavor", title: "Why Fat is Flavor (And How to Use It)" }, { href: "/blog/maillard-reaction-browning-flavor", title: "The Maillard Reaction: Why Browning = Flavor" }, { href: "/blog/complete-guide-to-salts", title: "The Complete Guide to Salts" }, { href: "/reviews/lodge-seasoned-cast-iron-3-skillet-bundle", title: "Lodge Cast Iron Skillet Bundle Review" }
+    { href: "/blog/how-to-make-marinara-sauce", title: "How to Make Marinara Sauce" }, { href: "/blog/fat-is-flavor", title: "Why Fat is Flavor (And How to Use It)" }, { href: "/blog/maillard-reaction-browning-flavor", title: "The Maillard Reaction: Why Browning = Flavor" }, { href: "/blog/complete-guide-to-salts", title: "The Complete Guide to Salts" }, { href: "/reviews/lodge-seasoned-cast-iron-3-skillet-bundle", title: "Lodge Cast Iron Skillet Bundle Review" }
   ]
 }

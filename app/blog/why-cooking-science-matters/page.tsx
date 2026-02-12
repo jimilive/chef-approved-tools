@@ -55,7 +55,7 @@ export default function CookingSciencePage() {
           </p>
 
           <p>
-            But then something clicked. When I understood <em>why</em> a steak browns (Maillard reaction needs high heat and dry surface), I stopped making gray, steamed steaks. When I learned <em>how</em> emulsions work (emulsifiers bridge oil and water), I stopped breaking sauces. When I grasped <em>what</em> happens when you overwork dough (gluten overdevelopment makes it tough), I stopped making dense, chewy biscuits. </p>
+            But then something clicked. When I understood <em>why</em> a steak browns (Maillard reaction needs high heat and dry surface), I stopped making gray, steamed steaks. When I learned <em>how</em> emulsions work (emulsifiers bridge oil and water), I stopped breaking sauces. When I grasped <em>what</em> happens when you overwork dough (<Link href="/blog/bread-science-gluten-development" className="text-orange-700 no-underline">gluten overdevelopment</Link> makes it tough), I stopped making dense, chewy biscuits. </p>
 
           <p>
             <strong>Understanding the science didn&apos;t make cooking harder. It made it easier</strong>. I went from blindly following instructions to understanding what I was doing and why it worked. And when things went wrong, I could diagnose the problem and fix it instead of starting over. </p>

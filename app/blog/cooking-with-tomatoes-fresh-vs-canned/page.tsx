@@ -139,7 +139,7 @@ export default function TomatoesGuidePage() {
           <div className="bg-amber-50 border-l-4 border-amber-400 p-6 my-8 rounded-r-lg">
             <h2 className="mt-0 text-amber-900 font-bold">Restaurant Reality</h2>
             <p>
-              <strong>Working the pizza station,</strong> I&apos;d watch home cooks come in and ask why our marinara tasted so much better than theirs. The answer was simple: we used canned tomatoes. Not fresh. Canned.
+              <strong>Working the pizza station,</strong> I&apos;d watch home cooks come in and ask why our <Link href="/blog/how-to-make-marinara-sauce" className="text-orange-700 no-underline">marinara</Link> tasted so much better than theirs. The answer was simple: we used canned tomatoes. Not fresh. Canned.
             </p>
             <p>
               They&apos;d look confused. &quot;But fresh is always better, right?&quot;

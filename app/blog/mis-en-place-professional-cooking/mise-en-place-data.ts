@@ -81,6 +81,6 @@ export const educationalData = {
       }
     ]
   }, relatedArticles: [
-    { href: "/blog/meal-prep-station-setup-restaurant-efficiency", title: "Meal Prep Station Setup: Restaurant Efficiency" }, { href: "/blog/knife-safety-rules-professional-kitchens", title: "Knife Safety Rules From Professional Kitchens" }, { href: "/blog/how-to-make-roux", title: "How to Make a Perfect Roux" }, { href: "/blog/caramelization-science", title: "The Science of Caramelization" }, { href: "/reviews/victorinox-fibrox-8-inch-chefs-knife", title: "Victorinox Fibrox 8\" Chef's Knife Review" }, { href: "/reviews/oxo-good-grips-bench-scraper", title: "OXO Good Grips Bench Scraper Review" }
+    { href: "/blog/what-is-mirepoix", title: "What Is Mirepoix?" }, { href: "/blog/meal-prep-station-setup-restaurant-efficiency", title: "Meal Prep Station Setup: Restaurant Efficiency" }, { href: "/blog/knife-safety-rules-professional-kitchens", title: "Knife Safety Rules From Professional Kitchens" }, { href: "/blog/how-to-make-roux", title: "How to Make a Perfect Roux" }, { href: "/blog/caramelization-science", title: "The Science of Caramelization" }, { href: "/reviews/victorinox-fibrox-8-inch-chefs-knife", title: "Victorinox Fibrox 8\" Chef's Knife Review" }, { href: "/reviews/oxo-good-grips-bench-scraper", title: "OXO Good Grips Bench Scraper Review" }
   ]
 }

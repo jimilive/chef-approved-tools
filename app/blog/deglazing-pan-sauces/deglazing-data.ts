@@ -408,6 +408,7 @@ export const educationalData = {
   },
 
   relatedArticles: [
+    { href: "/blog/how-to-make-marinara-sauce", title: "How to Make Marinara Sauce" },
     { href: "/blog/how-to-preheat-a-pan", title: "How to Preheat a Pan Properly" },
     { href: "/blog/stock-vs-broth-vs-bouillon", title: "Stock vs Broth vs Bouillon" },
     { href: "/blog/understanding-cooking-fats", title: "Understanding Cooking Fats" },

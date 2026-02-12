@@ -364,7 +364,7 @@ export default function StockVsBrothPage() {
           <h3>When Substitutions Fail</h3>
           <ul>
             <li><strong>Pan sauces</strong> – Stock&apos;s gelatin creates the glossy, coating texture. Broth makes a thin, watery sauce. Bouillon makes it too salty.</li>
-            <li><strong>Risotto</strong> – Stock&apos;s body is part of what makes risotto creamy. Broth works but produces a lighter result.</li>
+            <li><strong><Link href="/blog/how-to-make-perfect-risotto" className="text-orange-700 no-underline">Risotto</Link></strong> – Stock&apos;s body is part of what makes risotto creamy. Broth works but produces a lighter result.</li>
             <li><strong>Reductions</strong> – Anything that reduces by half or more needs stock. Broth gets thin. Bouillon gets unbearably salty.</li>
           </ul>
 

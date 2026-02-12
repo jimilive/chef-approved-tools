@@ -97,6 +97,6 @@ export const umamiData = {
       }
     ]
   }, relatedArticles: [
-    { href: "/blog/why-cooking-science-matters", title: "Why Cooking Science Matters" }, { href: "/blog/fat-is-flavor", title: "Why Fat is Flavor (And How to Use It)" }, { href: "/blog/understanding-acids-cooking", title: "Understanding Acids in Cooking" }, { href: "/blog/complete-guide-to-salts", title: "Complete Guide to Salts" }
+    { href: "/blog/how-to-make-perfect-risotto", title: "How to Make Perfect Risotto" }, { href: "/blog/why-cooking-science-matters", title: "Why Cooking Science Matters" }, { href: "/blog/fat-is-flavor", title: "Why Fat is Flavor (And How to Use It)" }, { href: "/blog/understanding-acids-cooking", title: "Understanding Acids in Cooking" }, { href: "/blog/complete-guide-to-salts", title: "Complete Guide to Salts" }
   ]
 }

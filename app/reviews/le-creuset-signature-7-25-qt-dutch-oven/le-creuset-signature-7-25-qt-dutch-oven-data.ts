@@ -254,6 +254,12 @@ export const reviewData = {
         name: "Japanese Wooden Spoon Set",
         description: "Won't scratch your Le Creuset's enamel interior. Essential for preserving the light-colored finish.",
         href: "/reviews/japanese-wooden-spoon-set"
+      },
+      {
+        emoji: "🍞",
+        name: "Bread Science: Gluten Development",
+        description: "Understanding gluten for better Dutch oven bread. The science behind perfect loaves.",
+        href: "/blog/bread-science-gluten-development"
       }
     ]
   },

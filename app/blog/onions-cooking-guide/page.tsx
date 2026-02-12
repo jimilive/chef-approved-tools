@@ -46,7 +46,7 @@ export default function OnionsGuidePage() {
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <p>
-            Onions are the foundation of flavor in almost every savory dish you&apos;ll ever cook. French cuisine calls them part of &quot;mirepoix.&quot; Italian cooking uses &quot;soffritto.&quot; Cajun food relies on the &quot;holy trinity.&quot; Different names, same principle: onions build depth, sweetness, and complexity that nothing else can replicate. </p>
+            Onions are the foundation of flavor in almost every savory dish you&apos;ll ever cook. French cuisine calls them part of &quot;<Link href="/blog/what-is-mirepoix" className="text-orange-700 no-underline">mirepoix</Link>.&quot; Italian cooking uses &quot;soffritto.&quot; Cajun food relies on the &quot;holy trinity.&quot; Different names, same principle: onions build depth, sweetness, and complexity that nothing else can replicate. </p>
 
           <p>
             But here&apos;s what most home cooks don&apos;t understand: <strong>not all onions are the same, and how you cook them completely changes what they contribute to a dish</strong>. Raw onions are sharp and pungent. Sautéed onions are soft and sweet. <Link href="/blog/caramelization-science" className="text-orange-700 hover:text-orange-800 underline">Caramelized onions</Link> are deeply savory and almost candy-like. The same ingredient, three completely different flavors. </p>

@@ -65,6 +65,6 @@ export const garlicData = {
       }
     ]
   }, relatedArticles: [
-    { href: "/blog/onions-cooking-guide", title: "Complete Guide to Cooking Onions" }, { href: "/blog/fat-is-flavor", title: "Why Fat is Flavor (And How to Use It)" }, { href: "/blog/understanding-acids-cooking", title: "Understanding Acids in Cooking" }, { href: "/reviews/victorinox-fibrox-8-inch-chefs-knife", title: "Victorinox Fibrox 8\" Chef's Knife Review" }
+    { href: "/blog/how-to-make-marinara-sauce", title: "How to Make Marinara Sauce" }, { href: "/blog/what-is-mirepoix", title: "What Is Mirepoix? The Foundation of Flavor" }, { href: "/blog/onions-cooking-guide", title: "Complete Guide to Cooking Onions" }, { href: "/blog/fat-is-flavor", title: "Why Fat is Flavor (And How to Use It)" }, { href: "/blog/understanding-acids-cooking", title: "Understanding Acids in Cooking" }, { href: "/reviews/victorinox-fibrox-8-inch-chefs-knife", title: "Victorinox Fibrox 8\" Chef's Knife Review" }
   ]
 }

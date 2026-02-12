@@ -89,6 +89,6 @@ export const restingMeatData = {
       }
     ]
   }, relatedArticles: [
-    { href: "/blog/how-to-sear-steaks-like-restaurant-chef", title: "How to Sear Steaks Like a Restaurant Chef" }, { href: "/blog/kitchen-thermometers-guide", title: "Complete Guide to Kitchen Thermometers" }, { href: "/blog/maillard-reaction-browning-flavor", title: "The Maillard Reaction: Why Browning = Flavor" }, { href: "/reviews/lodge-seasoned-cast-iron-3-skillet-bundle", title: "Lodge Cast Iron Skillet Bundle Review" }, { href: "/reviews/nordic-ware-half-sheet-pan", title: "Nordic Ware Half Sheet Pan Review" }, { href: "/blog/why-professional-chefs-use-kosher-salt", title: "Why Professional Chefs Use Kosher Salt" }
+    { href: "/blog/why-cook-chicken-wings-longer", title: "Why You Should Cook Chicken Wings Longer" }, { href: "/blog/how-to-sear-steaks-like-restaurant-chef", title: "How to Sear Steaks Like a Restaurant Chef" }, { href: "/blog/kitchen-thermometers-guide", title: "Complete Guide to Kitchen Thermometers" }, { href: "/blog/maillard-reaction-browning-flavor", title: "The Maillard Reaction: Why Browning = Flavor" }, { href: "/reviews/lodge-seasoned-cast-iron-3-skillet-bundle", title: "Lodge Cast Iron Skillet Bundle Review" }, { href: "/reviews/nordic-ware-half-sheet-pan", title: "Nordic Ware Half Sheet Pan Review" }, { href: "/blog/why-professional-chefs-use-kosher-salt", title: "Why Professional Chefs Use Kosher Salt" }
   ]
 }

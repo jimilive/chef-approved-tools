@@ -73,6 +73,6 @@ export const educationalData = {
       }
     ]
   }, relatedArticles: [
-    { href: "/blog/kitchen-thermometers-guide", title: "Complete Guide to Kitchen Thermometers" }, { href: "/blog/how-to-sear-steaks-like-restaurant-chef", title: "How to Sear Steaks Like a Restaurant Chef" }, { href: "/blog/why-resting-meat-key-cooking", title: "Why Resting Is the Key to Cooking Meat" }, { href: "/reviews/lodge-seasoned-cast-iron-3-skillet-bundle", title: "Lodge Cast Iron Skillet Bundle Review" }, { href: "/guides/cookware-materials", title: "Cookware Materials Explained" }, { href: "/blog/why-professional-chefs-use-kosher-salt", title: "Why Professional Chefs Use Kosher Salt" }
+    { href: "/blog/why-cook-chicken-wings-longer", title: "Why You Should Cook Chicken Wings Longer" }, { href: "/blog/bread-science-gluten-development", title: "Bread Science: Gluten Development" }, { href: "/blog/kitchen-thermometers-guide", title: "Complete Guide to Kitchen Thermometers" }, { href: "/blog/how-to-sear-steaks-like-restaurant-chef", title: "How to Sear Steaks Like a Restaurant Chef" }, { href: "/blog/why-resting-meat-key-cooking", title: "Why Resting Is the Key to Cooking Meat" }, { href: "/reviews/lodge-seasoned-cast-iron-3-skillet-bundle", title: "Lodge Cast Iron Skillet Bundle Review" }, { href: "/guides/cookware-materials", title: "Cookware Materials Explained" }, { href: "/blog/why-professional-chefs-use-kosher-salt", title: "Why Professional Chefs Use Kosher Salt" }
   ]
 }

@@ -76,7 +76,7 @@ export default function MakingStockPage() {
             I learned to make stock in culinary school, but I learned to make it *right* at Purple Café in Seattle. For 6 years, we made stock weekly (beef, chicken, fish, mushroom, vegetable) in massive commercial stockpots that simmered for 8 to 16 hours. That aroma of roasted bones and aromatics became the baseline for everything we served. </p>
 
           <p>
-            Stock is flavor currency in professional kitchens. Build deep, rich stock and you can create incredible sauces, soups, and risottos with minimal additional seasoning. Start with weak stock and no amount of salt or herbs will compensate for that missing foundation. </p>
+            Stock is flavor currency in professional kitchens. Build deep, rich stock and you can create incredible sauces, soups, and <Link href="/blog/how-to-make-perfect-risotto" className="text-orange-700 no-underline">risottos</Link> with minimal additional seasoning. Start with weak stock and no amount of salt or herbs will compensate for that missing foundation. </p>
 
           <p>
             By the end of this guide, you&rsquo;ll know the exact restaurant process for rich, clear stock that gels when chilled, the hallmark of proper collagen extraction. </p>
@@ -84,7 +84,7 @@ export default function MakingStockPage() {
           <h2 id="why-stock-matters">Why Stock Matters More Than You Think</h2>
 
           <p>
-            Stock is invisible in the final dish, but it&rsquo;s doing most of the work. A risotto made with good stock needs minimal seasoning. Soup built on weak stock requires excessive salt and herbs to compensate for missing depth. </p>
+            Stock is invisible in the final dish, but it&rsquo;s doing most of the work. A <Link href="/blog/how-to-make-perfect-risotto" className="text-orange-700 no-underline">risotto</Link> made with good stock needs minimal seasoning. Soup built on weak stock requires excessive salt and herbs to compensate for missing depth. </p>
 
           <p>
             The collagen extracted from bones creates body, that silky mouthfeel in a pan sauce or the way soup coats your spoon. You can&rsquo;t fake this with cornstarch or butter. It comes from time and bones, period. </p>
@@ -213,7 +213,7 @@ export default function MakingStockPage() {
           </p>
 
           <p>
-            For chicken stock, add mirepoix after 2-3 hours. For beef stock, add after 4-5 hours. This timing extracts vegetable flavor without bitterness or cloudiness from disintegrating vegetables. </p>
+            For chicken stock, add <Link href="/blog/what-is-mirepoix" className="text-orange-700 no-underline">mirepoix</Link> after 2-3 hours. For beef stock, add after 4-5 hours. This timing extracts vegetable flavor without bitterness or cloudiness from disintegrating vegetables. </p>
 
           <p>
             Don&rsquo;t bother peeling vegetables for stock, just wash them thoroughly. The peels add color and flavor. Cut into large chunks (2-3 inches), they&rsquo;ll simmer for hours and small pieces turn to mush. </p>

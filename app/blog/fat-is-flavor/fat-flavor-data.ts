@@ -57,6 +57,6 @@ export const educationalData = {
       }
     ]
   }, relatedArticles: [
-    { href: "/blog/understanding-acids-cooking", title: "Understanding Acids in Cooking" }, { href: "/blog/maillard-reaction-browning-flavor", title: "The Maillard Reaction: Why Browning = Flavor" }, { href: "/blog/what-is-emulsification", title: "What is Emulsification?" }, { href: "/blog/how-to-make-roux", title: "How to Make a Perfect Roux" }
+    { href: "/blog/how-to-make-marinara-sauce", title: "How to Make Marinara Sauce" }, { href: "/blog/understanding-acids-cooking", title: "Understanding Acids in Cooking" }, { href: "/blog/maillard-reaction-browning-flavor", title: "The Maillard Reaction: Why Browning = Flavor" }, { href: "/blog/what-is-emulsification", title: "What is Emulsification?" }, { href: "/blog/how-to-make-roux", title: "How to Make a Perfect Roux" }
   ]
 }

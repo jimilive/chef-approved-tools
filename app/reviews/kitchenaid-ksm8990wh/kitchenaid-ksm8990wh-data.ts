@@ -332,6 +332,12 @@ export const reviewData = {
         name: "KitchenAid Professional 600",
         description: "Professional 6-quart stand mixer.",
         href: "/reviews/kitchenaid-kp26m1xlc-professional-600"
+      },
+      {
+        emoji: "🍞",
+        name: "Bread Science: Gluten Development",
+        description: "Understanding gluten development for better dough.",
+        href: "/blog/bread-science-gluten-development"
       }
     ]
   },

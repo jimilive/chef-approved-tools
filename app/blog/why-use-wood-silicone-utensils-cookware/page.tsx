@@ -150,7 +150,7 @@ export default function WhyUseWoodSiliconeUtensils() {
 
           <p>We used wood for:</p>
           <ul>
-            <li>Stirring risotto, polenta, and thick sauces</li>
+            <li>Stirring <Link href="/blog/how-to-make-perfect-risotto" className="text-orange-700 no-underline">risotto</Link>, polenta, and thick sauces</li>
             <li>Long-cooked applications (stews, braises)</li>
             <li>Any task where the utensil would rest in a hot pan</li>
             <li>General prep work</li>

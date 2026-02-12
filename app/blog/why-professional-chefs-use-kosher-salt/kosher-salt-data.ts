@@ -79,6 +79,6 @@ export const educationalData = {
       }
     ]
   }, relatedArticles: [
-    { href: "/reviews/diamond-crystal-kosher-salt", title: "Diamond Crystal Kosher Salt Review", description: "The professional chef's choice for 24 years, flaky crystals, pure flavor, perfect control." }, { href: "/blog/how-to-sear-steaks-like-restaurant-chef", title: "How to Sear Steaks Like a Restaurant Chef", description: "Professional steak searing techniques using kosher salt for perfect crust formation." }
+    { href: "/blog/how-to-make-marinara-sauce", title: "How to Make Marinara Sauce" }, { href: "/reviews/diamond-crystal-kosher-salt", title: "Diamond Crystal Kosher Salt Review", description: "The professional chef's choice for 24 years, flaky crystals, pure flavor, perfect control." }, { href: "/blog/how-to-sear-steaks-like-restaurant-chef", title: "How to Sear Steaks Like a Restaurant Chef", description: "Professional steak searing techniques using kosher salt for perfect crust formation." }
   ]
 }

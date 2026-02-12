@@ -269,6 +269,12 @@ export const reviewData = {
         name: "John Boos Cutting Board",
         description: "The prep surface that matches the Ninja's quality. Stage ingredients before air frying for professional results.",
         href: "/reviews/john-boos-platinum-commercial-cutting-board"
+      },
+      {
+        emoji: "🍗",
+        name: "Why Cook Chicken Wings Longer",
+        description: "The science behind why extended cooking makes wings crispy and tender.",
+        href: "/blog/why-cook-chicken-wings-longer"
       }
     ]
   },
