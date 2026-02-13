@@ -3584,7 +3584,7 @@ export const METADATA = {
       testingPeriod: "18 Years Testing",
       productSlug: "rubbermaid-commercial-cooks-scraper",
       publishedTime: "2025-10-17T10:00:00Z",
-      modifiedTime: "2026-02-01T10:00:00Z",
+      modifiedTime: "2026-02-13T10:00:00Z",
       searchIntent: "transactional",
       conversionPotential: "medium",
       affiliateProgram: "amazon",

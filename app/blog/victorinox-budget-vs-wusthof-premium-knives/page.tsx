@@ -105,7 +105,7 @@ export default function VictorinoxVsWusthofPage() {
                     href={comparisonData.productRecommendations.victorinox.affiliateUrl}
                     target="_blank"
                     rel="nofollow noopener noreferrer sponsored"
-                    className="inline-block bg-orange-800 hover:bg-orange-900 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+                    className="inline-block bg-orange-900 hover:bg-orange-950 !text-white font-bold py-3 px-6 rounded-lg transition-colors"
                   >
                     Check Price on Amazon
                   </Link>
@@ -124,7 +124,7 @@ export default function VictorinoxVsWusthofPage() {
                     href={comparisonData.productRecommendations.wusthof.affiliateUrl}
                     target="_blank"
                     rel="nofollow noopener noreferrer sponsored"
-                    className="inline-block bg-orange-800 hover:bg-orange-900 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+                    className="inline-block bg-orange-900 hover:bg-orange-950 !text-white font-bold py-3 px-6 rounded-lg transition-colors"
                   >
                     Check Price on Amazon
                   </Link>
@@ -158,7 +158,7 @@ export default function VictorinoxVsWusthofPage() {
                     href={comparisonData.productRecommendations.victorinox.affiliateUrl}
                     target="_blank"
                     rel="nofollow noopener noreferrer sponsored"
-                    className="inline-block bg-orange-800 hover:bg-orange-900 text-white font-bold py-3 px-6 rounded-lg transition-colors my-4"
+                    className="inline-block bg-orange-900 hover:bg-orange-950 !text-white font-bold py-3 px-6 rounded-lg transition-colors my-4"
                   >
                     Check Victorinox Price on Amazon
                   </Link>
@@ -176,7 +176,7 @@ export default function VictorinoxVsWusthofPage() {
                     href={comparisonData.productRecommendations.wusthof.affiliateUrl}
                     target="_blank"
                     rel="nofollow noopener noreferrer sponsored"
-                    className="inline-block bg-orange-800 hover:bg-orange-900 text-white font-bold py-3 px-6 rounded-lg transition-colors my-4"
+                    className="inline-block bg-orange-900 hover:bg-orange-950 !text-white font-bold py-3 px-6 rounded-lg transition-colors my-4"
                   >
                     Check Wüsthof Price on Amazon
                   </Link>
@@ -203,7 +203,7 @@ export default function VictorinoxVsWusthofPage() {
                     href={comparisonData.productRecommendations.victorinox.affiliateUrl}
                     target="_blank"
                     rel="nofollow noopener noreferrer sponsored"
-                    className="inline-block bg-orange-800 hover:bg-orange-900 text-white font-bold py-3 px-6 rounded-lg transition-colors w-full text-center"
+                    className="inline-block bg-orange-900 hover:bg-orange-950 !text-white font-bold py-3 px-6 rounded-lg transition-colors w-full text-center"
                   >
                     Victorinox on Amazon
                   </Link>
@@ -221,7 +221,7 @@ export default function VictorinoxVsWusthofPage() {
                     href={comparisonData.productRecommendations.wusthof.affiliateUrl}
                     target="_blank"
                     rel="nofollow noopener noreferrer sponsored"
-                    className="inline-block bg-orange-800 hover:bg-orange-900 text-white font-bold py-3 px-6 rounded-lg transition-colors w-full text-center"
+                    className="inline-block bg-orange-900 hover:bg-orange-950 !text-white font-bold py-3 px-6 rounded-lg transition-colors w-full text-center"
                   >
                     Wüsthof on Amazon
                   </Link>
