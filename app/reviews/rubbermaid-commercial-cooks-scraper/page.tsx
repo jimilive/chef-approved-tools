@@ -549,9 +549,6 @@ export default async function RubbermaidScraperReview() {
               })}
             </p>
             <p className="my-2.5">
-              <strong>🔍 Next Review:</strong> {reviewData.footerInfo.nextReview}
-            </p>
-            <p className="my-2.5">
               <strong>💬 Own a Rubbermaid Commercial scraper?</strong> Share your experience in the comments
               below. I read and respond to every comment.
             </p>
