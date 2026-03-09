@@ -510,7 +510,7 @@ export default async function BestChefKnivesPage() {
             <p className="text-blue-800 text-sm">
               Knives were evaluated on edge retention, handle comfort, balance, ease of sharpening, and long-term durability. No free samples or sponsored reviews. Just honest assessment from someone who&apos;s used these tools professionally for over two decades.
             </p>
-            <Link href="/methodology" className="text-blue-700 hover:text-blue-900 font-semibold text-sm">
+            <Link href="/about" className="text-blue-700 hover:text-blue-900 font-semibold text-sm">
               Read our complete testing methodology →
             </Link>
           </div>

@@ -143,7 +143,7 @@ export const braisingData = {
 
   relatedLinks: [
     { href: "/blog/how-to-preheat-a-pan", text: "Learn how to properly preheat your pan" },
-    { href: "/blog/cookware-materials-explained", text: "Learn about different cookware materials" },
+    { href: "/guides/cookware-materials", text: "Learn about different cookware materials" },
     { href: "/blog/caramelizing-onions-why-it-takes-45-minutes", text: "Learn how to caramelize onions properly" }
   ],
 

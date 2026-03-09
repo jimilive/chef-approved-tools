@@ -180,7 +180,7 @@ export default function KitchenStarterKitPage() {
             productSlug="kitchen-thermometer-comparison"
             merchant="internal"
           >
-            <Link href="/blog/kitchen-thermometer-guide" className="text-orange-700 hover:text-orange-700 font-medium">
+            <Link href="/blog/kitchen-thermometers-guide" className="text-orange-700 hover:text-orange-700 font-medium">
               See my thermometer comparison →
             </Link>
           </CTAVisibilityTracker> */}
@@ -380,7 +380,7 @@ export default function KitchenStarterKitPage() {
                 productSlug="season-cast-iron-guide"
                 merchant="internal"
               >
-                <Link href="/blog/season-cast-iron-restaurant-method" className="text-orange-700 hover:text-orange-700 font-medium">
+                <Link href="/blog/cast-iron-seasoning-care" className="text-orange-700 hover:text-orange-700 font-medium">
                   How to Season Cast Iron Like a Restaurant Chef
                 </Link>
               </CTAVisibilityTracker>
@@ -427,7 +427,7 @@ export default function KitchenStarterKitPage() {
                 productSlug="cookware-materials-explained"
                 merchant="internal"
               >
-                <Link href="/blog/cookware-materials-explained" className="text-orange-700 hover:text-orange-700 font-medium">
+                <Link href="/guides/cookware-materials" className="text-orange-700 hover:text-orange-700 font-medium">
                   Cookware Materials Explained
                 </Link>
               </CTAVisibilityTracker>

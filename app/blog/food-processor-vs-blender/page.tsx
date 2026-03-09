@@ -571,7 +571,7 @@ export default async function FoodProcessorVsBlenderPost() {
                   productSlug="food-processor-vs-blender"
                   merchant="internal"
                 >
-                  <Link href="/reviews/vitamix-5200" className="text-orange-700 underline">Vitamix 5200 Review (6 Years Restaurant Testing)</Link>
+                  <Link href="/reviews/vitamix-5200-professional-blender" className="text-orange-700 underline">Vitamix 5200 Review (6 Years Restaurant Testing)</Link>
                 </CTAVisibilityTracker></li>
               </ul>
             </div>

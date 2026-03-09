@@ -148,7 +148,7 @@ export default async function JapaneseWoodenSpoonSetReview() {
       tier={reviewData.metadata.tier as 1 | 2 | 3}
       testingPeriod={reviewData.tracking.testingPeriod}
       hook={reviewData.tracking.hook}
-      backLinkHref="/moving-and-stirring-tools"
+      backLinkHref="/moving-stirring"
       backLinkText="Browse all Moving & Stirring Tools"
     >
       {/* SECTION 1: HERO */}
@@ -250,7 +250,7 @@ export default async function JapaneseWoodenSpoonSetReview() {
 
           <div className="text-center my-8">
             <Link
-              href="/moving-and-stirring-tools"
+              href="/moving-stirring"
               className="text-orange-700 hover:text-orange-800 font-medium"
             >
               Explore more Moving & Stirring Tools →

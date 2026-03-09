@@ -142,7 +142,7 @@ export default async function LeCreusetDutchOvenReviewPage() {
       tier={reviewData.metadata.tier as 1 | 2 | 3}
       testingPeriod={reviewData.tracking.testingPeriod}
       hook={reviewData.tracking.hook}
-      backLinkHref="/cookware-and-bakeware"
+      backLinkHref="/cookware"
       backLinkText="Browse all Cookware & Bakeware"
     >
       {/* SECTION 1: HERO - Includes LCP-optimized verdict */}
@@ -327,7 +327,7 @@ export default async function LeCreusetDutchOvenReviewPage() {
 
           <div className="text-center my-8">
             <Link
-              href="/cookware-and-bakeware"
+              href="/cookware"
               className="text-orange-700 hover:text-orange-800 font-medium"
             >
               Explore more Cookware & Bakeware →

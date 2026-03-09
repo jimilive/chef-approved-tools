@@ -451,7 +451,7 @@ export default function ChefApprovedPage() {
               <h3 className="text-xl font-bold text-slate-900 mb-4">Learn More</h3>
               <ul className="space-y-2">
                 <li><Link href="/about" className="text-orange-700 hover:text-orange-700">About Scott Bradley - My professional background</Link></li>
-                <li><Link href="/methodology" className="text-orange-700 hover:text-orange-700">How I Review Products - My testing methodology</Link></li>
+                <li><Link href="/about" className="text-orange-700 hover:text-orange-700">How I Review Products - My testing methodology</Link></li>
                 <li><Link href="/newsletter" className="text-orange-700 hover:text-orange-700">Newsletter Signup - Professional tips & new reviews</Link></li>
               </ul>
             </div>

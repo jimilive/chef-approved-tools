@@ -35,6 +35,6 @@ export const stainlessData = {
       }
     ]
   }, relatedLinks: [
-    { href: "/blog/stainless-steel-why-food-sticks", text: "Stainless Steel Cooking: Why Food Sticks" }, { href: "/blog/cookware-materials-explained", text: "Cookware Materials Explained" }
+    { href: "/blog/stainless-steel-why-food-sticks", text: "Stainless Steel Cooking: Why Food Sticks" }, { href: "/guides/cookware-materials", text: "Cookware Materials Explained" }
   ]
 }

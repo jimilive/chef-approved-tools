@@ -140,7 +140,7 @@ export default async function NortonTriStoneSharpenerReview() {
       tier={reviewData.metadata.tier as 1 | 2 | 3}
       testingPeriod={reviewData.tracking.testingPeriod}
       hook={reviewData.tracking.hook}
-      backLinkHref="/cleaning-and-maintenance"
+      backLinkHref="/cleaning-maintenance"
       backLinkText="Browse all Cleaning & Maintenance"
     >
           {/* SECTION 1: HERO */}

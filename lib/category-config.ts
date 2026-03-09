@@ -228,12 +228,12 @@ export const categoryConfigs: Record<string, CategoryConfig> = {
       },
       {
         title: 'Immersion Blender Guide',
-        href: '/blog/immersion-blender-restaurant-workhorse',
+        href: '/blog/immersion-blender-vs-countertop-blender',
         description: 'Why immersion blenders are the most versatile tool in professional kitchens.'
       },
       {
         title: 'Food Processor vs Blender',
-        href: '/blog/food-processor-vs-blender-professional-uses',
+        href: '/blog/food-processor-vs-blender',
         description: 'Understanding which appliance handles which tasks better and why.'
       }
     ],

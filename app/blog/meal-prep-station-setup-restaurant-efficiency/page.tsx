@@ -343,7 +343,7 @@ export default function MealPrepStationSetupPage() {
               productSlug="meal-prep-station-setup-restaurant-efficiency"
               merchant="internal"
             >
-              <Link href="/blog/cookware-materials-explained" className="text-blue-700 underline">
+              <Link href="/guides/cookware-materials" className="text-blue-700 underline">
                 Learn about different cookware materials
               </Link>
             </CTAVisibilityTracker> and how they affect your cooking workflow and efficiency in the kitchen. </p>

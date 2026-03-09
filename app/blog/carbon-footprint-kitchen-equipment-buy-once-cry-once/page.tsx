@@ -185,7 +185,7 @@ export default function CarbonFootprintKitchenEquipmentPage() {
               productSlug="carbon-footprint-kitchen-equipment-buy-once-cry-once"
               merchant="internal"
             >
-              <Link href="/blog/cookware-materials-explained" className="text-blue-700 underline">
+              <Link href="/guides/cookware-materials" className="text-blue-700 underline">
                 Learn about different cookware materials
               </Link>
             </CTAVisibilityTracker> and how they compare in terms of durability, performance, and environmental impact. </p>

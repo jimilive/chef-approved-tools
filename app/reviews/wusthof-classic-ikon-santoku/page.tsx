@@ -123,7 +123,7 @@ export default async function WusthofClassicIkonSantokuReview() {
       tier={reviewData.metadata.tier as 1 | 2 | 3}
       testingPeriod={reviewData.tracking.testingPeriod}
       hook={reviewData.tracking.hook}
-      backLinkHref="/knives-and-cutting-tools"
+      backLinkHref="/knives"
       backLinkText="Browse all Knives & Cutting Tools"
     >
       {/* ========== SECTION 1: HERO + CTA #1 ========== */}

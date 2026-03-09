@@ -31,6 +31,6 @@ export const carbonData = {
       }
     ]
   }, relatedLinks: [
-    { href: "/blog/cookware-materials-explained", text: "Learn about different cookware materials" }, { href: "/blog/meal-prep-station-setup-restaurant-efficiency", text: "Learn how to set up an efficient meal prep station" }, { href: "/blog/braising-101-tough-cuts-made-tender", text: "Master braising" }
+    { href: "/guides/cookware-materials", text: "Learn about different cookware materials" }, { href: "/blog/meal-prep-station-setup-restaurant-efficiency", text: "Learn how to set up an efficient meal prep station" }, { href: "/blog/braising-101-tough-cuts-made-tender", text: "Master braising" }
   ]
 }

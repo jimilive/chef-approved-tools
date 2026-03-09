@@ -77,7 +77,7 @@ export function prefetchCriticalPages() {
 
   const criticalPages = [
     '/reviews',
-    '/methodology',
+    '/about',
     '/glossary'
   ];
 

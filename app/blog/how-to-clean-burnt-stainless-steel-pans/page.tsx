@@ -321,7 +321,7 @@ export default function CleanBurntStainlessSteelPost() {
                   productSlug="how-to-clean-burnt-stainless-steel-pans"
                   merchant="internal"
                 >
-                  <Link href="/blog/cookware-materials-explained" className="text-orange-700 underline">Cookware Materials Explained: What Chefs Actually Use</Link>
+                  <Link href="/guides/cookware-materials" className="text-orange-700 underline">Cookware Materials Explained: What Chefs Actually Use</Link>
                 </CTAVisibilityTracker></li>
                 {/* <li>• Kitchen Starter Kit: First 5 Tools to Buy</li> */}
               </ul>
@@ -342,7 +342,7 @@ export default function CleanBurntStainlessSteelPost() {
               <p className="text-slate-700 text-sm">
                 Learn how to prevent food from sticking to stainless steel in the first place. </p>
             </Link>
-            <Link href="/blog/cookware-materials-explained" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+            <Link href="/guides/cookware-materials" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">Cookware Materials Explained: What Chefs Actually Use</h4>
               <p className="text-slate-700 text-sm">
                 Understand the pros and cons of different cookware materials and how to care for each. </p>

@@ -974,7 +974,7 @@ export const METADATA = {
     'cookware-materials-explained': {
       title: "Cookware Materials Explained: Stainless, Cast Iron & More",
       description: "Professional chef explains the pros and cons of stainless steel, cast iron, nonstick, carbon steel, and copper cookware — and which belong in your kitchen.",
-      canonical: "https://www.chefapprovedtools.com/blog/cookware-materials-explained",
+      canonical: "https://www.chefapprovedtools.com/guides/cookware-materials",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
       imageAlt: "Cookware Materials Explained: Stainless, Cast Iron & More",

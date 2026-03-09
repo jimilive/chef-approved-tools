@@ -138,7 +138,7 @@ export default async function MethodAllPurposeCleanerReviewPage() {
       tier={reviewData.metadata.tier as 1 | 2 | 3}
       testingPeriod={reviewData.tracking.testingPeriod}
       hook={reviewData.tracking.hook}
-      backLinkHref="/cleaning-and-maintenance"
+      backLinkHref="/cleaning-maintenance"
       backLinkText="Browse all Cleaning & Maintenance"
     >
       {/* SECTION 1: HERO */}
@@ -364,7 +364,7 @@ export default async function MethodAllPurposeCleanerReviewPage() {
 
           <div className="text-center my-8">
             <Link
-              href="/cleaning-and-maintenance"
+              href="/cleaning-maintenance"
               className="text-orange-700 hover:text-orange-800 font-medium"
             >
               Explore more Cleaning & Maintenance →

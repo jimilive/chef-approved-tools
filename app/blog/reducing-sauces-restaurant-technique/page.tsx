@@ -156,7 +156,7 @@ export default function ReducingSaucesPage() {
               productSlug="reducing-sauces-restaurant-technique"
               merchant="internal"
             >
-              <Link href="/blog/cookware-materials-explained" className="text-blue-700 underline">
+              <Link href="/guides/cookware-materials" className="text-blue-700 underline">
                 Learn about different cookware materials
               </Link>
             </CTAVisibilityTracker> and why stainless steel is ideal for sauce reductions. </p>

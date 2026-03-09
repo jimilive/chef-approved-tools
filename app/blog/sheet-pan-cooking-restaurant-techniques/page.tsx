@@ -171,7 +171,7 @@ export default function SheetPanCookingRestaurantTechniquesPage() {
               productSlug="sheet-pan-cooking-restaurant-techniques"
               merchant="internal"
             >
-              <Link href="/blog/mise-en-place-guide" className="text-blue-700 underline">
+              <Link href="/blog/mis-en-place-professional-cooking" className="text-blue-700 underline">
                 Learn the complete mise en place method
               </Link>
             </CTAVisibilityTracker> for organizing your kitchen like a professional. </p> */}
@@ -219,7 +219,7 @@ export default function SheetPanCookingRestaurantTechniquesPage() {
               productSlug="sheet-pan-cooking-restaurant-techniques"
               merchant="internal"
             >
-              <Link href="/blog/reducing-sauces-guide" className="text-blue-700 underline">
+              <Link href="/blog/reducing-sauces-restaurant-technique" className="text-blue-700 underline">
                 Learn the professional method for reducing sauces
               </Link>
             </CTAVisibilityTracker> and building flavor through deglazing. </p> */}
@@ -363,7 +363,7 @@ export default function SheetPanCookingRestaurantTechniquesPage() {
               productSlug="sheet-pan-cooking-restaurant-techniques"
               merchant="internal"
             >
-              <Link href="/blog/cookware-materials-explained" className="text-blue-700 underline">
+              <Link href="/guides/cookware-materials" className="text-blue-700 underline">
                 Learn about different cookware materials
               </Link>
             </CTAVisibilityTracker> and how they affect heat distribution and browning in professional kitchens. </p>

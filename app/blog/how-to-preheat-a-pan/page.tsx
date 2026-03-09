@@ -344,7 +344,7 @@ export default function HowToPreheatPanPost() {
                   productSlug="how-to-preheat-a-pan"
                   merchant="internal"
                 >
-                  <Link href="/blog/cookware-materials-explained" className="text-orange-700 underline">Cookware Materials Explained: What Chefs Actually Use</Link>
+                  <Link href="/guides/cookware-materials" className="text-orange-700 underline">Cookware Materials Explained: What Chefs Actually Use</Link>
                 </CTAVisibilityTracker></li>
               </ul>
             </div>
@@ -367,7 +367,7 @@ export default function HowToPreheatPanPost() {
             <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Lodge Cast Iron Skillet Review
             </Link>
-            <Link href="/blog/cookware-materials-explained" className="text-orange-700 hover:text-orange-800 font-semibold">
+            <Link href="/guides/cookware-materials" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Cookware Materials Explained: What Chefs Actually Use
             </Link>
           </div>

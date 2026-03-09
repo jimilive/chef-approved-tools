@@ -25,6 +25,6 @@ export const starterkitData = {
       }
     ]
   }, relatedLinks: [
-    { href: "/blog/how-to-choose-first-chef-knife", text: "How to Choose Your First Chef Knife" }, { href: "/blog/cast-iron-seasoning-care", text: "Cast Iron Seasoning and Care" }, { href: "/blog/cookware-materials-explained", text: "Cookware Materials Explained" }
+    { href: "/blog/how-to-choose-first-chef-knife", text: "How to Choose Your First Chef Knife" }, { href: "/blog/cast-iron-seasoning-care", text: "Cast Iron Seasoning and Care" }, { href: "/guides/cookware-materials", text: "Cookware Materials Explained" }
   ]
 }

@@ -35,6 +35,6 @@ export const onionsData = {
       }
     ]
   }, relatedLinks: [
-    { href: "/blog/cookware-materials-explained", text: "Learn about different cookware materials" }, { href: "/blog/how-to-preheat-a-pan", text: "Learn how to properly preheat your pan" }
+    { href: "/guides/cookware-materials", text: "Learn about different cookware materials" }, { href: "/blog/how-to-preheat-a-pan", text: "Learn how to properly preheat your pan" }
   ]
 }

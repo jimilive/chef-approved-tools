@@ -321,7 +321,7 @@ export default function Braising101Page() {
               productSlug="braising-101-tough-cuts-made-tender"
               merchant="internal"
             >
-              <Link href="/blog/cookware-materials-explained" className="text-blue-700 underline">
+              <Link href="/guides/cookware-materials" className="text-blue-700 underline">
                 Learn about different cookware materials
               </Link>
             </CTAVisibilityTracker> and why cast iron excels at braising and other slow-cooking techniques.

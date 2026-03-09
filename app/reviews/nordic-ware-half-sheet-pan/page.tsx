@@ -139,7 +139,7 @@ export default async function NordicWareHalfSheetPanReview() {
       tier={reviewData.metadata.tier as 1 | 2 | 3}
       testingPeriod={reviewData.tracking.testingPeriod}
       hook={reviewData.tracking.hook}
-      backLinkHref="/cookware-and-bakeware"
+      backLinkHref="/cookware"
       backLinkText="Browse all Cookware & Bakeware"
     >
 

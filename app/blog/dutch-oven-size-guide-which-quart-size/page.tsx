@@ -218,7 +218,7 @@ export default function DutchOvenSizeGuidePage() {
                   productSlug="le-creuset-5.5-quart"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/le-creuset-5.5-quart-dutch-oven-review" className="text-blue-700 underline">
+                  <Link href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-blue-700 underline">
                     Le Creuset 5.5 Quart Dutch Oven
                   </Link>
                 </CTAVisibilityTracker>:</strong> The classic.
@@ -275,7 +275,7 @@ export default function DutchOvenSizeGuidePage() {
               productSlug="dutch-oven-size-guide-which-quart-size"
               merchant="internal"
             >
-              <Link href="/blog/cookware-materials-explained" className="text-blue-700 underline">
+              <Link href="/guides/cookware-materials" className="text-blue-700 underline">
                 Learn about different cookware materials
               </Link>
             </CTAVisibilityTracker> and why cast iron excels at heat retention for braising and baking.

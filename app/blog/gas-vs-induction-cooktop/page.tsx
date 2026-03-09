@@ -159,7 +159,7 @@ export default function GasVsInductionComparison() {
         <section className="bg-slate-50 rounded-xl p-8 mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Related Reading</h2>
           <div className="grid md:grid-cols-2 gap-4">
-            <Link href="/blog/cookware-materials-explained" className="text-orange-700 hover:text-orange-800 font-semibold">
+            <Link href="/guides/cookware-materials" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Cookware Materials Explained
             </Link>
             <Link href="/blog/cast-iron-seasoning-care" className="text-orange-700 hover:text-orange-800 font-semibold">

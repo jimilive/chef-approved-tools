@@ -35,6 +35,6 @@ export const preheatData = {
       }
     ]
   }, relatedLinks: [
-    { href: "/blog/stainless-steel-why-food-sticks", text: "Stainless Steel Cooking: Why Food Sticks" }, { href: "/blog/how-to-clean-burnt-stainless-steel-pans", text: "How to Clean Burnt Stainless Steel Pans" }, { href: "/reviews/lodge-seasoned-cast-iron-3-skillet-bundle", text: "Lodge Cast Iron Skillet Review" }, { href: "/blog/cookware-materials-explained", text: "Cookware Materials Explained: What Chefs Actually Use" }
+    { href: "/blog/stainless-steel-why-food-sticks", text: "Stainless Steel Cooking: Why Food Sticks" }, { href: "/blog/how-to-clean-burnt-stainless-steel-pans", text: "How to Clean Burnt Stainless Steel Pans" }, { href: "/reviews/lodge-seasoned-cast-iron-3-skillet-bundle", text: "Lodge Cast Iron Skillet Review" }, { href: "/guides/cookware-materials", text: "Cookware Materials Explained: What Chefs Actually Use" }
   ]
 }

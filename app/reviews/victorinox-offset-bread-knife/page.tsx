@@ -115,7 +115,7 @@ export default async function ProductReview() {
       tier={reviewData.metadata.tier as 1 | 2 | 3}
       testingPeriod={reviewData.tracking.testingPeriod}
       hook={reviewData.tracking.hook}
-      backLinkHref="/knives-and-cutting-tools"
+      backLinkHref="/knives"
       backLinkText="Browse all Knives & Cutting Tools"
     >
       {/* SECTION 1: HERO */}
@@ -261,7 +261,7 @@ export default async function ProductReview() {
 
           <div className="text-center my-8">
             <Link
-              href="/knives-and-cutting-tools"
+              href="/knives"
               className="text-orange-700 hover:text-orange-800 font-medium"
             >
               Explore more Knives & Cutting Tools →
